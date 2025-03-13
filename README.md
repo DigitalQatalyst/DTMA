@@ -1,35 +1,36 @@
-<img src="https://i.ibb.co/ynXWk5S/bonik-intro-sale.gif" alt="bonik-intro-sale" border="0">
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-<p>Bonik is a multi-purpose eCommerce template built with React Next.js aiming at faster performance, high code quality & SEO, etc.</p>
+## Getting Started
 
-<p>We used styled-components and carefully created custom components so that we don't have to sacrifice performance. The styled component also provides an easy way to change the appearance of the entire website.</p>
+First, run the development server:
 
-<p>Bonik comes with 4 different shop versions (Superstore, Grocery delivery, Niche Market version 1, Niche Market version 2), And tons of inner pages including multivendor and user account.</p>
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-<img src="https://i.ibb.co/r7Jb9d5/Presentation-1.png" alt="Presentation-1" border="0">
-<img src="https://i.ibb.co/NswLPcF/Presentation-2.png" alt="Presentation-2" border="0">
-<img src="https://i.ibb.co/xfVzrPy/Presentation-3.png" alt="Presentation-3" border="0">
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## <pre>
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## Latest Version 2.1.0 - 31 October 2024
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-Added : Next.js 15 & Update All Packages
-Update : Replace `pure-react-carousel` To `react-slick`
+## Learn More
 
-</pre>
+To learn more about Next.js, take a look at the following resources:
 
-## <pre>
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## Latest Version 1.1.0 - 07 March 2023
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-Added : 7 New Homepage variation
-Added : Fake Data and Server `/src/__server__`
-Added : Data Models `/src/interfaces`
-Added : Make Dynamic All Pages With Calling API
-Added : API Function For All Routes `/src/utils/__api__`
-Added : Install All Latest Packages
-Fixed : Update Folder Structure and Some bugs Fixed
-Update : Refactor AppContext code `/src/contexts/AppContext.tsx`
+## Deploy on Vercel
 
-</pre>
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

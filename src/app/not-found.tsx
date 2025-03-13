@@ -1,36 +1,49 @@
-"use client";
-
+import { Metadata } from "next";
+import Image from "next/image";
+import error_img from '@/assets/img/error/error.png';
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import HeaderTwo from "@/components/header/header-two";
+import FooterSeven from "@/components/footer/footer-seven";
 
-import Image from "@component/Image";
-import FlexBox from "@component/FlexBox";
-import { Button } from "@component/buttons";
+
+export const metadata: Metadata = {
+    title: "Not Found - Acadia",
+};
 
 export default function NotFound() {
-  const router = useRouter();
-  const handleGoBack = () => router.back();
+    return (
+        <>
+            {/* header area start */}
+            <HeaderTwo inner={true} />
+            {/* header area end */}
+            <main>
 
-  return (
-    <FlexBox
-      px="1rem"
-      minHeight="100vh"
-      alignItems="center"
-      flexDirection="column"
-      justifyContent="center">
-      <Image src="/assets/images/illustrations/404.svg" maxWidth="320px" width="100%" mb="2rem" />
+                {/* not found area start */}
+                <div className="tp-error-area pt-120 pb-120">
+                    <div className="container">
+                        <div className="row justify-content-center">
+                            <div className="col-xl-10">
+                                <div className="tp-error-wrapper text-center">
+                                    <h4 className="tp-error-title">Oops!</h4>
+                                    <div className="tp-error-thumb mb-50">
+                                        <Image src={error_img} alt="error-img" style={{ height: "auto" }} />
+                                    </div>
+                                    <div className="tp-error-content">
+                                        <h4 className="tp-error-title-sm">Something went Wrong...</h4>
+                                        <p>Sorry, {"we couldn't"} find your page.</p>
+                                        <Link className="tp-btn-inner" href="/">Back to Home</Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/* not found area end */}
+            </main>
 
-      <FlexBox flexWrap="wrap">
-        <Button variant="outlined" color="primary" m="0.5rem" onClick={handleGoBack}>
-          Go Back
-        </Button>
-
-        <Link href="/">
-          <Button variant="contained" color="primary" m="0.5rem">
-            Go to Home
-          </Button>
-        </Link>
-      </FlexBox>
-    </FlexBox>
-  );
+            {/* footer area start */}
+            <FooterSeven />
+            {/* footer area end */}
+        </>
+    );
 }
