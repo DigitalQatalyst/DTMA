@@ -49,11 +49,14 @@ const HeroSection = () => {
         </div>
 
         <button
-          className="btn position-absolute bottom-0 end-0 m-0"
+          className="btn position-absolute bottom-0 end-0"
           style={{
             backgroundColor: "#00A9A5",
             color: "#fff",
-            borderRadius: "50px",
+            borderRadius: "10px",
+            right: "0px",
+            // transform: "translateY(70%)",
+            // zIndex: 9999
           }}
         >
           <img src="assets/img/icon/frame.svg" alt="Robot Icon" className="ms-2" style={{ width: "20px", height: "20px" }} />

@@ -26,7 +26,7 @@ const CategoriesSection = () => {
     height="13"
     viewBox="0 0 151 13"
     fill="none"
-    style={{textAlign: "right"}}
+    style={{textAlign: "right", marginLeft: "25rem", marginTop: "-3rem"}}
   >
     <path
       fillRule="evenodd"
@@ -36,20 +36,21 @@ const CategoriesSection = () => {
     />
   </svg>
 </h2>
-        <div className="row">
-          {categories.map((category) => (
-            <div className="col-md-3 mb-4" key={category.id}>
-              <div className="category-card p-4 bg-white shadow-sm rounded d-flex flex-column align-items-start">
-                <img
-                  src={category.icon}
-                  alt={category.name}
-                  className="category-icon mb-3"
-                />
-                <h5>{category.name}</h5>
-              </div>
-            </div>
-          ))}
-        </div>
+<div className="row">
+  {categories.map((category) => (
+    <div className="col-md-3 mb-4" key={category.id}>
+      <div className="category-card p-4 bg-white shadow-sm rounded d-flex flex-column align-items-start">
+        <img
+          src={category.icon}
+          alt={category.name}
+          className="category-icon mb-3"
+        />
+        <h5 style={{ color: "#636366" }}>{category.name}</h5> {/* Set text color */}
+      </div>
+    </div>
+  ))}
+</div>
+
       </div>
     </section>
   );
