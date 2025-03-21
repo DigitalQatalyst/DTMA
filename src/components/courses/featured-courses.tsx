@@ -74,27 +74,37 @@ const FeaturedCoursesSection = () => {
   return (
     <section className="featured-courses py-5">
       <div className="container">
-        <h2 className="display-4 mb-4">
-          <strong>
-            Featured <span style={{ color: "#008080" }}>Courses</span>
-          </strong>
-          <br />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="151"
-            height="13"
-            viewBox="0 0 151 13"
-            fill="none"
-            style={{ textAlign: "right", marginLeft: "17rem", marginTop: "-5rem" }}
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M144.802 10.9143C81.4865 -4.02447 26.0413 5.35568 6.60412 10.8145C4.92012 11.2874 2.52954 12.6543 1.26461 12.0247C-0.000322044 11.3951 0.339402 9.00736 2.0234 8.53442C23.4523 2.51625 82.1684 -7.15917 148.569 8.43463C150.401 8.82352 151.042 11.1878 150.002 11.8725C148.962 12.5572 146.634 11.3032 144.802 10.9143Z"
-              fill="#008080"
-            />
-          </svg>
-        </h2>
+      <div className="container">
+  <div className="d-flex justify-content-between align-items-center mb-4">
+    <h2 className="display-4">
+      <strong>
+        Featured <span style={{ color: "#008080" }}>Courses</span>
+      </strong>
+      <br />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="151"
+        height="13"
+        viewBox="0 0 151 13"
+        fill="none"
+        style={{ textAlign: "right", marginTop: "-5rem" }}
+      >
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M144.802 10.9143C81.4865 -4.02447 26.0413 5.35568 6.60412 10.8145C4.92012 11.2874 2.52954 12.6543 1.26461 12.0247C-0.000322044 11.3951 0.339402 9.00736 2.0234 8.53442C23.4523 2.51625 82.1684 -7.15917 148.569 8.43463C150.401 8.82352 151.042 11.1878 150.002 11.8725C148.962 12.5572 146.634 11.3032 144.802 10.9143Z"
+          fill="#008080"
+        />
+      </svg>
+    </h2>
+    <div className="d-flex">
+      <span className="mr-5" style={{ cursor: 'pointer', fontSize: '1.25rem', color:"#000000"}}>New</span>  {/* Increased font size and spacing */}
+      <span className="mr-5 ml-5" style={{ color: "#008080", cursor: 'pointer', fontSize: '1.25rem' }}>Popular</span> {/* Active span */}
+      <span className="ml-5" style={{ cursor: 'pointer', fontSize: '1.25rem', color:"#000000"}}>View All</span>
+    </div>
+  </div>
+</div>
+
 
         <div className="row">
           {featuredCourses.map((course) => (
