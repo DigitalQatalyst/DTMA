@@ -19,7 +19,7 @@ const featuredCourses = [
     category: "Marketing",
     lessons: 10,
     learners: 40,
-    credits: 900,
+    credits: 1000,
     rating: 4,
     imgSrc: "/assets/img/categoriesLandingPage/home_02_slide_1-removebg-preview 1 2.jpg",
     link: "/courses/2",
@@ -98,28 +98,28 @@ const FeaturedCoursesSection = () => {
 
         <div className="row">
           {featuredCourses.map((course) => (
-            <div className="col-md-3 mb-4 d-flex" key={course.id}>
-              <div className="card h-100">
+            <div className="col-md-4 mb-4 d-flex" key={course.id}>
+              <div className="card h-100" style={{ border: "none", boxShadow: "none" }}>
                 <img
                   src={course.imgSrc}
                   alt={course.title}
                   className="card-img-top"
                 />
-                <div className="card-body d-flex flex-column">
+                <div className="card-body d-flex flex-column" style={{ paddingLeft: "0" }}>
                   {/* Category Section */}
-                  <div className="category mb-3" style={{ backgroundColor: "rgba(0, 128, 128, 0.20)", padding: "5px", borderRadius: "5px", marginTop: "10px", width: "90px", color : "#008080"}}>
-                    <span>category</span>
+                  <div className="category mb-3" style={{ backgroundColor: "rgba(0, 128, 128, 0.20)", padding: "5px", borderRadius: "3px", marginTop: "10px", width: "75px", color : "#008080"}}>
+                    <span><strong>Category</strong></span>
                   </div>
 
                   {/* Lessons and Learners Icons */}
-                  <div className="d-flex justify-content-between mb-3">
-                    <div className="d-flex">
+                  <div className="d-flex align-items-center mb-3">
+                    <div className="d-flex mr-5">
                       <img src="/assets/img/categoriesLandingPage/icon.svg" alt="Lesson Icon" style={{ width: '16px', height: '16px', marginRight: '5px', marginTop: "5px"}} />
-                      <span>{course.lessons} Lessons</span>
+                      <span className="mr-5">{course.lessons} Lessons</span>
                     </div>
-                    <div className="d-flex">
+                    <div className="d-flex ml-5">
                       <img src="/assets/img/categoriesLandingPage/user.svg" alt="Learner Icon" style={{ width: '16px', height: '16px', marginRight: '5px',  marginTop: "5px" }} />
-                      <span>{course.learners} + Learners</span>
+                      <span >{course.learners} + Learners</span>
                     </div>
                   </div>
 
@@ -133,12 +133,33 @@ const FeaturedCoursesSection = () => {
 
                   {/* Stars Section */}
                   <div className="d-flex align-items-center mt-2">
-                    <span className="text-warning">
-                      {"★".repeat(Math.floor(course.rating))}
-                      {"☆".repeat(5 - Math.floor(course.rating))}
-                    </span>
+                  <span className="text-warning">
+                    {/* Render filled stars */}
+                    {Array.from({ length: Math.floor(course.rating) }).map((_, index) => (
+                      <img
+                        key={`filled-${index}`}
+                        src="/assets/img/categoriesLandingPage/star.svg"
+                        alt="Filled Star"
+                        style={{ marginRight: "5px" }}
+                      />
+                    ))}
+
+                    {/* Render empty stars */}
+                    {Array.from({ length: 5 - Math.floor(course.rating) }).map((_, index) => (
+                      <img
+                        key={`empty-${index}`}
+                        src="/assets/img/categoriesLandingPage/star2.svg"
+                        alt="Empty Star"
+                        style={{ marginRight: "5px" }}
+                      />
+                    ))}
+                  </span>
                     <span className="ml-2">({course.rating})</span>
                   </div>
+                  {course.id === 2 && (
+                    <Link href={course.link}>
+                      <button className="btn mt-3" style={{ backgroundColor: "#008080", borderRadius: "5px" , width: "20rem", color: "#ffffff" }}>Preview Course</button>
+                    </Link>)}
 
                 </div>
               </div>
