@@ -5,32 +5,47 @@ import React from "react";
 const featuredCourses = [
   {
     id: 1,
-    title: "Business Process Management",
-    description: "Optimize your business processes with this comprehensive course.",
-    imgSrc: "/assets/img/course1.jpg",
+    title: "Reshape business processes with automation",
+    // description: "Optimize your business processes with this comprehensive course.",
+    imgSrc: "/assets/img/categoriesLandingPage/home_02_slide_1-removebg-preview 1 1.jpg",
     link: "/courses/1",
   },
   {
     id: 2,
-    title: "Data Science for Beginners",
-    description: "Get started with data science and analytics.",
-    imgSrc: "/assets/img/course2.jpg",
+    title: "Leveraging Social Media for Marketing",
+    // description: "Get started with data science and analytics.",
+    imgSrc: "/assets/img/categoriesLandingPage/home_02_slide_1-removebg-preview 1 2.jpg",
     link: "/courses/2",
   },
   {
     id: 3,
-    title: "Cloud Computing Fundamentals",
-    description: "Learn the fundamentals of cloud computing and its applications.",
-    imgSrc: "/assets/img/course3.jpg",
+    title: "Transforming MarTech for Enhanced Engagement",
+    // description: "Learn the fundamentals of cloud computing and its applications.",
+    imgSrc: "/assets/img/categoriesLandingPage/home_02_slide_1-removebg-preview 1 5.jpg",
     link: "/courses/3",
   },
   {
     id: 4,
-    title: "Digital Marketing Campaigns",
-    description: "Master the art of digital marketing with this hands-on course.",
-    imgSrc: "/assets/img/course4.jpg",
+    title: "Use AI insights to improve  decision-making.",
+    // description: "Master the art of digital marketing with this hands-on course.",
+    imgSrc: "/assets/img/categoriesLandingPage/home_02_slide_1-removebg-preview 1 3.jpg",
     link: "/courses/4",
   },
+  {
+    id: 5,
+    title: "Driving Growth with Impact Marketing",
+    // description: "Master the art of digital marketing with this hands-on course.",
+    imgSrc: "/assets/img/categoriesLandingPage/home_02_slide_1-removebg-preview 1 3.png",
+    link: "/courses/4",
+  },
+  {
+    id: 6,
+    title: "Creating Digital Campaigns",
+    // description: "Master the art of digital marketing with this hands-on course.",
+    imgSrc: "/assets/img/categoriesLandingPage/home_02_slide_1-removebg-preview 1 4.jpg",
+    link: "/courses/4",
+  },
+  
 ];
 
 const FeaturedCoursesSection = () => {
@@ -38,7 +53,8 @@ const FeaturedCoursesSection = () => {
     <section className="featured-courses py-5">
       <div className="container">
       <h2 className="display-4 mb-4">
-  Featured <span style={{ color: "#008080" }}>Courses</span>
+        <strong>
+        Featured <span style={{ color: "#008080" }}>Courses</span></strong>
   <br />
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +85,7 @@ const FeaturedCoursesSection = () => {
                 <div className="card-body">
                   <h5 className="card-title">{course.title}</h5>
                   <p className="card-text">{course.description}</p>
-                  <button
+                  {/* <button
                     className="btn btn-light position-absolute bottom-0 start-0 m-3"
                     style={{
                       backgroundColor: "#00A9A5",
@@ -78,7 +94,7 @@ const FeaturedCoursesSection = () => {
                     }}
                   >
                     Learn More
-                  </button>
+                  </button> */}
                   {/* <Link href={course.link} className="btn">
                     Learn More
                   </Link> */}
