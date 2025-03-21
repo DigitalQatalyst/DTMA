@@ -210,7 +210,7 @@ li,
   --tp-red-3: #B70A14;
   --tp-blue-1: #F1F3F9;
   --tp-heading-primary: #161613;
-  --tp-heading-2: #031F42;
+  --tp-heading-2: #008080;
   --tp-heading-3: #0A1D3A;
   --tp-heading-4: #161821;
   --tp-text-body: #57595F;
@@ -3262,7 +3262,7 @@ div.demo img {
   background: linear-gradient(180deg, rgba(134, 56, 252, 0.9) 0%, #5838fc 100%);
 }
 .tp-breadcrumb__title {
-  color: #031F42;
+  color: #008080;
   font-size: 56px;
   font-weight: 600;
   margin: 0;
@@ -3298,7 +3298,7 @@ div.demo img {
   background-color: rgba(3, 31, 66, 0.2);
 }
 .tp-breadcrumb__list span.color {
-  color: #031F42;
+  color: #008080;
 }
 .tp-breadcrumb__list span.white {
   color: var(--tp-common-white);
@@ -3327,7 +3327,7 @@ div.demo img {
   margin-bottom: 0;
 }
 .tp-breadcrumb__content-filter p span {
-  color: #031f42;
+  color: #008080;
   font-weight: 500;
 }
 .tp-breadcrumb__overlay {
@@ -6672,7 +6672,7 @@ body .ui-tooltip {
   transform: scale(1.08);
 }
 .tp-search-course-item-title {
-  color: #031F42;
+  color: #008080;
   font-size: 17px;
   font-weight: 500;
   margin-bottom: 2px;
@@ -7265,7 +7265,7 @@ body .ui-tooltip {
 }
 .tp-header-2 .offcanvas-open-btn i {
   font-size: 16px;
-  color: #031F42;
+  color: #008080;
   transition: all 0.3s ease-in-out;
 }
 .tp-header-2 .offcanvas-open-btn:hover {
@@ -8940,7 +8940,7 @@ body .ui-tooltip {
 .tp-megamenu-academics-btns a {
   font-size: 15px;
   font-weight: 600;
-  color: #031F42;
+  color: #008080;
   display: inline-block;
   border-radius: 6px;
   padding: 7px 70px;
@@ -9878,7 +9878,7 @@ body .ui-tooltip {
 .tp-postbox-comment-reply a {
   font-weight: 400;
   font-size: 15px;
-  color: #031f42;
+  color: #008080;
   padding: 4px 14px;
   border-radius: 100px;
   border: 1px solid #e6e8f0;
@@ -12753,13 +12753,13 @@ a.social-yout {
 .tp-about-banner span {
   font-size: 22px;
   font-weight: 300;
-  color: #031F42;
+  color: #008080;
   margin-bottom: 8px;
   display: inline-block;
   letter-spacing: -0.44px;
 }
 .tp-about-banner-title {
-  color: #031F42;
+  color: #008080;
   font-size: 70px;
   font-weight: 600;
   margin: 0;
@@ -12920,7 +12920,7 @@ a.social-yout {
 .tp-about-tutor-title {
   font-size: 50px;
   font-weight: 600;
-  color: #031F42;
+  color: #008080;
   letter-spacing: -1px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
@@ -16840,7 +16840,7 @@ a.social-yout {
   transform: translateY(-2px);
 }
 .tp-category-title {
-  color: #031F42;
+  color: #008080;
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 2px;
@@ -17273,7 +17273,7 @@ span.cat-lgreen {
   transform: scale(0);
 }
 .tp-course-tab .nav-link.active {
-  color: #031F42;
+  color: #008080;
 }
 .tp-course-tab .nav-link.active span {
   opacity: 1;
@@ -19596,7 +19596,7 @@ a .course-sky {
   font-size: 16px;
   font-weight: 500;
   border-radius: 6px;
-  background: #031f42;
+  background: #008080;
   padding: 10px 29px;
   transform: translateY(-50%);
   color: var(--tp-common-white);
@@ -19830,10 +19830,10 @@ a .course-sky {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  background-color: #031f42;
+  background-color: #008080;
 }
 .tp-course-details-2-faq .accordion-button .accordion-btn::before {
-  background-color: #031f42;
+  background-color: #008080;
   -webkit-transform: translate(-50%, -50%) rotate(90deg);
   -moz-transform: translate(-50%, -50%) rotate(90deg);
   -ms-transform: translate(-50%, -50%) rotate(90deg);
@@ -27638,7 +27638,7 @@ span.common-pale-purple {
   }
 }
 .tp-progress-title {
-  color: #031F42;
+  color: #008080;
   font-size: 22px;
   font-weight: 500;
   line-height: 28px;
@@ -28564,7 +28564,7 @@ span.common-pale-purple {
   transition: all 0.3s 0s ease-out;
 }
 .tp-dashboard-course-title {
-  color: #031F42;
+  color: #008080;
   font-size: 20px;
   font-weight: 500;
   line-height: 1.4;
@@ -31010,3 +31010,7 @@ span.common-pale-purple {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+
+
+

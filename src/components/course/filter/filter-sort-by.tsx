@@ -3,7 +3,9 @@ import { FilterActionTypes } from "@/types/course-filter-type";
 
 
 const filterSortBy = [
+    {value:'rating', label:'New'},
     {value:'rating', label:'Trending'},
+    {value:'rating', label:'Popularity'},
     {value:'low', label:'Price: low to high'},
     {value:'high', label:'Price: high to low'},
 ]

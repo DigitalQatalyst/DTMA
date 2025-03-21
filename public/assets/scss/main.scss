@@ -4,3 +4,52 @@
 @forward 'theme';
 @forward 'components';
 @forward 'layout';
+
+.h3Title {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 82px;
+    letter-spacing: -1px;
+    color: #1A1A1A;
+    font-family: 'Outfit', sans-serif;
+  }
+
+
+// .tp-course-filter-top-right-search input,
+// .tp-course-filter-top-right-search .form-control {
+//   border-radius: 0 !important; /* Remove rounded corners */
+//   border: 1px solid #ccc; /* Optional: Adjust border for styling */
+// }
+
+/* Inside main.scss */
+.tp-course-filter-top-right-search input,
+.tp-course-filter-top-right-search .form-control {
+  border-radius: 8px !important; /* Remove rounded corners */
+  background-color: transparent !important; /* Remove background color */
+  width: 319.734px; /* Set the width */
+  height: 44px; /* Set the height */
+  flex-shrink: 0; /* Prevent shrinking */
+  border: 1px solid var(--Stroke-Color-1, #DBDADE); /* Set border color with fallback */
+}
+
+/* Inside main.scss */
+.tp-course-filter-btn .tp-filter-btn {
+    border-radius: 8px !important; /* Remove border-radius */
+    color: #008080; /* Set the text color to #008080 */
+  }
+  
+/* Inside main.scss */
+.nav-item .nav-link.active {
+    background-color: var(--P-500, #008080) !important; /* Set background color */
+    border-color: var(--P-500, #008080) !important; /* Optional: Set border color to match background */
+  }
+  
+  .nav-item .nav-link {
+    background-color: transparent; /* Default background color */
+  }
+  
+  .nav-item .nav-link.active:hover {
+    background-color: var(--P-500, #008080) !important; /* Optional: Background color on hover */
+  }
+  
+  
