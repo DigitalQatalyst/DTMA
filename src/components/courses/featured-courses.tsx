@@ -1,4 +1,3 @@
-// components/courses/featured-courses.tsx
 import Link from "next/link";
 import React from "react";
 
@@ -6,98 +5,141 @@ const featuredCourses = [
   {
     id: 1,
     title: "Reshape business processes with automation",
-    // description: "Optimize your business processes with this comprehensive course.",
+    category: "Business Process",
+    lessons: 12,
+    learners: 45,
+    credits: 1000,
+    rating: 4.5,
     imgSrc: "/assets/img/categoriesLandingPage/home_02_slide_1-removebg-preview 1 1.jpg",
     link: "/courses/1",
   },
   {
     id: 2,
     title: "Leveraging Social Media for Marketing",
-    // description: "Get started with data science and analytics.",
+    category: "Marketing",
+    lessons: 10,
+    learners: 40,
+    credits: 900,
+    rating: 4,
     imgSrc: "/assets/img/categoriesLandingPage/home_02_slide_1-removebg-preview 1 2.jpg",
     link: "/courses/2",
   },
   {
     id: 3,
     title: "Transforming MarTech for Enhanced Engagement",
-    // description: "Learn the fundamentals of cloud computing and its applications.",
+    category: "MarTech",
+    lessons: 12,
+    learners: 50,
+    credits: 1000,
+    rating: 4,
     imgSrc: "/assets/img/categoriesLandingPage/home_02_slide_1-removebg-preview 1 5.jpg",
     link: "/courses/3",
   },
   {
     id: 4,
-    title: "Use AI insights to improve  decision-making.",
-    // description: "Master the art of digital marketing with this hands-on course.",
+    title: "Use AI insights to improve decision-making.",
+    category: "AI Insights",
+    lessons: 15,
+    learners: 60,
+    credits: 1200,
+    rating: 5,
     imgSrc: "/assets/img/categoriesLandingPage/home_02_slide_1-removebg-preview 1 3.jpg",
     link: "/courses/4",
   },
   {
     id: 5,
     title: "Driving Growth with Impact Marketing",
-    // description: "Master the art of digital marketing with this hands-on course.",
+    category: "Growth Marketing",
+    lessons: 10,
+    learners: 35,
+    credits: 800,
+    rating: 4.5,
     imgSrc: "/assets/img/categoriesLandingPage/home_02_slide_1-removebg-preview 1 3.png",
-    link: "/courses/4",
+    link: "/courses/5",
   },
   {
     id: 6,
     title: "Creating Digital Campaigns",
-    // description: "Master the art of digital marketing with this hands-on course.",
+    category: "Campaign Management",
+    lessons: 8,
+    learners: 40,
+    credits: 700,
+    rating: 4.5,
     imgSrc: "/assets/img/categoriesLandingPage/home_02_slide_1-removebg-preview 1 4.jpg",
-    link: "/courses/4",
+    link: "/courses/6",
   },
-  
 ];
 
 const FeaturedCoursesSection = () => {
   return (
     <section className="featured-courses py-5">
       <div className="container">
-      <h2 className="display-4 mb-4">
-        <strong>
-        Featured <span style={{ color: "#008080" }}>Courses</span></strong>
-  <br />
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="151"
-    height="13"
-    viewBox="0 0 151 13"
-    fill="none"
-    style={{ textAlign: "right", marginLeft: "17rem", marginTop: "-5rem" }}
-  >
-    <path
-      fillRule="evenodd"
-      clipRule="evenodd"
-      d="M144.802 10.9143C81.4865 -4.02447 26.0413 5.35568 6.60412 10.8145C4.92012 11.2874 2.52954 12.6543 1.26461 12.0247C-0.000322044 11.3951 0.339402 9.00736 2.0234 8.53442C23.4523 2.51625 82.1684 -7.15917 148.569 8.43463C150.401 8.82352 151.042 11.1878 150.002 11.8725C148.962 12.5572 146.634 11.3032 144.802 10.9143Z"
-      fill="#008080"
-    />
-  </svg>
-</h2>
+        <h2 className="display-4 mb-4">
+          <strong>
+            Featured <span style={{ color: "#008080" }}>Courses</span>
+          </strong>
+          <br />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="151"
+            height="13"
+            viewBox="0 0 151 13"
+            fill="none"
+            style={{ textAlign: "right", marginLeft: "17rem", marginTop: "-5rem" }}
+          >
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M144.802 10.9143C81.4865 -4.02447 26.0413 5.35568 6.60412 10.8145C4.92012 11.2874 2.52954 12.6543 1.26461 12.0247C-0.000322044 11.3951 0.339402 9.00736 2.0234 8.53442C23.4523 2.51625 82.1684 -7.15917 148.569 8.43463C150.401 8.82352 151.042 11.1878 150.002 11.8725C148.962 12.5572 146.634 11.3032 144.802 10.9143Z"
+              fill="#008080"
+            />
+          </svg>
+        </h2>
 
         <div className="row">
           {featuredCourses.map((course) => (
-            <div className="col-md-3 mb-4" key={course.id}>
-              <div className="card">
+            <div className="col-md-3 mb-4 d-flex" key={course.id}>
+              <div className="card h-100">
                 <img
                   src={course.imgSrc}
                   alt={course.title}
                   className="card-img-top"
                 />
-                <div className="card-body">
+                <div className="card-body d-flex flex-column">
+                  {/* Category Section */}
+                  <div className="category mb-3" style={{ backgroundColor: "rgba(0, 128, 128, 0.20)", padding: "5px", borderRadius: "5px", marginTop: "10px", width: "90px", color : "#008080"}}>
+                    <span>category</span>
+                  </div>
+
+                  {/* Lessons and Learners Icons */}
+                  <div className="d-flex justify-content-between mb-3">
+                    <div className="d-flex">
+                      <img src="/assets/img/categoriesLandingPage/icon.svg" alt="Lesson Icon" style={{ width: '16px', height: '16px', marginRight: '5px', marginTop: "5px"}} />
+                      <span>{course.lessons} Lessons</span>
+                    </div>
+                    <div className="d-flex">
+                      <img src="/assets/img/categoriesLandingPage/user.svg" alt="Learner Icon" style={{ width: '16px', height: '16px', marginRight: '5px',  marginTop: "5px" }} />
+                      <span>{course.learners} + Learners</span>
+                    </div>
+                  </div>
+
+                  {/* Title Section */}
                   <h5 className="card-title">{course.title}</h5>
-                  <p className="card-text">{course.description}</p>
-                  {/* <button
-                    className="btn btn-light position-absolute bottom-0 start-0 m-3"
-                    style={{
-                      backgroundColor: "#00A9A5",
-                      color: "#fff",
-                      borderRadius: "10px",
-                    }}
-                  >
-                    Learn More
-                  </button> */}
-                  {/* <Link href={course.link} className="btn">
-                    Learn More
-                  </Link> */}
+
+                  {/* Credits Section with Greenish Background */}
+                  <div className="credits-section" style={{padding: "10px", borderRadius: "5px", marginTop: "10px", textAlign: "left", color:"#008080" }}>
+                    <span><strong>{course.credits} credits</strong></span>
+                  </div>
+
+                  {/* Stars Section */}
+                  <div className="d-flex align-items-center mt-2">
+                    <span className="text-warning">
+                      {"★".repeat(Math.floor(course.rating))}
+                      {"☆".repeat(5 - Math.floor(course.rating))}
+                    </span>
+                    <span className="ml-2">({course.rating})</span>
+                  </div>
+
                 </div>
               </div>
             </div>
