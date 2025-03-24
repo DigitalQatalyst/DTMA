@@ -83,9 +83,9 @@ export default function CourseItem({ course, removeTag }: IProps) {
               <i className="fa-solid fa-star"></i>
             </div>
           </div>
-          <div className="tp-course-pricing home-2">
+          {/* <div className="tp-course-pricing home-2">
             <CoursePrice discount={discount} price={price} />
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="tp-course-btn home-2">
