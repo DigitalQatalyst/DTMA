@@ -65,7 +65,7 @@ const TestimonialSection = () => {
       className="testimonials py-5"
       style={{
         background:
-          "linear-gradient(186deg, #0C7D81 -3.07%, rgba(12, 125, 129, 0.00) 95.2%)",
+          "linear-gradient(186deg, #0C7D81 -3.07%, rgb(255, 255, 255) 95.2%)",
       }}
     >
       <div className="container">

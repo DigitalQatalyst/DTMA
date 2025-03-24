@@ -154,7 +154,6 @@ const FeaturedCoursesSection = () => {
                       />
                     ))}
 
-                    {/* Render empty stars */}
                     {Array.from({ length: 5 - Math.floor(course.rating) }).map((_, index) => (
                       <img
                         key={`empty-${index}`}
@@ -168,7 +167,7 @@ const FeaturedCoursesSection = () => {
                   </div>
                   {course.id === 2 && (
                     <Link href={course.link}>
-                      <button className="btn mt-3" style={{ backgroundColor: "#008080", borderRadius: "5px" , width: "20rem", color: "#ffffff" }}>Preview Course</button>
+                      <button className="btn mt-4" style={{ backgroundColor: "#008080", borderRadius: "5px" , width: "24rem", color: "#ffffff" }}>Preview Course</button>
                     </Link>)}
 
                 </div>
