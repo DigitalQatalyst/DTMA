@@ -17227,6 +17227,7 @@ span.cat-lgreen {
 }
 .tp-course-btn.home-2 a {
   background-color: var(--Primary, #008080) !important;
+  border-radius: 10px;
 }
 /* .tp-course-btn.home-2 a:hover {
   background-color: var(--tp-heading-primary);
@@ -18485,7 +18486,7 @@ a .course-sky {
   font-weight: 500;
   padding: 9px 34px;
   border-radius: 100px;
-  color: var(--tp-dashboard-secondary);
+  color: var(--P-500, #008080);
   box-shadow: 0 1px 2px 0 rgba(3, 11, 30, 0.14);
   background: linear-gradient(180deg, #fff 0%, #f9f6ff 100%);
   transition: none;
