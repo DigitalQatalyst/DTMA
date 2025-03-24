@@ -39,17 +39,10 @@
   }
   
 /* Inside main.scss */
-.nav-item .nav-link.active {
-    background-color: var(--P-500, #008080) !important; /* Set background color */
-    border-color: var(--P-500, #008080) !important; /* Optional: Set border color to match background */
-  }
-  
-  .nav-item .nav-link {
-    background-color: transparent; /* Default background color */
-  }
-  
-  .nav-item .nav-link.active:hover {
-    background-color: var(--P-500, #008080) !important; /* Optional: Background color on hover */
-  }
+// .custom-tab-button {
+//   background-color: #008080 !important;
+//   color: #fff !important;
+// }
+
   
   

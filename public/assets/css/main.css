@@ -4927,29 +4927,29 @@ body .ui-tooltip {
   height: 16px;
 }
 
-.ui-icon, .ui-widget-content .ui-icon, .ui-widget-header .ui-icon {
+/* .ui-icon, .ui-widget-content .ui-icon, .ui-widget-header .ui-icon {
   background-image: url("images/ui-icons_444444_256x240.png");
-}
+} */
 
-.ui-button:focus .ui-icon, .ui-button:hover .ui-icon, .ui-state-focus .ui-icon, .ui-state-hover .ui-icon {
+/* .ui-button:focus .ui-icon, .ui-button:hover .ui-icon, .ui-state-focus .ui-icon, .ui-state-hover .ui-icon {
   background-image: url("images/ui-icons_555555_256x240.png");
-}
+} */
 
-.ui-button:active .ui-icon, .ui-state-active .ui-icon {
+/* .ui-button:active .ui-icon, .ui-state-active .ui-icon {
   background-image: url("images/ui-icons_ffffff_256x240.png");
-}
+} */
 
-.ui-button .ui-state-highlight.ui-icon, .ui-state-highlight .ui-icon {
+/* .ui-button .ui-state-highlight.ui-icon, .ui-state-highlight .ui-icon {
   background-image: url("images/ui-icons_777620_256x240.png");
-}
+} */
 
-.ui-state-error .ui-icon, .ui-state-error-text .ui-icon {
+/* .ui-state-error .ui-icon, .ui-state-error-text .ui-icon {
   background-image: url("images/ui-icons_cc0000_256x240.png");
-}
+} */
 
-.ui-button .ui-icon {
+/* .ui-button .ui-icon {
   background-image: url("images/ui-icons_777777_256x240.png");
-}
+} */
 
 .ui-icon-blank {
   background-position: 16px 16px;
@@ -17226,11 +17226,11 @@ span.cat-lgreen {
   background-color: var(--tp-heading-2);
 }
 .tp-course-btn.home-2 a {
-  background-color: var(--tp-theme-secondary);
+  background-color: var(--Primary, #008080) !important;
 }
-.tp-course-btn.home-2 a:hover {
+/* .tp-course-btn.home-2 a:hover {
   background-color: var(--tp-heading-primary);
-}
+} */
 .tp-course-tab .nav-link {
   position: relative;
   color: #A0A2A4;
@@ -18425,9 +18425,11 @@ a .course-sky {
   transform: translateY(-3px);
 }
 .tp-course-filter-top-tab ul .nav-item .nav-link.active {
-  border-radius: 100px;
-  box-shadow: 0 1px 2px 0 rgba(3, 11, 30, 0.14);
-  background: linear-gradient(180deg, #fff 0%, #f9f6ff 100%);
+  border-radius: 10px;
+  /* background-color: #008080;  */
+  background: linear-gradient(180deg, #008080 0%, #006666 100%) !important;
+  color: #FFF !important; ; 
+  
 }
 .tp-course-filter-top-right-search {
   position: relative;
