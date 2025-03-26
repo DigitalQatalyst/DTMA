@@ -1,5 +1,6 @@
+"use client"
 import Link from "next/link";
-import React from "react";
+import {useState} from "react";
 
 const featuredCourses = [
   {
@@ -71,11 +72,14 @@ const featuredCourses = [
 ];
 
 const FeaturedCoursesSection = () => {
+  const [hoveredCard, setHoveredCard] = useState(null); // Track hovered card
+
   return (
     <section className="featured-courses py-5">
       <div className="container">
       <div className="container">
   <div className="d-flex justify-content-between align-items-center mb-4">
+
     <h2 className="display-4">
       <strong>
         Featured <span style={{ color: "#008080" }}>Courses</span>
@@ -87,7 +91,7 @@ const FeaturedCoursesSection = () => {
         height="13"
         viewBox="0 0 151 13"
         fill="none"
-        style={{ textAlign: "right", marginTop: "-5rem" }}
+        style={{ textAlign: "right", marginTop: "-5rem", marginLeft: "17rem" }}
       >
         <path
           fillRule="evenodd"
@@ -97,7 +101,7 @@ const FeaturedCoursesSection = () => {
         />
       </svg>
     </h2>
-    <div className="d-flex">
+    <div className="d-flex" style={{marginTop:"-5rem"}}>
       <span className="mr-5" style={{ cursor: 'pointer', fontSize: '1.25rem', color:"#000000"}}>New</span>  {/* Increased font size and spacing */}
       <span className="mr-5 ml-5" style={{ color: "#008080", cursor: 'pointer', fontSize: '1.25rem' }}>Popular</span> {/* Active span */}
       <span className="ml-5" style={{ cursor: 'pointer', fontSize: '1.25rem', color:"#000000"}}>View All</span>
@@ -108,20 +112,33 @@ const FeaturedCoursesSection = () => {
 
         <div className="row">
           {featuredCourses.map((course) => (
-            <div className="col-md-4 mb-4 d-flex" key={course.id}>
-              <div className="card h-100" style={{ border: "none", boxShadow: "none" }}>
+            <div className="col-md-4 mb-4 d-flex" key={course.id}
+            onMouseEnter={() => setHoveredCard(course.id)}
+            onMouseLeave={() => setHoveredCard(null)}>
+              <div className="card h-100" style={{ border: "none", boxShadow: "none",
+                // transform: hoveredCard === course.id ? "translateY(-33%)" : "none",
+                // transition: "transform 0.3s ease",
+               }}>
                 <img
                   src={course.imgSrc}
                   alt={course.title}
                   className="card-img-top"
+                  // style={{
+                  //   transition: "transform 0.3s ease",
+                  //   transform: hoveredCard === course.id ? "translateY(-33%)" : "none", // Move image up on hover
+                  // }}
+                  
                 />
-                <div className="card-body d-flex flex-column" style={{ paddingLeft: "0" }}>
-                  {/* Category Section */}
+                <div className="card-body d-flex flex-column" style={{ paddingLeft: "0", 
+                backgroundColor: hoveredCard === course.id ? "#fff" : "transparent",
+                  transform: hoveredCard === course.id ? "translateY(-25%)" : "none", // Slide content up
+                  transition: "transform 0.3s ease, background-color 0.3s ease", // Smooth transition for sliding
+                 }}>
+               
                   <div className="category mb-3" style={{ backgroundColor: "rgba(0, 128, 128, 0.20)", padding: "5px", borderRadius: "3px", marginTop: "10px", width: "75px", color : "#008080"}}>
                     <span><strong>Category</strong></span>
                   </div>
 
-                  {/* Lessons and Learners Icons */}
                   <div className="d-flex align-items-center mb-3">
                     <div className="d-flex mr-5">
                       <img src="/assets/img/categoriesLandingPage/icon.svg" alt="Lesson Icon" style={{ width: '16px', height: '16px', marginRight: '5px', marginTop: "5px"}} />
@@ -134,7 +151,11 @@ const FeaturedCoursesSection = () => {
                   </div>
 
                   {/* Title Section */}
-                  <h5 className="card-title">{course.title}</h5>
+                  <h5 className="card-title" style={{
+                    textDecoration: hoveredCard === course.id ? "underline" : "none", // Underline on hover
+                    cursor: "pointer",
+                    transition: "text-decoration 0.3s ease", // Smooth transition for underline
+                  }}>{course.title}</h5>
 
                   {/* Credits Section with Greenish Background */}
                   <div className="credits-section" style={{padding: "10px", borderRadius: "5px", marginTop: "10px", textAlign: "left", color:"#008080" }}>

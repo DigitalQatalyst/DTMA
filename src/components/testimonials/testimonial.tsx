@@ -63,16 +63,12 @@ const TestimonialSection = () => {
   return (
     <section
       className="testimonials py-5"
-      style={{
-        background:
-          "linear-gradient(186deg, #0C7D81 -3.07%, rgb(255, 255, 255) 95.2%)",
-      }}
     >
       <div className="container">
-        <p className="text-center" style={{ marginTop: "-2rem", color: "white" }}>
+        <p className="text-center" style={{ marginTop: "-2rem"}}>
           Testimonials
         </p>
-        <h2 className="display-4 mb-0 text-center text-light">
+        <h2 className="display-4 mb-0 text-center">
           <strong>
             What Learners <span style={{ color: "#008080" }}>Say</span> About DTMA
           </strong>
@@ -80,7 +76,7 @@ const TestimonialSection = () => {
           <img
             src="/assets/img/icon/line.svg"
             alt="line Icon"
-            style={{ marginLeft: "-8rem", marginTop: "-4rem" }}
+            style={{ marginLeft: "2rem", marginTop: "-4rem" }}
           />
         </h2>
 
@@ -178,15 +174,15 @@ const TestimonialSection = () => {
             </div>
             <div className="partner-logo" style={{marginRight: "5rem"}}>
               <img
-                src="/assets/img/testimonial/logo_04.svg"
-                alt="Academics"
+                src="/assets/img/testimonial/logo_01.png"
+                alt="StudentChat"
                 style={{ maxHeight: "60px", width: "auto" }}
               />
             </div>
             <div className="partner-logo" style={{marginRight: "5rem"}}>
               <img
-                src="/assets/img/testimonial/logo_01.png"
-                alt="StudentChat"
+                src="/assets/img/testimonial/logo_04.svg"
+                alt="Academics"
                 style={{ maxHeight: "60px", width: "auto" }}
               />
             </div>
