@@ -64,11 +64,14 @@ export default function CourseItem({ course, removeTag }: IProps) {
             {" "}{students} Learners
           </span>
         </div>
-        <h4 className="tp-course-title">
+        <h4 className="tp-course-titles">
           <Link href={`/course-details/${id}`}
             dangerouslySetInnerHTML={{ __html: removeTag ? title.replace(/(<([^>]+)>)/gi, "") : title }}
           ></Link>
         </h4>
+
+        <h5 className="credits-line">1000 credits</h5>
+
         <div className="tp-course-rating d-flex align-items-end justify-content-between">
           <div className="tp-course-rating-star">
             <p>
@@ -81,6 +84,7 @@ export default function CourseItem({ course, removeTag }: IProps) {
               <i className="fa-solid fa-star"></i>
               <i className="fa-solid fa-star"></i>
               <i className="fa-solid fa-star"></i>
+              
             </div>
           </div>
           {/* <div className="tp-course-pricing home-2">
