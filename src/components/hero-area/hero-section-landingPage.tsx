@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="hero-section position-relative" style={{marginBottom: "7rem"}}>
+    <section className="hero-section position-relative" style={{marginBottom: "17rem"}}>
       {/* Hero Background */}
       <div className="hero-bg position-absolute w-100 h-100">
         <img
@@ -48,8 +48,8 @@ const HeroSection = () => {
             color: "#fff",
             borderRadius: "10px",
             right: "0px",
-            marginTop: "6.5rem",
-            marginRight: "-5.7rem"
+            marginTop: "16.5rem",
+            marginRight: "-8.6rem"
           }}
         >
           <img src="assets/img/icon/frame.svg" alt="Robot Icon" className="ms-2" style={{ width: "20px", height: "20px" }} />
