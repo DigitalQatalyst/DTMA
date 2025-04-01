@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { LessonsSvg, UserSvgTwo } from "../../svg";
+import { LessonsSvg, UserSvgTwo, star } from "../../svg";
 import { ICourseDT } from "@/types/course-d-t";
 import Link from "next/link";
 import CoursePrice from "../course-price";
@@ -17,7 +17,8 @@ export default function CourseItem({ course, removeTag }: IProps) {
     author_name,
     author_img,
     title,
-    discount,
+    // discount,
+    credits,
     lessons,
     students,
     avg_rating,
@@ -34,9 +35,9 @@ export default function CourseItem({ course, removeTag }: IProps) {
           )}
           {author_name}
         </span>
-        {discount && discount > 0 ? (
+        {/* {discount && discount > 0 ? (
           <span className="discount">-{discount}% </span>
-        ) : null}
+        ) : null} */}
       </div>
       <div className="tp-course-thumb">
         <Link href={`/course-details/${id}`}>
@@ -60,7 +61,7 @@ export default function CourseItem({ course, removeTag }: IProps) {
           </span>
           <span>
             <span><UserSvgTwo /></span>
-            {" "}{students} Student
+            {" "}{students} + Learners
           </span>
         </div>
         <h4 className="tp-course-title">
@@ -68,23 +69,24 @@ export default function CourseItem({ course, removeTag }: IProps) {
             dangerouslySetInnerHTML={{ __html: removeTag ? title.replace(/(<([^>]+)>)/gi, "") : title }}
           ></Link>
         </h4>
+        <div className="tp-course-pricing home-2">
+            <CoursePrice credits={credits} />
+          </div>
         <div className="tp-course-rating d-flex align-items-end justify-content-between">
           <div className="tp-course-rating-star">
             <p>
-              {avg_rating}
-              <span> /{total_rating}</span>
+              {/* {avg_rating} */}
+              {/* <span> /{total_rating}</span> */}
             </p>
             <div className="tp-course-rating-icon">
               <i className="fa-solid fa-star"></i>
               <i className="fa-solid fa-star"></i>
               <i className="fa-solid fa-star"></i>
               <i className="fa-solid fa-star"></i>
-              <i className="fa-solid fa-star"></i>
+              <i className="fa-gray fa-star"></i> <span>(12)</span>
             </div>
           </div>
-          <div className="tp-course-pricing home-2">
-            <CoursePrice discount={discount} price={price} />
-          </div>
+          
         </div>
       </div>
       <div className="tp-course-btn home-2">

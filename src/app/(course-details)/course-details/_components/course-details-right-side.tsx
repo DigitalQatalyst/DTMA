@@ -24,11 +24,12 @@ export default function CourseDetailsRightSide({ course }: IProps) {
          </div>
          <div className="tp-course-details-2-widget-content">
             <div className="tp-course-details-2-widget-price">
-               <CoursePrice discount={discount} price={price} />
+               {/* <CoursePrice discount={discount} price={price} /> */}
+               <span style={{ color: "var(--tp-dashboard-primary)" }}> 1000 credits</span>
             </div>
             <div className="tp-course-details-2-widget-btn">
-               <Link className="active" href="/cart">Add to Cart</Link>
-               <Link href="/course-with-filter">Buy Course</Link>
+               <Link href="/cart">Add to Cart</Link>
+               <Link className="active"  href="/course-with-filter">Buy Course</Link>
                <p>30-Day Money-Back Guarantee</p>
             </div>
 
@@ -38,7 +39,7 @@ export default function CourseDetailsRightSide({ course }: IProps) {
                <div className="tp-course-details-2-widget-list-item-wrapper">
 
                   <div className="tp-course-details-2-widget-list-item d-flex align-items-center justify-content-between">
-                     <span> <LectureSvg /> Lectures</span>
+                     <span> <LectureSvg /> Chapters</span>
                      <span>40</span>
                   </div>
                   <div className="tp-course-details-2-widget-list-item d-flex align-items-center justify-content-between">
@@ -46,7 +47,7 @@ export default function CourseDetailsRightSide({ course }: IProps) {
                      <span>4h 50m</span>
                   </div>
                   <div className="tp-course-details-2-widget-list-item d-flex align-items-center justify-content-between">
-                     <span> <SkillLevelSvg /> Skill Level</span>
+                     <span> <SkillLevelSvg /> Resources</span>
                      <span>Beginner</span>
                   </div>
                   <div className="tp-course-details-2-widget-list-item d-flex align-items-center justify-content-between">
@@ -54,16 +55,16 @@ export default function CourseDetailsRightSide({ course }: IProps) {
                      <span>{course.language}</span>
                   </div>
                   <div className="tp-course-details-2-widget-list-item d-flex align-items-center justify-content-between">
-                     <span> <DeadLineSvg /> Deadline</span>
+                     <span> <DeadLineSvg /> Access</span>
                      <span>30 Nov 2024</span>
                   </div>
                   <div className="tp-course-details-2-widget-list-item d-flex align-items-center justify-content-between">
-                     <span> <CertificateSvg /> Certificate</span>
+                     <span> <CertificateSvg /> Badge</span>
                      <span>Yes</span>
                   </div>
 
                   <div className="tp-course-details-2-widget-share d-flex align-items-center justify-content-between">
-                     <a className="share" href="#"><span><ShareSvg clr="#5169F1" /></span> Share this course</a>
+                     <a className="share" href="#"><span><ShareSvg clr="#008080" /></span> Share this course</a>
                      <a className="coupon" href="#">Apply coupon</a>
                   </div>
                   <div className="tp-course-details-2-widget-search p-relative">
