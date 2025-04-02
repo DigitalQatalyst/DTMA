@@ -2,7 +2,7 @@ import { ICourseDT } from "@/types/course-d-t";
 import CourseDetailsRightSide from "../_components/course-details-right-side";
 import CourseDetailsInfo from "@/components/course/details/course-details-info";
 import CourseDetailsCurriculum from "@/components/course/details/course-details-curriculum";
-import CourseDetailsInstructor from "@/components/course/details/course-details-instructor";
+// import CourseDetailsInstructor from "@/components/course/details/course-details-instructor";
 import CourseDetailsRatingReviews from "@/components/course/details/course-details-rating-reviews";
 import CourseDetailsFeaturedReviews from "@/components/course/details/course-details-featured-reviews";
 import CourseDetailsReviewForm from "@/components/course/details/course-details-review-form";

@@ -1,5 +1,4 @@
 import BackToTop from "@/components/back-to-top";
-import FooterSeven from "@/components/footer/footer-seven";
 // import HeaderTwo from "@/components/header/header-two";
 import MainProvider from "@/components/provider/main-provider";
 import Navbar from "@/components/header/navbar/dtma-navbar";
@@ -21,7 +20,6 @@ export default function Layout({children}: {children:React.ReactNode}) {
       {/* footer area start */}
       <PostFooter/>
       <Footer/>
-
       {/* footer area end */}
 
       {/* back to top */}
