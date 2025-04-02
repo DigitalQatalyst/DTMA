@@ -1,3 +1,4 @@
+
 import React from "react";
 import Image from "next/image";
 import { LessonsSvg, UserSvgTwo, star } from "../../svg";
@@ -83,7 +84,7 @@ export default function CourseItem({ course, removeTag }: IProps) {
               <i className="fa-solid fa-star"></i>
               <i className="fa-solid fa-star"></i>
               <i className="fa-solid fa-star"></i>
-              <i className="fa-gray fa-star"></i> <span>(12)</span>
+              <i className="fa-gray-outline fa-star"></i> <span>(12)</span>
             </div>
           </div>
           
