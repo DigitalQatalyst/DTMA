@@ -30,8 +30,7 @@ export default function CourseDetailsInfo() {
           {/* <li>Understand the evolution of economic systems.</li> */}
     
         </ul>
-        <p>With this course, you also have access to a whole lot of resources not only for reference but <br/>
-        also free media like aerial video shots, background music, fonts, and more.</p>
+        <p>With this course, you also have access to a whole lot of resources not only for reference but also free media like aerial video shots, background music, fonts, and more.</p>
       </div>
     </div>
   )

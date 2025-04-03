@@ -1,4 +1,5 @@
 import { ICourseDT } from "@/types/course-d-t";
+import './courseDetails.css';
 import CourseDetailsRightSide from "../_components/course-details-right-side";
 import CourseDetailsInfo from "@/components/course/details/course-details-info";
 import CourseDetailsCurriculum from "@/components/course/details/course-details-curriculum";
@@ -7,6 +8,7 @@ import CourseDetailsRatingReviews from "@/components/course/details/course-detai
 import CourseDetailsFeaturedReviews from "@/components/course/details/course-details-featured-reviews";
 import CourseDetailsReviewForm from "@/components/course/details/course-details-review-form";
 import CourseDetailsNav from "@/components/course/details/course-details-nav";
+import CourseResources from "@/components/resources_courseDetails/resources";
 
 type IProps = {
    course: ICourseDT;
@@ -37,6 +39,11 @@ export default function CourseDetailsArea({ course }: IProps) {
                         {/* <div id="instructors" className="pt-100">
                            <h4 className="tp-course-details-2-main-title">Your Instructors</h4>
                            <CourseDetailsInstructor />
+                        </div> */}
+
+                        {/* <div className="tp-course-detail..">
+                           <span>Resources</span>
+                           <CourseResources />
                         </div> */}
 
                         <div id="reviews">
