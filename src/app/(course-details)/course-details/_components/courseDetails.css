@@ -59661,6 +59661,55 @@
     color: var(--tp-common-white);
     background-color: var(--tp-dashboard-primary);
   }
+  .resources-container {
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.resources-button-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.resources-button {
+  padding: 8px 16px;
+  margin-right: 10px;
+  border: 2px solid #008080;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  color: #008080;
+}
+
+.resources-button:hover {
+  background-color: #008080;
+  color: white
+}
+
+.resources-button.active {
+  background-color: #008080;
+  color: white;
+}
+
+.resources-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.resources-table-header {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.resources-table-row:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.resources-table-data {
+  padding: 10px;
+  color: #828282;
+}
   
   @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (max-width: 767px) {
     .tp-course-details-2-main-inner {
