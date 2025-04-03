@@ -15,7 +15,7 @@ export default function CourseDetailsNav() {
                     <a href="#curriculum">Curriculum</a>
                 </li>
                 <li className={activeSection === "instructors" ? "current" : ""}>
-                    <a href="#instructors">Instructors</a>
+                    <a href="#instructors">Resources</a>
                 </li>
                 <li className={activeSection === "reviews" ? "current" : ""}>
                     <a href="#reviews">Reviews</a>
