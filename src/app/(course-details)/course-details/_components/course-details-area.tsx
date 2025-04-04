@@ -42,7 +42,7 @@ export default function CourseDetailsArea({ course }: IProps) {
                         </div> */}
 
 
-                        <div id="reviews">
+                        <div id="resources">
                            <h4 className="tp-course-details-2-main-title">Resources</h4>
                            <CourseResources />
                         </div>
