@@ -49,10 +49,10 @@ const CartMiniSidebar = ({ openSidebar, onShowSidebar }: IProps) => {
                     <h5 className="cartmini__title home-shop">
                       <a href="#">{removeTagInText(item.title)}</a>
                     </h5>
-                    <div className="cartmini__price-wrapper">
+                    {/* <div className="cartmini__price-wrapper">
                       <span className="cartmini__price home-shop">${item.price.toFixed(2)}</span>
                       <span className="cartmini__quantity">{" "}x{1}</span>
-                    </div>
+                    </div> */}
                   </div>
                   <a className="cartmini__del pointer">
                     <i className="fa-regular fa-xmark"></i>
