@@ -11,34 +11,34 @@ type IProps = {
 export default function CourseDetailsBreadcrumb({ course }: IProps) {
    return (
       <section className="tp-breadcrumb__area pt-25 pb-55 p-relative z-index-1 fix">
-         <div className="tp-breadcrumb__bg" style={{ backgroundImage: "url(/assets/img/breadcrumb/breadcrumb-bg-2.jpg)" }}></div>
+         <div className="tp-breadcrumb__bg" style={{backgroundColor: "var(--Linear-teal, rgba(0, 128, 128, 0.20))" }}></div>
          <div className="container">
             <div className="row align-items-center">
                <div className="col-sm-12">
                   <div className="tp-breadcrumb__content">
-                     <div className="tp-breadcrumb__list course-details mb-70">
+                     {/* <div className="tp-breadcrumb__list course-details mb-70">
                         <span><Link href="/"><HomeSvg/></Link></span>
                         <span>Courses  /  Design  /  {removeTagInText(course.title)}</span>
-                     </div>
+                     </div> */}
 
                      <div className="tp-course-details-2-header">
-                        <span className="tp-course-details-2-category">{course.category}</span>
-                        <h3 className="tp-course-details-2-title">Bigener Adobe Illustrator for <br /> Graphic Design</h3>
+                        {/* <span className="tp-course-details-2-category">{course.category}</span> */}
+                        <h3 className="tp-course-details-2-title">Revolutionizing Procurement with <br /> Digital Tools</h3>
                         <div className="tp-course-details-2-meta-wrapper d-flex align-items-center flex-wrap">
                            <div className="tp-course-details-2-meta ">
                               <div className="tp-course-details-2-author d-flex align-items-center">
-                                 <div className="tp-course-details-2-author-avater">
+                                 {/* <div className="tp-course-details-2-author-avater">
                                     <Image src={course.author_img ? course.author_img : author_img} alt="Salim Rana" width={50} height={50} />
-                                 </div>
-                                 <div className="tp-course-details-2-author-content">
+                                 </div> */}
+                                 {/* <div className="tp-course-details-2-author-content">
                                     <span className="tp-course-details-2-author-designation">Teacher</span>
                                     <h3 className="tp-course-details-2-meta-title"><a href="#">Maria Fisce</a></h3>
-                                 </div>
+                                 </div> */}
                               </div>
                            </div>
                            <div className="tp-course-details-2-meta">
                               <span className="tp-course-details-2-meta-subtitle">Category</span>
-                              <h3 className="tp-course-details-2-meta-title">Data Science</h3>
+                              <h3 className="tp-course-details-2-meta-title">Digital Marcomm</h3>
                            </div>
                            <div className="tp-course-details-2-meta">
                               <span className="tp-course-details-2-meta-subtitle">Last updated</span>
