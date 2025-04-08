@@ -1,5 +1,3 @@
-=
-
 const Footer = () => {
   return (
 <section className="footer-section py-5" style={{ backgroundColor: "#f8f9fa" }}>
