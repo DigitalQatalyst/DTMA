@@ -6,7 +6,7 @@ export type ICourseDT = {
     thumbnail: string;
     category: string;
     price: number;
-    credits: number
+    // credits: number
     avg_rating: number;
     discount: number;
     lessons: number;
