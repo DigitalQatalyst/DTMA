@@ -15,7 +15,7 @@ type IProps = {
   transparent?: boolean;
 }
 
-export default function HeaderMain({ inner = false, transparent }: IProps) {
+export default function HeaderTwo({ inner = false, transparent }: IProps) {
   return (
     <>
       <header className="header-area p-relative">
