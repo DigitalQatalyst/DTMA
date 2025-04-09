@@ -27,7 +27,7 @@ export default function CourseDetailsPage({ params }: Props) {
             <main>
 
                 {/* breadcrumb area start */}
-                <CourseDetailsBreadcrumb course={course} />
+                {/* <CourseDetailsBreadcrumb course={course} /> */}
                 {/* breadcrumb area end */}
 
                 {/* course details area */}
