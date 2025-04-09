@@ -5,9 +5,9 @@ import { ICourseDT } from "@/types/course-d-t";
 // import { removeTagInText } from "@/utils";
 // import author_img from "@/assets/img/course/course-5-teacher-1.png";
 
-type IProps = {
-   course: ICourseDT
-}
+// type IProps = {
+//    course: ICourseDT
+// }
 export default function CourseDetailsBreadcrumb() {
    return (
       <section className="tp-breadcrumb__area pt-25 pb-55 p-relative z-index-1 fix">
