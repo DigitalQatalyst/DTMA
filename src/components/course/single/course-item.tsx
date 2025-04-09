@@ -3,7 +3,7 @@ import Image from "next/image";
 import { LessonsSvg, UserSvgTwo } from "../../svg";
 import { ICourseDT } from "@/types/course-d-t";
 import Link from "next/link";
-import CoursePrice from "../course-price";
+// import CoursePrice from "../course-price";
 import '@/assets/css/main.css';
 
 type IProps = {
@@ -15,16 +15,16 @@ export default function CourseItem({ course, removeTag }: IProps) {
   const {
     id,
     thumbnail,
-    author_name,
-    author_img,
+    // author_name,
+    // author_img,
     title,
-    discount,
+    // discount,
     lessons,
     students,
     avg_rating,
     total_rating,
     category,
-    price,
+    // price,
   } = course || {};
   return (
     <div className="tp-course-item p-relative fix mb-30">

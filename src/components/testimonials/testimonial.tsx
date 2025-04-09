@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React, { useState } from "react";
 
@@ -17,7 +17,7 @@ const testimonials = [
     name: "John Doe",
     position: "CEO, TechCorp",
     quote:
-      "DTMA helped transform our team with cutting-edge skills that are essential in today's digital world.",
+      "DTMA helped transform our team with cutting-edge skills that are essential in today&apos;s digital world.",
     imgSrc: "/assets/img/testimonial2.jpg",
     rating: 4,
   },
@@ -32,7 +32,6 @@ const testimonials = [
   },
 ];
 
-
 const TestimonialSection = () => {
   const [activeTestimonialIndex, setActiveTestimonialIndex] = useState(0);
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -40,11 +39,11 @@ const TestimonialSection = () => {
   const handleEllipsisClick = (index: number): void => {
     setActiveTestimonialIndex(index); // Set active testimonial index
   };
-  const handleMouseEnter = (index: number): void => {
-    setHoveredIndex(index); // Set hovered index when mouse enters a dot
-  };
+  // const handleMouseEnter = (index: number): void => {
+  //   setHoveredIndex(index); // Set hovered index when mouse enters a dot
+  // };
 
-  const handleMouseLeave = ():void  => {
+  const handleMouseLeave = (): void => {
     setHoveredIndex(null); // Reset hover effect when mouse leaves a dot
   };
   const wrapQuote = (quote: string) => {
@@ -61,11 +60,9 @@ const TestimonialSection = () => {
   };
 
   return (
-    <section
-      className="testimonials py-5"
-    >
+    <section className="testimonials py-5">
       <div className="container">
-        <p className="text-center" style={{ marginTop: "-2rem"}}>
+        <p className="text-center" style={{ marginTop: "-2rem" }}>
           Testimonials
         </p>
         <h2 className="display-4 mb-0 text-center">
@@ -96,9 +93,9 @@ const TestimonialSection = () => {
                 className="testimonial-card p-5 text-center text-white rounded"
                 style={{ minWidth: "100%" }} // Ensure each testimonial takes full width
               >
-                <h5 style={{marginTop: "-4rem",}}>{testimonial.name}</h5>
+                <h5 style={{ marginTop: "-4rem" }}>{testimonial.name}</h5>
                 <p className="text-muted">{testimonial.position}</p>
-                <div className="d-flex justify-content-center" style={{marginBottom: "4rem"}}>
+                <div className="d-flex justify-content-center" style={{ marginBottom: "4rem" }}>
                   {Array.from({ length: 5 }).map((_, index) => (
                     <img
                       key={`star-${index}`}
@@ -108,21 +105,20 @@ const TestimonialSection = () => {
                     />
                   ))}
                 </div>
-                <p className="testimonial-quote" style={{color: "#636366", fontSize: "22px", marginBottom: ".7rem"}}>
+                <p className="testimonial-quote" style={{ color: "#636366", fontSize: "22px", marginBottom: ".7rem" }}>
                   {wrapQuote(testimonial.quote)}
                 </p>
-
               </div>
             ))}
           </div>
 
           {/* Ellipses for Navigation */}
           <div className="text-center">
-          {testimonials.map((_, index) => (
+            {testimonials.map((_, index) => (
               <span
                 key={index}
                 onClick={() => handleEllipsisClick(index)} // Click event to switch testimonials
-                onMouseEnter={() => handleMouseEnter(index)} // Mouse enter to apply hover effect
+                // onMouseEnter={() => handleMouseEnter(index)} // Mouse enter to apply hover effect
                 onMouseLeave={handleMouseLeave} // Mouse leave to reset hover effect
                 className={`dot ${activeTestimonialIndex === index ? "active" : ""}`}
                 style={{
@@ -131,16 +127,15 @@ const TestimonialSection = () => {
                   height: "10px",
                   borderRadius: "50%",
                   backgroundColor:
-                  activeTestimonialIndex === index || hoveredIndex === index
-                    ? "#008080"  // Active or hovered dot color (green)
-                    : "#ccc",    // Non-active dots (gray)
-                margin: "0 5px",
-                cursor: "pointer",
-                transition: "background-color 0.3s ease, transform 0.3s ease", // Smooth transition for color and size
-                transform: `scale(${1 - Math.abs(activeTestimonialIndex - index) * 0.2})`, // Smaller as it moves away from active
-                opacity: activeTestimonialIndex === index ? 1 : 0.5, // Make non-active dots less opaque
-              }}
-                
+                    activeTestimonialIndex === index || hoveredIndex === index
+                      ? "#008080"  // Active or hovered dot color (green)
+                      : "#ccc",    // Non-active dots (gray)
+                  margin: "0 5px",
+                  cursor: "pointer",
+                  transition: "background-color 0.3s ease, transform 0.3s ease", // Smooth transition for color and size
+                  transform: `scale(${1 - Math.abs(activeTestimonialIndex - index) * 0.2})`, // Smaller as it moves away from active
+                  opacity: activeTestimonialIndex === index ? 1 : 0.5, // Make non-active dots less opaque
+                }}
               ></span>
             ))}
           </div>
@@ -148,51 +143,49 @@ const TestimonialSection = () => {
       </div>
 
       <section className="partner-section py-5">
-      <div className="container">
-        <div className="row align-items-center">
-          <div className="col-md-6">
-            <h3 className="display-5">
-              Who will <br/> You Learn <span style={{ color: "#008080" }}>With?</span>
-            </h3>
-            <p>
-              You can list your partners or instructor's <br /> brands here to show off your site’s partners.
-            </p>
-            <button
-              className="btn"
-              style={{ backgroundColor: "#008080", color: "#ffffff", borderRadius: "30px" }}
-            >
-              View All Partners
-            </button>
-          </div>
-          <div className="col-md-6 d-flex" style={{marginTop: "10rem"}}>
-            <div className="partner-logo" style={{marginRight: "5rem"}}>
-              <img
-                src="/assets/img/testimonial/logo_02.svg"
-                alt="Penwriter"
-                style={{ maxHeight: "60px", width: "auto" }}
-              />
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-md-6">
+              <h3 className="display-5">
+                Who will <br /> You Learn <span style={{ color: "#008080" }}>With?</span>
+              </h3>
+              <p>
+                You can list your partners or instructor&apos;s <br /> brands here to show off your site’s partners.
+              </p>
+              <button
+                className="btn"
+                style={{ backgroundColor: "#008080", color: "#ffffff", borderRadius: "30px" }}
+              >
+                View All Partners
+              </button>
             </div>
-            <div className="partner-logo" style={{marginRight: "5rem"}}>
-              <img
-                src="/assets/img/testimonial/logo_01.png"
-                alt="StudentChat"
-                style={{ maxHeight: "60px", width: "auto" }}
-              />
-            </div>
-            <div className="partner-logo" style={{marginRight: "5rem"}}>
-              <img
-                src="/assets/img/testimonial/logo_04.svg"
-                alt="Academics"
-                style={{ maxHeight: "60px", width: "auto" }}
-              />
+            <div className="col-md-6 d-flex" style={{ marginTop: "10rem" }}>
+              <div className="partner-logo" style={{ marginRight: "5rem" }}>
+                <img
+                  src="/assets/img/testimonial/logo_02.svg"
+                  alt="Penwriter"
+                  style={{ maxHeight: "60px", width: "auto" }}
+                />
+              </div>
+              <div className="partner-logo" style={{ marginRight: "5rem" }}>
+                <img
+                  src="/assets/img/testimonial/logo_01.png"
+                  alt="StudentChat"
+                  style={{ maxHeight: "60px", width: "auto" }}
+                />
+              </div>
+              <div className="partner-logo" style={{ marginRight: "5rem" }}>
+                <img
+                  src="/assets/img/testimonial/logo_04.svg"
+                  alt="Academics"
+                  style={{ maxHeight: "60px", width: "auto" }}
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </section>
-
-    </section>
-    
   );
 };
 

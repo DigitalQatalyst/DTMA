@@ -1,7 +1,7 @@
 import FilterCategory from "@/components/course/filter/filter-category";
-import FilterInstructor from "@/components/course/filter/filter-instructor";
-import FilterLanguage from "@/components/course/filter/filter-language";
-import FilterPrice from "@/components/course/filter/filter-price";
+// import FilterInstructor from "@/components/course/filter/filter-instructor";
+// import FilterLanguage from "@/components/course/filter/filter-language";
+// import FilterPrice from "@/components/course/filter/filter-price";
 import FilterSortBy from "@/components/course/filter/filter-sort-by";
 
 

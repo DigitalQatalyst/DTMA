@@ -1,5 +1,5 @@
-import { formatPrice } from "@/lib/format-price";
-import { discountPrice } from "@/utils";
+// import { formatPrice } from "@/lib/format-price";
+// import { discountPrice } from "@/utils";
 
 type IProps = {
     // discount: number;
