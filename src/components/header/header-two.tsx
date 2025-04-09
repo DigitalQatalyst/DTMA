@@ -2,8 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import SearchButton from "./button/search-button";
-// import NavbarMenusTwo from "./navbar/navbar-menus-2";
-import HeaderMain from "./navbar/dtma-navbar";
+import NavbarMenusTwo from "./navbar/navbar-menus-2";
 import logo from "@/assets/img/logo/logo-black.png";
 import ProfileDropdown from "./header-profile/profile-dropdown";
 import HeaderCategoryArea from "./header-category/header-category-area";
@@ -36,8 +35,7 @@ export default function HeaderTwo({ inner = false, transparent }: IProps) {
               </div>
               <div className="col-xxl-6 col-xl-7 col-lg-6 d-none d-xl-block">
                 <div className="main-menu text-xl-center d-none d-xl-block">
-                  {/* <NavbarMenusTwo /> */}
-                  <HeaderMain/>
+                  <NavbarMenusTwo />
                 </div>
               </div>
               <div className="col-xxl-3 col-xl-2 col-lg-6 col-6">
