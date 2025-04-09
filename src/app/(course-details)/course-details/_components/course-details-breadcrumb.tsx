@@ -8,7 +8,7 @@ import { ICourseDT } from "@/types/course-d-t";
 type IProps = {
    course: ICourseDT
 }
-export default function CourseDetailsBreadcrumb({ course }: IProps) {
+export default function CourseDetailsBreadcrumb() {
    return (
       <section className="tp-breadcrumb__area pt-25 pb-55 p-relative z-index-1 fix">
          <div className="tp-breadcrumb__bg" style={{backgroundColor: "var(--Linear-teal, rgba(0, 128, 128, 0.20))" }}></div>
