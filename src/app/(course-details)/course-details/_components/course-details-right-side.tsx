@@ -3,7 +3,7 @@ import { CertificateSvg, DeadLineSvg, DurationSvg, LanguageSvg, LectureSvg, Play
 import VideoProvider from "@/components/video/video-provider";
 import course_img from '@/assets/img/course/details/course.jpg';
 import { ICourseDT } from "@/types/course-d-t";
-import CoursePrice from "../../../../components/course/course-price";
+// import CoursePrice from "../../../../components/course/course-price";
 import Link from "next/link";
 
 type IProps = {
@@ -11,7 +11,7 @@ type IProps = {
 };
 
 export default function CourseDetailsRightSide({ course }: IProps) {
-   const { discount, price } = course || {};
+   // const { discount, price } = course || {};
    return (
       <div className="tp-course-details-2-widget">
          <div className="tp-course-details-2-widget-thumb p-relative">

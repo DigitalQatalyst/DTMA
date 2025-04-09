@@ -3,7 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { FilterSvg, GridSvg, HomeSvg, ListSvg } from "@/components/svg";
 import CourseFilterDropdownArea from "./course-filter/course-filter-dropdown-area";
-import useCourseFilter from "@/hooks/use-course-filter";
+// import useCourseFilter from "@/hooks/use-course-filter";
 import FilterSearchTerm from "@/components/form/filter-search-term-form";
 import '@/assets/css/main.css';
 
@@ -12,7 +12,7 @@ type IProps = {
 }
 export default function CourseFilterBanner({spacing='pt-180 pb-220'}: IProps) {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
-  const {state} = useCourseFilter();
+  // const {state} = useCourseFilter();
   return (
     <section className={`tp-course-filter-area p-relative ${spacing}`}>
       <div className="container">
