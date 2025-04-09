@@ -1,7 +1,7 @@
 // import Link from "next/link";
 // import Image from "next/image";
 // import { HomeSvg } from "@/components/svg";
-import { ICourseDT } from "@/types/course-d-t";
+// import { ICourseDT } from "@/types/course-d-t";
 // import { removeTagInText } from "@/utils";
 // import author_img from "@/assets/img/course/course-5-teacher-1.png";
 
