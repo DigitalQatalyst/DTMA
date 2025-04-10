@@ -41707,7 +41707,7 @@
   input[type=password]:focus,
   input[type=url]:focus,
   textarea:focus {
-    border-color: var(--tp-theme-primary);
+    border-color: var(--tp-theme-dashboard);
   }
   
   input[type=text]:focus::placeholder,
@@ -72659,7 +72659,238 @@
     border-top: 1px solid #dcdee6;
     border-bottom: 1px solid #dcdee6;
   }
+
+  /* Q&A */
+  .tp-qna-item {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+  }
+
+  .k-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+    border-radius: 50%;
+    background-color: #f0f0f0; /* Match the gray background */
+
+    color: #777; /* Match the "K" color */
+    font-size: 16px; /* Adjust font size */
+    font-weight: bold;
+  }
   
+  .qna-header-container {
+    /* border-radius: 8px; */
+    border-radius: 6px 6px 0px 0px;
+    border: 1px solid var(--Stroke-Color-1, #DBDADE);
+    padding: 10px 15px;
+    /* border-radius: 8px; */
+  }
+  
+  .qna-header {
+    margin-bottom: 15px;
+  }
+  
+  .qna-header button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .discussion-btn,
+  .ask-question-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .discussion-btn {
+    background-color: #008080; /* Default Discussion button background (green) */
+    color: #ffffff; /* Default Discussion button text color (white) */
+    margin-right: 10px;
+  }
+  
+  .ask-question-btn {
+    background-color: #fff; /* Default Ask Question button background (white) */
+    color: #008080; /* Default Ask Question button text color (green) */
+  }
+  
+  .discussion-btn:hover {
+    background-color: #fff; /* Hover effect for Discussion button (white) */
+    color: #008080; /* Hover effect for Discussion button text (green) */
+  }
+  
+  .ask-question-btn:hover {
+    background-color: #008080; /* Hover effect for Ask Question button (green) */
+    color: #ffffff; /* Hover effect for Ask Question button text (white) */
+  }
+  
+  /* Toggle effect: When hovering one, the other changes */
+  .discussion-btn:hover + .ask-question-btn {
+    background-color: #008080; /* When hovering Discussion, make Ask Question green */
+    color: #ffffff;
+  }
+  
+  .ask-question-btn:hover + .discussion-btn {
+    background-color: #fff; /* When hovering Ask Question, make Discussion white */
+    color: #008080;
+  }
+  
+  .tp-qna-main-question {
+    margin-bottom: 15px;
+  }
+  
+  .tp-qna-avatar {
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+  }
+  
+  .default-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    color: #777;
+    font-size: 10px;
+    margin-right: 3px;
+    font-weight: bold;
+  }
+  
+  .default-avatar.small {
+    width: 24px;
+    height: 24px;
+    font-size: 10px;
+  }
+  
+  .default-avatar.extra-small {
+    width: 20px;
+    height: 20px;
+    font-size: 8px;
+  }
+  
+  .tp-qna-author-name {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 2px;
+  }
+  
+  .tp-qna-question-content p {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.5;
+  }
+  
+  .tp-qna-actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .tp-qna-action-link {
+    background: none;
+    border: none;
+    color: #007bff;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 8px;
+    transition: color 0.3s ease;
+  }
+  
+  .tp-qna-action-link:hover {
+    color: #0056b3;
+  }
+  
+  .tp-qna-actions .separator {
+    color: #ccc;
+    margin: 0 5px;
+    font-size: 12px;
+  }
+  
+  .tp-qna-replies {
+    padding-left: 15px;
+    margin-top: 15px;
+    border-left: 1px solid #eee;
+  }
+  
+  .tp-qna-reply {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  
+  .tp-qna-reply-content {
+    flex-grow: 1;
+  }
+  
+  .tp-qna-reply-author-name {
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1px;
+  }
+  
+  .tp-qna-reply-content p {
+    font-size: 12px;
+    color: #555;
+    line-height: 1.4;
+    margin-bottom: 3px;
+  }
+  
+  .tp-qna-reply-form {
+    margin-top: 15px;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 6px;
+  }
+  
+  .tp-qna-reply-input-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 18px;
+    padding: 6px 10px;
+  }
+  
+  .tp-qna-reply-input {
+    border: none;
+    background: transparent;
+    flex-grow: 1;
+    margin-left: 4px;
+    font-size: 12px;
+    color: #333;
+    outline: none;
+  }
+  
+  .tp-qna-send-button {
+    background-color: #008080;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 6px 8px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tp-qna-send-button:hover {
+    background-color: #008080;
+  }
+
   @media only screen and (max-width: 767px) {
     .tpd-continue-learning-q {
       flex-wrap: wrap;
