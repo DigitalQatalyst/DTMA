@@ -20,6 +20,7 @@ export default function Layout({children}: {children:React.ReactNode}) {
       {/* footer area start */}
       {/* <FooterSeven/> */}
       <PreFooter/>
+      
       <Footer/>
       {/* footer area end */}
 
