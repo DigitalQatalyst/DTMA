@@ -3,7 +3,7 @@ import useScrollSpy from "@/hooks/use-scroll-spy";
 
 
 export default function CourseDetailsNav() {
-    const sections = ["info", "curriculum", "instructors", "reviews"];
+    const sections = ["info", "curriculum", "resources", "reviews"];
     const activeSection = useScrollSpy(sections);
     return (
         <nav>
@@ -14,8 +14,8 @@ export default function CourseDetailsNav() {
                 <li className={activeSection === "curriculum" ? "current" : ""}>
                     <a href="#curriculum">Curriculum</a>
                 </li>
-                <li className={activeSection === "instructors" ? "current" : ""}>
-                    <a href="#instructors">Instructors</a>
+                <li className={activeSection === "resources" ? "current" : ""}>
+                    <a href="#resources">Resources</a>
                 </li>
                 <li className={activeSection === "reviews" ? "current" : ""}>
                     <a href="#reviews">Reviews</a>

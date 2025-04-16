@@ -113,7 +113,7 @@ const FeaturedCoursesSection = () => {
         <div className="row">
           {featuredCourses.map((course) => (
             <div className="col-md-4 mb-4 d-flex" key={course.id}
-            onMouseEnter={() => setHoveredCard(course.id)}
+            // onMouseEnter={() => setHoveredCard(course.id)}
             onMouseLeave={() => setHoveredCard(null)}>
               <div className="card h-100" style={{ border: "none", boxShadow: "none",
                 // transform: hoveredCard === course.id ? "translateY(-33%)" : "none",

@@ -1,5 +1,5 @@
 
-const Footer = () => {
+const PreFooter = () => {
   return (
 <section className="footer-section py-5" style={{ backgroundColor: "#f8f9fa" }}>
   <div className="container">
@@ -57,4 +57,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default PreFooter;
