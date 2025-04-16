@@ -148,7 +148,7 @@ const QnAItem = ({
             </div>
             <input
               type="text"
-              placeholder="Leave a reply..."
+              placeholder="Leave a reply...."
               className="tp-qna-reply-input"
               value={replyText}
               onChange={handleReplyChange}
@@ -159,8 +159,6 @@ const QnAItem = ({
           </div>
         </div>
       )}
-
-      {/* ... (Your replies rendering) ... */}
     </div>
   );
 };
