@@ -22,7 +22,7 @@ export default function CourseDetailsRatingReviews() {
                             <span><StarTwo /></span>
                             <span><StarTwo clr="#BFC5CA" /></span>
                         </div>
-                        <p>Rated 4 out of 1 Rating</p>
+                        <p>Rated 4 out of 5 Rating</p>
                     </div>
                 </div>
                 <div className="col-lg-8">

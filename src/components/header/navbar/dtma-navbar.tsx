@@ -15,7 +15,7 @@ type IProps = {
   transparent?: boolean;
 }
 
-export default function HeaderTwo({ inner = false, transparent }: IProps) {
+export default function HeaderTwo({ transparent }: IProps) {
   return (
     <>
       <header className="header-area p-relative">
@@ -26,10 +26,10 @@ export default function HeaderTwo({ inner = false, transparent }: IProps) {
                 <div className="tp-header-2-right d-flex align-items-center">
                   <div className="tp-header-inner-logo tp-header-logo">
                     <Link href="/">
-                      <Image src={logo} alt="logo" priority style={{ height: 'auto' }} />
+                      <Image src={logo} alt="logo" priority style={{ height: 'auto', marginLeft:"-3em" }} />
                     </Link>
                   </div>
-                  <div className="df" style={{display:"flex", flexDirection:"row", alignItems: "center", gap:"5px", marginRight: "5rem" }}>
+                  <div className="df" style={{display:"flex", flexDirection:"row", alignItems: "center", gap:"5px", marginLeft: "5rem" }}>
                     <CategorySvg /> 
                   <span>Category</span>
                   </div>
@@ -39,7 +39,7 @@ export default function HeaderTwo({ inner = false, transparent }: IProps) {
                       alignItems: "center", 
                       background: "white", 
                       borderRadius: "10px", 
-                      margin: "5px 5px",
+                      marginLeft: "1rem",
                       border: "1px solid #ccc", 
                       padding: "2px 10px" 
                     }}
@@ -64,8 +64,7 @@ export default function HeaderTwo({ inner = false, transparent }: IProps) {
                       style={{ 
                         height: "20px", 
                         width: "20px", 
-                        cursor: "pointer", 
-                        marginRight: "10px"
+                        cursor: "pointer"
                       }} 
                     />
                   </div>
@@ -73,18 +72,18 @@ export default function HeaderTwo({ inner = false, transparent }: IProps) {
                 </div>
               </div>
               <div className="col-xxl-6 col-xl-7 col-lg-6 d-none d-xl-block">
-                <div className="main-menu text-xl-center d-none d-xl-block">
+                <div className="main-menu text-xl-center d-none d-xl-block" style={{marginLeft:"15rem"}}>
                   <span style={{color:"#008080"}}>Home</span>
-                  <span style={{marginLeft: "2rem"}}>About</span>
-                  <span style={{marginLeft: "2rem"}}>Catalog</span>
-                  <span style={{marginLeft: "2rem"}}>Resources</span>
-                  <span style={{marginLeft: "2rem"}}>Contact</span>
+                  <span style={{marginLeft: "1rem"}}>About</span>
+                  <span style={{marginLeft: "1rem"}}>Catalog</span>
+                  <span style={{marginLeft: "1rem"}}>Resources</span>
+                  <span style={{marginLeft: "1rem"}}>Contact</span>
                 </div>
               </div>
               <div className="col-xxl-3 col-xl-2 col-lg-6 col-6">
-                <div className="tp-header-2-contact d-flex align-items-center justify-content-end">
-                  <div className="align-items-center">
-                  <Image src={user} alt="user" style={{ height: '17px', width: "15px", marginRight:"7px" }} />
+                <div className="tp-header-2-contact d-flex align-items-center justify-content-end" style={{marginLeft:"15rem"}}>
+                  <div className="align-items-center d-flex">
+                  <Image src={user} alt="user" style={{ height: '17px', width: "15px", marginRight:"3px" }} />
                   <span style={{marginRight:"15px" }}>Admin</span>
                   </div>
                   {/* <div className="tp-header-2-cart home-2 d-none d-xxl-block">
