@@ -56,5 +56,5 @@ stages:
               kubectl apply -f K8s/deployment.yaml -n dev
               
               echo "Force a rolling restart of the deployment to pick up the latest image"
-              kubectl rollout restart deployment <deployment-name> -n dev
+              kubectl rollout restart deployment frontend-deployment -n dev
             displayName: 'Deploy to OVH Kubernetes'
