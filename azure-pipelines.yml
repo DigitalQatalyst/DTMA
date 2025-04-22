@@ -51,6 +51,6 @@ stages:
               sed -i "s|image: .*$|image: $(REGISTRY_URL)/dtma/$(imageName):$(imageTag)|" K8s/deployment.yaml
 
               echo "Deploying to Kubernetes"
-              kubectl config use-context kubernetes-admin@DTMP
+              kubectl config use-context kubernetes-admin@dtma
               kubectl apply -f K8s/deployment.yaml -n dev
             displayName: 'Deploy to OVH Kubernetes'
