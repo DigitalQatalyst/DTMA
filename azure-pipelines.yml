@@ -46,11 +46,17 @@ stages:
           - script: |
               mkdir -p ~/.kube
               cp $(GetKubeconfig.secureFilePath) ~/.kube/config
+              
 
               echo "Updating deployment with image tag: $(imageTag)"
               sed -i "s|image: .*$|image: $(REGISTRY_URL)/dtma/$(imageName):$(imageTag)|" K8s/deployment.yaml
 
               echo "Deploying to Kubernetes"
-              kubectl config use-context kubernetes-admin@DTMP
+              # Ensure we use the correct Kubernetes context
+              echo "Switching to the correct context: kubernetes-admin@dtma"
+              kubectl config use-context kubernetes-admin@DTMA
               kubectl apply -f K8s/deployment.yaml -n dev
+              
+              echo "Force a rolling restart of the deployment to pick up the latest image"
+              kubectl rollout restart deployment <deployment-name> -n dev
             displayName: 'Deploy to OVH Kubernetes'
