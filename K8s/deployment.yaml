@@ -1,0 +1,42 @@
+# Deployment configuration
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+  namespace: dev  # Change this to 'staging' or 'prod' as needed
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: sclh3efw.c1.gra9.container-registry.ovh.net/dtma/frontend:v1.0
+        ports:
+        - containerPort: 3000
+      imagePullSecrets:
+      - name: ovh-registry-secret  # Make sure the secret is created as mentioned before
+
+---
+# Service configuration
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-service
+  namespace: dev  # Change this to 'staging' or 'prod' as needed
+spec:
+  selector:
+    app: frontend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+      nodePort: 30500  # Specify the nodePort (a port in the range 30000-32767)
+  type: NodePort
+      
+      
