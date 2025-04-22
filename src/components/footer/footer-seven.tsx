@@ -2,8 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { Email } from "../svg";
 import FooterSocial from "./footer-social";
-import logo from '@/assets/img/logo/logo-black-2.png';
-import logo_white from '@/assets/img/logo/logo-white.png';
+// import logo from '@/assets/img/logo/logo-black-2.png';
+// import logo_white from '@/assets/img/logo/logo-white.png';
+import logo from "@/assets/img/logo/dtma.svg";
 import { footerLinks } from "@/data/footer-links";
 
 type Props = {
@@ -22,11 +23,12 @@ export default function FooterSeven({bgClr,dashboard_footer}: Props) {
               <div className="tp-footer-widget tp-footer-col-1 mb-30">
                 <div className="tp-footer-widget-logo mb-20 tp-header-logo">
                   <Link href="/">
-                    <Image src={dashboard_footer?logo_white:logo} alt="logo" style={{ height: "auto" }} />
+                    {/* <Image src={dashboard_footer?logo_white:logo} alt="logo" style={{ height: "auto" }} /> */}
+                    <Image src={logo} alt="logo" style={{ height: "auto" }} />
                   </Link>
                 </div>
                 <div className="tp-footer-widget-content">
-                  <p>Lorem ipsum dolor sit amet, consectetur <br /> adipisc ing elit.</p>
+                  <p>Designed for professionals and organizations, DTMA <br/> provides cutting-edge learning in AI, automation, and <br /> digital transformation, empowering a future-ready workforce</p>
                 </div>
                 <div className="tp-footer-contact">
                   <span>Got Questions? Call us</span>

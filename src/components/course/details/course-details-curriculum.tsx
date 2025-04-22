@@ -9,7 +9,7 @@ import {
 
  const CurriculumData = [
    {
-     moduleTitle: "Intro to Course and Histudy",
+     moduleTitle: "Intro Streamlining Procurement Processes",
      lessons: [
        {
          type: "video",
@@ -19,20 +19,20 @@ import {
        },
        {
          type: "video",
-         title: "Greetings and introduction",
+         title: "How to streamline procurement",
          duration: "20 min",
          preview: true,
        },
-       {
-         type: "audio",
-         title: "Incididunt ut labore et dolore",
-         duration: "20 min",
+        {
+         type: "Resources",
+         title: "Inforgraphic",
+        //  duration: "20 min",
          preview: false,
        },
        {
-         type: "reading",
-         title: "Incididunt ut labore et dolore",
-         duration: "20 min",
+         type: "Quiz",
+         title: ": Intro Streamlining Procurement Processes",
+        //  duration: "20 min",
          preview: false,
        },
      ],
@@ -40,7 +40,7 @@ import {
      totalTime: "15m 10s",
    },
    {
-     moduleTitle: "Intro to Course and Histudy",
+     moduleTitle: "Data-Driven Decision Making",
      lessons: [
        {
          type: "video",
@@ -50,19 +50,19 @@ import {
        },
        {
          type: "video",
-         title: "Greetings and introduction",
+         title: "How to streamline procurement",
          duration: "20 min",
          preview: true,
        },
        {
-         type: "audio",
-         title: "Incididunt ut labore et dolore",
+         type: "Resources",
+         title: "Inforgraphic",
          duration: "20 min",
          preview: false,
        },
        {
-         type: "reading",
-         title: "Incididunt ut labore et dolore",
+         type: "Quiz",
+         title: "Intro Streamlining Procurement Processes",
          duration: "20 min",
          preview: false,
        },
@@ -71,7 +71,7 @@ import {
      totalTime: "20m 50s",
    },
    {
-     moduleTitle: "Intro to Course and Histudy",
+     moduleTitle: "Enhancing Supplier Collaboration",
      lessons: [
        {
          type: "video",
@@ -86,15 +86,15 @@ import {
          preview: true,
        },
        {
-         type: "audio",
-         title: "Incididunt ut labore et dolore",
-         duration: "20 min",
+         type: "Resources",
+         title: "Inforgraphic",
+        //  duration: "20 min",
          preview: false,
        },
        {
-         type: "reading",
-         title: "Incididunt ut labore et dolore",
-         duration: "20 min",
+         type: "Quiz",
+         title: "Intro to Course and Histudy",
+        //  duration: "20 min",
          preview: false,
        },
      ],
@@ -143,8 +143,8 @@ import {
                      <div className="left">
                        <span>
                          {lesson.type === "video" && <VideoPlayerTwoSvg />}
-                         {lesson.type === "audio" && <AudioPlayerSvg />}
-                         {lesson.type === "reading" && <Document />}{" "}
+                         {lesson.type === "Resources" && <AudioPlayerSvg />}
+                         {lesson.type === "Quiz" && <Document />}{" "}
                          <i>{lesson.type.charAt(0).toUpperCase() + lesson.type.slice(1)}:</i>{" "}
                          {lesson.title}
                        </span>

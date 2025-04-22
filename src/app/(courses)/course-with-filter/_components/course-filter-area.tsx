@@ -9,7 +9,7 @@ import usePagination from "@/hooks/use-pagination";
 
 export default function CourseFilterArea() {
     const { state } = useCourseFilter();
-    const { currentItems, handlePageClick, pageCount } = usePagination(state.filteredCourses, 6);
+    const { currentItems, handlePageClick, pageCount } = usePagination(state.filteredCourses, 12);
     return (
         <section>
             {state.filteredCourses.length > 0 ? (
