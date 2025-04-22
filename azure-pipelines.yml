@@ -1,0 +1,56 @@
+trigger:
+  branches:
+    include:
+      - develop
+
+variables:
+  - group: ovh-secrets
+  - name: imageName
+    value: dtma/frontend
+  - name: imageTag
+    value: $(Build.BuildId)
+
+stages:
+  - stage: BuildAndPush
+    jobs:
+      - job: Build
+        pool:
+          vmImage: 'Ubuntu-latest'
+        steps:
+          - checkout: self
+          - task: Bash@3
+            inputs:
+              targetType: 'inline'
+              script: |
+                echo "Login to OVH registry"
+                echo $(REGISTRY_PASSWORD) | docker login $(REGISTRY_URL) -u $(REGISTRY_USERNAME) --password-stdin
+
+                echo "Build Docker image"
+                docker build -t $(REGISTRY_URL)/dtma/$(imageName):$(imageTag) .
+
+                echo "Push image to OVH registry"
+                docker push $(REGISTRY_URL)/dtma/$(imageName):$(imageTag)
+
+  - stage: Deploy
+    dependsOn: BuildAndPush
+    jobs:
+      - job: Deploy
+        pool:
+          vmImage: 'Ubuntu-latest'
+        steps:
+          - task: DownloadSecureFile@1
+            name: GetKubeconfig
+            inputs:
+              secureFile: 'ovh-kubeconfig.yml'
+
+          - script: |
+              mkdir -p ~/.kube
+              cp $(GetKubeconfig.secureFilePath) ~/.kube/config
+
+              echo "Updating deployment with image tag: $(imageTag)"
+              sed -i "s|image: .*$|image: $(REGISTRY_URL)/dtma/$(imageName):$(imageTag)|" K8s/deployment.yaml
+
+              echo "Deploying to Kubernetes"
+              kubectl config use-context kubernetes-admin@DTMP
+              kubectl apply -f K8s/deployment.yaml -n dev
+            displayName: 'Deploy to OVH Kubernetes'
