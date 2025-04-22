@@ -3,7 +3,7 @@ import CourseFilterBanner from "./_components/course-filter-banner";
 import CourseFilterProvider from "@/components/provider/course-filter-provider";
 import { all_courses } from "@/data/course-data";
 import CourseFilterArea from "./_components/course-filter-area";
-import BannerArea from "@/components/banner/banner-area";
+// import BannerArea from "@/components/banner/banner-area";
 
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default function CourseWithFilterPage() {
             {/* course filter area */}
 
             {/* banner area start */}
-            <BannerArea/>
+            {/* <BannerArea/> */}
             {/* banner area end */}
 
         </CourseFilterProvider>

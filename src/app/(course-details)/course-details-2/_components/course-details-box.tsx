@@ -2,7 +2,7 @@ import Image from "next/image";
 import { ShareSvg } from "@/components/svg";
 import SocialLinks from "@/components/social/social-links";
 import { ICourseDT } from "@/types/course-d-t";
-import CoursePrice from "@/components/course/course-price";
+// import CoursePrice from "@/components/course/course-price";
 import Link from "next/link";
 
 type IProps = {
@@ -10,7 +10,7 @@ type IProps = {
 }
 
 export default function CourseDetailsBox({ course }: IProps) {
-   const { price, discount, thumbnail } = course || {};
+   const {thumbnail } = course || {};
    return (
       <div className="tp-course-details-3-widget">
          <div className="tp-course-details-2-widget-thumb p-relative">
@@ -18,10 +18,10 @@ export default function CourseDetailsBox({ course }: IProps) {
          </div>
          <div className="tp-course-details-3-widget-content">
             <div className="tp-course-details-2-widget-price d-flex justify-content-between align-items-center">
-               <div className="price">
-                  <CoursePrice price={price} discount={discount}/>
+               {/* <div className="price">
+                  <CoursePrice  discount={discount}/>
                   {discount && <p>-{discount}% off</p>}
-               </div>
+               </div> */}
                <div className="share p-relative">
                   <div className="tp-postbox-share">
                      <button className="p-relative">

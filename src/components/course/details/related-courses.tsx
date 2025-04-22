@@ -12,7 +12,7 @@ export default function RelatedCourses() {
                     <div className="col-lg-12">
                         <div className="tp-course-details-2-related-heading pt-80">
                             <h3 className="tp-course-details-2-related-title">Related Courses</h3>
-                            <p>10,000+ unique online course list designs</p>
+                   
                         </div>
                     </div>
                 </div>

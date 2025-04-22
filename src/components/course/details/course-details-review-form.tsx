@@ -27,7 +27,7 @@ export default function CourseDetailsReviewForm() {
             </div>
           </div>
           <div className="tp-contact-btn">
-            <button className="tp-btn-inner">Submit Review</button>
+            <button className="btn-inner">Submit Review</button>
           </div>
         </div>
       </div>
