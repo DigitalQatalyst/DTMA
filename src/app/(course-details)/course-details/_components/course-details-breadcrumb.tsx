@@ -8,6 +8,7 @@ import { ICourseDT } from "@/types/course-d-t";
 type IProps = {
    course: ICourseDT
 }
+
 export default function CourseDetailsBreadcrumb({}: IProps) {
    return (
       <section className="tp-breadcrumb__area pt-25 pb-55 p-relative z-index-1 fix">
