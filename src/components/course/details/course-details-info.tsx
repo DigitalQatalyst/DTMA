@@ -16,7 +16,7 @@ export default function CourseDetailsInfo() {
           <span className="svg-icon">
             {showMore ? <MinusSvg clr="#008080" /> : <PlusThreeSvg clr="#008080" />}
           </span> 
-          Show {showMore ? '&apos;Less&apos;' : '&apos;More&apos;'}
+          Show {showMore ? 'Less' : 'More'}
        </a>
       </div>
       <h4 className="tp-course-details-2-main-title">What will you Learn?</h4>
