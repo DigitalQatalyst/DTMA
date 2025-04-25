@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: sclh3efw.c1.gra9.container-registry.ovh.net/dtma/dtma/frontend:latest
+        image: sclh3efw.c1.gra9.container-registry.ovh.net/dtma/dtma/dtma/frontend:${BUILD_NUMBER}
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
