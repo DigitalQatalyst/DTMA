@@ -54,6 +54,7 @@ stages:
               echo "Deploying to Kubernetes"
               kubectl config use-context kubernetes-admin@DTMA
               kubectl apply -f K8s/deployment.yaml -n dev
+              kubectl set image deployment/frontend-deployment frontend=$(REGISTRY_URL)/dtma/$(imageName):$(imageTag) -n dev
               
               echo "Force a rolling restart of the deployment to pick up the latest image"
               kubectl rollout restart deployment frontend-deployment -n dev
