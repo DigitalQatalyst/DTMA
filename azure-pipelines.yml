@@ -50,6 +50,13 @@ stages:
               kubectl config use-context kubernetes-admin@DTMA
               kubectl config get-contexts
               
+              kubectl create secret docker-registry ovh-registry-secret \
+              	--docker-server=$REGISTRY_URL \
+              	--docker-username=$REGISTRY_USERNAME \
+              	--docker-password=$REGISTRY_PASSWORD \
+              	--docker-email=$REGISTRY_EMAIL \
+              	--namespace=dev
+              
 
               echo "Updating deployment with image tag: $(imageTag)"
               sed -i "s|image: .*$|image: $(REGISTRY_URL)/dtma/$(imageName):$(imageTag)|" K8s/deployment.yaml
