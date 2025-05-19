@@ -62,6 +62,7 @@ stages:
               sed -i "s|image: .*$|image: $(REGISTRY_URL)/dtma/$(imageName):$(imageTag)|" K8s/deployment.yaml
                             
               kubectl apply -f K8s/deployment.yaml -n dev
+              kubectl apply -f K8s/services.yaml -n dev
               kubectl set image deployment/frontend-deployment frontend=$(REGISTRY_URL)/dtma/$(imageName):$(imageTag) -n dev
               
               echo "Force a rolling restart of the deployment to pick up the latest image"
