@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: sclh3efw.c1.gra9.container-registry.ovh.net/dtma/dtma/frontend:4333
+        image: u4c2j2w9.c1.gra9.container-registry.ovh.net/dtma/dtma/frontend:4333
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
@@ -24,20 +24,6 @@ spec:
       - name: ovh-registry-secret  # Make sure the secret is created as mentioned before
 
 ---
-# Service configuration
-apiVersion: v1
-kind: Service
-metadata:
-  name: frontend-service
-  namespace: dev  # Change this to 'staging' or 'prod' as needed
-spec:
-  selector:
-    app: frontend
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 3000
-      nodePort: 30500  # Specify the nodePort (a port in the range 30000-32767)
-  type: NodePort
+
       
       
