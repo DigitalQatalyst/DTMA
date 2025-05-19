@@ -44,15 +44,16 @@ stages:
               secureFile: 'kubeconfig-dtma.yml'
 
           - script: |
+              echo "Deploying to Kubernetes"
               mkdir -p ~/.kube
               cp $(GetKubeconfig.secureFilePath) ~/.kube/config
+              kubectl config use-context kubernetes-admin@DTMA
+              kubectl config get contexts
               
 
               echo "Updating deployment with image tag: $(imageTag)"
               sed -i "s|image: .*$|image: $(REGISTRY_URL)/dtma/$(imageName):$(imageTag)|" K8s/deployment.yaml
-
-              echo "Deploying to Kubernetes"
-              kubectl config use-context kubernetes-admin@DTMA
+                            
               kubectl apply -f K8s/deployment.yaml -n dev
               kubectl set image deployment/frontend-deployment frontend=$(REGISTRY_URL)/dtma/$(imageName):$(imageTag) -n dev
               
