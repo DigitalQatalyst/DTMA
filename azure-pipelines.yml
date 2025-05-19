@@ -48,7 +48,7 @@ stages:
               mkdir -p ~/.kube
               cp $(GetKubeconfig.secureFilePath) ~/.kube/config
               kubectl config use-context kubernetes-admin@DTMA
-              kubectl config get contexts
+              kubectl config get-contexts
               
 
               echo "Updating deployment with image tag: $(imageTag)"
