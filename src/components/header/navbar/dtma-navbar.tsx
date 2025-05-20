@@ -26,7 +26,7 @@ export default function HeaderTwo({ inner = false, transparent }: IProps) {
                 <div className="tp-header-2-right d-flex align-items-center">
                   <div className="tp-header-inner-logo tp-header-logo">
                     <Link href="/">
-                      <Image src={logo} alt="logo" priority style={{ height: 'auto', marginLeft:"-3em" }} />
+                      <Image src={logo} alt="logo" priority style={{ height: 'auto' }} />
                     </Link>
                   </div>
                   <div className="df" style={{display:"flex", flexDirection:"row", alignItems: "center", gap:"5px", marginLeft: "5rem" }}>

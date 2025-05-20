@@ -9,6 +9,7 @@ import FunFactArea from "@/components/fun-fact/fun-fact-area";
 import HeroAreaTwo from "@/components/hero-area/hero-area-two";
 import TeamArea from "@/components/team/team-area";
 import TestimonialTwo from "@/components/testimonial/testimonial-two";
+import Navbar from "@/components/header/navbar/dtma-navbar";
 
 export const metadata: Metadata = {
   title: "Home Online Course - Acadia",
@@ -17,10 +18,6 @@ export const metadata: Metadata = {
 export default function HomeOnlineCoursePage() {
   return (
     <main>
-      {/* hero area start */}
-      <HeroAreaTwo />
-      {/* hero area end */}
-
       {/* category area */}
       <CategoryArea />
       {/* category area */}

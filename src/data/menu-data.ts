@@ -18,7 +18,7 @@ const menu_data:IMenu[] = [
      },
 	 {
 		id:2,
-		title:'Academics',
+		title:'About',
 		link:'#',
 		sm_mega_menus:[
 			{ id: 1, title: "Overview", link: "/university-admission-overview" },
@@ -32,7 +32,7 @@ const menu_data:IMenu[] = [
 	 },
 	 {
 		id:3,
-		title:'Admissions',
+		title:'Catalog',
 		link:'#',
 		dropdown_menus:[
 			{id:1,title:"Overview", link: "/university-admission-overview" },
@@ -45,7 +45,7 @@ const menu_data:IMenu[] = [
 	 },
 	 {
 		id:4,
-		title:'Pages',
+		title:'Resources',
 		link:'#',
 		pages_dropdown:[
 			{
@@ -93,7 +93,7 @@ const menu_data:IMenu[] = [
 	 },
 	 {
 		id:5,
-		title:'Blog',
+		title:'Contact',
 		link:'#',
 		dropdown_menus:[
 			{id:1,title:"Blog 3 Column", link:"/blog-stories" },
@@ -128,7 +128,7 @@ export const menu_data_2:IMenuDT2[] = [
     },
 	{
 		id:2,
-		title:'Academics',
+		title:'About',
 		link:'#',
 		academic_dropdown:[
 			{
@@ -159,7 +159,7 @@ export const menu_data_2:IMenuDT2[] = [
 	},
 	{
 		id:3,
-		title:'Courses',
+		title:'Catalog',
 		link:'#',
 		course_dropdown:[
 			{
@@ -189,7 +189,7 @@ export const menu_data_2:IMenuDT2[] = [
 	},
 	{
 		id:4,
-		title:'Dashboard',
+		title:'Resources',
 		link:'#',
 		dashboard_dropdown:[
 			{
@@ -229,7 +229,7 @@ export const menu_data_2:IMenuDT2[] = [
 	},
 	{
 		id:5,
-		title:'Pages',
+		title:'Contact',
 		link:'#',
 		pages_dropdown:[
 			{
@@ -275,17 +275,17 @@ export const menu_data_2:IMenuDT2[] = [
 			}
 		]
 	 },
-	 {
-		id:6,
-		title:'Blog',
-		link:'#',
-		dropdown_menus:[
-			{id:1,title:"Blog 3 Column", link:"/blog-stories" },
-			{id:2,title:"Blog Grid Sidebar", link:"/blog-stories-sidebar" },
-			{id:3,title:"Blog List Sidebar", link:"/blog-list" },
-			{id:4,title:"Blog Standard", link:"/blog-standard" },
-			{id:5,title:"Blog Details", link:"/blog-details/1" },
-			{id:6,title:"Blog Details Full Width", link:"/blog-details-full-width/1" },
-		]
-	 }
+	//  {
+	// 	id:6,
+	// 	title:'Blog',
+	// 	link:'#',
+	// 	dropdown_menus:[
+	// 		{id:1,title:"Blog 3 Column", link:"/blog-stories" },
+	// 		{id:2,title:"Blog Grid Sidebar", link:"/blog-stories-sidebar" },
+	// 		{id:3,title:"Blog List Sidebar", link:"/blog-list" },
+	// 		{id:4,title:"Blog Standard", link:"/blog-standard" },
+	// 		{id:5,title:"Blog Details", link:"/blog-details/1" },
+	// 		{id:6,title:"Blog Details Full Width", link:"/blog-details-full-width/1" },
+	// 	]
+	//  }
 ]

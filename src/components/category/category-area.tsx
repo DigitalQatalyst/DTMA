@@ -14,7 +14,7 @@ export default function CategoryArea() {
               className="tp-section mb-40 text-center wow fadeInUp"
               data-wow-delay=".4s"
             >
-              <h5 className="tp-section-3-subtitle">Top Categories</h5>
+              {/* <h5 className="tp-section-3-subtitle">Top Categories</h5> */}
               <h3 className="tp-section-3-title">
                 Most demanding{" "}
                 <span>
@@ -58,7 +58,7 @@ export default function CategoryArea() {
             </div>
           ))}
         </div>
-        <div className="row justify-content-center">
+        {/* <div className="row justify-content-center">
           <div className="col-xl-6 col-lg-8">
             <div
               className="tp-category-banner d-flex align-items-center justify-content-between tp-category-banner-bg mt-35"
@@ -83,7 +83,7 @@ export default function CategoryArea() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

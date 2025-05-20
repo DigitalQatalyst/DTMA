@@ -3,7 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import SearchButton from "./button/search-button";
 import NavbarMenusTwo from "./navbar/navbar-menus-2";
-import logo from "@/assets/img/logo/logo-black.png";
+// import logo from "@/assets/img/logo/logo-black.png";
+import logo from "@/assets/img/logo/dtma.svg";
 import ProfileDropdown from "./header-profile/profile-dropdown";
 import HeaderCategoryArea from "./header-category/header-category-area";
 import HeaderStickyWrapper from "./header-sticky-provider/header-sticky-wrapper";
@@ -43,16 +44,16 @@ export default function HeaderTwo({ inner = false, transparent }: IProps) {
                   <div className="tp-header-inner-search">
                     <SearchButton/>
                   </div>
-                  <div className="tp-header-2-cart home-2 d-none d-xxl-block">
+                  {/* <div className="tp-header-2-cart home-2 d-none d-xxl-block">
                     <CartButton/>
-                  </div>
+                  </div> */}
                   <div className={`tp-header-inner-btn ${inner ? '' : 'home-2'} d-none d-xxl-block`}>
                     <Link className="tp-btn-inner" href="/course-with-filter">
-                      Enroll Now
+                    Log in
                     </Link>
                   </div>
                   {/* profile dropdown */}
-                  <ProfileDropdown/>
+                  {/* <ProfileDropdown/> */}
                   {/* profile dropdown */}
                   <div className="offcanvas-btn d-xxl-none ml-30">
                     <OffcanvasButton offcanvas_cls="offcanvas__2" offcanvas_menu_2={true}/>

@@ -210,19 +210,19 @@ li,
   --tp-red-3: #B70A14;
   --tp-blue-1: #F1F3F9;
   --tp-heading-primary: #161613;
-  --tp-heading-2: #031F42;
+  --tp-heading-2: #008080;
   --tp-heading-3: #0A1D3A;
   --tp-heading-4: #161821;
   --tp-text-body: #57595F;
   --tp-theme-primary: #AB0C2F;
-  --tp-theme-secondary: #1A73E8;
+  --tp-theme-secondary: #008080;
   --tp-theme-3: #FF7162;
   --tp-theme-4: #B1040E;
   --tp-theme-5: #F0EC51;
   --tp-theme-6: #1E1E2F;
   --tp-theme-7: #4661FD;
   --tp-theme-8: #006B61;
-  --tp-dashboard-primary: #556DF5;
+  --tp-dashboard-primary: #008080;
   --tp-dashboard-secondary: #5169F1;
   --tp-dashboard-3: #5B7D55;
   --tp-dashboard-danger: #FF4D4F;
@@ -7784,6 +7784,8 @@ body .ui-tooltip {
 
 .tp-header-inner {
   box-shadow: 0px 1px 1px 0px rgba(3, 11, 30, 0.1), 0px 1px 2px 1px rgba(3, 11, 30, 0.06);
+padding-right: 10rem;
+border: 2px solid red;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (max-width: 767px) {
   .tp-header-inner {
@@ -17032,7 +17034,7 @@ span.cat-lgreen {
   }
 }
 .tp-funfact-title {
-  color: var(--tp-common-white);
+  color: var(tp-common-black);
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 2px;

@@ -1,27 +1,25 @@
-'use client'
 import React from "react";
-import { SearchSvgTwo } from "@/components/svg";
-import SearchPopup from "@/components/modal/search-popup";
+import Image from 'next/image';
+import user from "@/assets/img/icon/userAvatar.svg";
 
-type SearchButtonProps = {
-   icon?: React.ReactNode;
-};
+interface SearchButtonProps {
+    icon?: React.ReactNode;
+   //  user: string; //  <-  Consider making this more specific (e.g., string if it's a URL)
+}
 
 export default function SearchButton({ icon }: SearchButtonProps) {
-   const [isSearchOpen, setIsSearchOpen] = React.useState(false);
-
-   const handleSearchToggle = () => {
-      setIsSearchOpen(!isSearchOpen);
-   };
-
-   return (
-      <>
-         <button className="tp-search-open-btn" onClick={handleSearchToggle}>
-            {icon || <SearchSvgTwo/>}
-         </button>
-
-         <SearchPopup isSearchOpen={isSearchOpen} onHide={handleSearchToggle} />
-
-      </>
-   );
+    return (
+        <div className="tp-search-open-btn" style={{ display: 'flex', alignItems: 'center' }}>
+            {icon || (
+                <Image
+                    src={user}
+                    alt="user icon"
+                    width={20}
+                    height={20}
+                    style={{ marginRight: "3px" }}
+                />
+            )}
+            <p style={{ margin: 0, }} >Admin</p>
+        </div>
+    );
 }

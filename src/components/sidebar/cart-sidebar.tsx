@@ -50,7 +50,7 @@ const CartMiniSidebar = ({ openSidebar, onShowSidebar }: IProps) => {
                       <a href="#">{removeTagInText(item.title)}</a>
                     </h5>
                     <div className="cartmini__price-wrapper">
-                      <span className="cartmini__price home-shop">${item.price.toFixed(2)}</span>
+                      <span className="cartmini__price home-shop">${item?.price ? item.price.toFixed(2) : 'N/A'}</span>
                       <span className="cartmini__quantity">{" "}x{1}</span>
                     </div>
                   </div>
