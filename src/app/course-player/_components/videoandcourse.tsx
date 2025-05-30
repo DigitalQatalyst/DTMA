@@ -20,7 +20,7 @@ export default function VideoAndCourse() {
 
           <div className="categorycard">
             <div className="category">
-              <p className="catname">Course Info</p>
+              <p className="catname">Course Information</p>
             </div>
           </div>
         </div>
