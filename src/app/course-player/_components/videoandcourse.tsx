@@ -15,6 +15,7 @@ export default function VideoAndCourse() {
             className="playerimage"
             alt="playerimage"
             width={500}
+            height={400}
           />
 
           <div className="categorycard">
