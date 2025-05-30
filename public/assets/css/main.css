@@ -270,12 +270,16 @@ h6 {
   -ms-transition: color 0.3s 0s ease-out;
   -o-transition: color 0.3s 0s ease-out;
   transition: color 0.3s 0s ease-out;
+  
 }
 
 h1 {
   font-size: 40px;
 }
 
+.test-text{
+  color:red;
+}
 h2 {
   font-size: 36px;
 }
