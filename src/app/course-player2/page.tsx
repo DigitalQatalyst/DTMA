@@ -1,8 +1,8 @@
 import { Metadata } from "next";
-// import CourseFilterProvider from "@/components/provider/course-filter-provider";
-// import { all_courses } from "@/data/course-data";
-// import BannerArea from "@/components/banner/banner-area";
-// import BreadcrumbOne from "@/components/breadcrumb/breadcrumb-one";
+import CourseFilterProvider from "@/components/provider/course-filter-provider";
+import { all_courses } from "@/data/course-data";
+import BannerArea from "@/components/banner/banner-area";
+import BreadcrumbOne from "@/components/breadcrumb/breadcrumb-one";
 import VideoAndCourse from "./_components/videoandcourse";
 
 export const metadata: Metadata = {
@@ -11,8 +11,7 @@ export const metadata: Metadata = {
 
 export default function CoursePlayerPage() {
   return (
-    // <CourseFilterProvider initialCourses={all_courses}>
-    <div>
+    <CourseFilterProvider initialCourses={all_courses}>
       {/* breadcrumb area start */}
       {/* <BreadcrumbOne
         subtitle=" Course With Sidebar"
@@ -32,7 +31,6 @@ export default function CoursePlayerPage() {
       {/* banner area start */}
       {/* <BannerArea /> */}
       {/* banner area end */}
-      {/* </CourseFilterProvider> */}
-    </div>
+    </CourseFilterProvider>
   );
 }
