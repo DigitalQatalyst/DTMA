@@ -1,4 +1,4 @@
-import { File, Menu, Minus, Plus, Pointer } from "lucide-react";
+import { File, Menu, Minus, Pointer } from "lucide-react";
 import React from "react";
 import { coursecontent } from "../constants";
 
