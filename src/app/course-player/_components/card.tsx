@@ -2,7 +2,6 @@ import { BookOpen, User } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import { StarRatings } from "./starratings";
-import { number } from "zod/v4";
 
 interface CardProps {
   title: string;

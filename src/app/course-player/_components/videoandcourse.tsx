@@ -1,16 +1,6 @@
-import {
-  ChevronLeft,
-  ChevronRight,
-  Menu,
-  Plus,
-  Star,
-  ThumbsDown,
-  ThumbsUp,
-} from "lucide-react";
-import Image from "next/image";
+import { ChevronLeft, ChevronRight, Plus } from "lucide-react";
 import React from "react";
 import WriteReview from "./writereview";
-import { StarRatings } from "./starratings";
 import AboutCourse from "./aboutcourse";
 import LearnObjectives from "./learnobjectives";
 import FeaturedReviews from "./featuredreviews";
