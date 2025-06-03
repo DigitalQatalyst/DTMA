@@ -1,4 +1,12 @@
-import { Plus, Star, ThumbsDown, ThumbsUp } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Menu,
+  Plus,
+  Star,
+  ThumbsDown,
+  ThumbsUp,
+} from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import WriteReview from "./writereview";
@@ -10,6 +18,7 @@ import RatingsAndReviews from "./ratingsandreviews";
 import Qanda from "./qanda";
 import Resources from "./resources";
 import RelatedCourses from "./relatedcourses";
+import ContentBar from "./contentbar";
 // import "../../../styles/global.css";
 
 export default function VideoAndCourse() {
@@ -22,13 +31,26 @@ export default function VideoAndCourse() {
       </div>
       <div className="herosection">
         <div className="videocontainer">
-          <Image
-            src="/assets/img/instructor/instructor-bg.jpg"
-            className="playerimage"
-            alt="playerimage"
-            width={500}
-            height={400}
-          />
+          <div className="video-container">
+            <video
+              className="playerimage"
+              autoPlay
+              loop
+              muted
+              width={500}
+              height={400}
+              src="https://videos.pexels.com/video-files/3141208/3141208-uhd_2560_1440_25fps.mp4"
+            ></video>
+
+            <div className="overlay">
+              <div className="chevron left">
+                <ChevronLeft size={32} color="white" />
+              </div>
+              <div className="chevron right">
+                <ChevronRight size={32} color="white" />
+              </div>
+            </div>
+          </div>
 
           <div className="categorycard">
             <div className="category">
@@ -81,7 +103,7 @@ export default function VideoAndCourse() {
           </div>
         </div>
         <div className="contentcontainer">
-          <div></div>
+          <ContentBar />
         </div>
       </div>
       <hr />
