@@ -61,6 +61,32 @@ export const coursecontent: Course[] = [
           type: "Quiz",
         },
       ],
+  },
+    {
+      id: 1,
+      title: "Enhancing Supplier Collaboration.",
+      subtitles: [
+        {
+          id: 1,
+          subtitle: "Course Intro",
+          type: "video",
+        },
+        {
+          id: 3,
+          subtitle: "How to streamline procurement.",
+          type: "Resources",
+        },
+        {
+          id: 4,
+          subtitle: "Inforgraphic",
+          type: "Resources",
+        },
+        {
+          id: 5,
+          subtitle: "Inforgraphic",
+          type: "Quiz",
+        },
+      ],
     },
 ];
   

@@ -1,7 +1,10 @@
-import FooterSeven from "@/components/footer/footer-seven";
-import "./playerstyle.css";
-import BackToTop from "@/components/back-to-top";
+// import FooterSeven from "@/components/footer/footer-seven";
 import HeaderTwo from "@/components/header/header-two";
+import "./playerstyle.css";
+import FooterSeven from "@/components/footer/footer-seven";
+import BackToTop from "@/components/back-to-top";
+// import BackToTop from "@/components/back-to-top";
+// import HeaderTwo from "@/components/header/header-two";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (

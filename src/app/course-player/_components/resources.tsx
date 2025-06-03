@@ -8,7 +8,7 @@ const Resources = () => {
 
         <div className="resourcebuttons">
           <div>
-            <button className="active">Downloads</button>
+            <button className="activebtn">Downloads</button>
           </div>
           <div>
             <button className="inactive">External Links</button>
