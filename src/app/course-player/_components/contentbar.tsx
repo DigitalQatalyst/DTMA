@@ -1,8 +1,30 @@
-import { File, Menu, Minus, Pointer } from "lucide-react";
-import React from "react";
+"use client";
+import { File, Menu, Minus, Pointer, Plus } from "lucide-react";
+import React, { useState } from "react";
 import { coursecontent } from "../constants";
 
 const ContentBar: React.FC = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(0); // Default open first section
+  const [selectedItem, setSelectedItem] = useState<{
+    sectionIndex: number;
+    itemIndex: number;
+  } | null>(null);
+
+  const toggleSection = (idx: number) => {
+    setOpenIndex((prev) => (prev === idx ? null : idx));
+  };
+
+  const handleSelect = (
+    sectionIndex: number,
+    itemIndex: number,
+    itemData: any
+  ) => {
+    setSelectedItem({ sectionIndex, itemIndex });
+
+    // ✅ You can now do something with itemData
+    console.log("Selected item data:", itemData);
+  };
+
   return (
     <div>
       <div className="contenttop">
@@ -12,26 +34,41 @@ const ContentBar: React.FC = () => {
         </button>
       </div>
 
-      {/* content bar */}
       {coursecontent.map((course, idx) => {
+        const isOpen = openIndex === idx;
+
         return (
           <div className="contentbar" key={idx}>
-            <div className="contenttitle">
-              <Minus size={15} color="gray" />
+            <div className="contenttitle" onClick={() => toggleSection(idx)}>
+              {isOpen ? (
+                <Minus size={15} color="gray" />
+              ) : (
+                <Plus size={15} color="gray" />
+              )}
               <h3 className="primarycol">{course.title}</h3>
             </div>
-            <div className="contentsubtitles">
-              <div className="w-full">
+
+            <div className={`contentsubtitles-wrapper ${isOpen ? "open" : ""}`}>
+              <div className="contentsubtitles">
                 {course.subtitles.map((subs, index) => {
+                  const isActive =
+                    selectedItem?.sectionIndex === idx &&
+                    selectedItem?.itemIndex === index;
+
                   return (
-                    <div className="subs" key={index}>
+                    <div
+                      className={`subs ${isActive ? "active-item" : ""}`}
+                      key={index}
+                      onClick={() => handleSelect(idx, index, subs)}
+                      data-id={subs.id || `${idx}-${index}`} // optional identifier
+                    >
                       {subs.type === "Quiz" ? (
                         <File size={14} color="gray" />
                       ) : (
-                        <Pointer color="white" size={14} />
+                        <Pointer size={14} color="white" />
                       )}
-                      <p className="">
-                        {subs.type}:<span>{subs.subtitle}</span>
+                      <p>
+                        {subs.type}: <span>{subs.subtitle}</span>
                       </p>
                     </div>
                   );

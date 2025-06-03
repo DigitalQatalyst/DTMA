@@ -30,7 +30,7 @@ const Qanda = () => {
             </div>
             <div className="message">
               <div className="messagetext">
-                <h3>Sandra Lenku</h3>
+                <p className="username">Sandra Lenku</p>
                 <p>
                   I have a questions about the didgital office course outline.Is
                   there any material to support the course other than the docs
@@ -52,7 +52,7 @@ const Qanda = () => {
                     <p className="">K</p>
                   </div>
                   <div className="replybody">
-                    <h3>Sandra Lenku.</h3>
+                    <p className="username">Sandra Lenku.</p>
                     <p>Maybe try this link.</p>
                     <p className="like">like</p>
                   </div>
