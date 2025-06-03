@@ -2,21 +2,31 @@ import { BookOpen, User } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import { StarRatings } from "./starratings";
+import { number } from "zod/v4";
 
-const Card = () => {
+interface CardProps {
+  title: string;
+  numberOfLearners: number;
+  credits: number;
+  category: string;
+  image: string;
+}
+
+const Card: React.FC<CardProps> = ({
+  title,
+  numberOfLearners,
+  credits,
+  category,
+  image,
+}) => {
   return (
     <div className="relcard">
       <div className="imagecontainer">
-        <Image
-          src="/assets/img/instructor/instructor-bg.jpg"
-          className="card-image"
-          alt="course image"
-          fill
-        />
+        <Image src={image} className="card-image" alt="course image" fill />
       </div>
       <div className="card-data">
         <button className="button-like">
-          <p>category</p>
+          <p>{category}</p>
         </button>
         <div className="lessoninfo">
           <div className="lesson">
@@ -25,16 +35,14 @@ const Card = () => {
           </div>
           <div className="learners">
             <User size={18} color="gray" />
-            <p>45+ Learners</p>
+            <p>{numberOfLearners}+ Learners</p>
           </div>
         </div>
 
         <div className="courseinfo">
-          <h2 className="coursetitle">
-            Creating Seamless Ecommerce Experience
-          </h2>
+          <h2 className="coursetitle">{title}</h2>
           <div className="credits">
-            <p className="primarycol">1000 credist</p>
+            <p className="primarycol">{credits} credist</p>
           </div>
           <div className="cardrate">
             <StarRatings size={12} />

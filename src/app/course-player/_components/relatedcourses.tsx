@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./card";
+import { sampleData } from "../constants";
 
 const RelatedCourses = () => {
   return (
@@ -7,15 +8,19 @@ const RelatedCourses = () => {
       <div className="relatedhead">
         <h1 className="playerheading">Related Courses</h1>
         <div className="relatedcards">
-          <div>
-            <Card />
-          </div>
-          <div>
-            <Card />
-          </div>
-          <div>
-            <Card />
-          </div>
+          {sampleData.map((course, idx) => {
+            return (
+              <div key={idx}>
+                <Card
+                  image={course.image}
+                  title={course.title}
+                  numberOfLearners={course.numberOfLearners}
+                  credits={course.credits}
+                  category={course.category}
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

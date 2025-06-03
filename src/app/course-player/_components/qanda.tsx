@@ -21,6 +21,57 @@ const Qanda = () => {
               </button>
             </div>
           </div>
+
+          <div className="startdiscussion">
+            <div>
+              <div className="usertag">
+                <p className="primarytext">K</p>
+              </div>
+            </div>
+            <div className="message">
+              <div className="messagetext">
+                <h3>Sandra Lenku</h3>
+                <p>
+                  I have a questions about the didgital office course outline.Is
+                  there any material to support the course other than the docs
+                  and resource page?
+                </p>
+                <div className="actions">
+                  <a href="" className="primarycol">
+                    <p className="primarycol">Like</p>
+                  </a>
+                  <div className="dot">.</div>
+                  <a href="" className="primarycol">
+                    <p className="primarycol">Reply</p>
+                  </a>
+                </div>
+              </div>
+              <div className="replybox">
+                <div className="reply">
+                  <div className="userreplytag">
+                    <p className="">K</p>
+                  </div>
+                  <div className="replybody">
+                    <h3>Sandra Lenku.</h3>
+                    <p>Maybe try this link.</p>
+                    <p className="like">like</p>
+                  </div>
+                </div>
+                <div className="reply">
+                  <div className="userreplytag">
+                    <p className="">K</p>
+                  </div>
+                  <div className="replybody">
+                    <input
+                      type="text"
+                      placeholder="Leave a reply...."
+                      className=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

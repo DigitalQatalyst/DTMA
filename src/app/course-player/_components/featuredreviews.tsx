@@ -14,7 +14,7 @@ const FeaturedReviews = () => {
               <div>
                 <div className="image-wrapper">
                   <Image
-                    src="/assets/img/instructor/instructor-bg.jpg"
+                    src="/assets/pic.jpg"
                     height={60}
                     width={40}
                     alt="user"
