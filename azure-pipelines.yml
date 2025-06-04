@@ -41,7 +41,7 @@ stages:
           - task: DownloadSecureFile@1
             name: GetKubeconfig
             inputs:
-              secureFile: 'ovh-kubeconfig.yml'
+              secureFile: 'kubeconfig-dtma.yml'
 
           - script: |
               mkdir -p ~/.kube
