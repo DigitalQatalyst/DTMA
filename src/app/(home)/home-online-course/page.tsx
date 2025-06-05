@@ -53,7 +53,7 @@ export default function HomeOnlineCoursePage() {
       {/* brand area end */}
 
       {/* banner area start */}
-      <BannerArea/>
+      {/* <BannerArea/> */}
       {/* banner area end */}
 
       {/* cta area start */}
