@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { DownArrowTwo, Email, RightArrowFour } from '../svg';
-import FooterSocial from './footer-social';
+// import FooterSocial from './footer-social';
+import socials from "@/assets/img/footer/Social-icons.svg";
 import { footerLinks } from '@/data/footer-links';
-import logo from '@/assets/img/logo/logo-black.png';
-import google_play from '@/assets/img/footer/google-play.jpg';
-import apple_store from '@/assets/img/footer/apple-store.jpg';
+import logo from '@/assets/img/logo/dtma.svg';
+// import google_play from '@/assets/img/footer/google-play.jpg';
+// import apple_store from '@/assets/img/footer/apple-store.jpg';
 
 export default function FooterTwo() {
    return (
@@ -14,7 +15,7 @@ export default function FooterTwo() {
             <div className="tp-footer-main pt-70 pb-55">
                <div className="container">
                   <div className="row">
-                     <div className="col-xl-3 col-lg-4 col-md-6">
+                     <div className="col-xl-3 col-lg-3 col-md-6">
                         <div className="tp-footer-widget tp-footer-2-col-1 mb-30">
                            <div className="tp-footer-widget-logo mb-20 tp-header-logo">
                               <Link href="/">
@@ -22,7 +23,7 @@ export default function FooterTwo() {
                               </Link>
                            </div>
                            <div className="tp-footer-widget-content">
-                              <p>Acadia education theme, built specifically for the education centers which is teaching and involve learners.</p>
+                              <p>Designed for professionals and organizations, DTMA provides cutting-edge learning in AI, automation, and digital transformation, empowering a future-ready workforce.</p>
                            </div>
                            <div className="tp-footer-contact">
                               <div className="tp-footer-btn">
@@ -35,9 +36,9 @@ export default function FooterTwo() {
                            </div>
                         </div>
                      </div>
-                     <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                     <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                         <div className="tp-footer-widget tp-footer-2-col-2 mb-30">
-                           <h4 className="tp-footer-widget-title mb-15">About</h4>
+                           <h4 className="tp-footer-widget-title mb-15">Quick Links</h4>
                            <div className="tp-footer-widget-link">
                               <ul>
                                  {footerLinks.link_one.map((link) => (
@@ -49,12 +50,30 @@ export default function FooterTwo() {
                            </div>
                         </div>
                      </div>
-                     <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                     
+                     <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                         <div className="tp-footer-widget tp-footer-2-col-3 mb-30">
-                           <h4 className="tp-footer-widget-title mb-15">Quick links</h4>
+                           <h4 className="tp-footer-widget-title mb-15">Get to Know Us</h4>
                            <div className="tp-footer-widget-link">
                               <ul>
                                  {footerLinks.link_two.map((link) => (
+                                    <li key={link.id}>
+                                       <Link href={link.link}>{link.title}</Link>
+                                       {link.isNew && (
+                                          <span className="new-badge">New</span>
+                                       )}
+                                    </li>
+                                 ))}
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <div className="tp-footer-widget tp-footer-2-col-3 mb-30">
+                           <h4 className="tp-footer-widget-title mb-15">Legal</h4>
+                           <div className="tp-footer-widget-link">
+                              <ul>
+                                 {footerLinks.link_three.map((link) => (
                                     <li key={link.id}>
                                        <Link href={link.link}>{link.title}</Link>
                                     </li>
@@ -63,7 +82,7 @@ export default function FooterTwo() {
                            </div>
                         </div>
                      </div>
-                     <div className="col-xl-3 col-lg-4 col-md-6">
+                     {/* <div className="col-xl-3 col-lg-4 col-md-6">
                         <div className="p-footer-widget tp-footer-2-col-4 mb-30">
                            <h4 className="tp-footer-widget-title mb-20">Our Newsletter</h4>
                            <div className="tp-footer-contact">
@@ -86,11 +105,11 @@ export default function FooterTwo() {
                               </a>
                            </div>
                         </div>
-                     </div>
+                     </div> */}
                   </div>
                </div>
             </div>
-            <div className="tp-footer-bottom">
+            {/* <div className="tp-footer-bottom">
                <div className="container">
                   <div className="row align-items-center">
                      <div className="col-lg-3 col-md-4">
@@ -124,7 +143,18 @@ export default function FooterTwo() {
                      </div>
                   </div>
                </div>
-            </div>
+            </div> */}
+            <footer className="footer py-4 bg-dark text-white">
+      <div className="container" style={{ 
+        display: "flex", 
+        justifyContent: "space-around", 
+        width: "100%"
+        }}>
+
+        <p style={{marginLeft: "-25rem"}}>&copy; 2024 <span className="text-white">DTMA</span> </p>
+        <Image src={socials} alt="socials" priority style={{ height: 'auto', marginRight: "-20rem" }} />
+      </div>
+    </footer>
          </div>
       </footer>
    )
