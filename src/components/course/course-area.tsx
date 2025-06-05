@@ -53,7 +53,7 @@ export default function CourseArea() {
               </div>
             </div>
           </div>
-          <div className="row justify-content-center">
+          {/* <div className="row justify-content-center">
             <div className="col-xxl-6 col-lg-8">
               <div
                 className="tp-category-banner d-flex align-items-center justify-content-between tp-category-banner-bg mt-35"
@@ -78,7 +78,7 @@ export default function CourseArea() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </CourseProvider>
