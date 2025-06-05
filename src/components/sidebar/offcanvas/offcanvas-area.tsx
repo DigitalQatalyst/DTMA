@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import logo from '@/assets/img/logo/logo-black.png';
+import logo from '@/assets/img/logo/dtma.svg';
 import { BehanceSvg, CloseThreeSvg, DribbleSvg, InstagramSvg, YoutubeTwoSvg } from "@/components/svg";
 import OffcanvasMenu from "./offcanvas-menu";
 import OffcanvasMenuTwo from "./offcanvas-menu-2";
@@ -47,7 +47,7 @@ export default function OffcanvasArea({openOffCanvas,onHandleOffCanvas,offcanvas
                      {offcanvas_menu_2 ? <OffcanvasMenuTwo /> : <OffcanvasMenu />}
                      {/* mobile menu */}
 
-                     <div className="offcanvas-gallery">
+                     {/* <div className="offcanvas-gallery">
                         <div className="row gx-2">
                            {galleryData.map((item, index) => (
                               <div className="col-md-3 col-3" key={index}>
@@ -59,16 +59,16 @@ export default function OffcanvasArea({openOffCanvas,onHandleOffCanvas,offcanvas
                               </div>
                            ))}
                         </div>
-                     </div>
-                     <div className="offcanvas-contact">
+                     </div> */}
+                     {/* <div className="offcanvas-contact">
                         <h3 className="offcanvas-title sm">Information</h3>
                         <ul>
                            <li><a href="tel:1245654">+ 4 20 7700 1007</a></li>
                            <li><a href="mailto:hello@acadia.com">hello@acadia.com</a></li>
                            <li><a href="#">Avenue de Roma 158b, Lisboa</a></li>
                         </ul>
-                     </div>
-                     <div className="offcanvas-social">
+                     </div> */}
+                     {/* <div className="offcanvas-social">
                         <h3 className="offcanvas-title sm">Follow Us</h3>
                         <ul>
                            <li>
@@ -92,7 +92,7 @@ export default function OffcanvasArea({openOffCanvas,onHandleOffCanvas,offcanvas
                               </a>
                            </li>
                         </ul>
-                     </div>
+                     </div> */}
                   </div>
                </div>
             </div>
