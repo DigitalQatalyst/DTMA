@@ -38,10 +38,10 @@ export default function OffcanvasArea({openOffCanvas,onHandleOffCanvas,offcanvas
                      </div>
                   </div>
                   <div className="offcanvas-main">
-                     <div className="offcanvas-content">
+                     {/* <div className="offcanvas-content">
                         <h3 className="offcanvas-title">Hello There!</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit, </p>
-                     </div>
+                     </div> */}
                      
                      {/* mobile menu */}
                      {offcanvas_menu_2 ? <OffcanvasMenuTwo /> : <OffcanvasMenu />}
