@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import shape_underline from "@/assets/img/unlerline/course-2-svg-1.svg";
+import shape_underline from "@/assets/img/shape/bottom-line/line.svg";
 import category_shape from "@/assets/img/shape/category-2-shape-1.png";
 import CourseProvider from "../provider/course-provider";
 import CourseTabBtn from "./course-tab-btn";
 import CourseItems from "./course-items";
 
-const tab_navs = ["All Courses", "Trending", "Popularity", "Featured"];
+const tab_navs = ["New","Popular","View All"];
 
 export default function CourseArea() {
   return (
@@ -16,10 +16,10 @@ export default function CourseArea() {
           <div className="row align-items-end">
             <div className="col-xxl-5 col-xl-6 col-lg-7">
               <div className="tp-section mb-40">
-                <h5 className="tp-section-3-subtitle">Our Courses</h5>
+                {/* <h5 className="tp-section-3-subtitle">Our Courses</h5> */}
                 <h3 className="tp-section-3-title">
-                  Most Popular
-                  <span>
+                  Featured
+                  <span style={{ marginLeft: '8px' }}>
                     Courses
                     <Image
                       className="tp-underline-shape-6 wow bounceIn"

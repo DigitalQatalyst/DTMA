@@ -5,10 +5,18 @@ export const online_courses_data: ICourseDT[] = [
     id: 1,
     author_img: "/assets/img/teacher/teacher-5.png",
     author_name: "Hilary Ouse",
+<<<<<<< HEAD
     title: "Reshape business processes with automation",
     thumbnail: "/assets/img/dtma/home_02_slide_1-removebg-preview 1 1.png",
     category: "All Categories",
     price: 84,
+=======
+    title: "Creating Seamless <br/> E-Commerce Experiences",
+    thumbnail: "/assets/img/course/course-thumb-1.jpg",
+    category: "Category",
+    credits: 1000,
+    // price: 84,
+>>>>>>> 3353289 (made course items aligned)
     avg_rating: 5,
     discount: 25,
     lessons: 12,
@@ -21,9 +29,16 @@ export const online_courses_data: ICourseDT[] = [
     id: 2,
     author_img: "/assets/img/teacher/teacher-2.png",
     author_name: "Joss Sticks",
+<<<<<<< HEAD
     title: "Leveraging Social Media for Marketing",
     thumbnail: "/assets/img/dtma/home_02_slide_1-removebg-preview 1 2.png",
     category: "Digital Workspace",
+=======
+    title: "Voice of the Customer <br />(VoC) Integration",
+    thumbnail: "/assets/img/course/course-thumb-5.jpg",
+    category: "Category",
+    credits: 1000,
+>>>>>>> 3353289 (made course items aligned)
     price: 54,
     avg_rating: 4,
     discount: 5,
@@ -37,9 +52,16 @@ export const online_courses_data: ICourseDT[] = [
     id: 3,
     author_img: "/assets/img/teacher/teacher-3.png",
     author_name: "Purpleson",
+<<<<<<< HEAD
     title: "Transforming MarTech for Enhanced Engagement",
     thumbnail: "/assets/img/dtma/home_02_slide_1-removebg-preview 1 5.png",
     category: "Digital Security",
+=======
+    title: "Automating Core Business <br />Processes",
+    thumbnail: "/assets/img/course/course-thumb-2.jpg",
+    category: "Category",
+    credits: 1000,
+>>>>>>> 3353289 (made course items aligned)
     price: 92,
     avg_rating: 4.5,
     discount: 10,
@@ -53,9 +75,16 @@ export const online_courses_data: ICourseDT[] = [
     id: 4,
     author_img: "/assets/img/teacher/teacher-5.png",
     author_name: "Benjamin",
+<<<<<<< HEAD
     title: "Use AI insights to improve decision-making.",
     thumbnail: "/assets/img/dtma/home_02_slide_1-removebg-preview 1 3.png",
     category: "Digital Experience",
+=======
+    title: "The complete guide to build <br/> restful API application",
+    thumbnail: "/assets/img/course/course-thumb-4.jpg",
+    category: "Category",
+    credits: 1000,
+>>>>>>> 3353289 (made course items aligned)
     price: 45,
     avg_rating: 4.8,
     discount: 0,
@@ -198,6 +227,7 @@ export const online_courses_data: ICourseDT[] = [
     author_img: "/assets/img/teacher/teacher-4.png",
     author_name: "Indigo Violet",
     title: "Computer science: mathematical and analytical",
+<<<<<<< HEAD
     thumbnail: "/assets/img/dtma/home_02_slide_1-removebg-preview 1 4.png",
     category: "Digital Marcom",
     price: 65,
@@ -232,6 +262,11 @@ export const online_courses_data: ICourseDT[] = [
     title: "Computer science: mathematical and analytical",
     thumbnail: "/assets/img/dtma/home_02_slide_1-removebg-preview 1 4.png",
     category: "Digital Marcom",
+=======
+    thumbnail: "/assets/img/course/course-thumb-3.jpg",
+    category: "Category",
+    credits: 1000,
+>>>>>>> 3353289 (made course items aligned)
     price: 65,
     avg_rating: 5,
     discount: 4,
@@ -247,7 +282,12 @@ export const online_courses_data: ICourseDT[] = [
     author_name: "Hanson Deck",
     title: "Machine learning A-Z: <br/> hands-on python and java",
     thumbnail: "/assets/img/course/course-thumb-6.jpg",
+<<<<<<< HEAD
     category: "Programming",
+=======
+    category: "Category",
+    credits: 1000,
+>>>>>>> 3353289 (made course items aligned)
     price: 75,
     avg_rating: 5,
     discount: 0,

@@ -14,11 +14,8 @@ export default function CategoryArea() {
               className="tp-section mb-40 text-center wow fadeInUp"
               data-wow-delay=".4s"
             >
-<<<<<<< HEAD
-              <h5 className="tp-section-3-subtitle">Top Categories</h5>
-=======
+
               <h5 className="tp-section-3-subtitle">Course Categories</h5>
->>>>>>> 6ef4bff (updated the featured categories items and shape-bottom-line)
               <h3 className="tp-section-3-title">
                 
                 Most Demanding{" "}
