@@ -1,8 +1,8 @@
 import Image from "next/image";
-import icon_1 from "@/assets/img/icon/funfact/funfact-2-icon-1.svg";
-import icon_2 from "@/assets/img/icon/funfact/funfact-2-icon-2.svg";
-import icon_3 from "@/assets/img/icon/funfact/funfact-2-icon-3.svg";
-import icon_4 from "@/assets/img/icon/funfact/funfact-2-icon-4.svg";
+import icon_1 from "@/assets/img/icon/funfact/icon.svg";
+import icon_2 from "@/assets/img/icon/funfact/icon (1).svg";
+import icon_3 from "@/assets/img/icon/funfact/icon (2).svg";
+import icon_4 from "@/assets/img/icon/funfact/icon (3).svg";
 
 const funFacts = [
   {
@@ -38,7 +38,7 @@ export default function FunFactArea() {
     <section
       className="funfact-area tp-funfact-bg"
       data-background="assets/img/bg/funfact-2-bg-1.jpg"
-      style={{ backgroundImage: "url(/assets/img/bg/funfact-2-bg-1.jpg)" }}
+      // style={{ backgroundImage: "url(/assets/img/bg/funfact-2-bg-1.jpg)" }}
     >
       <div className="container">
         <div className="row">
