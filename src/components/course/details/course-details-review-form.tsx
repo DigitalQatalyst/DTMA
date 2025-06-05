@@ -1,15 +1,24 @@
 import { StarTwo } from "@/components/svg";
 
-
 export default function CourseDetailsReviewForm() {
   return (
     <form>
-      <div className="tp-course-details-2-comment-star">
-        <span><StarTwo /></span>
-        <span><StarTwo /></span>
-        <span><StarTwo /></span>
-        <span><StarTwo /></span>
-        <span><StarTwo clr="#BFC5CA" /></span>
+      <div className="tp-course-details-2-comment-star frates">
+        <span>
+          <StarTwo />
+        </span>
+        <span>
+          <StarTwo />
+        </span>
+        <span>
+          <StarTwo />
+        </span>
+        <span>
+          <StarTwo />
+        </span>
+        <span>
+          <StarTwo clr="#BFC5CA" />
+        </span>
       </div>
 
       <div className="tp-contact-input-form">
@@ -32,5 +41,5 @@ export default function CourseDetailsReviewForm() {
         </div>
       </div>
     </form>
-  )
+  );
 }

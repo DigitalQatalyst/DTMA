@@ -1,3 +1,32 @@
+/* additionals */
+.rates {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+}
+.detailnav {
+  width: 100%;
+  display: flex;
+}
+.detailnav ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.frates {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  /* text-align: center;
+  justify-content: center; */
+  width: 100%;
+}
+
 .player {
   background-color: white;
   margin-bottom: 0.25rem;
@@ -18,9 +47,9 @@
   padding-bottom: 1rem;
 }
 .videocontainer {
-  margin-top: 0.25rem;
+  margin-top: 0.2rem;
   margin-bottom: 0.25rem;
-  width: 60%;
+  width: 100%;
   align-items: flex-start;
   /* background-color: rgb(0 0 0); */
   height: 100%;
