@@ -22,6 +22,9 @@ export default function HomeOnlineCoursePage() {
       {/* hero area end */}
 
       {/* category area */}
+
+      <HeroAreaTwo />
+      {/* <HeroSection /> */}
       <CategoryArea />
       {/* category area */}
 

@@ -7,7 +7,7 @@ const HeroSection = () => {
       {/* Hero Background */}
       <div className="hero-bg position-absolute w-100 h-100">
         <img
-          src="/assets/img/Hero image.jpg"
+          src="/assets/img/hero-image.jpg"
           alt="Hero Background"
           className="w-100 h-200 object-fit-cover"
           style={{ objectPosition: "top center" }}
