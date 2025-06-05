@@ -2,7 +2,7 @@
 import Slider from "react-slick";
 import { useRef, useState } from "react";
 import Image from "next/image";
-import shape_underline from "@/assets/img/unlerline/testimonial-2-svg-1.svg";
+import shape_underline from "@/assets/img/shape/bottom-line/line.svg";
 import quate_1 from "@/assets/img/testimonial/testimonial-shape-1.png";
 import quate_2 from "@/assets/img/testimonial/testimonial-shape-3.png";
 import { testimonial_two_data } from "@/data/testimonial-data";
@@ -57,15 +57,15 @@ export default function TestimonialTwo() {
       sliderRef.current?.slickNext();
     };
   return (
-    <section className="testimonial-area lightblue-bg pb-85">
+    <section className="testimonial-area pb-85">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-xxl-6 col-lg-8">
             <div className="tp-testimonial-section">
               <div className="tp-section text-center mb-40">
-                <h5 className="tp-section-3-subtitle">Live Courses</h5>
+                <h5 className="tp-section-3-subtitle">Testimonials</h5>
                 <h3 className="tp-section-3-title">
-                  Student{" "}
+                  What Learner’s{" "}
                   <span>
                     Say
                     <Image
@@ -76,7 +76,7 @@ export default function TestimonialTwo() {
                       alt="shape-underline"
                     />
                   </span>
-                  About Acadia
+                  About DTMA
                 </h3>
               </div>
             </div>
@@ -94,11 +94,11 @@ export default function TestimonialTwo() {
                 asNavFor={slider1 as Slider}
                 ref={(slider) => setSlider2(slider)}
               >
-                {nav_avatars.map((avatar, i) => (
+                {/* {nav_avatars.map((avatar, i) => (
                   <div key={i} className="tp-testimonial-2-avatar-item">
                     <Image src={avatar} alt="avatar" width={74} height={74} />
                   </div>
-                ))}
+                ))} */}
               </Slider>
               <button onClick={sliderNext} type="button" className="slick-next slick-arrow">
                 <i className="fa-solid fa-angle-right"></i>
@@ -137,7 +137,7 @@ export default function TestimonialTwo() {
                   </div>
                   <div className="tp-testimonial-2-content p-relative">
                     <p>{item.testimonial}</p>
-                    <div className="tp-testimonial-2-shape">
+                    {/* <div className="tp-testimonial-2-shape">
                       <div className="shape-1">
                         <Image
                           src={quate_1}
@@ -150,7 +150,7 @@ export default function TestimonialTwo() {
                           alt="quate"
                         />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               ))}

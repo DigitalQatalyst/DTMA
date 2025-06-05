@@ -23,10 +23,10 @@ export const testimonial_two_data = [
   {
     id: 1,
     name: "Hilary Oise",
-    position: "Lecturer, Oxford University",
+    position: "IT Manager",
     rating: 5,
     testimonial:
-      "I need to get a certification for English proficiency and Acadia is my best choice. Their tutors are smart and professional when dealing with students. I wanted to place a review since! Thanks and 5 stars!",
+      "The bite-sized modules made learning so easy! I completed my AI for Business Leaders course in just 4 weeks while working full-time.",
   },
   {
     id: 2,
