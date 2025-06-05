@@ -1,6 +1,6 @@
 import Image from "next/image";
 import category_data from "@/data/category-data";
-import shape_line from "@/assets/img/shape/bottom-line/line-2-category.svg";
+import shape_line from "@/assets/img/shape/bottom-line/line.svg";
 import category_shape from "@/assets/img/shape/category-2-shape-1.png";
 import Link from "next/link";
 
@@ -14,9 +14,14 @@ export default function CategoryArea() {
               className="tp-section mb-40 text-center wow fadeInUp"
               data-wow-delay=".4s"
             >
+<<<<<<< HEAD
               <h5 className="tp-section-3-subtitle">Top Categories</h5>
+=======
+              <h5 className="tp-section-3-subtitle">Course Categories</h5>
+>>>>>>> 6ef4bff (updated the featured categories items and shape-bottom-line)
               <h3 className="tp-section-3-title">
-                Most demanding{" "}
+                
+                Most Demanding{" "}
                 <span>
                   Categories
                   <Image
@@ -25,6 +30,7 @@ export default function CategoryArea() {
                     data-wow-delay=".4s"
                     src={shape_line}
                     alt="shape"
+                    
                   />
                 </span>
                 .
