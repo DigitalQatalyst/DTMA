@@ -57,6 +57,16 @@ const category_data: ICategoryDT[] = [
     icon: "/assets/img/icon/category/cat-2-icon-8.svg",
     color: "cat-lgreen",
   },
+<<<<<<< HEAD
+=======
+  { id: 2, title: "Digital Security", icon: "/assets/img/icon/LandingPage-categories/Frame 33904.svg" },
+   { id: 3, title: "Digital Experience", icon: "/assets/img/icon/LandingPage-categories/Frame 33908.svg" },
+  { id: 4, title: "Digital Marcom", icon: "/assets/img/icon/LandingPage-categories/Frame 33907.svg" },
+    { id: 5, title: "Digital Core", icon: "/assets/img/icon/LandingPage-categories/Frame 33903.svg" },
+    { id: 6, title: "Digital Organisation", icon: "/assets/img/icon/LandingPage-categories/Frame 33902.svg" },
+    { id: 7, title: "Digital BackOffice", icon: "/assets/img/icon/LandingPage-categories/Frame 33904.svg" },
+    { id: 8, title: "Digital Intelligence", icon: "/assets/img/icon/LandingPage-categories/Frame 33910.svg" },
+>>>>>>> 6ef4bff (updated the featured categories items and shape-bottom-line)
 ];
 
 export default category_data;
