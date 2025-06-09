@@ -14,7 +14,8 @@ type IProps = {
   course: ICourseDT;
 };
 
-export default function CourseDetailsArea({ course }: IProps) {
+// export default function CourseDetailsArea({ course }: IProps) {
+export default function CourseDetailsArea() {
   return (
     <section className="tp-course-details-2-area pt-50 pb-80">
       <div className="container">
@@ -25,7 +26,7 @@ export default function CourseDetailsArea({ course }: IProps) {
                 {/* <CourseDetailsNav /> */}
               </div>
               <div className="d-flex align-items-center">
-                <VideoAndCourse course={course} />
+                <VideoAndCourse />
               </div>
 
               <div className="tp-course-details-2-content">
