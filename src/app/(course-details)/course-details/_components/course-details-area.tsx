@@ -1,4 +1,3 @@
-import { ICourseDT } from "@/types/course-d-t";
 import "./courseDetails.css";
 import "./playerstyle.css";
 import CourseDetailsInfo from "@/components/course/details/course-details-info";
