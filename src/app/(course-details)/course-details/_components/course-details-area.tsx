@@ -11,11 +11,7 @@ import CourseVideo from "./coursevideo";
 import ContentBar from "./contentbar";
 import Qanda from "./qanda";
 
-type IProps = {
-  course: ICourseDT;
-};
-
-export default function CourseDetailsArea({ course }: IProps) {
+export default function CourseDetailsArea() {
   return (
     <section className="tp-course-details-2-area pt-50 pb-80">
       <div className="container">

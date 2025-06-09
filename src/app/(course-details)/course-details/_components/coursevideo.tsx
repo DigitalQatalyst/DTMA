@@ -1,11 +1,6 @@
 "use client";
-import { ChevronLeft, ChevronRight, Lock, Plus } from "lucide-react";
+import { ChevronRight, Lock } from "lucide-react";
 import React, { useState } from "react";
-import WriteReview from "./writereview";
-import AboutCourse from "./aboutcourse";
-import LearnObjectives from "./learnobjectives";
-import FeaturedReviews from "./featuredreviews";
-import RatingsAndReviews from "./ratingsandreviews";
 import Qanda from "./qanda";
 import Resources from "./resources";
 import RelatedCourses from "./relatedcourses";
