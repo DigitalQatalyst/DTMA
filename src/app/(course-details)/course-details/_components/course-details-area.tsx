@@ -10,6 +10,7 @@ import CourseResources from "@/components/resources_courseDetails/resources";
 import CourseVideo from "./coursevideo";
 import ContentBar from "./contentbar";
 import Qanda from "./qanda";
+import CourseDetailsRightSide from "./course-details-right-side";
 
 type IProps = {
   course: ICourseDT;
@@ -82,7 +83,7 @@ export default function CourseDetailsArea({ course }: IProps) {
           </div>
           <div className="col-lg-4">
             {/* right sidebar box */}
-            <ContentBar />
+            <CourseDetailsRightSide course={course} />
             {/* <CourseDetailsCurriculum /> */}
             {/* <CourseDetailsRightSide course={course} /> */}
             {/* right sidebar box */}
