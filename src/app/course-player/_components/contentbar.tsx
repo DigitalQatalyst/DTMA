@@ -22,7 +22,7 @@ const ContentBar: React.FC = () => {
     setSelectedItem({ sectionIndex, itemIndex });
 
     // ✅ You can now do something with itemData
-    console.log("Selected item data:", itemData);
+    console.log("Selecte item data:", itemData);
   };
 
   return (
