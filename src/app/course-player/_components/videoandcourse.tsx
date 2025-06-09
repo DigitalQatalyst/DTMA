@@ -1,5 +1,5 @@
 "use client";
-import { ChevronLeft, ChevronRight, Lock, Plus } from "lucide-react";
+import { ChevronRight, Lock, Plus } from "lucide-react";
 import React, { useState } from "react";
 import WriteReview from "./writereview";
 import AboutCourse from "./aboutcourse";

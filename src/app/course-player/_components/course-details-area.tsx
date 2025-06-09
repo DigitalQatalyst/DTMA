@@ -7,7 +7,6 @@ import CourseDetailsCurriculum from "@/components/course/details/course-details-
 import CourseDetailsRatingReviews from "@/components/course/details/course-details-rating-reviews";
 import CourseDetailsFeaturedReviews from "@/components/course/details/course-details-featured-reviews";
 import CourseDetailsReviewForm from "@/components/course/details/course-details-review-form";
-import CourseDetailsNav from "@/components/course/details/course-details-nav";
 import CourseResources from "@/components/resources_courseDetails/resources";
 import VideoAndCourse from "./videoandcourse";
 
