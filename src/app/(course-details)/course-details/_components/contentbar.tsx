@@ -1,15 +1,5 @@
 "use client";
-import {
-  File,
-  Menu,
-  Minus,
-  Pointer,
-  Plus,
-  VideoIcon,
-  FileVideo,
-  CirclePlay,
-  FileQuestion,
-} from "lucide-react";
+import { Menu, Minus, Plus, CirclePlay, FileQuestion } from "lucide-react";
 import React, { useState } from "react";
 import { coursecontent } from "../constants";
 
