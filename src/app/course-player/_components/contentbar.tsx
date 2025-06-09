@@ -3,6 +3,12 @@ import { File, Menu, Minus, Pointer, Plus } from "lucide-react";
 import React, { useState } from "react";
 import { coursecontent } from "../constants";
 
+interface SubtitleItem {
+  id?: string | number;
+  type: string;
+  subtitle: string;
+}
+
 const ContentBar: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0); // Default open first section
   const [selectedItem, setSelectedItem] = useState<{
@@ -17,7 +23,7 @@ const ContentBar: React.FC = () => {
   const handleSelect = (
     sectionIndex: number,
     itemIndex: number,
-    itemData: any
+    itemData: SubtitleItem
   ) => {
     setSelectedItem({ sectionIndex, itemIndex });
 
