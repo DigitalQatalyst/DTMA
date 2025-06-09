@@ -1,3 +1,4 @@
+import { ICourseDT } from "@/types/course-d-t";
 import "./courseDetails.css";
 import "./playerstyle.css";
 import CourseDetailsInfo from "@/components/course/details/course-details-info";
@@ -10,7 +11,11 @@ import CourseVideo from "./coursevideo";
 import ContentBar from "./contentbar";
 import Qanda from "./qanda";
 
-export default function CourseDetailsArea() {
+type IProps = {
+  course: ICourseDT;
+};
+
+export default function CourseDetailsArea({ course }: IProps) {
   return (
     <section className="tp-course-details-2-area pt-50 pb-80">
       <div className="container">
