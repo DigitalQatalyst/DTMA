@@ -25,7 +25,7 @@ export default function CourseDetailsArea({ course }: IProps) {
                 {/* <CourseDetailsNav /> */}
               </div>
               <div className="d-flex align-items-center">
-                <VideoAndCourse />
+                <VideoAndCourse course={course} />
               </div>
 
               <div className="tp-course-details-2-content">
