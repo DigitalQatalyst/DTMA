@@ -3,11 +3,8 @@ import { Menu, Minus, Plus, CirclePlay, FileQuestion } from "lucide-react";
 import React, { useState } from "react";
 import { coursecontent } from "../constants";
 
-interface SubtitleItem {
-  id?: string;
-  type: string;
-  subtitle: string;
-}
+// Import the Subs type directly to ensure type consistency
+import type { Subs } from "../constants";
 
 const ContentBar: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0); // Default open first section
@@ -23,7 +20,7 @@ const ContentBar: React.FC = () => {
   const handleSelect = (
     sectionIndex: number,
     itemIndex: number,
-    itemData: SubtitleItem
+    itemData: Subs
   ) => {
     setSelectedItem({ sectionIndex, itemIndex });
 
