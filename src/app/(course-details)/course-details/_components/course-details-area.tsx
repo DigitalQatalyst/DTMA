@@ -14,6 +14,7 @@ type IProps = {
   course: ICourseDT;
 };
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default function CourseDetailsArea({ course }: IProps) {
   return (
     <section className="tp-course-details-2-area pt-50 pb-80">
