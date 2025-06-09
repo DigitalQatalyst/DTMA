@@ -1,16 +1,12 @@
 import { ICourseDT } from "@/types/course-d-t";
 import "./courseDetails.css";
 import "./playerstyle.css";
-import CourseDetailsRightSide from "../_components/course-details-right-side";
 import CourseDetailsInfo from "@/components/course/details/course-details-info";
-import CourseDetailsCurriculum from "@/components/course/details/course-details-curriculum";
-// import CourseDetailsInstructor from "@/components/course/details/course-details-instructor";
 import CourseDetailsRatingReviews from "@/components/course/details/course-details-rating-reviews";
 import CourseDetailsFeaturedReviews from "@/components/course/details/course-details-featured-reviews";
 import CourseDetailsReviewForm from "@/components/course/details/course-details-review-form";
 import CourseDetailsNav from "@/components/course/details/course-details-nav";
 import CourseResources from "@/components/resources_courseDetails/resources";
-import VideoAndCourse from "./videoandcourse";
 import CourseVideo from "./coursevideo";
 import ContentBar from "./contentbar";
 import Qanda from "./qanda";

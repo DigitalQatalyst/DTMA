@@ -1,5 +1,5 @@
 "use client";
-import { ChevronLeft, ChevronRight, Lock, Plus } from "lucide-react";
+import { ChevronRight, Lock, Plus } from "lucide-react";
 import React, { useState } from "react";
 import WriteReview from "./writereview";
 import AboutCourse from "./aboutcourse";
@@ -9,8 +9,6 @@ import RatingsAndReviews from "./ratingsandreviews";
 import Qanda from "./qanda";
 import Resources from "./resources";
 import RelatedCourses from "./relatedcourses";
-import ContentBar from "./contentbar";
-// import "../../../styles/global.css";
 
 export default function VideoAndCourse() {
   const [viewIndex, setViewIndex] = useState(0); // 0 = video, 1 = quick start
@@ -128,7 +126,6 @@ export default function VideoAndCourse() {
             <WriteReview />
           </div>
         </div>
-        {/* <div className="contentcontainer"><ContentBar /></div> */}
       </div>
       <hr />
       <div className="coursesection">
