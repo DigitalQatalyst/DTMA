@@ -15,7 +15,7 @@ type IProps = {
 };
 
 // export default function CourseDetailsArea({ course }: IProps) {
-export default function CourseDetailsArea() {
+export default function CourseDetailsArea({ course }: IProps) {
   return (
     <section className="tp-course-details-2-area pt-50 pb-80">
       <div className="container">
