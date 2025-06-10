@@ -1,4 +1,4 @@
-import { ICourseDT } from "@/types/course-d-t";
+import { ICourseDT, IGymDT } from "@/types/course-d-t";
 
 export const online_courses_data: ICourseDT[] = [
   {
@@ -9,7 +9,7 @@ export const online_courses_data: ICourseDT[] = [
     thumbnail: "/assets/img/course/course-thumb-1.jpg",
     category: "Art & Design",
     credits: 1000,
-    // price: 84,
+    price: 84,
     avg_rating: 5,
     discount: 25,
     lessons: 12,
@@ -105,7 +105,7 @@ export const online_courses_data: ICourseDT[] = [
   },
 ];
 
-export const gym_course_data: ICourseDT[] = [
+export const gym_course_data: IGymDT[] = [
   {
     id: 7,
     author_img: "/assets/img/course/course-5-thumb-1.jpg",
@@ -198,7 +198,7 @@ export const gym_course_data: ICourseDT[] = [
   },
 ];
 
-export const high_school_course_data: ICourseDT[] = [
+export const high_school_course_data: IGymDT[] = [
   {
     id: 13,
     title: "English Language Club",
