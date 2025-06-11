@@ -7,7 +7,7 @@ import CourseLiveArea from "@/components/course/course-live-area";
 import CtaTwo from "@/components/cta/cta-two";
 import FunFactArea from "@/components/fun-fact/fun-fact-area";
 import HeroAreaTwo from "@/components/hero-area/hero-area-two";
-import TeamArea from "@/components/team/team-area";
+// import TeamArea from "@/components/team/team-area";
 import TestimonialTwo from "@/components/testimonial/testimonial-two";
 
 export const metadata: Metadata = {
@@ -22,8 +22,6 @@ export default function HomeOnlineCoursePage() {
       {/* hero area end */}
 
       {/* category area */}
-
-      <HeroAreaTwo />
       {/* <HeroSection /> */}
       <CategoryArea />
       {/* category area */}
