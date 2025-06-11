@@ -8,42 +8,37 @@ const HeroAreaTwo = () => {
     <section className="hero-section position-relative" style={{marginBottom: "17rem"}}>
       {/* Hero Background */}
       <div className="hero-bg position-absolute w-100 h-100">
-        <Image
+        {/* <Image
           src={hero_thumb}
           alt="Hero Background"
           className="w-100 h-200 object-fit-cover"
           style={{ objectPosition: "top center" }}
-        />
+        /> */}
       </div>
 
       {/* Hero Content */}
       <div className="container position-relative z-index-2 text-center text-white" style={{paddingTop:"10rem"}}>
   
-        <h1 className="display-4 mb-3" style={{ color: "#ffffff" }}>
-          <strong>Embrace Change</strong>
+        <h1 className="hero-content" style={{ color: "#000A06" }}>
+          <strong>Learn. Transform . Lead</strong>
         </h1>
 
-        <p className="mb-4" style={{ fontSize: "1.2rem", color: "rgba(255, 255, 255, 0.80)"}}>
-          Join our expert-led courses on <strong style={{ color: "#008080" }}>Digital Transformation Management Academy</strong> <br></br>to propel your career in the digital transformation journey.
+        <p className="paragraph">
+          DTMA equips professionals and organizations with AI-driven, personalized digital <br/> transformation learning—accessible, affordable, and role-specific.
         </p>
 
-        <div className="mb-3">
-          <input
+          {/* <input
             type="text"
             className="form-control"
             placeholder="How can we help?"
             style={{ width: "300px", display: "inline-block", borderRadius: "0px 0px 0px 0px" }}
-          />
+          /> */}
           <button
-            className="btn"
-            style={{ height: "55px", borderRadius: "0px 10px 10px 0px", backgroundColor: "#008080", color: "#fff", marginBottom: "3px" }}
-          >
-            <img src="assets/img/icon/frame.svg" alt="Robot Icon" className="ms-2" style={{ width: "20px", height: "20px" }} />
-            Ask DTMA AI
+            className="courses-btn">
+            Explore Courses Now
           </button>
-        </div>
 
-        <button
+        {/* <button
           className="btn position-absolute"
           style={{
             backgroundColor: "#00A9A5",
@@ -56,7 +51,7 @@ const HeroAreaTwo = () => {
         >
           <img src="assets/img/icon/frame.svg" alt="Robot Icon" className="ms-2" style={{ width: "20px", height: "20px" }} />
           Ask DTMA AI
-        </button>
+        </button> */}
       </div>
     </section>
   );
