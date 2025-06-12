@@ -21,14 +21,16 @@ export default function HomeOnlineCoursePage() {
       <HeroAreaTwo />
       {/* hero area end */}
 
+      {/* fun fact area start */}
+      <FunFactArea />
+      {/* fun fact area end */}
+
       {/* category area */}
       {/* <HeroSection /> */}
       <CategoryArea />
       {/* category area */}
 
-      {/* fun fact area start */}
-      <FunFactArea />
-      {/* fun fact area end */}
+
 
       {/* course area start */}
       <CourseArea />
