@@ -1,7 +1,7 @@
 import Image from "next/image";
 import category_data from "@/data/category-data";
 // import shape_line from "@/assets/img/shape/bottom-line/line.svg";
-import category_shape from "@/assets/img/shape/category-2-shape-1.png";
+// import category_shape from "@/assets/img/shape/category-2-shape-1.png";
 import Link from "next/link";
 
 export default function CategoryArea() {
@@ -61,7 +61,7 @@ export default function CategoryArea() {
             </div>
           ))}
         </div>
-        <div className="row justify-content-center">
+        {/* <div className="row justify-content-center">
           <div className="col-xl-6 col-lg-8">
             <div
               className="tp-category-banner d-flex align-items-center justify-content-between tp-category-banner-bg mt-35"
@@ -86,7 +86,7 @@ export default function CategoryArea() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
