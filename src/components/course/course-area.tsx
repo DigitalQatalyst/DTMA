@@ -1,12 +1,12 @@
-import Link from "next/link";
+// import Link from "next/link";
 import Image from "next/image";
-import shape_underline from "@/assets/img/shape/bottom-line/line.svg";
-import category_shape from "@/assets/img/shape/category-2-shape-1.png";
+// import shape_underline from "@/assets/img/shape/bottom-line/line.svg";
+import arrow_outward from "@/assets/img/icon/arrow_outward.svg";
 import CourseProvider from "../provider/course-provider";
 import CourseTabBtn from "./course-tab-btn";
 import CourseItems from "./course-items";
 
-const tab_navs = ["New","Popular","View All"];
+const tab_navs = ["Browse More Courses"];
 
 export default function CourseArea() {
   return (
@@ -16,33 +16,34 @@ export default function CourseArea() {
           <div className="row align-items-end">
             <div className="col-xxl-5 col-xl-6 col-lg-7">
               <div className="tp-section mb-40">
-                {/* <h5 className="tp-section-3-subtitle">Our Courses</h5> */}
-                <h3 className="tp-section-3-title">
-                  Featured
-                  <span style={{ marginLeft: '8px' }}>
-                    Courses
-                    <Image
+                <h5 className="tp-section-3-subtitle">Featured Courses</h5>
+                <div className="col-xxl-7 col-xl-6 col-lg-5">
+                  <div className="tp-course-tab d-flex justify-content-lg-end mb-40">
+                    <nav>
+                      <div className="nav" id="nav-tab" role="tablist">
+                        {tab_navs.map((tab) => (
+                          <CourseTabBtn key={tab} tab={tab} />
+                        ))}
+                      </div>
+                      <Image src={arrow_outward} alt="outward arrow" />
+                    </nav>
+                  </div>
+                </div>
+
+                {/* <Image
                       className="tp-underline-shape-6 wow bounceIn"
                       data-wow-duration="1.5s"
                       data-wow-delay=".4s"
                       src={shape_underline}
                       alt="shape-underline"
-                    />
-                  </span>
-                </h3>
+                    /> */}
+
               </div>
+              <p className="course-area-p">Jumpstart your learning with popular courses designed for immediate impact:</p>
+
+
             </div>
-            <div className="col-xxl-7 col-xl-6 col-lg-5">
-              <div className="tp-course-tab d-flex justify-content-lg-end mb-40">
-                <nav>
-                  <div className="nav" id="nav-tab" role="tablist">
-                    {tab_navs.map((tab) => (
-                      <CourseTabBtn key={tab} tab={tab} />
-                    ))}
-                  </div>
-                </nav>
-              </div>
-            </div>
+
           </div>
           <div className="row">
             <div className="col-lg-12">

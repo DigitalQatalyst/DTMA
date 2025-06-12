@@ -23,7 +23,7 @@ export default function FooterTwo() {
                               </Link>
                            </div>
                            <div className="tp-footer-widget-content">
-                              <p>Designed for professionals and organizations, DTMA provides cutting-edge learning in AI, automation, and digital transformation, empowering a future-ready workforce.</p>
+                              <p>Stay ahead with the latest insights, courses, and opportunities in digital transformation.</p>
                            </div>
                            <div className="tp-footer-contact">
                               <div className="tp-footer-btn">

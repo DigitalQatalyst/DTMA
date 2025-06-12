@@ -49,13 +49,13 @@ export default function TestimonialTwo() {
   const [slider2, setSlider2] = useState<Slider | null>(null);
   const sliderRef = useRef<Slider | null>(null);
 
-    const sliderPrev = () => {
-      sliderRef.current?.slickPrev();
-    };
+  const sliderPrev = () => {
+    sliderRef.current?.slickPrev();
+  };
 
-    const sliderNext = () => {
-      sliderRef.current?.slickNext();
-    };
+  const sliderNext = () => {
+    sliderRef.current?.slickNext();
+  };
   return (
     <section className="testimonial-area pb-85">
       <div className="container">
@@ -63,10 +63,10 @@ export default function TestimonialTwo() {
           <div className="col-xxl-6 col-lg-8">
             <div className="tp-testimonial-section">
               <div className="tp-section text-center mb-40">
-                <h5 className="tp-section-3-subtitle">Testimonials</h5>
+                <h5 className="tp-section-3-subtitle">What Our Learners Say</h5>
                 <h3 className="tp-section-3-title">
-                  What Learner’s{" "}
-                  <span>
+                  Don’t just take our words - see how DTMA has empowered professionals like you:
+                  {/* <span>
                     Say
                     <Image
                       className="tp-underline-shape-8 wow bounceIn"
@@ -75,8 +75,7 @@ export default function TestimonialTwo() {
                       src={shape_underline}
                       alt="shape-underline"
                     />
-                  </span>
-                  About DTMA
+                  </span> */}
                 </h3>
               </div>
             </div>
@@ -94,11 +93,11 @@ export default function TestimonialTwo() {
                 asNavFor={slider1 as Slider}
                 ref={(slider) => setSlider2(slider)}
               >
-                {/* {nav_avatars.map((avatar, i) => (
+                {nav_avatars.map((avatar, i) => (
                   <div key={i} className="tp-testimonial-2-avatar-item">
                     <Image src={avatar} alt="avatar" width={74} height={74} />
                   </div>
-                ))} */}
+                ))}
               </Slider>
               <button onClick={sliderNext} type="button" className="slick-next slick-arrow">
                 <i className="fa-solid fa-angle-right"></i>

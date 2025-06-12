@@ -37,7 +37,7 @@ export default function HomeOnlineCoursePage() {
       {/* course area end */}
 
       {/* course live area start */}
-      <CourseLiveArea />
+      {/* <CourseLiveArea /> */}
       {/* course live area end */}
 
       {/* testimonial area start */}
@@ -45,15 +45,15 @@ export default function HomeOnlineCoursePage() {
       {/* testimonial area end */}
 
       {/* team area start */}
-      <TeamArea />
+      {/* <TeamArea /> */}
       {/* team area end */}
 
       {/* brand area start */}
-      <BrandArea />
+      {/* <BrandArea /> */}
       {/* brand area end */}
 
       {/* banner area start */}
-      <BannerArea />
+      {/* <BannerArea /> */}
       {/* banner area end */}
 
       {/* cta area start */}
