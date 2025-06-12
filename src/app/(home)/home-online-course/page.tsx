@@ -7,7 +7,7 @@ import CourseLiveArea from "@/components/course/course-live-area";
 import CtaTwo from "@/components/cta/cta-two";
 import FunFactArea from "@/components/fun-fact/fun-fact-area";
 import HeroAreaTwo from "@/components/hero-area/hero-area-two";
-// import TeamArea from "@/components/team/team-area";
+import TeamArea from "@/components/team/team-area";
 import TestimonialTwo from "@/components/testimonial/testimonial-two";
 
 export const metadata: Metadata = {
@@ -27,35 +27,35 @@ export default function HomeOnlineCoursePage() {
       {/* category area */}
 
       {/* fun fact area start */}
-      <FunFactArea/>
+      <FunFactArea />
       {/* fun fact area end */}
 
       {/* course area start */}
-      <CourseArea/>
+      <CourseArea />
       {/* course area end */}
 
       {/* course live area start */}
-      {/* <CourseLiveArea/> */}
+      <CourseLiveArea />
       {/* course live area end */}
 
       {/* testimonial area start */}
-      <TestimonialTwo/>
+      <TestimonialTwo />
       {/* testimonial area end */}
 
       {/* team area start */}
-      {/* <TeamArea/> */}
+      <TeamArea />
       {/* team area end */}
 
       {/* brand area start */}
-      <BrandArea/>
+      <BrandArea />
       {/* brand area end */}
 
       {/* banner area start */}
-      {/* <BannerArea/> */}
+      <BannerArea />
       {/* banner area end */}
 
       {/* cta area start */}
-      <CtaTwo/>
+      <CtaTwo />
       {/* cta area end */}
     </main>
   );
