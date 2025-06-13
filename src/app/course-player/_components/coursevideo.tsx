@@ -1,9 +1,9 @@
 "use client";
-import { ChevronRight, Lock } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import React, { useState } from "react";
 import QuizModal from "./quiz/QuizModal";
 
-export default function VideoAndCourse() {
+export default function CourseVideo() {
   const [viewIndex, setViewIndex] = useState(0); // 0 = video, 1 = quick start
   const [isQuizModalOpen, setIsQuizModalOpen] = useState(false);
 
@@ -59,23 +59,45 @@ export default function VideoAndCourse() {
               <h2 className="text-2xl font-semibold mb-4 text-black">
                 Take Quiz
               </h2>
-              <div className="lock">
-                <Lock size={50} color="gray" />
-              </div>
               <button
+                className="quickstart-btn"
                 onClick={openQuizModal}
-                className="quickstart-btn bg-teal-200 text-white px-4 py-2 rounded shadow hover:bg-teal-600 transition"
+                style={{
+                  margin: "20px 0",
+                  padding: "10px 20px",
+                  fontSize: "16px",
+                  cursor: "pointer",
+                  backgroundColor: "#008080",
+                  color: "white",
+                  border: "none",
+                  borderRadius: "4px",
+                }}
               >
                 Start Quiz
               </button>
-              <div className="lock">
-                <p className="text-lock">Complete course to take quiz.</p>
-                <button onClick={prev} className="backtext">
-                  Back to Course
-                </button>
-              </div>
+              <button onClick={prev} className="backtext">
+                Back to Course
+              </button>
             </div>
           </div>
+
+          {/* <div className="categorycard">
+            <div className="category">
+              <p className="catname">Course Information</p>
+            </div>
+            <div className="category">
+              <p className="catname">Resources</p>
+            </div>
+            <div className="category">
+              <p className="catname">Notes</p>
+            </div>
+            <div className="category">
+              <p className="catname">Q & A</p>
+            </div>
+            <div className="category">
+              <p className="catname">Review</p>
+            </div>
+          </div> */}
         </div>
       </div>
       <QuizModal isOpen={isQuizModalOpen} onClose={closeQuizModal} />
