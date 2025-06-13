@@ -65,7 +65,7 @@ const GET_COURSES = `
 const mapToCourseDT = (item: Product): ICourseDT => ({
   id: item.id,
   title: item.name,
-  thumbnail: "/assets/img/campus/campuses-thumb.jpg", // Placeholder
+  thumbnail: "/assets/img/dtma/home_02_slide_1-removebg-preview 1 1.png", // Placeholder
   author_name: item.customFields.instructor,
   author_img: "/assets/img/teacher/teacher-1.png", // Placeholder
   category: "Technology", // Placeholder
