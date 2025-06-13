@@ -15,4 +15,5 @@ export type ICourseDT = {
   language: string;
   progress?: number;
   description?: string; // Added to support description from query
+  videoURL?: string; // Added for video display
 };

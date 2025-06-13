@@ -27,7 +27,7 @@ export default function CourseItem({ course, removeTag }: IProps) {
   } = course || {};
   return (
     <div className="tp-course-item p-relative fix mb-30">
-      <div className="tp-course-teacher mb-15">
+      {/* <div className="tp-course-teacher mb-15">
         <span>
           {author_img && (
             <Image src={author_img} alt={author_name} width={30} height={30} />
@@ -37,7 +37,7 @@ export default function CourseItem({ course, removeTag }: IProps) {
         {discount && discount > 0 ? (
           <span className="discount">-{discount}% </span>
         ) : null}
-      </div>
+      </div> */}
       <div className="tp-course-thumb">
         <Link href={`/course-details/${id}`}>
           <Image
