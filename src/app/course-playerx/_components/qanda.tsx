@@ -1,16 +1,14 @@
-"use client";
-
 import React from "react";
 
 const Qanda = () => {
   return (
     <div>
       <div className="qanda">
-        {/* <h1 className="playerheading">Q & A</h1> */}
+        <h1 className="playerheading">Q & A</h1>
         <div className="qasec">
           <div className="startdiscussion">
             <div>
-              <div className="usertag d-flex align-items-center">
+              <div className="usertag">
                 <p className="primarytext">K</p>
               </div>
             </div>

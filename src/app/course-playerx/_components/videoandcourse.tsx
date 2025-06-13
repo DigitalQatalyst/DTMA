@@ -1,17 +1,33 @@
 "use client";
-import { ChevronRight, Lock } from "lucide-react";
+import { ChevronRight, Lock, Plus } from "lucide-react";
 import React, { useState } from "react";
+import WriteReview from "./writereview";
+import AboutCourse from "./aboutcourse";
+import LearnObjectives from "./learnobjectives";
+import FeaturedReviews from "./featuredreviews";
+import RatingsAndReviews from "./ratingsandreviews";
+import Qanda from "./qanda";
+import Resources from "./resources";
+import RelatedCourses from "./relatedcourses";
+import ContentBar from "./contentbar";
 import QuizModal from "./quiz/QuizModal";
+import "../styles.css";
 
-export default function CourseVideo() {
+export default function VideoAndCourse() {
   const [viewIndex, setViewIndex] = useState(0); // 0 = video, 1 = quick start
   const [isQuizModalOpen, setIsQuizModalOpen] = useState(false);
 
   const next = () => setViewIndex((prev) => Math.min(prev + 1, 1));
   const prev = () => setViewIndex((prev) => Math.max(prev - 1, 0));
 
-  const openQuizModal = () => setIsQuizModalOpen(true);
-  const closeQuizModal = () => setIsQuizModalOpen(false);
+  const openQuizModal = () => {
+    setIsQuizModalOpen(true);
+    console.log("Opening quiz modal"); // Debug log
+  };
+  const closeQuizModal = () => {
+    setIsQuizModalOpen(false);
+    console.log("Closing quiz modal"); // Debug log
+  };
 
   return (
     <div className="container h-full player p-12">
@@ -81,7 +97,7 @@ export default function CourseVideo() {
             </div>
           </div>
 
-          {/* <div className="categorycard">
+          <div className="categorycard">
             <div className="category">
               <p className="catname">Course Information</p>
             </div>
@@ -97,8 +113,47 @@ export default function CourseVideo() {
             <div className="category">
               <p className="catname">Review</p>
             </div>
-          </div> */}
+          </div>
+
+          {/* about course */}
+          <AboutCourse />
+          {/* showmore */}
+          <div className="showmore">
+            <div className="showmorebutton">
+              <Plus size={20} color="#008080" />
+              <p className="shomoretext text-teal">Show More</p>
+            </div>
+          </div>
+
+          {/* what to learn */}
+          <LearnObjectives />
+
+          {/* resources */}
+          <Resources />
+          <div>
+            {/* q&a */}
+            <Qanda />
+
+            {/* reviews */}
+            <WriteReview />
+
+            {/* Reviews and Ratings */}
+            <RatingsAndReviews />
+
+            {/* fatured Review */}
+            <FeaturedReviews />
+
+            {/* write review */}
+            <WriteReview />
+          </div>
         </div>
+        <div className="contentcontainer">
+          <ContentBar />
+        </div>
+      </div>
+      <hr />
+      <div className="coursesection">
+        <RelatedCourses />
       </div>
       <QuizModal isOpen={isQuizModalOpen} onClose={closeQuizModal} />
     </div>

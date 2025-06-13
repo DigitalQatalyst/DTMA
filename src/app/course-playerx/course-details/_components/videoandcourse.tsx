@@ -1,18 +1,20 @@
 "use client";
-import { ChevronRight, Lock } from "lucide-react";
+import { ChevronRight, Lock, Plus } from "lucide-react";
 import React, { useState } from "react";
-import QuizModal from "./quiz/QuizModal";
+import WriteReview from "./writereview";
+import AboutCourse from "./aboutcourse";
+import LearnObjectives from "./learnobjectives";
+import FeaturedReviews from "./featuredreviews";
+import RatingsAndReviews from "./ratingsandreviews";
+import Qanda from "./qanda";
+import Resources from "./resources";
+import RelatedCourses from "./relatedcourses";
 
-export default function CourseVideo() {
+export default function VideoAndCourse() {
   const [viewIndex, setViewIndex] = useState(0); // 0 = video, 1 = quick start
-  const [isQuizModalOpen, setIsQuizModalOpen] = useState(false);
 
   const next = () => setViewIndex((prev) => Math.min(prev + 1, 1));
   const prev = () => setViewIndex((prev) => Math.max(prev - 1, 0));
-
-  const openQuizModal = () => setIsQuizModalOpen(true);
-  const closeQuizModal = () => setIsQuizModalOpen(false);
-
   return (
     <div className="container h-full player p-12">
       <div className="pageheading">
@@ -59,29 +61,22 @@ export default function CourseVideo() {
               <h2 className="text-2xl font-semibold mb-4 text-black">
                 Take Quiz
               </h2>
-              <button
-                className="quickstart-btn"
-                onClick={openQuizModal}
-                style={{
-                  margin: "20px 0",
-                  padding: "10px 20px",
-                  fontSize: "16px",
-                  cursor: "pointer",
-                  backgroundColor: "#008080",
-                  color: "white",
-                  border: "none",
-                  borderRadius: "4px",
-                }}
-              >
+              <div className="lock">
+                <Lock size={50} color="gray" />
+              </div>
+              <button className="quickstart-btn bg-teal-200 text-white px-4 py-2 rounded shadow hover:bg-teal-600 transition">
                 Start Quiz
               </button>
-              <button onClick={prev} className="backtext">
-                Back to Course
-              </button>
+              <div className="lock">
+                <p className="text-lock">Complete course to take quiz.</p>
+                <button onClick={prev} className="backtext">
+                  Back to Course
+                </button>
+              </div>
             </div>
           </div>
 
-          {/* <div className="categorycard">
+          <div className="categorycard">
             <div className="category">
               <p className="catname">Course Information</p>
             </div>
@@ -97,10 +92,45 @@ export default function CourseVideo() {
             <div className="category">
               <p className="catname">Review</p>
             </div>
-          </div> */}
+          </div>
+
+          {/* about course */}
+          <AboutCourse />
+          {/* showmore */}
+          <div className="showmore">
+            <div className="showmorebutton">
+              <Plus size={20} color="#008080" />
+              <p className="shomoretext text-teal">Show More</p>
+            </div>
+          </div>
+
+          {/* what to learn */}
+          <LearnObjectives />
+
+          {/* resources */}
+          <Resources />
+          <div>
+            {/* q&a */}
+            <Qanda />
+
+            {/* reviews */}
+            <WriteReview />
+
+            {/* Reviews and Ratings */}
+            <RatingsAndReviews />
+
+            {/* fatured Review */}
+            <FeaturedReviews />
+
+            {/* write review */}
+            <WriteReview />
+          </div>
         </div>
       </div>
-      <QuizModal isOpen={isQuizModalOpen} onClose={closeQuizModal} />
+      <hr />
+      <div className="coursesection">
+        <RelatedCourses />
+      </div>
     </div>
   );
 }
