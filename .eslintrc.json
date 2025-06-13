@@ -4,6 +4,7 @@
     "next/typescript"
   ],
   "rules": {
+    // Disable the next/no-img-element rule
     "@next/next/no-img-element": "off"
   }
 }
