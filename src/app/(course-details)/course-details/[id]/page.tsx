@@ -1,5 +1,5 @@
 import { all_courses } from "@/data/course-data";
-import CourseDetailsBreadcrumb from "../_components/course-details-breadcrumb";
+// import CourseDetailsBreadcrumb from "../_components/course-details-breadcrumb";
 import CourseDetailsArea from "../_components/course-details-area";
 import RelatedCourses from "@/components/course/details/related-courses";
 import { removeTagInText } from "@/utils";
@@ -27,7 +27,7 @@ export default function CourseDetailsPage({ params }: Props) {
             <main>
 
                 {/* breadcrumb area start */}
-                <CourseDetailsBreadcrumb course={course} />
+                {/* <CourseDetailsBreadcrumb course={course} /> */}
                 {/* breadcrumb area end */}
 
                 {/* course details area */}
