@@ -1,7 +1,7 @@
 "use client";
-import QuizModal from "@/app/course-playerx/_components/quiz/QuizModal";
-import { ChevronRight, Lock, Plus } from "lucide-react";
+import { ChevronRight, Lock } from "lucide-react";
 import React, { useState } from "react";
+import QuizModal from "./quiz/QuizModal";
 
 export default function VideoAndCourse() {
   const [viewIndex, setViewIndex] = useState(0); // 0 = video, 1 = quick start
