@@ -14,7 +14,6 @@ import Qanda from "./qanda";
 import React, { useState } from "react";
 import QuizModal from "./quiz/QuizModal";
 import VideoAndCourse from "./videoandcourse";
-import CourseDetailsNav from "@/components/course/details/course-details-nav";
 
 type IProps = {
   course: ICourseDT;
@@ -35,9 +34,6 @@ export default function CourseDetailsArea({ course }: IProps) {
             <div className="tp-course-details-2-main-inner pr-30">
               <div id="info" className="align-items-center">
                 <VideoAndCourse />
-              </div>
-              <div className="tp-course-details-2-nav d-flex align-items-center">
-                <CourseDetailsNav />
               </div>
 
               <div id="notes" className="tp-course-details-2-content">

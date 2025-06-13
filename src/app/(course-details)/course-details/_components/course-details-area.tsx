@@ -1,14 +1,20 @@
+"use client";
 import { ICourseDT } from "@/types/course-d-t";
 import "./courseDetails.css";
 import "./playerstyle.css";
+import "../styles.css";
 import CourseDetailsInfo from "@/components/course/details/course-details-info";
 import CourseDetailsRatingReviews from "@/components/course/details/course-details-rating-reviews";
 import CourseDetailsFeaturedReviews from "@/components/course/details/course-details-featured-reviews";
 import CourseDetailsReviewForm from "@/components/course/details/course-details-review-form";
 import CourseResources from "@/components/resources_courseDetails/resources";
-import CourseVideo from "./coursevideo";
+
 import ContentBar from "./contentbar";
 import Qanda from "./qanda";
+import React, { useState } from "react";
+import QuizModal from "./quiz/QuizModal";
+import VideoAndCourse from "./videoandcourse";
+import CourseDetailsNav from "@/components/course/details/course-details-nav";
 
 type IProps = {
   course: ICourseDT;
@@ -16,6 +22,11 @@ type IProps = {
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default function CourseDetailsArea({ course }: IProps) {
+  const [isQuizModalOpen, setIsQuizModalOpen] = useState(false);
+
+  const openQuizModal = () => setIsQuizModalOpen(true);
+  const closeQuizModal = () => setIsQuizModalOpen(false);
+
   return (
     <section className="tp-course-details-2-area pt-50 pb-80">
       <div className="container">
@@ -23,7 +34,10 @@ export default function CourseDetailsArea({ course }: IProps) {
           <div className="col-lg-8">
             <div className="tp-course-details-2-main-inner pr-30">
               <div id="info" className="align-items-center">
-                <CourseVideo />
+                <VideoAndCourse />
+              </div>
+              <div>
+                <CourseDetailsNav />
               </div>
 
               <div id="notes" className="tp-course-details-2-content">
@@ -71,6 +85,27 @@ export default function CourseDetailsArea({ course }: IProps) {
           </div>
         </div>
       </div>
+
+      <div className="text-center">
+        <button
+          className="quickstart-btn"
+          onClick={openQuizModal}
+          style={{
+            margin: "20px 0",
+            padding: "10px 20px",
+            fontSize: "16px",
+            cursor: "pointer",
+            backgroundColor: "#008080",
+            color: "white",
+            border: "none",
+            borderRadius: "4px",
+          }}
+        >
+          Start Quiz
+        </button>
+      </div>
+
+      <QuizModal isOpen={isQuizModalOpen} onClose={closeQuizModal} />
     </section>
   );
 }

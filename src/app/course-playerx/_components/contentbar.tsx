@@ -1,10 +1,13 @@
 "use client";
-import { Menu, Minus, Plus, CirclePlay, FileQuestion } from "lucide-react";
+import { File, Menu, Minus, Pointer, Plus } from "lucide-react";
 import React, { useState } from "react";
 import { coursecontent } from "../constants";
 
-// Import the Subs type directly to ensure type consistency
-import type { Subs } from "../constants";
+interface SubtitleItem {
+  id?: string | number;
+  type: string;
+  subtitle: string;
+}
 
 const ContentBar: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0); // Default open first section
@@ -20,12 +23,12 @@ const ContentBar: React.FC = () => {
   const handleSelect = (
     sectionIndex: number,
     itemIndex: number,
-    itemData: Subs
+    itemData: SubtitleItem
   ) => {
     setSelectedItem({ sectionIndex, itemIndex });
 
     // ✅ You can now do something with itemData
-    console.log("Selected item data:", itemData);
+    console.log("Selecte item data:", itemData);
   };
 
   return (
@@ -66,13 +69,12 @@ const ContentBar: React.FC = () => {
                       data-id={subs.id || `${idx}-${index}`} // optional identifier
                     >
                       {subs.type === "Quiz" ? (
-                        <FileQuestion size={14} color="gray" />
+                        <File size={14} color="gray" />
                       ) : (
-                        <CirclePlay size={14} color="black" />
+                        <Pointer size={14} color="white" />
                       )}
                       <p>
-                        {/* {subs.type}: <span>{subs.subtitle}</span> */}
-                        <span>{subs.subtitle}</span>
+                        {subs.type}: <span>{subs.subtitle}</span>
                       </p>
                     </div>
                   );

@@ -4,12 +4,11 @@ interface Course {
   subtitles: Subs[];
 }
 
-export interface Subs {
+interface Subs {
   id: number;
   subtitle: string;
   type: string;
 }
-
 export const coursecontent: Course[] = [
     {
       id: 1,
