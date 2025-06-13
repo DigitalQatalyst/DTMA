@@ -1,5 +1,5 @@
 "use client";
-import { ChevronRight, Lock } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import React, { useState } from "react";
 import QuizModal from "./quiz/QuizModal";
 

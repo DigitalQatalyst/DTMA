@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { quizData, QuizQuestion } from "./quizdata";
+import { quizData } from "./quizdata";
 import { X } from "lucide-react";
 
 interface QuizModalProps {
@@ -149,7 +149,8 @@ const QuizModal: React.FC<QuizModalProps> = ({ isOpen, onClose }) => {
           <div className="quiz-results-container">
             <h1>Congratulations!</h1>
             <p className="text-gray-600">
-              You have completed the quiz. Here's a summary of your performance.
+              You have completed the quiz. Here&apos;s a summary of your
+              performance.
             </p>
             <div className="results-summary">
               <div className="result-card correct">
