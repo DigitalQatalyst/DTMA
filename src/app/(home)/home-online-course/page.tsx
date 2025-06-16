@@ -10,6 +10,7 @@ import FunFactArea from "@/components/fun-fact/fun-fact-area";
 import HeroAreaTwo from "@/components/hero-area/hero-area-two";
 // import TeamArea from "@/components/team/team-area";
 import TestimonialTwo from "@/components/testimonial/testimonial-two";
+import FAQ from "@/components/faq/faq-area";
 
 export const metadata: Metadata = {
   title: "Home Online Course - Acadia",
@@ -44,7 +45,7 @@ export default function HomeOnlineCoursePage() {
       {/* testimonial area start */}
       <TestimonialTwo />
       {/* testimonial area end */}
-
+      <FAQ />
       {/* team area start */}
       {/* <TeamArea /> */}
       {/* team area end */}
