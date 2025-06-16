@@ -23,11 +23,11 @@ export default function HeaderTwo({ inner = false, transparent }: IProps) {
         className="header-area p-relative" 
         style={{ 
           background: 'linear-gradient(186deg, rgba(12, 125, 129, 0.50) -3.07%, rgba(12, 125, 129, 0.00) 95.2%)',
-          display: 'flex', // Enable flexbox
-          flexDirection: 'column', // Stack children vertically
-          justifyContent: 'center', // Center vertically
-          alignItems: 'center', // Center horizontally
-          minHeight: '200px', // Define a minimum height (adjust as needed)
+          display: 'flex', 
+          flexDirection: 'column', 
+          justifyContent: 'center', 
+          alignItems: 'center', 
+          minHeight: '200px', 
         }}
       >
         {/* <HeaderStickyWrapper cls={`tp-header-2 ${transparent ? 'tp-header-transparent' : ''}`}> */}
@@ -35,7 +35,7 @@ export default function HeaderTwo({ inner = false, transparent }: IProps) {
             className="container custom-container-larg" 
             style={{
               backgroundColor: '#FFFFFF',
-              height: '50%', // 80% of CustomHeader's height
+              height: '50%', 
               borderRadius: '12px',
               padding: '20px',
               boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
