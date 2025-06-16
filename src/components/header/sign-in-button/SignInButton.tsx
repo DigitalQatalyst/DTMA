@@ -9,6 +9,7 @@ const SignInButton = () => (
       justifyContent: 'center',
       alignItems: 'center',
       gap: '8px',
+      
       borderRadius: '8px',
       border: '1px solid #008080',
       color: '#008080',
