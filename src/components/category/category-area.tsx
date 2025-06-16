@@ -1,4 +1,5 @@
 import Image from "next/image";
+import '../../app/(home)/home-online-course/main.css'; // Adjust the path as necessary
 import category_data from "@/data/category-data";
 // import shape_line from "@/assets/img/shape/bottom-line/line.svg";
 // import category_shape from "@/assets/img/shape/category-2-shape-1.png";
@@ -15,8 +16,8 @@ export default function CategoryArea() {
               data-wow-delay=".4s"
             >
 
-              <h5 className="tp-section-3-subtitle">Course Categories</h5>
-              <h3 className="tp-section-3-title">
+              <h5 className="tp-course-subtitle">Course Categories</h5>
+              <h3 className="tp-course-p">
                 Choose from specialized tracks designed to equip you with practical skills in:
                 {/* Most Demanding{" "}
                 <span>
@@ -44,14 +45,14 @@ export default function CategoryArea() {
                 data-wow-delay={`.${item.id}s`}
               >
                 <div className="tp-category-icon">
-                  <span className={item.color}>
+                  <div className={item.color}>
                     <Image
                       src={item.icon}
                       alt={item.title}
                       width={25}
                       height={25}
                     />
-                  </span>
+                  </div>
                 </div>
                 <div className="tp-category-content">
                   <h4 className="tp-category-title">{item.title}</h4>

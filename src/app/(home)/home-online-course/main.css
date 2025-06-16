@@ -4,7 +4,7 @@
 .hero-section {
     background: linear-gradient(186deg, rgba(12, 125, 129, 0.50) -3.07%, rgba(12, 125, 129, 0.00) 95.2%);
     width: 100%;
-    height: 775px;
+    height: 665px;
     position: relative;
     margin-top: 0;
     /* Ensure the gradient is applied across the full width of the section */
@@ -109,9 +109,9 @@
     cursor: pointer;
     position: fixed;
     /* Fixed position on the screen */
-    bottom: 30px;
+    top: 20rem;
     /* Position it at the bottom of the screen */
-    right: 30px;
+    left: 55rem;
     /* Position it to the far right */
     z-index: 10;
     /* Ensure it stays above other elements */
@@ -122,4 +122,80 @@
     /* Adjust the icon size as per your design */
     height: 30px;
     /* Adjust the icon size */
+}
+
+.trustee {
+    text-align: center;
+}
+
+.tp-course-subtitle {
+    color: #000A06;
+    font-family: Outfit;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 60px;
+    /* 150% */
+}
+
+.tp-course-p .tp-courses-subtitle {
+    color: #000A06;
+    text-align: center;
+    font-family: Outfit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.tp-category-title {
+    color: var(--Grey-on-black, #636366);
+
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    /* 111.111% */
+}
+
+.tp-section {
+    display: flex;
+    /* Use space-between to push items to opposite ends */
+    justify-content: space-between;
+    /* Changed from flex-start */
+    align-items: center;
+    width: 100%;
+    /* gap: 10rem; */
+}
+
+/* Container for the navigation and image */
+.nav-container {
+    display: flex;
+    /* justify-content: flex-end; */
+    /* Align items to the far right */
+    align-items: center;
+    /* Align items vertically centered */
+    gap: 10px;
+    /* margin-left: auto; */
+}
+
+/* Style for the navigation */
+.nav {
+    display: flex;
+    gap: 20px;
+    color: var(--P-500, #008080);
+
+    /* 100% */
+    /* Space between the tab buttons */
+}
+
+/* Image styling to make sure it's inline and aligned */
+
+.course-area-p {
+    text-align: left;
+    /* Align the paragraph text to the left */
+    font-size: 1rem;
+    color: #666;
+    margin-top: 20px;
 }
