@@ -9,8 +9,9 @@ import '@/assets/css/main.css';
 
 type IProps = {
   spacing?: string;
+  totalItems?: number;
 }
-export default function CourseFilterBanner({spacing='pt-180 pb-220'}: IProps) {
+export default function CourseFilterBanner({spacing='pt-180 pb-220', totalItems=48}: IProps) {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   // const {state} = useCourseFilter();
   return (
@@ -21,12 +22,12 @@ export default function CourseFilterBanner({spacing='pt-180 pb-220'}: IProps) {
             <div className="tp-breadcrumb__content-filter mb-50">
               <div className="tp-breadcrumb__list">
                 <span><Link href="/"><HomeSvg /></Link></span>
-                <span className="color">All Courses</span>
+                <span className="color">Home / Courses</span>
               </div>
               <h3 className="h3Title">All Courses</h3>
 
               {/* <p>We have the largest collection of <span>{state.courses.length}</span> courses</p> */}
-              <p>We have the largest collection of <span>48</span> courses</p>
+              <p>We have the largest collection of <span>{totalItems}</span> courses</p>
             </div>
             <div className="tp-course-filter-wrap p-relative">
               <div className="row">

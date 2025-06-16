@@ -8,6 +8,7 @@ import Pagination from "@/components/ui/pagination";
 import useCourseFilter from "@/hooks/use-course-filter";
 import usePagination from "@/hooks/use-pagination";
 import { ICourseDT } from "@/types/course-d-t";
+import CourseFilterBanner from './course-filter-banner';
 
 // Define TypeScript interfaces for GraphQL response
 interface CustomFields {
@@ -134,6 +135,7 @@ export default function CourseFilterArea() {
 
   return (
     <section>
+      <CourseFilterBanner totalItems={totalItems}/>
       {courses.length > 0 ? (
         <div className="tp-filter-mt-2">
           <div className="container">
