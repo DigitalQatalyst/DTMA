@@ -35,12 +35,12 @@ export default function HeaderTwo({ inner = false, transparent }: IProps) {
           style={{
             backgroundColor: '#FFFFFF',
             height: '70%', // 80% of CustomHeader's height
-            width: '80%', // 80% of CustomHeader's width
+            width: '93%', // 80% of CustomHeader's width
             borderRadius: '12px',
             padding: '20px',
             boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
             maxHeight: '80%', // Prevent height overflow
-            maxWidth: '80%', // Prevent width overflow
+            maxWidth: '95%', // Prevent width overflow
           }}
         >
           <div className="row align-items-center">
