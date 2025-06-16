@@ -18,7 +18,7 @@ export default function CourseArea() {
               <div className="tp-section mb-40">
                 <h5 className="tp-courses-subtitle">Featured Courses</h5>
                 <div className="nav-container">
-                  <div className="nav" id="nav-tab" role="tablist">
+                  <div className="nav-content" id="nav-tab" role="tablist">
                     {tab_navs.map((tab) => (
                       <CourseTabBtn key={tab} tab={tab} />
                     ))}

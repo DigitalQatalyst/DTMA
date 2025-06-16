@@ -62,9 +62,9 @@ export default function TestimonialTwo() {
         <div className="row justify-content-center">
           <div className="col-xxl-6 col-lg-8">
             <div className="tp-testimonial-section">
-              <div className="tp-section text-center mb-40">
-                <h5 className="tp-section-3-subtitle">What Our Learners Say</h5>
-                <h3 className="tp-section-3-title">
+              <div className="tp-testimonial-section text-center mb-40">
+                <h5 className="tp-course-subtitle">What Our Learners Say</h5>
+                <h3 className="tp-testimony-title">
                   Don’t just take our words - see how DTMA has empowered professionals like you:
                   {/* <span>
                     Say

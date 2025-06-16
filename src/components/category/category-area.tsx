@@ -12,7 +12,7 @@ export default function CategoryArea() {
         <div className="row justify-content-center">
           <div className="col-xl-8 col-lg-10">
             <div
-              className="tp-section mb-40 text-center wow fadeInUp"
+              className="tp-course-section mb-40 text-center wow fadeInUp"
               data-wow-delay=".4s"
             >
 

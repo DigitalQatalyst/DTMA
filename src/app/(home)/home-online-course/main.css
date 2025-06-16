@@ -138,7 +138,7 @@
     /* 150% */
 }
 
-.tp-course-p .tp-courses-subtitle {
+.tp-course-p .tp-courses-subtitle .tp-testimony-title {
     color: #000A06;
     text-align: center;
     font-family: Outfit;
@@ -181,7 +181,7 @@
 }
 
 /* Style for the navigation */
-.nav {
+.nav-content {
     display: flex;
     gap: 20px;
     color: var(--P-500, #008080);
@@ -198,4 +198,61 @@
     font-size: 1rem;
     color: #666;
     margin-top: 20px;
+}
+
+.tp-faq-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    /* align-self: stretch; */
+}
+
+.tp-faq-subtitle {
+    color: var(--Gray-900, #101828);
+    text-align: center;
+    font-family: Outfit;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 60px;
+    /* 150% */
+    letter-spacing: -0.8px;
+}
+
+.tp-faq-title {
+    color: rgba(0, 0, 6, 0.60);
+    text-align: center;
+    font-family: Outfit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    /* 100% */
+}
+
+.accordion-button {
+    color: #000006;
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    /* 155.556% */
+}
+
+.tp-faq-box .tpd-accordion .accordion-button {
+    font-size: 20px;
+    font-weight: 500;
+    color: #000006;
+}
+
+.tp-faq-box .tpd-accordio .accordion-body {
+    color: var(--Grey-on-black, #636366);
+    font-size: 16px;
+    font-weight: 300;
+    border-radius: 0 0 16px 16px;
+    border-bottom: 1px solid #E6E8F0;
+    border-left: 1px solid #E6E8F0;
+    border-right: 1px solid #E6E8F0;
 }
