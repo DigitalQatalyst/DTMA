@@ -14,31 +14,19 @@ export default function CourseArea() {
       <section className="course-area tp-course-wrapper mt-100 mb-100">
         <div className="container">
           <div className="row align-items-end">
-            <div className="col-xxl-5 col-xl-6 col-lg-7">
+            <div className="">
               <div className="tp-section mb-40">
-                <h5 className="tp-section-3-subtitle">Featured Courses</h5>
-                <div className="col-xxl-7 col-xl-6 col-lg-5">
-                  <div className="tp-course-tab d-flex justify-content-lg-end mb-40">
-                    <nav>
-                      <div className="nav" id="nav-tab" role="tablist">
-                        {tab_navs.map((tab) => (
-                          <CourseTabBtn key={tab} tab={tab} />
-                        ))}
-                      </div>
-                      <Image src={arrow_outward} alt="outward arrow" />
-                    </nav>
+                <h5 className="tp-courses-subtitle">Featured Courses</h5>
+                <div className="nav-container">
+                  <div className="nav" id="nav-tab" role="tablist">
+                    {tab_navs.map((tab) => (
+                      <CourseTabBtn key={tab} tab={tab} />
+                    ))}
                   </div>
+                  <Image src={arrow_outward} alt="outward arrow" />
                 </div>
-
-                {/* <Image
-                      className="tp-underline-shape-6 wow bounceIn"
-                      data-wow-duration="1.5s"
-                      data-wow-delay=".4s"
-                      src={shape_underline}
-                      alt="shape-underline"
-                    /> */}
-
               </div>
+
               <p className="course-area-p">Jumpstart your learning with popular courses designed for immediate impact:</p>
 
 
