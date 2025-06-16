@@ -1,13 +1,14 @@
 import { Metadata } from "next";
-import BannerArea from "@/components/banner/banner-area";
-import BrandArea from "@/components/brand/brand-area";
+import './main.css';
+// import BannerArea from "@/components/banner/banner-area";
+// import BrandArea from "@/components/brand/brand-area";
 import CategoryArea from "@/components/category/category-area";
 import CourseArea from "@/components/course/course-area";
-import CourseLiveArea from "@/components/course/course-live-area";
+// import CourseLiveArea from "@/components/course/course-live-area";
 import CtaTwo from "@/components/cta/cta-two";
 import FunFactArea from "@/components/fun-fact/fun-fact-area";
 import HeroAreaTwo from "@/components/hero-area/hero-area-two";
-import TeamArea from "@/components/team/team-area";
+// import TeamArea from "@/components/team/team-area";
 import TestimonialTwo from "@/components/testimonial/testimonial-two";
 
 export const metadata: Metadata = {

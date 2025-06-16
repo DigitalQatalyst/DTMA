@@ -1,0 +1,125 @@
+/* src/styles/button.css */
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(186deg, rgba(12, 125, 129, 0.50) -3.07%, rgba(12, 125, 129, 0.00) 95.2%);
+    width: 100%;
+    height: 775px;
+    position: relative;
+    margin-top: 0;
+    /* Ensure the gradient is applied across the full width of the section */
+}
+
+/* Header (Navbar) */
+.header-area {
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    border-radius: 12px;
+    border: 2px solid #FFF; */
+    /* background: #FFF; */
+    /* backdrop-filter: blur(10px); */
+}
+
+.tp-header-2 {
+    border-radius: 12px;
+    border: 2px solid #FFF;
+    background: #FFF;
+    backdrop-filter: blur(10px);
+
+}
+
+/* Hero Content */
+.content-container {
+
+    position: absolute;
+    /* Position the text inside the hero section */
+    top: 170%;
+    /* Adjust vertical position of hero content */
+    left: 50%;
+    transform: translateX(-50%);
+    /* Center the text horizontally */
+    z-index: 1;
+    /* Ensure text appears above the background but below navbar */
+    text-align: center;
+}
+
+.hero-content {
+    color: #000A06;
+    /* Dark color for the main text */
+    font-size: 40px;
+    /* Large font for the title */
+    font-weight: bold;
+}
+
+/* Sign In Button */
+.tp-sign-in-btn {
+    color: #008080;
+    /* Light teal color */
+    font-family: Outfit;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 24px;
+    border-radius: 8px;
+    border: 1px solid #008080;
+    /* Same color as text */
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tp-sign-in-btn:hover {
+    background-color: #008080;
+    /* Hover background */
+    color: white;
+    /* Hover text color */
+}
+
+/* Courses Button */
+.courses-btn {
+    padding: 16px 24px;
+    background: #008080;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    margin-top: 20px;
+}
+
+/* Message Icon Button */
+.message-icon-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    padding: 13.83px;
+    /* Adjust padding to match design */
+    background-color: #008080;
+    /* Teal background color */
+    border-radius: 50%;
+    /* Fully rounded shape */
+    gap: 24px;
+    /* Adjust spacing between icon and border */
+    border: none;
+    /* No border */
+    cursor: pointer;
+    position: fixed;
+    /* Fixed position on the screen */
+    bottom: 30px;
+    /* Position it at the bottom of the screen */
+    right: 30px;
+    /* Position it to the far right */
+    z-index: 10;
+    /* Ensure it stays above other elements */
+}
+
+.message-icon-btn img {
+    width: 30px;
+    /* Adjust the icon size as per your design */
+    height: 30px;
+    /* Adjust the icon size */
+}
