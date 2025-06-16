@@ -1,8 +1,6 @@
-// components/MainMenu.tsx
-
 import React from "react";
+import Link from "next/link"; // Import Link from next/link
 import SearchButton from "../button/search-button";
-
 
 export default function MainMenu() {
   const linkStyles = {
@@ -19,10 +17,10 @@ export default function MainMenu() {
     <div className="main-menu text-xl-center d-none d-xl-block">
       <nav>
         <ul>
-          <li><a href="#" style={linkStyles}>Home</a></li>
-          <li><a href="#" style={linkStyles}>Courses</a></li>
-          <li><a href="#" style={linkStyles}>About</a></li>
-          <li><a href="#" style={linkStyles}>Help & Support</a></li>
+          <li><Link href="/" style={linkStyles}>Home</Link></li>
+          <li><Link href="/course-with-filter" style={linkStyles}>Courses</Link></li>
+          <li><Link href="#" style={linkStyles}>About</Link></li>
+          <li><Link href="#" style={linkStyles}>Help & Support</Link></li>
           <li style={{ marginTop: '35px' }}><SearchButton /></li>
         </ul>
       </nav>
