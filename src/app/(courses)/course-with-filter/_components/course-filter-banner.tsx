@@ -43,8 +43,8 @@ export default function CourseFilterBanner({spacing='pt-180 pb-220', totalItems=
                     <div className="tp-course-filter-top-right-search d-none d-lg-block mb-20">
                       <FilterSearchTerm/>
                     </div>
-                    <div className="tp-course-filter-btn mb-20">
-                      <button onClick={() => setIsFilterOpen(!isFilterOpen)} type="button" className="tp-filter-btn filter-show-dropdown-btn filter-open-btn">
+                    <div className="tp-course-filter-btn mb-20" style={{ display: 'flex', alignItems: 'center' }}>
+                      <button onClick={() => setIsFilterOpen(!isFilterOpen)} type="button" className="tp-filter-btn filter-show-dropdown-btn filter-open-btn" style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '6px 12px' }}>
                         <span>
                           <FilterSvg />
                         </span>
