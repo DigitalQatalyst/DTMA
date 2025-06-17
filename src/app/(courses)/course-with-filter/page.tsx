@@ -15,7 +15,7 @@ export default function CourseWithFilterPage() {
         <CourseFilterProvider initialCourses={all_courses}>
 
             {/* course banner area start */}
-            <CourseFilterBanner/>
+            {/* <CourseFilterBanner/> */}
             {/* course banner area end */}
 
             {/* course filter area */}
