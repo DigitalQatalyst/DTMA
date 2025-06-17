@@ -35,18 +35,18 @@ export default function CourseListItemTwo({ course, sm_title, title_cls }: IProp
                         </div>
                     </div>
                 </div>
-                <h4 className={title_cls ? title_cls : 'tp-course-filter-title'}>
+                <h4 className={title_cls ? title_cls : 'tp-course-titles'}>
                     <Link href={`/course-details/${id}`}>
                         {sm_title ? removeTagInText(title).slice(0, 28) + "..." : removeTagInText(title)}
                     </Link>
                 </h4>
                 <div className="tp-course-filter-meta">
-                    <span>
+                    {/* <span>
                         {author_img && (
                             <Image src={author_img} alt={author_name} width={30} height={30} />
                         )}
                         {author_name}
-                    </span>
+                    </span> */}
                     <span>
                         <LessonsSvg />
                         {lessons} Lessons
@@ -60,9 +60,9 @@ export default function CourseListItemTwo({ course, sm_title, title_cls }: IProp
                     <p>In this course, We will learn how to create websites by structuring and styling your pages with HTML and CSS.</p>
                 </div>
                 <div className="tp-course-filter-pricing d-flex align-items-center justify-content-between">
-                    <div className="price">
+                    {/* <div className="price">
                       <CoursePrice discount={discount} price={price} />
-                    </div>
+                    </div> */}
                     <div className="tp-course-filter-btn">
                         <Link href={`/course-details/${id}`}>Preview this Course</Link>
                     </div>
