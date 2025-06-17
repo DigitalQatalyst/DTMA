@@ -119,7 +119,7 @@ const tabContentData = [
 
 export default function FaqArea() {
   return (
-    <section className="tp-faq-area tp-faq-p pt-50 pb-120">
+    <section className="tp-faq-area tp-faq-p pt-50 pb-0">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
@@ -202,7 +202,7 @@ export default function FaqArea() {
                           </div> */}
                       {/* </div> */}
                       {/* </div> */}
-                      <div className="col-lg-8">
+                      <div className="col-lg-10 offset-lg-1">
                         <div className="tp-faq-box">
                           <div className="tpd-accordion">
                             <div

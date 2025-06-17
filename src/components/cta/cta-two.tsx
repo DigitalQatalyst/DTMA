@@ -1,11 +1,11 @@
-import Image from "next/image";
+// import Image from "next/image";
 // import shape_underline from "@/assets/img/shape/bottom-line/line.svg";
 // import email from "@/assets/img/cta/meassage.svg";
-import checkSvg from "@/assets/img/cta/vector.svg";
+// import checkSvg from "@/assets/img/cta/vector.svg";
 
 export default function CtaTwo() {
   return (
-    <section className="cta-area tp-cta-2-bg">
+    <section className="cta-area tp-cta-2-bg" style={{ backgroundColor: "#008080" }}>
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-xxl-8 col-lg-10">
@@ -28,17 +28,20 @@ export default function CtaTwo() {
               </h2>
               {/* <p>Get expert insights, AI trends & career-boosting tips – straight to your inbox!</p> */}
               <div className="tp-cta-2-form">
-                <form action="#">
-                  {/* <span>
+                {/* <form action="#" className="subscribe-inputs"> */}
+                {/* <span>
                     <Image
                       alt="email evg"
                       src={email} />
                   </span> */}
-                  <input type="text" placeholder="Email address" />
-                  <div className="tp-cta-2-btn">
-                    <button className="tp-btn-round">Subscribe Now</button>
-                  </div>
-                </form>
+                <div>
+                  <input type="text" className="tp-cta-2-input" placeholder="Email address" style={{ borderRadius: "5px", padding: "17px 16px 17px 20px", width: "456px" }} />
+                </div>
+
+                <div className="tp-cta-btn">
+                  <button className="tp-btn-subscribe">Subscribe Now</button>
+                </div>
+                {/* </form> */}
               </div>
               {/* <div className="tp-cta-2-info-list">
                 <span>
