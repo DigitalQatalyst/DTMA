@@ -19756,7 +19756,7 @@ a .course-sky {
 }
 .tp-course-filter-btn a:hover {
   color: var(--tp-common-white);
-  background: var(--tp-dashboard-primary);
+  background: var(--Primary, #008080);
   box-shadow: 0 0 1px 0 #1438b5, 0 1px 2px 0 rgba(20, 56, 181, 0.25);
 }
 .tp-course-filter-select .nice-select {

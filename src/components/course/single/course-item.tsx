@@ -25,6 +25,17 @@ export default function CourseItem({ course, removeTag }: IProps) {
     category,
     credits,
   } = course || {};
+
+  // Calculate number of filled stars
+  const filledStars = Math.round(avg_rating); // Round to nearest integer (e.g., 4.7 → 5, 4.3 → 4)
+  const stars = Array(5).fill(0).map((_, index) => (
+    <i
+      key={index}
+      className={index < filledStars ? "fa-solid fa-star" : "fa-regular fa-star"}
+      style={{ color: index < filledStars ? "#FFC107" : "#D3D3D3" }}
+    ></i>
+  ));
+
   return (
     <div className="tp-course-item p-relative fix mb-30">
       {/* <div className="tp-course-teacher mb-15">
@@ -78,11 +89,7 @@ export default function CourseItem({ course, removeTag }: IProps) {
               <span> /{total_rating}</span>
             </p>
             <div className="tp-course-rating-icon">
-              <i className="fa-solid fa-star"></i>
-              <i className="fa-solid fa-star"></i>
-              <i className="fa-solid fa-star"></i>
-              <i className="fa-solid fa-star"></i>
-              <i className="fa-solid fa-star"></i>
+              {stars}
             </div>
           </div>
         </div>
