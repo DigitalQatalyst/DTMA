@@ -7,7 +7,7 @@ export const footerLinks = {
     ],
     link_two: [
         { id: 1, title: "About DTMA", link: '/about' },
-        { id: 2, title: "Updates", link: '' },
+        { id: 2, title: "Updates", link: '', isNew: true },
         { id: 3, title: "Contact Us", link: '' },
     ],
     link_three: [
