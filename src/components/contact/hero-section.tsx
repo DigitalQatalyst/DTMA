@@ -1,11 +1,12 @@
 import React from 'react';
 import './styles.scss';
+import { SearchSvg } from '../svg';
 // import { SearchSvg } from '../svg';
 
 const HeroSection = () => {
     return (
         <section className="help-support-section">
-            {/* <div className="help-support-container">
+            <div className="help-support-container">
                 <h1>Hello, how can we help?</h1>
                 <p>
                     Get the Support you need, when you need it. We're here to help you succeed
@@ -21,7 +22,7 @@ const HeroSection = () => {
                     <span> &gt; </span>
                     <span>Help &amp; Support</span>
                 </div>
-            </div> */}
+            </div>
         </section>
     );
 };
