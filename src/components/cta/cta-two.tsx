@@ -6,7 +6,7 @@
 export default function CtaTwo() {
   return (
     <section className="cta-area tp-cta-2-bg" style={{ backgroundColor: "#008080" }}>
-      <div className="container">
+      <div className="cta-container">
         <div className="row justify-content-center">
           <div className="col-xxl-8 col-lg-10">
             <div className="tp-cta-2-wrapper text-center">

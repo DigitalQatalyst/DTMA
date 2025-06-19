@@ -9,7 +9,7 @@ import CtaTwo from "@/components/cta/cta-two";
 import FunFactArea from "@/components/fun-fact/fun-fact-area";
 import HeroAreaTwo from "@/components/hero-area/hero-area-two";
 // import TeamArea from "@/components/team/team-area";
-import TestimonialTwo from "@/components/testimonial/testimonial-two";
+import TestimonialThree from "@/components/testimonial/testimonal-three";
 import FAQ from "@/components/faq/faq-area";
 import Question from "@/components/QuestionsStill/question";
 
@@ -44,7 +44,7 @@ export default function HomeOnlineCoursePage() {
       {/* course live area end */}
 
       {/* testimonial area start */}
-      <TestimonialTwo />
+      <TestimonialThree />
       {/* testimonial area end */}
       <FAQ />
 
