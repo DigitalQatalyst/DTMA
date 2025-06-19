@@ -145,7 +145,7 @@
     font-family: Outfit;
     font-size: 20px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 200;
     line-height: 20px;
 }
 
@@ -365,7 +365,6 @@
     color: white;
 }
 
-/* Container for the CTA section */
 .tp-cta-2-bg {
     margin: 5rem;
     border-radius: 8px;
@@ -378,7 +377,6 @@
     box-sizing: border-box;
 }
 
-/* Title styling */
 .tp-cta-2-title {
     color: var(--base-white, #FFF);
     text-align: center;
@@ -390,10 +388,20 @@
 }
 
 .tp-cta-2-form {
-    display: flex;
-    display: flex;
-    justify-content: space-between;
-    align-self: stretch;
+    .tp-cta-2-form {
+        display: flex;
+        /* Makes the input and button align horizontally by default */
+        gap: 15px;
+        /* Add some space between them on desktop */
+        justify-content: center;
+        /* Center the form elements */
+        align-items: center;
+        /* Vertically align them */
+        max-width: 500px;
+        /* Optional: limit overall form width on desktop */
+        margin: 0 auto;
+        /* Optional: center the form itself */
+    }
 }
 
 .tp-cta-2-input {
@@ -437,10 +445,8 @@
     position: relative;
     display: flex;
     width: 80%;
-    /* border: 1px solid rgba(0, 128, 128, 0.3); */
     border-radius: 8px;
     overflow: hidden;
-    /* background-color: white; */
     height: 60px;
 }
 
@@ -449,10 +455,7 @@
     right: 0;
     top: 0;
     height: 40px;
-    /* Adjust button height to be slightly less than container height */
     padding: 0 20px;
-    /* Adjust padding to control button width */
-    /* margin-left: 5px; */
     background: var(--P-500, #008080);
     color: white;
     border: none;
@@ -467,7 +470,6 @@
 
 .tp-footer-sub-input {
     flex-grow: 1;
-    /* padding: 0 20px; */
     border: none;
     font-size: 16px;
     font-style: normal;
@@ -482,45 +484,35 @@
 .tp-footer-bottom-wrapper {
     padding: 20px 0;
     color: #A3A3A3;
-    /* Light grey text color for general content */
 }
 
 .tp-footer-copyright {
     display: flex;
     align-items: center;
     gap: 20px;
-    /* Space between the policy links and copyright text */
     font-size: 0.9rem;
-    /* Adjust font size as needed */
     color: #A3A3A3;
-    /* Consistent text color */
 }
 
 .tp-footer-copyright a {
-    color: #A3A3A3;
-    /* Link color */
+    color: #4B465C;
     text-decoration: none;
-    /* Remove underline from links */
-    transition: color 0.3s ease;
 }
 
-.tp-footer-copyright a:hover {
-    color: #FFF;
-    /* White on hover for links */
-}
 
 .tp-footer-copyright span {
     white-space: nowrap;
-    /* Prevent copyright text from wrapping */
 }
 
-/* Ensure the image itself is styled if needed, though Next/Image handles some of this */
 .tp-footer-social-icons img {
-    /* You might not need specific styles here if the SVG is scaled correctly */
     height: 20px;
-    /* Adjust height if necessary to match design */
     width: auto;
-    /* Maintain aspect ratio */
+}
+
+.cta-container {
+    max-width: 1200px;
+    /* Or your desired max width */
+    margin: 0 auto;
 }
 
 @media (max-width: 767px) {
@@ -543,9 +535,132 @@
     }
 }
 
-
 @media only screen and (max-width: 767px) {
     .tp-cta-btn {
         right: 6px;
+        margin-top: 1rem;
     }
+}
+
+/* testimonial */
+/* --- Custom Slick Dots Styling with Image Assets & Hover Effects --- */
+
+/* Parent container for the dots */
+.custom-slick-dots .slick-dots {
+    bottom: -60px;
+    /* Position dots below slider */
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    display: flex !important;
+    /* Ensure flexbox for gap */
+    justify-content: center;
+    gap: 10px;
+    /* Spacing between dots */
+}
+
+/* Individual list item for each dot */
+.custom-slick-dots .slick-dots li {
+    margin: 0;
+    /* Reset default margin */
+    padding: 0;
+    position: relative;
+    /* For absolute positioning of images inside customPaging div */
+    width: 12px;
+    /* Set width for the li itself to control click area and initial size */
+    height: 12px;
+    /* Set height for the li itself */
+    cursor: pointer;
+    /* Indicate it's clickable */
+    transition: transform 0.3s ease;
+    /* Smooth transition for hover effect */
+    outline: none;
+    /* Remove outline on focus */
+}
+
+/* Make dots "hugger" (larger) on hover */
+.custom-slick-dots .slick-dots li:hover {
+    transform: scale(1.5);
+    /* Makes dot 50% larger on hover */
+}
+
+/* Apply green color on hover for inactive dots */
+/* This works by targeting the inactive image and applying a filter.
+   Adjust filter values based on your grey SVG's color to get the exact green.
+   This might be more effective if your SVG uses 'currentColor' or similar for its fill. */
+.custom-slick-dots .slick-dots li:hover .dot-inactive {
+    /* Example filter to turn grey to green */
+    filter: brightness(0.8) sepia(1) saturate(100) hue-rotate(80deg);
+    /* Adjust these values */
+    /* If your SVG's fill is not inherited, you might need:
+     fill: #1D976C; for SVG embedded directly via currentColor
+  */
+}
+
+
+/* Hide slick's default button styling */
+.custom-slick-dots .slick-dots li button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 0;
+    /* Hide default dot character */
+    line-height: 0;
+    outline: none;
+}
+
+.custom-slick-dots .slick-dots li button:before {
+    display: none;
+    /* Hide default dot pseudo-element */
+}
+
+/* Wrapper div from customPaging */
+.custom-dot-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles for the custom Image components within customPaging */
+.custom-slick-dots .slick-dots li .dot-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Ensure the SVG fits without cropping */
+    transition: opacity 0.3s ease, filter 0.3s ease;
+    /* Smooth transition for showing/hiding and filter */
+}
+
+.custom-slick-dots .slick-dots li .dot-inactive {
+    opacity: 1;
+    /* Inactive image visible by default */
+}
+
+.custom-slick-dots .slick-dots li .dot-active {
+    opacity: 0;
+    /* Active image hidden by default */
+}
+
+/* When the parent <li> is active, show the active image and hide the inactive */
+.custom-slick-dots .slick-dots li.slick-active .dot-inactive {
+    opacity: 0 !important;
+    /* Hide inactive image */
+    /* filter: none; */
+    /* Reset filter if it was applied on hover to inactive */
+}
+
+.custom-slick-dots .slick-dots li.slick-active .dot-active {
+    opacity: 1;
+    /* Show active image */
 }
