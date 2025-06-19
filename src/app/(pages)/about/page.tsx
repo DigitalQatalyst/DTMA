@@ -13,7 +13,8 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main>
-
+      
+      
       {/* about banner area start */}
       <AboutBanner />
       {/* about banner area end */}
@@ -26,8 +27,8 @@ export default function AboutPage() {
       <CounterSix/>
       {/* counter area end */}
 
-      {/* mission area start */}
-      <MissionArea top_cls="pt-120 pb-120"/>
+      {/* mission area start - top_cls="pt-120 pb-120"*/}
+      <MissionArea/>
       {/* mission area end */}
 
       {/* team area start */}
