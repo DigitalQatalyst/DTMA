@@ -137,7 +137,7 @@ export default function CourseFilterArea() {
   }
 
   return (
-    <section>
+    <section style={{ marginTop: '-100px' }}>
       <CourseFilterBanner totalItems={totalItems} />
       {courses.length > 0 ? (
         <div className="tp-filter-mt-2">
