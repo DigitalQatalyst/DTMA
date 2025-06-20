@@ -13,7 +13,7 @@ export interface Subs {
 export const coursecontent: Course[] = [
     {
       id: 1,
-      title: "Intro to streamlining procurement processes.",
+      title: "Intro to streamlining procurement processes",
       subtitles: [
         {
           id: 1,
