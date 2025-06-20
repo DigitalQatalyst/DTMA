@@ -56,7 +56,7 @@ export default function DashboardCourseItemThree({ course }: IProps) {
                                 <PenSvg/>
                             </Link>
                         </div>
-                        <CourseDashboardItemAction courseId={id}/>
+                        {/* <CourseDashboardItemAction courseId={id}/> */}
                     </div>
                 </div>
             </div>
