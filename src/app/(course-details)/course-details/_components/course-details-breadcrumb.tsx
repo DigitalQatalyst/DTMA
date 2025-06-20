@@ -1,15 +1,14 @@
 // import Link from "next/link";
 // import Image from "next/image";
 // import { HomeSvg } from "@/components/svg";
-import { ICourseDT } from "@/types/course-d-t";
+// import { ICourseDT } from "@/types/course-d-t";
 // import { removeTagInText } from "@/utils";
 // import author_img from "@/assets/img/course/course-5-teacher-1.png";
 
-type IProps = {
-   course: ICourseDT
-}
-
-export default function CourseDetailsBreadcrumb({}: IProps) {
+// type IProps = {
+//    course: ICourseDT
+// }
+export default function CourseDetailsBreadcrumb() {
    return (
       <section className="tp-breadcrumb__area pt-25 pb-55 p-relative z-index-1 fix">
          <div className="tp-breadcrumb__bg" style={{backgroundColor: "var(--Linear-teal, rgba(0, 128, 128, 0.20))" }}></div>
