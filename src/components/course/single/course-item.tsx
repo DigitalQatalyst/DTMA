@@ -44,11 +44,12 @@ export default function CourseItem({ course, removeTag }: IProps) {
             <Image src={author_img} alt={author_name} width={30} height={30} />
           )}
           {author_name}
-        </span>
-        {discount && discount > 0 ? (
+        </span> */}
+        {/* {discount && discount > 0 ? (
           <span className="discount">-{discount}% </span>
-        ) : null}
-      </div> */}
+        ) : null} */}
+      {/* </div> */}
+
       <div className="tp-course-thumb">
         <Link href={`/course-details/${id}`}>
           <Image
@@ -89,7 +90,15 @@ export default function CourseItem({ course, removeTag }: IProps) {
               <span> /{total_rating}</span>
             </p>
             <div className="tp-course-rating-icon">
-              {stars}
+
+              <i className="fa-solid fa-star"></i>
+              <i className="fa-solid fa-star"></i>
+              <i className="fa-solid fa-star"></i>
+              <i className="fa-solid fa-star"></i>
+
+              <i className="fa-regular fa-star"></i> <span>(12)</span>
+
+
             </div>
           </div>
         </div>

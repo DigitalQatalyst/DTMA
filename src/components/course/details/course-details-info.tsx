@@ -1,4 +1,4 @@
-"use client";
+"use Client";
 import React from "react";
 import { MinusSvg, PlusThreeSvg } from "@/components/svg";
 

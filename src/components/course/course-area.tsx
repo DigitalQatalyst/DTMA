@@ -1,12 +1,12 @@
-import Link from "next/link";
+// import Link from "next/link";
 import Image from "next/image";
-import shape_underline from "@/assets/img/unlerline/course-2-svg-1.svg";
-import category_shape from "@/assets/img/shape/category-2-shape-1.png";
+// import shape_underline from "@/assets/img/shape/bottom-line/line.svg";
+import arrow_outward from "@/assets/img/icon/arrow_outward.svg";
 import CourseProvider from "../provider/course-provider";
 import CourseTabBtn from "./course-tab-btn";
 import CourseItems from "./course-items";
 
-const tab_navs = ["All Courses", "Trending", "Popularity", "Featured"];
+const tab_navs = ["Browse More Courses"];
 
 export default function CourseArea() {
   return (
@@ -14,35 +14,24 @@ export default function CourseArea() {
       <section className="course-area tp-course-wrapper mt-100 mb-100">
         <div className="container">
           <div className="row align-items-end">
-            <div className="col-xxl-5 col-xl-6 col-lg-7">
+            <div className="">
               <div className="tp-section mb-40">
-                <h5 className="tp-section-3-subtitle">Our Courses</h5>
-                <h3 className="tp-section-3-title">
-                  Most Popular
-                  <span>
-                    Courses
-                    <Image
-                      className="tp-underline-shape-6 wow bounceIn"
-                      data-wow-duration="1.5s"
-                      data-wow-delay=".4s"
-                      src={shape_underline}
-                      alt="shape-underline"
-                    />
-                  </span>
-                </h3>
-              </div>
-            </div>
-            <div className="col-xxl-7 col-xl-6 col-lg-5">
-              <div className="tp-course-tab d-flex justify-content-lg-end mb-40">
-                <nav>
-                  <div className="nav" id="nav-tab" role="tablist">
+                <h5 className="tp-courses-subtitle">Featured Courses</h5>
+                <div className="nav-container">
+                  <div className="nav-content" id="nav-tab" role="tablist">
                     {tab_navs.map((tab) => (
                       <CourseTabBtn key={tab} tab={tab} />
                     ))}
                   </div>
-                </nav>
+                  <Image src={arrow_outward} alt="outward arrow" />
+                </div>
               </div>
+
+              <p className="course-area-p">Jumpstart your learning with popular courses designed for immediate impact:</p>
+
+
             </div>
+
           </div>
           <div className="row">
             <div className="col-lg-12">
@@ -53,7 +42,7 @@ export default function CourseArea() {
               </div>
             </div>
           </div>
-          <div className="row justify-content-center">
+          {/* <div className="row justify-content-center">
             <div className="col-xxl-6 col-lg-8">
               <div
                 className="tp-category-banner d-flex align-items-center justify-content-between tp-category-banner-bg mt-35"
@@ -78,7 +67,7 @@ export default function CourseArea() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </CourseProvider>
