@@ -539,6 +539,7 @@
     .tp-cta-btn {
         right: 6px;
         margin-top: 1rem;
+        margin-left: 5px;
     }
 }
 
@@ -702,7 +703,8 @@
 
 .testimonial-item {
     display: flex;
-    flex-direction: row; /* Flexed in one row */
+    flex-direction: row;
+    /* Flexed in one row */
     align-items: flex-start;
     gap: 30px;
     text-align: left;
@@ -740,7 +742,8 @@
 }
 
 .star {
-    color: #008080; /* Changed to #008080 as per the fill color you specified earlier */
+    color: #008080;
+    /* Changed to #008080 as per the fill color you specified earlier */
     font-size: 16px;
 }
 
