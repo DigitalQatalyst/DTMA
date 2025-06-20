@@ -1493,7 +1493,7 @@ export default function CheckoutArea() {
             Order Summary
           </span>
           {/* BG */}
-          <div
+          {/* <div
             style={{
               width: "749.032px",
               height: "701px",
@@ -1502,7 +1502,7 @@ export default function CheckoutArea() {
               background: "#FFF",
               boxShadow: "0px 1px 3px 0px rgba(3, 0, 71, 0.09)"
             }}
-          ></div>
+          ></div> */}
    
         </div>
 

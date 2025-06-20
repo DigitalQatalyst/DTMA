@@ -105,7 +105,7 @@ export default function CounterSix() {
     style={{
       alignSelf: "stretch",
       color: "#000",
-      fontFamily: "Montserrat",
+      fontFamily: "Inter",
       fontSize: "16px",
       fontStyle: "normal",
       fontWeight: 400,
@@ -118,7 +118,7 @@ export default function CounterSix() {
             style={{
               alignSelf: "stretch",
               color: "#000",
-              fontFamily: "Montserrat",
+              fontFamily: "Inter",
               fontSize: "16px",
               fontStyle: "normal",
               fontWeight: 400,
