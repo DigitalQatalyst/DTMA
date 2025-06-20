@@ -43,12 +43,16 @@ const ContentBar: React.FC = () => {
         return (
           <div className="contentbar" key={idx}>
             <div className="contenttitle" onClick={() => toggleSection(idx)}>
-              {isOpen ? (
-                <Minus size={15} color="gray" />
-              ) : (
-                <Plus size={15} color="gray" />
-              )}
-              <h3 className="primarycol">{course.title}</h3>
+              <div className="content-icon">
+                {isOpen ? (
+                  <Minus size={15} color="gray" />
+                ) : (
+                  <Plus size={15} color="gray" />
+                )}
+              </div>
+              <div>
+                <h3 className="primarycol">{course.title}</h3>
+              </div>
             </div>
 
             <div className={`contentsubtitles-wrapper ${isOpen ? "open" : ""}`}>

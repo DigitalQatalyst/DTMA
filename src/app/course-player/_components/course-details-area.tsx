@@ -24,7 +24,7 @@ type IProps = {
 export default function CourseDetailsArea({ course }: IProps) {
   const [isQuizModalOpen, setIsQuizModalOpen] = useState(false);
 
-  const openQuizModal = () => setIsQuizModalOpen(true);
+  // const openQuizModal = () => setIsQuizModalOpen(true);
   const closeQuizModal = () => setIsQuizModalOpen(false);
 
   return (
@@ -86,7 +86,7 @@ export default function CourseDetailsArea({ course }: IProps) {
         </div>
       </div>
 
-      <div className="text-center">
+      {/* <div className="text-center">
         <button
           className="quickstart-btn"
           onClick={openQuizModal}
@@ -103,7 +103,7 @@ export default function CourseDetailsArea({ course }: IProps) {
         >
           Start Quiz
         </button>
-      </div>
+      </div> */}
 
       <QuizModal isOpen={isQuizModalOpen} onClose={closeQuizModal} />
     </section>
