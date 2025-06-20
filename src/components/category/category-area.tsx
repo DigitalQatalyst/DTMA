@@ -1,7 +1,8 @@
 import Image from "next/image";
+import '../../app/(home)/home-online-course/main.css'; // Adjust the path as necessary
 import category_data from "@/data/category-data";
-import shape_line from "@/assets/img/shape/bottom-line/line-2-category.svg";
-import category_shape from "@/assets/img/shape/category-2-shape-1.png";
+// import shape_line from "@/assets/img/shape/bottom-line/line.svg";
+// import category_shape from "@/assets/img/shape/category-2-shape-1.png";
 import Link from "next/link";
 
 export default function CategoryArea() {
@@ -11,12 +12,14 @@ export default function CategoryArea() {
         <div className="row justify-content-center">
           <div className="col-xl-8 col-lg-10">
             <div
-              className="tp-section mb-40 text-center wow fadeInUp"
+              className="tp-course-section mb-40 text-center wow fadeInUp"
               data-wow-delay=".4s"
             >
-              <h5 className="tp-section-3-subtitle">Top Categories</h5>
-              <h3 className="tp-section-3-title">
-                Most demanding{" "}
+
+              <h5 className="tp-course-subtitle">Course Categories</h5>
+              <h3 className="tp-course-p">
+                Choose from specialized tracks designed to equip you with practical skills in:
+                {/* Most Demanding{" "}
                 <span>
                   Categories
                   <Image
@@ -25,8 +28,9 @@ export default function CategoryArea() {
                     data-wow-delay=".4s"
                     src={shape_line}
                     alt="shape"
+                    
                   />
-                </span>
+                </span> */}
                 .
               </h3>
             </div>
@@ -41,24 +45,24 @@ export default function CategoryArea() {
                 data-wow-delay={`.${item.id}s`}
               >
                 <div className="tp-category-icon">
-                  <span className={item.color}>
+                  <div className={item.color}>
                     <Image
                       src={item.icon}
                       alt={item.title}
                       width={25}
                       height={25}
                     />
-                  </span>
+                  </div>
                 </div>
                 <div className="tp-category-content">
                   <h4 className="tp-category-title">{item.title}</h4>
-                  <span>{item.description}</span>
+                  {/* <span>{item.description}</span> */}
                 </div>
               </Link>
             </div>
           ))}
         </div>
-        <div className="row justify-content-center">
+        {/* <div className="row justify-content-center">
           <div className="col-xl-6 col-lg-8">
             <div
               className="tp-category-banner d-flex align-items-center justify-content-between tp-category-banner-bg mt-35"
@@ -83,7 +87,7 @@ export default function CategoryArea() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

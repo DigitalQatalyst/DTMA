@@ -21,6 +21,7 @@ export default function FaqItem({ faq, parentId }: IProps) {
                     data-bs-target={`#flush-collapse${faq.id}`}
                     aria-expanded="false"
                     aria-controls={`flush-collapse${faq.id}`}
+                    style={{ color: 'black' }}
                 >
                     {faq.question}
                     <span className="accordion-btn"></span>

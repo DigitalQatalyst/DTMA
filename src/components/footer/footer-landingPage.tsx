@@ -1,10 +1,12 @@
+import Image from "next/image";
+
 const PreFooter = () => {
   return (
 <section className="footer-section py-5" style={{ backgroundColor: "#f8f9fa" }}>
   <div className="container">
     <div className="row">
       <div className="col-12 col-md-4">
-      <img
+      <Image
                   src="/assets/img/icon/DTMA.svg"
                   alt="line Icon"
                   style={{ marginRight: "-3rem", zIndex: "3"}}
