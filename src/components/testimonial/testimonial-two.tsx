@@ -2,9 +2,9 @@
 import Slider from "react-slick";
 import { useRef, useState } from "react";
 import Image from "next/image";
-import shape_underline from "@/assets/img/shape/bottom-line/line.svg";
-import quate_1 from "@/assets/img/testimonial/testimonial-shape-1.png";
-import quate_2 from "@/assets/img/testimonial/testimonial-shape-3.png";
+// import shape_underline from "@/assets/img/shape/bottom-line/line.svg";
+// import quate_1 from "@/assets/img/testimonial/testimonial-shape-1.png";
+// import quate_2 from "@/assets/img/testimonial/testimonial-shape-3.png";
 import { testimonial_two_data } from "@/data/testimonial-data";
 
 // slider options

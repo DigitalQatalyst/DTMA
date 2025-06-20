@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { DownArrowTwo, Email, RightArrowFour } from '../svg';
+// import { DownArrowTwo, Email, RightArrowFour } from '../svg';
 // import FooterSocial from './footer-social';
-import socials from "@/assets/img/footer/Social-icons.svg";
+// import socials from "@/assets/img/footer/Social-icons.svg";
 import { footerLinks } from '@/data/footer-links';
 import logo from '@/assets/img/logo/dtma.svg';
 // import google_play from '@/assets/img/footer/google-play.jpg';
