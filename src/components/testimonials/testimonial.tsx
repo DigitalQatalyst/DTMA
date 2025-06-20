@@ -1,5 +1,6 @@
 'use client';
 
+import Image from "next/image";
 import React, { useState } from "react";
 
 const testimonials = [
@@ -70,7 +71,7 @@ const TestimonialSection = () => {
             What Learners <span style={{ color: "#008080" }}>Say</span> About DTMA
           </strong>
           <br />
-          <img
+          <Image
             src="/assets/img/icon/line.svg"
             alt="line Icon"
             style={{ marginLeft: "2rem", marginTop: "-4rem" }}
@@ -97,7 +98,7 @@ const TestimonialSection = () => {
                 <p className="text-muted">{testimonial.position}</p>
                 <div className="d-flex justify-content-center" style={{ marginBottom: "4rem" }}>
                   {Array.from({ length: 5 }).map((_, index) => (
-                    <img
+                    <Image
                       key={`star-${index}`}
                       src="/assets/img/categoriesLandingPage/star.svg"
                       alt="Filled Star"
@@ -161,21 +162,21 @@ const TestimonialSection = () => {
             </div>
             <div className="col-md-6 d-flex" style={{ marginTop: "10rem" }}>
               <div className="partner-logo" style={{ marginRight: "5rem" }}>
-                <img
+                <Image
                   src="/assets/img/testimonial/logo_02.svg"
                   alt="Penwriter"
                   style={{ maxHeight: "60px", width: "auto" }}
                 />
               </div>
               <div className="partner-logo" style={{ marginRight: "5rem" }}>
-                <img
+                <Image
                   src="/assets/img/testimonial/logo_01.png"
                   alt="StudentChat"
                   style={{ maxHeight: "60px", width: "auto" }}
                 />
               </div>
               <div className="partner-logo" style={{ marginRight: "5rem" }}>
-                <img
+                <Image
                   src="/assets/img/testimonial/logo_04.svg"
                   alt="Academics"
                   style={{ maxHeight: "60px", width: "auto" }}

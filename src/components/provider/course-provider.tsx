@@ -13,16 +13,14 @@ export default function CourseProvider({ children }: IPropType) {
   const [filterCourse, setFilterCourse] = React.useState<ICourseDT[]>([...online_courses_data]);
 
   React.useEffect(() => {
-    if (activeTab === "All Courses") {
-      setFilterCourse([...online_courses_data]);
-    } else if (activeTab === "Trending") {
-      setFilterCourse(online_courses_data.slice(2, 4));
-    } else if (activeTab === "Popularity") {
-      setFilterCourse(online_courses_data.slice(4, 6));
-    } else if (activeTab === "Featured") {
-      setFilterCourse(online_courses_data.slice(0, 2));
-    }
-  }, [activeTab]);
+  if (activeTab === "New") {
+    setFilterCourse([...online_courses_data]); // Show all courses
+  } else if (activeTab === "Polpular") {
+    setFilterCourse(online_courses_data.slice(0, 2)); // Now it shows the first 2 courses
+  } else if (activeTab === "View All") {
+    setFilterCourse(online_courses_data.slice(2, 4)); // Now it shows courses from index 2 to 3
+  }
+}, [activeTab]);
 
   return (
     <CourseContext.Provider value={{ activeTab, setActiveTab,filterCourse }}>

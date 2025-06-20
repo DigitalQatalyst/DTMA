@@ -1,27 +1,27 @@
-// import Image from "next/image";
-// import shape_underline from "@/assets/img/unlerline/brand-2-svg-1.svg";
-// // brands
-// import brand_1 from "@/assets/img/brand/brand-2-logo-1.png";
-// import brand_2 from "@/assets/img/brand/brand-2-logo-2.png";
-// import brand_3 from "@/assets/img/brand/brand-2-logo-3.png";
-// import brand_4 from "@/assets/img/brand/brand-2-logo-4.png";
-// import brand_5 from "@/assets/img/brand/brand-2-logo-5.png";
-// import brand_6 from "@/assets/img/brand/brand-2-logo-6.png";
-// import brand_7 from "@/assets/img/brand/brand-2-logo-7.png";
-// import brand_8 from "@/assets/img/brand/brand-2-logo-8.png";
-// import brand_9 from "@/assets/img/brand/brand-2-logo-9.png";
+import Image from "next/image";
+import shape_underline from "@/assets/img/unlerline/brand-2-svg-1.svg";
+// brands
+import brand_1 from "@/assets/img/brand/brand-2-logo-1.png";
+import brand_2 from "@/assets/img/brand/brand-2-logo-2.png";
+import brand_3 from "@/assets/img/brand/brand-2-logo-3.png";
+import brand_4 from "@/assets/img/brand/brand-2-logo-4.png";
+import brand_5 from "@/assets/img/brand/brand-2-logo-5.png";
+import brand_6 from "@/assets/img/brand/brand-2-logo-6.png";
+import brand_7 from "@/assets/img/brand/brand-2-logo-7.png";
+import brand_8 from "@/assets/img/brand/brand-2-logo-8.png";
+import brand_9 from "@/assets/img/brand/brand-2-logo-9.png";
 
-// const brands = [
-//   brand_1,
-//   brand_2,
-//   brand_3,
-//   brand_4,
-//   brand_5,
-//   brand_6,
-//   brand_7,
-//   brand_8,
-//   brand_9,
-// ];
+const brands = [
+  brand_1,
+  brand_2,
+  brand_3,
+  brand_4,
+  brand_5,
+  brand_6,
+  brand_7,
+  brand_8,
+  brand_9,
+];
 
 export default function BrandArea() {
   return (
