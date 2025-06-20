@@ -1,5 +1,5 @@
-'use client';
-import { useState, useEffect } from 'react';
+"use client";
+import { useState, useEffect } from "react";
 import client from "@/lib/graphQLClient";
 import ResetFilter from "@/components/course/filter/reset-filter";
 import CourseItem from "@/components/course/single/course-item";
@@ -8,7 +8,7 @@ import Pagination from "@/components/ui/pagination";
 import useCourseFilter from "@/hooks/use-course-filter";
 import usePagination from "@/hooks/use-pagination";
 import { ICourseDT } from "@/types/course-d-t";
-import CourseFilterBanner from './course-filter-banner';
+import CourseFilterBanner from "./course-filter-banner";
 
 // Define TypeScript interfaces for GraphQL response
 interface CustomFields {
@@ -105,7 +105,7 @@ export default function CourseFilterArea() {
         setTotalItems(data.products.totalItems);
         setError(null);
       } catch (err) {
-        setError('Failed to load courses');
+        setError("Failed to load courses");
         setCourses([]);
         setTotalItems(0);
       } finally {
@@ -117,10 +117,13 @@ export default function CourseFilterArea() {
   }, [currentPage]);
 
   // Use pagination hook with fetched courses
-  const { currentItems, handlePageClick, pageCount } = usePagination(courses, pageSize);
+  const { currentItems, handlePageClick, pageCount } = usePagination(
+    courses,
+    pageSize
+  );
 
   // Handle page change
-  const handlePageChange = (selectedItem: { selected: number; }) => {
+  const handlePageChange = (selectedItem: { selected: number }) => {
     setCurrentPage(selectedItem.selected);
     handlePageClick({ selected: selectedItem.selected });
   };
@@ -134,13 +137,18 @@ export default function CourseFilterArea() {
   }
 
   return (
-    <section style={{ marginTop: '-100px' }}>
+    <section>
       <CourseFilterBanner totalItems={totalItems} />
       {courses.length > 0 ? (
         <div className="tp-filter-mt-2">
           <div className="container">
             <div className="tab-content" id="myTabContent">
-              <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+              <div
+                className="tab-pane fade show active"
+                id="home"
+                role="tabpanel"
+                aria-labelledby="home-tab"
+              >
                 <div className="row">
                   {currentItems.map((course) => (
                     <div key={course.id} className="col-lg-4 col-md-6">
@@ -149,7 +157,12 @@ export default function CourseFilterArea() {
                   ))}
                 </div>
               </div>
-              <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+              <div
+                className="tab-pane fade"
+                id="profile"
+                role="tabpanel"
+                aria-labelledby="profile-tab"
+              >
                 {currentItems.map((course) => (
                   <CourseListItemTwo key={course.id} course={course} />
                 ))}
@@ -161,7 +174,11 @@ export default function CourseFilterArea() {
                 <div className="tp-event-inner-pagination pb-100">
                   <div className="tp-dashboard-pagination pt-20">
                     <div className="tp-pagination">
-                      <Pagination handlePageClick={handlePageChange} pageCount={pageCount} isCenter={true} />
+                      <Pagination
+                        handlePageClick={handlePageChange}
+                        pageCount={pageCount}
+                        isCenter={true}
+                      />
                     </div>
                   </div>
                 </div>
