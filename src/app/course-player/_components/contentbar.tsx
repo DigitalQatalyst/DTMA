@@ -50,7 +50,7 @@ const ContentBar: React.FC = () => {
                   <Plus size={15} color="gray" />
                 )}
               </div>
-              <div>
+              <div className="contentdata">
                 <h3 className="primarycol">{course.title}</h3>
               </div>
             </div>
