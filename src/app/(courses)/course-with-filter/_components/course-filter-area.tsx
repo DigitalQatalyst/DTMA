@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { useState, useEffect } from 'react';
 import client from "@/lib/graphQLClient";
 import ResetFilter from "@/components/course/filter/reset-filter";
@@ -120,7 +120,7 @@ export default function CourseFilterArea() {
   const { currentItems, handlePageClick, pageCount } = usePagination(courses, pageSize);
 
   // Handle page change
-  const handlePageChange = (selectedItem: { selected: number }) => {
+  const handlePageChange = (selectedItem: { selected: number; }) => {
     setCurrentPage(selectedItem.selected);
     handlePageClick({ selected: selectedItem.selected });
   };
@@ -135,7 +135,7 @@ export default function CourseFilterArea() {
 
   return (
     <section>
-      <CourseFilterBanner totalItems={totalItems}/>
+      <CourseFilterBanner totalItems={totalItems} />
       {courses.length > 0 ? (
         <div className="tp-filter-mt-2">
           <div className="container">
