@@ -11,8 +11,8 @@ type IProps = {
     title_cls?: string
 };
 
-export default function CourseListItemTwo({ course,sm_title,title_cls}: IProps) {
-    const { id,author_name, avg_rating, total_rating, lessons, students, thumbnail, category, price, author_img, title, discount } = course || {};
+export default function CourseListItemTwo({ course, sm_title, title_cls }: IProps) {
+    const { id, author_name, avg_rating, total_rating, lessons, students, thumbnail, category, price, author_img, title, discount } = course || {};
     return (
         <div className="tp-course-filter-item mb-25 d-flex">
             <div className="tp-course-filter-thumb">
@@ -26,26 +26,27 @@ export default function CourseListItemTwo({ course,sm_title,title_cls}: IProps) 
                     <div className="tp-course-rating-star">
                         <p>{avg_rating}<span> /{total_rating}</span></p>
                         <div className="tp-course-rating-icon">
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
+                            {Array.from({ length: total_rating }, (_, index) => (
+                                <i
+                                    key={index}
+                                    className={index < Math.round(avg_rating) ? "fa-solid fa-star" : "fa-regular fa-star"}
+                                ></i>
+                            ))}
                         </div>
                     </div>
                 </div>
-                <h4 className={title_cls?title_cls:'tp-course-filter-title'}>
+                <h4 className={title_cls ? title_cls : 'tp-course-titles'}>
                     <Link href={`/course-details/${id}`}>
                         {sm_title ? removeTagInText(title).slice(0, 28) + "..." : removeTagInText(title)}
                     </Link>
                 </h4>
                 <div className="tp-course-filter-meta">
-                    <span>
+                    {/* <span>
                         {author_img && (
                             <Image src={author_img} alt={author_name} width={30} height={30} />
                         )}
                         {author_name}
-                    </span>
+                    </span> */}
                     <span>
                         <LessonsSvg />
                         {lessons} Lessons
@@ -59,9 +60,9 @@ export default function CourseListItemTwo({ course,sm_title,title_cls}: IProps) 
                     <p>In this course, We will learn how to create websites by structuring and styling your pages with HTML and CSS.</p>
                 </div>
                 <div className="tp-course-filter-pricing d-flex align-items-center justify-content-between">
-                    <div className="price">
+                    {/* <div className="price">
                       <CoursePrice discount={discount} price={price} />
-                    </div>
+                    </div> */}
                     <div className="tp-course-filter-btn">
                         <Link href={`/course-details/${id}`}>Preview this Course</Link>
                     </div>

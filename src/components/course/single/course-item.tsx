@@ -3,7 +3,6 @@ import Image from "next/image";
 import { LessonsSvg, UserSvgTwo } from "../../svg";
 import { ICourseDT } from "@/types/course-d-t";
 import Link from "next/link";
-// import CoursePrice from "../course-price";
 import '@/assets/css/main.css';
 
 type IProps = {
@@ -15,17 +14,28 @@ export default function CourseItem({ course, removeTag }: IProps) {
   const {
     id,
     thumbnail,
-    // author_name,
-    // author_img,
+    author_name,
+    author_img,
     title,
-    // discount,
+    discount,
     lessons,
     students,
     avg_rating,
     total_rating,
     category,
-    // price,
+    credits,
   } = course || {};
+
+  // Calculate number of filled stars
+  const filledStars = Math.round(avg_rating); // Round to nearest integer (e.g., 4.7 → 5, 4.3 → 4)
+  const stars = Array(5).fill(0).map((_, index) => (
+    <i
+      key={index}
+      className={index < filledStars ? "fa-solid fa-star" : "fa-regular fa-star"}
+      style={{ color: index < filledStars ? "#FFC107" : "#D3D3D3" }}
+    ></i>
+  ));
+
   return (
     <div className="tp-course-item p-relative fix mb-30">
       {/* <div className="tp-course-teacher mb-15">
@@ -70,7 +80,7 @@ export default function CourseItem({ course, removeTag }: IProps) {
           ></Link>
         </h4>
 
-        <h5 className="credits-line">1000 credits</h5>
+        <h5 className="credits-line">{credits} credits</h5>
 
         <div className="tp-course-rating d-flex align-items-end justify-content-between">
           <div className="tp-course-rating-star">
@@ -79,17 +89,9 @@ export default function CourseItem({ course, removeTag }: IProps) {
               <span> /{total_rating}</span>
             </p>
             <div className="tp-course-rating-icon">
-              <i className="fa-solid fa-star"></i>
-              <i className="fa-solid fa-star"></i>
-              <i className="fa-solid fa-star"></i>
-              <i className="fa-solid fa-star"></i>
-              <i className="fa-solid fa-star"></i>
-              
+              {stars}
             </div>
           </div>
-          {/* <div className="tp-course-pricing home-2">
-            <CoursePrice discount={discount} price={price} />
-          </div> */}
         </div>
       </div>
       <div className="tp-course-btn home-2">
