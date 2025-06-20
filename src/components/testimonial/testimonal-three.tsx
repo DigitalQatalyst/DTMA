@@ -4,6 +4,7 @@ import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { ReactNode } from 'react';
 
 // Assuming these are your actual dot images for active and inactive states
 import ellipse_active_dot from "@/assets/img/testimonial/Ellipse 55.svg"; // Active dot image (teal/green)
@@ -39,7 +40,7 @@ const testi_slider_opt = {
         },
     ],
     // Custom dots styling - Retained inline styles as per request
-    appendDots: dots => (
+    appendDots: (dots: ReactNode) => (
         <div style={{
             position: "absolute",
             bottom: "-60px",
@@ -51,7 +52,7 @@ const testi_slider_opt = {
             <ul style={{ margin: "0px", padding: "0px", display: "flex", gap: "10px" }}> {dots} </ul>
         </div>
     ),
-    customPaging: i => (
+    customPaging: (i: number) => (
         // Render both images, CSS will control visibility and hover effects
         <div className="custom-dot-wrapper">
             <Image
@@ -74,40 +75,37 @@ const testi_slider_opt = {
 
 export default function TestimonialSection() {
     return (
-        <section style={styles.testimonialSection}>
-            <div style={styles.container}>
-                <h4 style={{ fontSize: '28px', fontWeight: '700', color: '#333', marginBottom: '20px', fontFamily: 'sans-serif' }}>What Our Learners Say</h4>
+        <section className="testimonial-section">
+            <div className="testimonial-container">
+                <h4 className="testimonial-heading">What Our Learners Say</h4>
 
-                <h5 style={{
-                    fontSize: '18px', fontWeight: '500', color: '#666', marginBottom: '60px', fontFamily: 'sans-serif'
-                }} >
+                <h5 className="testimonial-subheading">
                     Don’t just take our words - see how DTMA has empowered professionals like you:
                 </h5>
 
                 <Slider {...testi_slider_opt} className="custom-slick-dots">
                     {testimonial_three_data.map((item) => ( // <-- Using testimonial_three_data
-                        <div key={item.id} style={styles.slideWrapper}>
-                            <div style={styles.testimonialItem}>
-                                {/* Removed backgroundColor from avatarBlock as avatarBgColor is gone */}
-                                <div style={styles.avatarBlock}>
+                        <div key={item.id} className="slide-wrapper">
+                            <div className="testimonial-item">
+                                <div className="avatar-block">
                                     <Image
                                         src={item.avatar}
                                         alt={item.name}
                                         width={140}
                                         height={140}
-                                        style={styles.avatar}
+                                        className="avatar"
                                     />
                                 </div>
-                                <div style={styles.testimonialContent}>
-                                    <div style={styles.rating}>
+                                <div className="testimonial-content">
+                                    <div className="rating">
                                         {[...Array(item.rating)].map((_, index) => (
-                                            <i key={index} className="fa-solid fa-star" style={styles.star}></i>
+                                            <i key={index} className="fa-solid fa-star star"></i>
                                         ))}
                                     </div>
-                                    <p style={styles.testimonialText}>{item.testimonial}</p>
-                                    <div style={styles.metadata}>
-                                        <h4 style={styles.name}>{item.name}</h4>
-                                        <span style={styles.company}>{item.company}</span>
+                                    <p className="testimonial-text">{item.testimonial}</p>
+                                    <div className="metadata">
+                                        <h4 className="name">{item.name}</h4>
+                                        <span className="company">{item.company}</span>
                                     </div>
                                 </div>
                             </div>
@@ -115,91 +113,6 @@ export default function TestimonialSection() {
                     ))}
                 </Slider>
             </div>
-        </section >
+        </section>
     );
 }
-
-// Styles for the component - Retained as inline styles in this file
-const styles = {
-    testimonialSection: {
-        paddingTop: '60px',
-        paddingBottom: '120px',
-        textAlign: 'center',
-        backgroundColor: '#FFFFFF',
-    },
-    container: {
-        maxWidth: '1200px',
-        margin: '0 auto',
-        padding: '0 20px',
-    },
-
-
-    slideWrapper: {
-        padding: '0 15px',
-        outline: 'none',
-        boxSizing: 'border-box'
-    },
-    testimonialItem: {
-        display: 'flex',
-        flexDirection: 'row', // Flexed in one row
-        alignItems: 'flex-start',
-        gap: '30px',
-        textAlign: 'left',
-    },
-    avatarBlock: {
-        flexShrink: 0,
-        width: '160px',
-        height: '160px',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderRadius: '8px',
-        overflow: 'hidden',
-        boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
-        // backgroundColor: item.avatarBgColor was here, now removed
-    },
-    avatar: {
-        width: '100%',
-        height: '100%',
-        objectFit: 'cover',
-        borderRadius: '0px',
-    },
-    testimonialContent: {
-        flexGrow: 1,
-        padding: '0',
-        position: 'relative',
-    },
-    rating: {
-        display: 'flex',
-        gap: '5px',
-        marginBottom: '10px',
-    },
-    star: {
-        color: '#008080', // Changed to #008080 as per the fill color you specified earlier
-        fontSize: '16px',
-    },
-    testimonialText: {
-        fontSize: '16px',
-        color: '#555',
-        lineHeight: '1.6',
-        marginBottom: '15px',
-    },
-    metadata: {
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        gap: '10px',
-    },
-    name: {
-        fontSize: '18px',
-        fontWeight: '700',
-        color: '#333',
-        margin: '0',
-    },
-    company: {
-        fontSize: '15px',
-        fontWeight: '500',
-        color: '#008080',
-        textDecoration: 'none',
-    },
-};
