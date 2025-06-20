@@ -170,6 +170,7 @@ export default function BrandArea() {
     gap: "9px"
   }}
 >
+  <a href="/course-with-filter" style={{ textDecoration: "none" }}>
     <button
     style={{
       color: "#FFF",
@@ -188,6 +189,7 @@ export default function BrandArea() {
   >
     Explore Our Courses
   </button>
+  </a>
 </div>
 </div>
 </div>
