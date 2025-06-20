@@ -1,14 +1,17 @@
 import { Metadata } from "next";
-import BannerArea from "@/components/banner/banner-area";
-import BrandArea from "@/components/brand/brand-area";
+import './main.css';
+// import BannerArea from "@/components/banner/banner-area";
+// import BrandArea from "@/components/brand/brand-area";
 import CategoryArea from "@/components/category/category-area";
 import CourseArea from "@/components/course/course-area";
-import CourseLiveArea from "@/components/course/course-live-area";
+// import CourseLiveArea from "@/components/course/course-live-area";
 import CtaTwo from "@/components/cta/cta-two";
 import FunFactArea from "@/components/fun-fact/fun-fact-area";
 import HeroAreaTwo from "@/components/hero-area/hero-area-two";
-import TeamArea from "@/components/team/team-area";
-import TestimonialTwo from "@/components/testimonial/testimonial-two";
+// import TeamArea from "@/components/team/team-area";
+import TestimonialThree from "@/components/testimonial/testimonal-three";
+import FAQ from "@/components/faq/faq-area";
+import Question from "@/components/QuestionsStill/question";
 
 export const metadata: Metadata = {
   title: "Home Online Course - Acadia",
@@ -21,40 +24,45 @@ export default function HomeOnlineCoursePage() {
       <HeroAreaTwo />
       {/* hero area end */}
 
+      {/* fun fact area start */}
+      <FunFactArea />
+      {/* fun fact area end */}
+
       {/* category area */}
+      {/* <HeroSection /> */}
       <CategoryArea />
       {/* category area */}
 
-      {/* fun fact area start */}
-      <FunFactArea/>
-      {/* fun fact area end */}
+
 
       {/* course area start */}
-      <CourseArea/>
+      <CourseArea />
       {/* course area end */}
 
       {/* course live area start */}
-      <CourseLiveArea/>
+      {/* <CourseLiveArea /> */}
       {/* course live area end */}
 
       {/* testimonial area start */}
-      <TestimonialTwo/>
+      <TestimonialThree />
       {/* testimonial area end */}
+      <FAQ />
 
+      <Question />
       {/* team area start */}
-      <TeamArea/>
+      {/* <TeamArea /> */}
       {/* team area end */}
 
       {/* brand area start */}
-      <BrandArea/>
+      {/* <BrandArea /> */}
       {/* brand area end */}
 
       {/* banner area start */}
-      <BannerArea/>
+      {/* <BannerArea /> */}
       {/* banner area end */}
 
       {/* cta area start */}
-      <CtaTwo/>
+      <CtaTwo />
       {/* cta area end */}
     </main>
   );

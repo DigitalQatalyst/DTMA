@@ -1,92 +1,33 @@
-import Link from "next/link";
+import React from "react";
+import HeaderTwo from "@/components/header/header-two";
+import msg from "@/assets/img/hero/message.svg";
 import Image from "next/image";
-import CourseItem from "../course/single/course-item";
-import { RightArrowFour, ShapeTwo } from "../svg";
-import svg_underline from "@/assets/img/unlerline/hero-2-svg-1.svg";
-import hero_thumb from "@/assets/img/hero/hero-2-thumb-1.png";
-import hero_shape_1 from '@/assets/img/hero/hero-2-shape-2.png';
-import hero_shape_2 from '@/assets/img/hero/hero-2-shape-3.png';
-import hero_shape_3 from '@/assets/img/hero/hero-2-shape-4.png';
-import {online_courses_data} from "@/data/course-data";
 
-export default function HeroAreaTwo() {
+const HeroAreaTwo = () => {
   return (
-    <div className="tp-hero-area lightblue-bg tp-hero-2-bg">
-      <div className="container custom-container">
-        <div className="tp-hero-2-wrap">
-          <div className="row align-items-end">
-            <div className="col-xxl-5 col-xl-6 col-lg-7 col-md-12">
-              <div className="tp-hero-2-content">
-                <span
-                  className="tp-hero-2-subtitle wow fadeInUp"
-                  data-wow-delay=".3s"
-                >
-                  Keep Learning
-                </span>
-                <h2
-                  className="tp-hero-2-title wow fadeInUp"
-                  data-wow-delay=".5s"
-                >
-                  Best digital {" "}
-                  <span>
-                    Online{" "}
-                    <Image
-                      className="wow bounceIn"
-                      data-wow-duration="1.5s"
-                      data-wow-delay=".4s"
-                      src={svg_underline}
-                      alt="svg-underline"
-                    />
-                  </span>
-                  Courses
-                </h2>
-                <p className=" wow fadeInUp" data-wow-delay=".7s">
-                  Acquire global knowledge and build your <br /> professional
-                  skills
-                </p>
-                <div
-                  className="tp-hero-2-btn wow fadeInUp"
-                  data-wow-delay=".9s"
-                >
-                  <Link className="tp-btn-border" href="/course-with-filter">
-                    Find Courses
-                    <span>
-                      <RightArrowFour />
-                    </span>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="offset-xxl-4 col-xxl-3 offset-xl-2 col-xl-4 col-lg-5 col-md-6">
-              <div
-                className="tp-hero-2-course p-relative wow fadeInUp"
-                data-wow-delay=".5s"
-              >
-                <CourseItem course={online_courses_data[0]} />
-              </div>
-            </div>
-          </div>
-          <div className="tp-hero-2-thumb">
-            <Image src={hero_thumb} alt="hero-thumbnail" style={{height:'auto'}} />
-          </div>
+    // The hero-section itself is full width for the gradient
+    <section className="hero-section position-relative">
+      {/* Hero Content - This is where the container should be to constrain content width */}
+      <div className="container custom-container-larg position-relative z-index-2 text-center" style={{ paddingTop: "4rem" }}>
+        <HeaderTwo /> {/* Navbar before content */}
+        <div className="content-container">
+          <h1 className="hero-content" style={{ color: "#000A06", width: "698px" }}>
+            <strong>Learn. Transform . Lead</strong>
+          </h1>
+
+          <p className="paragraph">
+            DTMA equips professionals and organizations with AI-driven, personalized digital <br />
+            transformation learning—accessible, affordable, and role-specific.
+          </p>
+
+          <button className="courses-btn">Explore Courses Now</button>
+          
+          <Image src={msg} alt="message"  className="message-icon-btn" />
         </div>
+
       </div>
-      <div className="tp-hero-2-shape">
-        <div className="tp-hero-2-shape-1">
-          <span>
-            <ShapeTwo />
-          </span>
-        </div>
-        <div className="tp-hero-2-shape-2">
-          <Image src={hero_shape_1} alt="hero-shape" />
-        </div>
-        <div className="tp-hero-2-shape-3">
-          <Image src={hero_shape_2} alt="hero-shape" />
-        </div>
-        <div className="tp-hero-2-shape-4">
-          <Image src={hero_shape_3} alt="hero-shape" />
-        </div>
-      </div>
-    </div>
+    </section>
   );
-}
+};
+
+export default HeroAreaTwo;
