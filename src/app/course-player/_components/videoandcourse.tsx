@@ -66,7 +66,7 @@ export default function VideoAndCourse() {
                 onClick={openQuizModal}
                 className="quickstart-btn bg-teal-200 text-white px-4 py-2 rounded shadow hover:bg-teal-600 transition"
               >
-                Start Quiz
+                Start Quizes
               </button>
               <div className="lock">
                 <p className="text-lock">Complete course to take quiz.</p>

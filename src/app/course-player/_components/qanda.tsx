@@ -26,7 +26,7 @@ const Qanda = () => {
 
           <div className="startdiscussion">
             <div>
-              <div className="usertag">
+              <div className="usertag d-flex align-items-center">
                 <p className="primarytext">K</p>
               </div>
             </div>
