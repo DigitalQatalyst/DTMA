@@ -104,7 +104,7 @@ export default function CourseItem({ course, removeTag }: IProps) {
         </div>
       </div>
       <div className="tp-course-btn home-2">
-        <Link href={`/course-details/${id}`}>Preview this Course</Link>
+        <Link href={`/course-player/${id}`}>Preview this Course</Link>
       </div>
     </div>
   );
