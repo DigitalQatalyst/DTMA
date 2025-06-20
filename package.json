@@ -17,7 +17,7 @@
     "bootstrap": "^5.3.3",
     "graphql-request": "^7.2.0",
     "lucide-react": "^0.511.0",
-    "next": "14.2.11",
+    "next": "^14.2.30",
     "react": "^18",
     "react-apexcharts": "^1.4.1",
     "react-bootstrap": "^2.10.5",
