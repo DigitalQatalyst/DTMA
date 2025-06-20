@@ -146,6 +146,7 @@ export default function TutorArea() {
               alignSelf: "stretch"
             }}
           >
+            <a href="/contact" style={{ textDecoration: "none" }}>
             <button
             style={{
               color: "var(--Primary-100, #FFF)",
@@ -164,6 +165,7 @@ export default function TutorArea() {
           >
             Contact Us
           </button>
+          </a>
           </div>
         </div>
       </div>
