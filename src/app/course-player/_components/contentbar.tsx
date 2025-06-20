@@ -1,13 +1,10 @@
 "use client";
-import { File, Menu, Minus, Pointer, Plus } from "lucide-react";
+import { Menu, Minus, Plus, CirclePlay, FileQuestion } from "lucide-react";
 import React, { useState } from "react";
 import { coursecontent } from "../constants";
 
-interface SubtitleItem {
-  id?: string | number;
-  type: string;
-  subtitle: string;
-}
+// Import the Subs type directly to ensure type consistency
+import type { Subs } from "../constants";
 
 const ContentBar: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0); // Default open first section
@@ -23,12 +20,12 @@ const ContentBar: React.FC = () => {
   const handleSelect = (
     sectionIndex: number,
     itemIndex: number,
-    itemData: SubtitleItem
+    itemData: Subs
   ) => {
     setSelectedItem({ sectionIndex, itemIndex });
 
     // ✅ You can now do something with itemData
-    console.log("Selecte item data:", itemData);
+    console.log("Selected item data:", itemData);
   };
 
   return (
@@ -46,12 +43,16 @@ const ContentBar: React.FC = () => {
         return (
           <div className="contentbar" key={idx}>
             <div className="contenttitle" onClick={() => toggleSection(idx)}>
-              {isOpen ? (
-                <Minus size={15} color="gray" />
-              ) : (
-                <Plus size={15} color="gray" />
-              )}
-              <h3 className="primarycol">{course.title}</h3>
+              <div className="content-icon">
+                {isOpen ? (
+                  <Minus size={15} color="gray" />
+                ) : (
+                  <Plus size={15} color="gray" />
+                )}
+              </div>
+              <div>
+                <h3 className="primarycol">{course.title}</h3>
+              </div>
             </div>
 
             <div className={`contentsubtitles-wrapper ${isOpen ? "open" : ""}`}>
@@ -69,12 +70,13 @@ const ContentBar: React.FC = () => {
                       data-id={subs.id || `${idx}-${index}`} // optional identifier
                     >
                       {subs.type === "Quiz" ? (
-                        <File size={14} color="gray" />
+                        <FileQuestion size={14} color="gray" />
                       ) : (
-                        <Pointer size={14} color="white" />
+                        <CirclePlay size={14} color="black" />
                       )}
                       <p>
-                        {subs.type}: <span>{subs.subtitle}</span>
+                        {/* {subs.type}: <span>{subs.subtitle}</span> */}
+                        <span>{subs.subtitle}</span>
                       </p>
                     </div>
                   );
