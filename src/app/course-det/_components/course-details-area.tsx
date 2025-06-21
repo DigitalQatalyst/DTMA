@@ -2,19 +2,20 @@
 import { ICourseDT } from "@/types/course-d-t";
 import "./courseDetails.css";
 import "./playerstyle.css";
-import "../styles.css";
+// import "../styles.css";
 import CourseDetailsInfo from "@/components/course/details/course-details-info";
 import CourseDetailsRatingReviews from "@/components/course/details/course-details-rating-reviews";
 import CourseDetailsFeaturedReviews from "@/components/course/details/course-details-featured-reviews";
 import CourseDetailsReviewForm from "@/components/course/details/course-details-review-form";
 import CourseResources from "@/components/resources_courseDetails/resources";
 
-import ContentBar from "./contentbar";
 import Qanda from "./qanda";
 import React, { useState } from "react";
 import QuizModal from "./quiz/QuizModal";
-import VideoAndCourse from "./videoandcourse";
 import CourseDetailsNav from "@/components/course/details/course-details-nav";
+import CourseDetailsRightSide from "./course-details-right-side";
+
+import CourseDetailsBreadcrumb from "./course-details-breadcrumb";
 import ContentSideBar from "@/components/contentsidebar/contentbar";
 
 type IProps = {
@@ -29,14 +30,17 @@ export default function CourseDetailsArea({ course }: IProps) {
   const closeQuizModal = () => setIsQuizModalOpen(false);
 
   return (
-    <section className="tp-course-details-2-area pt-50 pb-80">
+    <section className="tp-course-details-2-area">
+      <div className="pb-80">
+        <CourseDetailsBreadcrumb course={course} />
+      </div>
       <div className="container">
         <div className="row">
           <div className="col-lg-8">
             <div className="tp-course-details-2-main-inner pr-30">
-              <div id="info" className="align-items-center">
+              {/* <div id="info" className="align-items-center">
                 <VideoAndCourse />
-              </div>
+              </div> */}
               <div className="tp-course-details-2-nav d-flex align-items-center">
                 <CourseDetailsNav />
               </div>
@@ -46,13 +50,15 @@ export default function CourseDetailsArea({ course }: IProps) {
                   <CourseDetailsInfo />
                 </div>
 
-                <div id="resources">
+                {/* {/* <div id="resources">
                   <h4 className="tp-course-details-2-main-title">Resources</h4>
                   <CourseResources />
-                </div>
+                </div> */}
                 <div id="q&a">
-                  <h4 className="tp-course-details-2-main-title">Q & A</h4>
-                  <Qanda />
+                  <h4 className="tp-course-details-2-main-title">
+                    Course Content
+                  </h4>
+                  <ContentSideBar />
                 </div>
 
                 <div id="reviews">
@@ -77,12 +83,9 @@ export default function CourseDetailsArea({ course }: IProps) {
               </div>
             </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col-lg-4 mt-200 pt-40">
             {/* right sidebar box */}
-            <ContentSideBar />
-            {/* <CourseDetailsCurriculum /> */}
-            {/* <CourseDetailsRightSide course={course} /> */}
-            {/* right sidebar box */}
+            <CourseDetailsRightSide course={course} />
           </div>
         </div>
       </div>
