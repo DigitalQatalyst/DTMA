@@ -2,6 +2,8 @@ import MainProvider from "@/components/provider/main-provider";
 import HeaderTwo from "@/components/header/header-two";
 import BackToTop from "@/components/back-to-top";
 import FooterSeven from "@/components/footer/footer-seven";
+import FooterTwo from "@/components/footer/footer-two";
+import "./main.css";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -15,11 +17,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       {/* main content */}
 
       {/* footer area start */}
-      <FooterSeven bgClr="#ffff"/>
+      <FooterTwo />
       {/* footer area end */}
 
       {/* back to top */}
-      <BackToTop/>
+      <BackToTop />
       {/* back to top */}
     </MainProvider>
   );
