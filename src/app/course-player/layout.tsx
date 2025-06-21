@@ -1,7 +1,6 @@
 import MainProvider from "@/components/provider/main-provider";
 import HeaderTwo from "@/components/header/header-two";
 import BackToTop from "@/components/back-to-top";
-import FooterSeven from "@/components/footer/footer-seven";
 import FooterTwo from "@/components/footer/footer-two";
 import "./main.css";
 
