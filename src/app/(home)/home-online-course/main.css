@@ -388,20 +388,19 @@
 }
 
 .tp-cta-2-form {
-    .tp-cta-2-form {
-        display: flex;
-        /* Makes the input and button align horizontally by default */
-        gap: 15px;
-        /* Add some space between them on desktop */
-        justify-content: center;
-        /* Center the form elements */
-        align-items: center;
-        /* Vertically align them */
-        max-width: 500px;
-        /* Optional: limit overall form width on desktop */
-        margin: 0 auto;
-        /* Optional: center the form itself */
-    }
+    display: flex;
+    /* Makes the input and button align horizontally by default */
+    gap: 15px;
+    /* Add some space between them on desktop */
+    justify-content: center;
+    /* Center the form elements */
+    align-items: center;
+    /* Vertically align them */
+    max-width: 500px;
+    /* Optional: limit overall form width on desktop */
+    margin: 0 auto;
+    /* Optional: center the form itself */
+
 }
 
 .tp-cta-2-input {
@@ -515,15 +514,40 @@
     margin: 0 auto;
 }
 
-@media (max-width: 767px) {
-    .tp-cta-2-form {
-        flex-direction: column;
+@media only screen and (max-width: 767px) {
+    .tp-cta-2 {
+        /* You might need to adjust this class name based on your HTML */
+        padding: 2rem 1rem;
+        /* Adjust padding for smaller screens (top/bottom, left/right) */
+        width: 90%;
+        /* Give it a percentage width */
+        max-width: 400px;
+        /* Or a suitable max-width for small screens if you want */
+        margin-left: auto;
+        /* Center the block */
+        margin-right: auto;
+        /* Center the block */
+        box-sizing: border-box;
+        /* Crucial for width calculation */
     }
 
-    .tp-cta-2-input,
-    .tp-cta-btn {
+    .tp-cta-2-form {
+        flex-direction: column;
         width: 100%;
+        align-items: center;
+        /* Center items horizontally when flex-direction is column */
+        gap: 1rem;
+    }
+
+
+    .tp-cta-btn {
+        width: calc(100% + 1rem);
         max-width: none;
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
+        display: flex;
+        justify-content: center;
+
     }
 
     .tp-btn-subscribe {
@@ -531,53 +555,45 @@
     }
 
     .tp-cta-2-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        text-align: center;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        padding: 0 0.5rem;
+    }
+
+    .tp-cta-2-input {
+        width: 100%;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        box-sizing: border-box;
     }
 }
 
-@media only screen and (max-width: 767px) {
-    .tp-cta-btn {
-        right: 6px;
-        margin-top: 1rem;
-        margin-left: 5px;
-    }
-}
 
 /* testimonial */
 /* --- Custom Slick Dots Styling with Image Assets & Hover Effects --- */
 
-/* Parent container for the dots */
 .custom-slick-dots .slick-dots {
     bottom: -60px;
-    /* Position dots below slider */
     list-style: none;
     text-align: center;
     padding: 0;
     margin: 0;
     display: flex !important;
-    /* Ensure flexbox for gap */
     justify-content: center;
     gap: 10px;
-    /* Spacing between dots */
 }
 
-/* Individual list item for each dot */
 .custom-slick-dots .slick-dots li {
     margin: 0;
-    /* Reset default margin */
     padding: 0;
     position: relative;
-    /* For absolute positioning of images inside customPaging div */
     width: 12px;
-    /* Set width for the li itself to control click area and initial size */
     height: 12px;
-    /* Set height for the li itself */
     cursor: pointer;
-    /* Indicate it's clickable */
     transition: transform 0.3s ease;
-    /* Smooth transition for hover effect */
     outline: none;
-    /* Remove outline on focus */
 }
 
 /* Make dots "hugger" (larger) on hover */
