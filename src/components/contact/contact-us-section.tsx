@@ -3,7 +3,12 @@ import "./styles.scss";
 
 const ContactUsSection = () => {
     return (
-        <section className="quick-help-section">
+        <section
+            className="quick-help-section"
+            style={{
+                background: 'linear-gradient(to top, #f8fbfc 0%, #cbe6ea 100%)',
+            }}
+        >
             <div className="container">
                 <h2 className="quick-help-title">Contact Us</h2>
                 <p className="quick-help-subtitle">

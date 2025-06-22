@@ -12,7 +12,9 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
     return (
-        <main>
+        <main style={{
+            marginBottom: '4rem'
+        }}>
 
             <HeroSection />
             <QuickHelpSection />
