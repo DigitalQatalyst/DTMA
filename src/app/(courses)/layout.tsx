@@ -1,6 +1,7 @@
 import BackToTop from "@/components/back-to-top";
-import Footer from "@/components/footer/dtma";
-import PreFooter from "@/components/footer/footer-landingPage";
+import FooterTwo from "@/components/footer/footer-two";
+// import Footer from "@/components/footer/dtma";
+// import PreFooter from "@/components/footer/footer-landingPage";
 import HeaderTwo from "@/components/header/header-two";
 // import HeaderTwo from "@/components/header/navbar/dtma-navbar";
 import MainProvider from "@/components/provider/main-provider";
@@ -19,9 +20,10 @@ export default function Layout({children}: {children:React.ReactNode}) {
 
       {/* footer area start */}
       {/* <FooterSeven/> */}
-      <PreFooter/>
+      {/* <PreFooter/> */}
       
-      <Footer/>
+      {/* <Footer/> */}
+      <FooterTwo/>
       {/* footer area end */}
 
       {/* back to top */}
