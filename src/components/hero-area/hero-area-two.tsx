@@ -1,6 +1,6 @@
 import React from "react";
 import HeaderTwo from "@/components/header/header-two";
-import msg from "@/assets/img/hero/message.svg";
+// import msg from "@/assets/img/hero/Message.svg";
 import Image from "next/image";
 
 const HeroAreaTwo = () => {
@@ -9,7 +9,7 @@ const HeroAreaTwo = () => {
     <section className="hero-section position-relative">
       {/* Hero Content - This is where the container should be to constrain content width */}
       <div className="container custom-container-larg position-relative z-index-2 text-center" style={{ paddingTop: "4rem" }}>
-        <HeaderTwo /> {/* Navbar before content */}
+        <HeaderTwo /> 
         <div className="content-container">
           <h1 className="hero-content" style={{ color: "#000A06", width: "698px" }}>
             <strong>Learn. Transform . Lead</strong>
@@ -21,8 +21,9 @@ const HeroAreaTwo = () => {
           </p>
 
           <button className="courses-btn">Explore Courses Now</button>
-          
-          <Image src={msg} alt="message"  className="message-icon-btn" />
+
+          <Image src="/assets/img/hero/Message.svg" width={80}
+            height={80} alt="message" className="message-icon-btn" />
         </div>
 
       </div>

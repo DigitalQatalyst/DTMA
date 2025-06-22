@@ -90,7 +90,7 @@
     margin-top: 20px;
 }
 
-/* Message Icon Button */
+/* Existing styles for .message-icon-btn (default for larger screens) */
 .message-icon-btn {
     display: flex;
     justify-content: center;
@@ -98,31 +98,44 @@
     width: 80px;
     height: 80px;
     padding: 13.83px;
-    /* Adjust padding to match design */
     background-color: #008080;
-    /* Teal background color */
     border-radius: 50%;
-    /* Fully rounded shape */
     gap: 24px;
-    /* Adjust spacing between icon and border */
     border: none;
-    /* No border */
     cursor: pointer;
     position: fixed;
-    /* Fixed position on the screen */
-    top: 20rem;
-    /* Position it at the bottom of the screen */
-    left: 55rem;
-    /* Position it to the far right */
     z-index: 10;
-    /* Ensure it stays above other elements */
+    top: 20rem;
+    left: 55rem;
 }
 
-.message-icon-btn img {
-    width: 30px;
-    /* Adjust the icon size as per your design */
-    height: 30px;
-    /* Adjust the icon size */
+/* Styles for small screens (e.g., mobile phones) */
+@media only screen and (max-width: 767px) {
+    .message-icon-btn {
+        width: 60px;
+        /* Smaller size for small screens */
+        height: 60px;
+        /* Smaller size for small screens */
+        padding: 10px;
+        /* Adjust padding for smaller size */
+
+        /* Positioning for small screens: top-right corner, aligning with hamburger */
+        top: 15px;
+        /* Adjust this to move it down from the top edge */
+        /* Example: 15px, 20px, 1rem - experiment to match the hamburger's vertical alignment */
+        right: 15px;
+        /* Adjust this to move it left from the right edge */
+        /* Example: 15px, 20px, 1rem - experiment to match the hamburger's horizontal alignment */
+
+        /* Reset conflicting properties from the base style */
+        bottom: auto;
+        /* Ensure 'bottom' property is removed for small screens */
+        left: auto;
+        /* Ensure 'left' property is removed for small screens */
+
+        /* Ensure it's still circular */
+        border-radius: 50%;
+    }
 }
 
 .trustee {
