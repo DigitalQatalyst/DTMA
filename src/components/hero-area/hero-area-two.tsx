@@ -9,7 +9,7 @@ const HeroAreaTwo = () => {
     <section className="hero-section position-relative">
       {/* Hero Content - This is where the container should be to constrain content width */}
       <div className="container custom-container-larg position-relative z-index-2 text-center" style={{ paddingTop: "4rem" }}>
-        <HeaderTwo /> 
+        <HeaderTwo />
         <div className="content-container">
           <h1 className="hero-content" style={{ color: "#000A06", width: "698px" }}>
             <strong>Learn. Transform . Lead</strong>
