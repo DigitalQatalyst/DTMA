@@ -10,7 +10,7 @@ type IProps = {
 };
 
 export default function FaqItem({ faq, parentId, isOpen, onToggle }: IProps) {
-  console.log("faq", faq);
+  // console.log("faq", faq);
   return (
     <div className={`accordion-item${isOpen ? " expand" : ""}`} key={faq.id}>
       <h2 className="accordion-header">
