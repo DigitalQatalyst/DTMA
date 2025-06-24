@@ -1,4 +1,5 @@
 // import Link from "next/link";
+"use client";
 import Image from "next/image";
 // import shape_underline from "@/assets/img/shape/bottom-line/line.svg";
 import arrow_outward from "@/assets/img/icon/arrow_outward.svg";
@@ -27,16 +28,16 @@ export default function CourseArea() {
                 </div>
               </div>
 
-              <p className="course-area-p">Jumpstart your learning with popular courses designed for immediate impact:</p>
-
-
+              <p className="course-area-p">
+                Jumpstart your learning with popular courses designed for
+                immediate impact:
+              </p>
             </div>
-
           </div>
           <div className="row">
             <div className="col-lg-12">
               <div className="tab-content wow fadeInUp" data-wow-delay=".3s">
-                <div className="row">
+                <div className="course-items-row">
                   <CourseItems />
                 </div>
               </div>

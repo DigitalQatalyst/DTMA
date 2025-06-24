@@ -690,14 +690,20 @@
 .usertag {
   height: 3rem;
   width: 3rem;
-  display: grid;
-  place-items: center;
+
   border-radius: 9999px;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+
   border: 1px solid;
   border-color: rgb(115 115 115);
+}
+.circletag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: green;
 }
 .usertag p {
   font-size: 30px;
