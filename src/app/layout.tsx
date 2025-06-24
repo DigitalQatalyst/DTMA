@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.scss";
 import "../styles/global.css";
+import "./main.css";
 import { Outfit, Jost, Crimson_Pro } from "next/font/google";
+import FooterTwo from "@/components/footer/footer-two";
+import BackToTop from "@/components/back-to-top";
+import MainProvider from "@/components/provider/main-provider";
 
 const outfit_bold = Outfit({
   subsets: ["latin"],
@@ -45,7 +49,16 @@ export default function RootLayout({
       <body
         className={`${outfit_bold.variable} ${outfit_heading.variable} ${outfit_p.variable} ${jost_primary.variable} ${crismon_secondary.variable}`}
       >
-        {children}
+        <MainProvider>
+          {children}
+          {/* footer area start */}
+          <FooterTwo />
+          {/* footer area end */}
+
+          {/* back to top */}
+          <BackToTop />
+          {/* back to top */}
+        </MainProvider>
       </body>
     </html>
   );

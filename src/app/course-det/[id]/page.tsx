@@ -2,6 +2,7 @@ import { all_courses } from "@/data/course-data";
 import CourseDetailsArea from "../_components/course-details-area";
 import RelatedCourses from "@/components/course/details/related-courses";
 import { removeTagInText } from "@/utils";
+import { Metadata } from "next";
 
 export function generateMetadata({ params }: Props) {
   const id = params.id;
@@ -12,6 +13,9 @@ export function generateMetadata({ params }: Props) {
       : "Course Details - Acadia",
   };
 }
+// export const metadata: Metadata = {
+//   title: "Course Details - DTMA",
+// };
 
 type Props = {
   params: {
