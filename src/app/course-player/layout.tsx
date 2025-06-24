@@ -8,7 +8,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <MainProvider>
       {/* header area start */}
-      <HeaderTwo inner={true} transparent={true} />
+      {/* <HeaderTwo inner={true} transparent={true} /> */}
       {/* header area end */}
 
       {/* main content */}
