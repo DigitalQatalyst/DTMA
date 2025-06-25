@@ -5,8 +5,6 @@ import SearchButton from "../button/search-button";
 export default function MainMenu() {
   const linkStyles = {
     color: "rgba(47, 43, 61, 0.90)",
-    fontFeatureSettings: "'liga' off, 'clig' off",
-    fontFamily: "Outfit",
     fontSize: "15px",
     fontStyle: "normal",
     fontWeight: 500,
