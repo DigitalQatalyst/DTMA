@@ -1,8 +1,10 @@
 import { all_courses } from "@/data/course-data";
+// import CourseDetailsBreadcrumb from "../_components/course-details-breadcrumb";
 import CourseDetailsArea from "../_components/course-details-area";
 import RelatedCourses from "@/components/course/details/related-courses";
 import { removeTagInText } from "@/utils";
-import { Metadata } from "next";
+import Image from "next/image";
+import error_img from "@/assets/img/error/cnf.png";
 
 export function generateMetadata({ params }: Props) {
   const id = params.id;
@@ -13,9 +15,6 @@ export function generateMetadata({ params }: Props) {
       : "Course Details - Acadia",
   };
 }
-// export const metadata: Metadata = {
-//   title: "Course Details - DTMA",
-// };
 
 type Props = {
   params: {
@@ -40,7 +39,10 @@ export default function CourseDetailsPage({ params }: Props) {
       {/* related course end */}
     </main>
   ) : (
-    <div className="text-center mt-100 mb-80">
+    <div className="text-center mt-100 mb-80 f-screen d-flex align-items-center">
+      <div className="tp-error-thumb mb-50">
+        <Image src={error_img} alt="error-img" style={{ height: "auto" }} />
+      </div>
       <h3>No Course found with id: {params.id}</h3>
     </div>
   );

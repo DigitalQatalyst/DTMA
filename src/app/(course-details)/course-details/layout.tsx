@@ -1,25 +1,23 @@
-import BackToTop from "@/components/back-to-top";
-// import HeaderTwo from "@/components/header/header-two";
 import MainProvider from "@/components/provider/main-provider";
-import Navbar from "@/components/header/navbar/dtma-navbar";
-import PostFooter from "@/components/footer/footer-landingPage";
-import Footer from "@/components/footer/dtma";
+import HeaderTwo from "@/components/header/header-two";
+import BackToTop from "@/components/back-to-top";
 import FooterTwo from "@/components/footer/footer-two";
+import "./main.css";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <MainProvider>
-      {/* <Navbar /> */}
+      {/* header area start */}
 
-      {/* <HeaderTwo inner={true}/> */}
+      {/* <HeaderTwo /> */}
+      {/* header area end */}
 
       {/* main content */}
       {children}
       {/* main content */}
 
       {/* footer area start */}
-      {/* <PostFooter /> */}
-      <FooterTwo />
+      {/* <FooterTwo /> */}
       {/* footer area end */}
 
       {/* back to top */}
