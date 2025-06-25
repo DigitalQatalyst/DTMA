@@ -7,6 +7,7 @@ import HeaderNine from "@/components/header/header-nine";
 import HeaderTwo from "@/components/header/header-two";
 // import HeaderTwo from "@/components/header/navbar/dtma-navbar";
 import MainProvider from "@/components/provider/main-provider";
+import "./main.css";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
