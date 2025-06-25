@@ -37,9 +37,9 @@ export default function MainMenu() {
               Help & Support
             </Link>
           </li>
-          <li style={{ marginTop: "35px" }}>
+          {/* <li style={{ marginTop: "35px" }}>
             <SearchButton />
-          </li>
+          </li> */}
         </ul>
       </nav>
     </div>
