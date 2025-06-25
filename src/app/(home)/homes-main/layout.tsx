@@ -1,13 +1,14 @@
-// import HeaderTwo from "@/components/header/header-two";
+import React from "react";
+import HeaderOne from "@/components/header/header-one";
+import FooterOne from "@/components/footer/footer-one";
 import BackToTop from "@/components/back-to-top";
 import MainProvider from "@/components/provider/main-provider";
-import FooterTwo from "@/components/footer/footer-two";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <MainProvider>
       {/* header area start */}
-      {/* <HeaderTwo /> */}
+      <HeaderOne />
       {/* header area end */}
 
       {/* main content */}
@@ -15,11 +16,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       {/* main content */}
 
       {/* footer area start */}
-      <FooterTwo />
+      <FooterOne/>
       {/* footer area end */}
 
       {/* back to top */}
-      <BackToTop />
+      <BackToTop/>
       {/* back to top */}
     </MainProvider>
   );

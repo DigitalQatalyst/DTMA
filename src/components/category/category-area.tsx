@@ -1,5 +1,5 @@
 import Image from "next/image";
-import "../../app/(home)/home-online-course/main.css"; // Adjust the path as necessary
+import "../../app/(home)/(home-main)/main.css"; // Adjust the path as necessary
 import category_data from "@/data/category-data";
 // import shape_line from "@/assets/img/shape/bottom-line/line.svg";
 // import category_shape from "@/assets/img/shape/category-2-shape-1.png";

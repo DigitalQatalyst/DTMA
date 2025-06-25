@@ -2,7 +2,7 @@
 // import { SearchSvgTwo } from "../svg";
 "use client";
 import FaqItem from "./faq-item";
-import "../../app/(home)/home-online-course/main.css"; // Adjust the path as necessary
+import "../../app/(home)/(home-main)/main.css"; // Adjust the path as necessary
 import { useState } from "react";
 
 // navData.js
