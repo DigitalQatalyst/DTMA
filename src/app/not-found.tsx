@@ -4,6 +4,8 @@ import error_img from "@/assets/img/error/error.png";
 import Link from "next/link";
 import HeaderTwo from "@/components/header/header-two";
 import FooterSeven from "@/components/footer/footer-seven";
+import group_img from "@/assets/page_not_found/Group.svg";
+import FooterTwo from "@/components/footer/footer-two";
 
 export const metadata: Metadata = {
   title: "Not Found - DTMA",
@@ -22,19 +24,31 @@ export default function NotFound() {
             <div className="row justify-content-center">
               <div className="col-xl-10">
                 <div className="tp-error-wrapper text-center">
-                  <h4 className="tp-error-title">Oops!</h4>
-                  <div className="tp-error-thumb mb-50">
+                  <div className="tp-error-thumb mb-50 d-flex justify-content-center">
                     <Image
-                      src={error_img}
+                      src={group_img}
                       alt="error-img"
-                      style={{ height: "auto" }}
+                      style={{ height: "auto", width: "550px" }}
                     />
                   </div>
                   <div className="tp-error-content">
-                    {/* <h4 className="tp-error-title-sm">Something went Wrong...</h4> */}
-                    <p>Error 404 </p>
-                    <Link className="tp-btn-inner" href="/">
-                      Back to Home
+                    <p style={{
+                      color: "#000A06",
+                      textAlign: "center",
+                      fontSize: "40px",
+                      fontStyle: "normal",
+                      fontWeight: 500,
+                      lineHeight: "60px"
+                    }}>Page Not Found</p>
+                    <Link
+                      className="tp-btn-inner"
+                      href="/"
+                      style={{
+                        borderRadius: "8px",
+                        background: "#008080",
+                      }}
+                    >
+                      Go Back
                     </Link>
                   </div>
                 </div>
@@ -46,7 +60,7 @@ export default function NotFound() {
       </main>
 
       {/* footer area start */}
-      <FooterSeven />
+      <FooterTwo />
       {/* footer area end */}
     </>
   );
