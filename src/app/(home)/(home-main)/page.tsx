@@ -1,17 +1,16 @@
+import React from "react";
 import { Metadata } from "next";
-import './main.css';
-// import BannerArea from "@/components/banner/banner-area";
-// import BrandArea from "@/components/brand/brand-area";
-import CategoryArea from "@/components/category/category-area";
-import CourseArea from "@/components/course/course-area";
-// import CourseLiveArea from "@/components/course/course-live-area";
-import CtaTwo from "@/components/cta/cta-two";
-import FunFactArea from "@/components/fun-fact/fun-fact-area";
-import HeroAreaTwo from "@/components/hero-area/hero-area-two";
-// import TeamArea from "@/components/team/team-area";
-import TestimonialThree from "@/components/testimonial/testimonal-three";
-import FAQ from "@/components/faq/faq-area";
-import Question from "@/components/QuestionsStill/question";
+import HeroAreaOne from "@/components/hero-area/hero-area-one";
+import ServiceOne from "@/components/service/service-one";
+import AboutOne from "@/components/about/about-one";
+import CounterOne from "@/components/counter/counter-one";
+import ProgramArea from "@/components/program/program-area";
+import EventArea from "@/components/event/event-area";
+import TestimonialOne from "@/components/testimonial/testimonial-one";
+import BlogOne from "@/components/blog/blog-one";
+import InstagramArea from "@/components/instagram/instagram-area";
+import CtaOne from "@/components/cta/cta-one";
+import FaqArea from "@/components/faq/faq-area";
 
 export const metadata: Metadata = {
   title: "Home Online Course - Acadia",
@@ -21,48 +20,44 @@ export default function HomeOnlineCoursePage() {
   return (
     <main>
       {/* hero area start */}
-      <HeroAreaTwo />
+      {/* <HeroAreaOne/> */}
       {/* hero area end */}
 
-      {/* fun fact area start */}
-      <FunFactArea />
-      {/* fun fact area end */}
+      {/* service area start */}
+      <ServiceOne />
+      {/* service area end */}
 
-      {/* category area */}
-      {/* <HeroSection /> */}
-      <CategoryArea />
-      {/* category area */}
+      {/* about area start */}
+      <AboutOne />
+      {/* about area end */}
 
+      {/* counter area start */}
+      <CounterOne />
+      {/* counter area end */}
 
+      {/* program area start */}
+      <ProgramArea />
+      {/* program area end */}
 
-      {/* course area start */}
-      <CourseArea />
-      {/* course area end */}
-
-      {/* course live area start */}
-      {/* <CourseLiveArea /> */}
-      {/* course live area end */}
+      {/* event area start */}
+      <EventArea />
+      {/* event area end */}
 
       {/* testimonial area start */}
-      <TestimonialThree />
+      <TestimonialOne />
       {/* testimonial area end */}
-      <FAQ />
+      <FaqArea />
 
-      <Question />
-      {/* team area start */}
-      {/* <TeamArea /> */}
-      {/* team area end */}
+      {/* blog area start */}
+      <BlogOne />
+      {/* blog area end */}
 
-      {/* brand area start */}
-      {/* <BrandArea /> */}
-      {/* brand area end */}
-
-      {/* banner area start */}
-      {/* <BannerArea /> */}
-      {/* banner area end */}
+      {/* instagram area start */}
+      <InstagramArea />
+      {/* instagram area end */}
 
       {/* cta area start */}
-      <CtaTwo />
+      <CtaOne />
       {/* cta area end */}
     </main>
   );
