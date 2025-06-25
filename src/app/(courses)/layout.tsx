@@ -6,12 +6,11 @@ import HeaderTwo from "@/components/header/header-two";
 // import HeaderTwo from "@/components/header/navbar/dtma-navbar";
 import MainProvider from "@/components/provider/main-provider";
 
-export default function Layout({children}: {children:React.ReactNode}) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <MainProvider>
-
       {/* header area start */}
-      <HeaderTwo transparent={true}/>
+      <HeaderTwo />
       {/* header area end */}
 
       {/* main content */}
@@ -21,9 +20,9 @@ export default function Layout({children}: {children:React.ReactNode}) {
       {/* footer area start */}
       {/* <FooterSeven/> */}
       {/* <PreFooter/> */}
-      
+
       {/* <Footer/> */}
-      <FooterTwo/>
+      <FooterTwo />
       {/* footer area end */}
 
       {/* back to top */}
