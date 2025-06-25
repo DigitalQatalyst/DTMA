@@ -1,5 +1,5 @@
 import Image from "next/image";
-import '../../app/(home)/home-online-course/main.css'; // Adjust the path as necessary
+import "../../app/(home)/(home-main)/main.css"; // Adjust the path as necessary
 import category_data from "@/data/category-data";
 // import shape_line from "@/assets/img/shape/bottom-line/line.svg";
 // import category_shape from "@/assets/img/shape/category-2-shape-1.png";
@@ -15,10 +15,10 @@ export default function CategoryArea() {
               className="tp-course-section mb-40 text-center wow fadeInUp"
               data-wow-delay=".4s"
             >
-
               <h5 className="tp-course-subtitle">Course Categories</h5>
-              <h3 className="tp-course-p">
-                Choose from specialized tracks designed to equip you with practical skills in:
+              <p className="tp-course-p">
+                Choose from specialized tracks designed to equip you with
+                practical skills in:
                 {/* Most Demanding{" "}
                 <span>
                   Categories
@@ -31,8 +31,7 @@ export default function CategoryArea() {
                     
                   />
                 </span> */}
-                .
-              </h3>
+              </p>
             </div>
           </div>
         </div>
