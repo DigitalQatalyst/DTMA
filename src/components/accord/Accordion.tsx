@@ -19,7 +19,7 @@ const FaqAccordion = ({ faq, parentId, isOpen, onToggle }: IProps) => {
   const toggleOpen = () => {
     setOpen(!open);
   };
-  console.log("faq", faq);
+  // console.log("faq", faq);
   return (
     <div className="accordion-area">
       <div className="accordion">
