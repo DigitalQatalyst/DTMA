@@ -4,11 +4,11 @@ import error_img from "@/assets/img/error/error.png";
 import Link from "next/link";
 import HeaderTwo from "@/components/header/header-two";
 import FooterSeven from "@/components/footer/footer-seven";
-import group_img from "@/assets/page_not_found/Group.svg";
+import coming_soon_img from "@/assets/page_not_found/soon.svg";
 import FooterTwo from "@/components/footer/footer-two";
 
 export const metadata: Metadata = {
-  title: "Not Found - DTMA",
+  title: "Coming Soon - DTMA",
 };
 
 export default function NotFound() {
@@ -24,9 +24,10 @@ export default function NotFound() {
             <div className="row justify-content-center">
               <div className="col-xl-10">
                 <div className="tp-error-wrapper text-center">
+                 <h4 className="tp-error-title">Coming Soon</h4>
                   <div className="tp-error-thumb mb-50 d-flex justify-content-center">
                     <Image
-                      src={group_img}
+                      src={coming_soon_img}
                       alt="error-img"
                       style={{ height: "auto", width: "550px" }}
                     />
@@ -35,11 +36,11 @@ export default function NotFound() {
                     <p style={{
                       color: "#000A06",
                       textAlign: "center",
-                      fontSize: "40px",
+                      fontSize: "32px",
                       fontStyle: "normal",
-                      fontWeight: 500,
+                      fontWeight: 300,
                       lineHeight: "60px"
-                    }}>Page Not Found</p>
+                    }}>This Page is coming soon</p>
                     <Link
                       className="tp-btn-inner"
                       href="/"
@@ -48,7 +49,7 @@ export default function NotFound() {
                         background: "#008080",
                       }}
                     >
-                      Go Back
+                      Back to Home
                     </Link>
                   </div>
                 </div>
