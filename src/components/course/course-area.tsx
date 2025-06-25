@@ -30,7 +30,7 @@ export default function CourseArea() {
 
               <p className="course-area-p">
                 Jumpstart your learning with popular courses designed for
-                immediate impact:
+                immediate impacts:
               </p>
             </div>
           </div>
