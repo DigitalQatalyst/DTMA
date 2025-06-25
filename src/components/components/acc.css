@@ -1,0 +1,34 @@
+.accordion-area {
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+}
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.accordion {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 5px;
+}
+.accordion-body {
+  text-align: left;
+  color: gray;
+}
+.open {
+  display: block;
+  transition-delay: 5s;
+  transition: opacity 5s ease-in-out, max-height 5s ease-in-out;
+}
+.none {
+  display: none;
+  transition: opacity 5s ease-in-out, max-height 5s ease-in-out;
+  transition-delay: 5s;
+}
+.icon {
+  cursor: pointer;
+  padding: 5px;
+}
