@@ -297,8 +297,8 @@
 .contact-wrapper {
   display: flex;
   flex-direction: column;
-  margin-top: 0;
-  /* gap: 40px; */
+  margin-top: 30px;
+  gap: 40px;
   /* Space between the two sections */
 }
 
