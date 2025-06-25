@@ -23,6 +23,7 @@ export default function CourseWithFilterPage() {
       {/* banner area start */}
       {/* <BannerArea/> */}
       {/* banner area end */}
+      
     </CourseFilterProvider>
   );
 }

@@ -64,7 +64,7 @@ export default function CourseDetailsRightSide({ course }: IProps) {
           </div>
         </div>
         <div className="tp-course-details-2-widget-btn">
-          <Link href="/cart">Add to Cart</Link>
+          <Link href="/cartnotfound">Add to Cart</Link>
           <Link className="active" href="/course-with-filter">
             Buy Course
           </Link>
