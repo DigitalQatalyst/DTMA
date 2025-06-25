@@ -17,11 +17,11 @@ const HeroSection = () => {
                         <SearchSvg />
                     </button> */}
                 </div>
-                <div className="help-breadcrumb">
+                {/* <div className="help-breadcrumb">
                     <span role="img" aria-label="home">🏠</span>
                     <span> &gt; </span>
                     <span>Help &amp; Support</span>
-                </div>
+                </div> */}
             </div>
         </section>
     );
