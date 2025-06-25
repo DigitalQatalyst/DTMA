@@ -6,6 +6,7 @@ import HeaderTwo from "@/components/header/header-two";
 import FooterSeven from "@/components/footer/footer-seven";
 import coming_soon_img from "@/assets/page_not_found/soon.svg";
 import FooterTwo from "@/components/footer/footer-two";
+import HeaderNine from "@/components/header/header-nine";
 
 export const metadata: Metadata = {
   title: "Coming Soon - DTMA",
@@ -15,7 +16,8 @@ export default function NotFound() {
   return (
     <>
       {/* header area start */}
-      <HeaderTwo inner={false} />
+      {/* <HeaderTwo inner={false} /> */}
+      <HeaderNine />
       {/* header area end */}
       <main>
         {/* not found area start */}

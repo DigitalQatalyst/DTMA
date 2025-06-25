@@ -28,54 +28,56 @@ export default function HeaderNine({ inner = false, transparent }: IProps) {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          minHeight: "200px", // Adjust as needed
+          height: "120px",
         }}
       >
         <div
           className="container custom-container-larg"
           style={{
             backgroundColor: "#FFFFFF",
-            height: "70%", // 80% of CustomHeader's height
-            width: "93%", // 80% of CustomHeader's width
+            height: "70%",
+            width: "93%",
             borderRadius: "12px",
             padding: "20px",
             boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
-            maxHeight: "80%", // Prevent height overflow
-            maxWidth: "95%", // Prevent width overflow
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            marginTop: "-10px",
+            position: "relative",
+            zIndex: 1, // Ensure navbar is above other elements
           }}
         >
-          <div className="row align-items-center">
-            <div className="col-xxl-3 col-xl-3 col-lg-6 col-6">
-              <div className="tp-header-2-right d-flex align-items-center">
-                <div className="tp-header-inner-logo tp-header-logo">
-                  <Link href="/">
-                    <Image
-                      src="/assets/dtma/dtma_logo.svg"
-                      alt="logo"
-                      width={100}
-                      height={50}
-                      priority
-                      style={{ height: "auto" }}
-                    />
-                  </Link>
-                </div>
+          <div className="col-xxl-3 col-xl-3 col-lg-6 col-6">
+            <div className="tp-header-2-right d-flex align-items-center">
+              <div className="tp-header-inner-logo tp-header-logo">
+                <Link href="/">
+                  <Image
+                    src="/assets/dtma/dtma_logo.svg"
+                    alt="logo"
+                    width={100}
+                    height={50}
+                    priority
+                    style={{ height: "auto" }}
+                  />
+                </Link>
               </div>
             </div>
+          </div>
 
-            <div className="col-xxl-6 col-xl-7 col-lg-6 d-none d-xl-block">
-              <MainMenu />
-            </div>
-            <div className="col-xxl-3 col-xl-2 col-lg-6 col-6">
-              <div className="tp-header-2-contact d-flex align-items-center justify-content-end">
-                <Image
-                  src="/assets/dtma/lock.svg"
-                  alt="lock"
-                  width={16}
-                  height={16}
-                  style={{ marginRight: "10px" }}
-                />
-                <SignInButton />
-              </div>
+          <div className="col-xxl-6 col-xl-7 col-lg-6 d-none d-xl-block">
+            <MainMenu />
+          </div>
+          <div className="col-xxl-3 col-xl-2 col-lg-6 col-6">
+            <div className="tp-header-2-contact d-flex align-items-center justify-content-end">
+              <Image
+                src="/assets/dtma/lock.svg"
+                alt="lock"
+                width={16}
+                height={16}
+                style={{ marginRight: "10px" }}
+              />
+              <SignInButton />
             </div>
           </div>
         </div>
