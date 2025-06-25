@@ -129,7 +129,32 @@ export default function CourseFilterArea() {
   };
 
   if (loading) {
-    return <section>Loading courses...</section>;
+    return (
+      <section className="loading-spinner-section">
+        <style jsx>{`
+          .loading-spinner-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 400px;
+          }
+          .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-left-color: #008080;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+          }
+          @keyframes spin {
+            to {
+              transform: rotate(360deg);
+            }
+          }
+        `}</style>
+        <div className="spinner"></div>
+      </section>
+    );
   }
 
   if (error) {
@@ -137,7 +162,7 @@ export default function CourseFilterArea() {
   }
 
   return (
-    <section>
+    <section style={{ marginTop: '-100px' }}>
       <CourseFilterBanner totalItems={totalItems} />
       {courses.length > 0 ? (
         <div className="tp-filter-mt-2">

@@ -45,7 +45,7 @@ export default function CourseItem({ course, removeTag }: IProps) {
           )}
           {author_name}
         </span> */}
-        {/* {discount && discount > 0 ? (
+      {/* {discount && discount > 0 ? (
           <span className="discount">-{discount}% </span>
         ) : null} */}
       {/* </div> */}
@@ -96,7 +96,7 @@ export default function CourseItem({ course, removeTag }: IProps) {
               <i className="fa-solid fa-star"></i>
               <i className="fa-solid fa-star"></i>
 
-              <i className="fa-regular fa-star"></i> <span>(12)</span>
+              <i className="fa-regular fa-star" style={{ color: "gray" }}></i> <span>(12)</span>
 
 
             </div>
@@ -104,7 +104,7 @@ export default function CourseItem({ course, removeTag }: IProps) {
         </div>
       </div>
       <div className="tp-course-btn home-2">
-        <Link href={`/course-details/${id}`}>Preview this Course</Link>
+        <Link href={`/course-player/${id}`}>Preview this Course</Link>
       </div>
     </div>
   );
