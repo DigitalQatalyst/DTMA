@@ -5,7 +5,10 @@
 
 export default function CtaTwo() {
   return (
-    <section className="cta-area tp-cta-2-bg" style={{ backgroundColor: "#008080" }}>
+    <section
+      className="cta-area tp-cta-2-bg"
+      style={{ backgroundColor: "#008080" }}
+    >
       <div className="cta-container">
         <div className="row justify-content-center">
           <div className="col-xxl-8 col-lg-10">
@@ -35,7 +38,16 @@ export default function CtaTwo() {
                       src={email} />
                   </span> */}
                 <div>
-                  <input type="text" className="tp-cta-2-input" placeholder="Email address" style={{ borderRadius: "5px", padding: "17px 16px 17px 20px", width: "456px" }} />
+                  <input
+                    type="text"
+                    className="tp-cta-2-input"
+                    placeholder="Email address"
+                    style={{
+                      borderRadius: "5px",
+                      padding: "17px 16px 17px 20px",
+                      width: "456px",
+                    }}
+                  />
                 </div>
 
                 <div className="tp-cta-btn">

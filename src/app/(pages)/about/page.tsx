@@ -7,38 +7,35 @@ import TeamArea from "@/components/team/team-area";
 import BrandArea from "@/components/brand/brand-area";
 
 export const metadata: Metadata = {
-    title: "About - Acadia",
-  };
+  title: "About - DTMA",
+};
 
 export default function AboutPage() {
   return (
     <main>
-      
-      
       {/* about banner area start */}
       <AboutBanner />
       {/* about banner area end */}
 
       {/* tutor area start */}
-      <TutorArea/>
+      <TutorArea />
       {/* tutor area end */}
 
       {/* counter area start */}
-      <CounterSix/>
+      <CounterSix />
       {/* counter area end */}
 
       {/* mission area start - top_cls="pt-120 pb-120"*/}
-      <MissionArea/>
+      <MissionArea />
       {/* mission area end */}
 
       {/* team area start */}
-      <TeamArea/>
+      <TeamArea />
       {/* team area end */}
 
       {/* brand area start */}
-      <BrandArea/>
+      <BrandArea />
       {/* brand area end */}
-
     </main>
   );
 }
