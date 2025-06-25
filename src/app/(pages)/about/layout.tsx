@@ -5,6 +5,7 @@ import Navbar from "@/components/header/navbar/dtma-navbar";
 import PostFooter from "@/components/footer/footer-landingPage";
 import Footer from "@/components/footer/dtma";
 import FooterTwo from "@/components/footer/footer-two";
+import "./main.css";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
