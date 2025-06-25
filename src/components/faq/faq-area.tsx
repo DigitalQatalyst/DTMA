@@ -1,8 +1,9 @@
 // import Link from "next/link";
 // import { SearchSvgTwo } from "../svg";
+"use client";
 import FaqItem from "./faq-item";
-import '../../app/(home)/home-online-course/main.css'; // Adjust the path as necessary
-
+import "../../app/(home)/home-online-course/main.css"; // Adjust the path as necessary
+import { useState } from "react";
 
 // navData.js
 export const navItems = [
@@ -28,7 +29,7 @@ const tabContentData = [
         id: 6,
         question: "Is there a free trial available?",
         answer:
-          "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
+          "Yes, you can try us for free for 30 days. If you want, we'll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
       },
       {
         id: 7,
@@ -80,7 +81,7 @@ const tabContentData = [
         id: 6,
         question: "Is there a free trial available?",
         answer:
-          "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
+          "Yes, you can try us for free for 30 days. If you want, we'll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
       },
       {
         id: 7,
@@ -118,6 +119,17 @@ const tabContentData = [
 ];
 
 export default function FaqArea() {
+  const [openFaqId, setOpenFaqId] = useState<{
+    [tabId: string]: number | null;
+  }>({});
+
+  const handleToggle = (tabId: string, faqId: number) => {
+    setOpenFaqId((prev) => ({
+      ...prev,
+      [tabId]: prev[tabId] === faqId ? null : faqId,
+    }));
+  };
+
   return (
     <section className="tp-faq-area tp-faq-p pt-50 pb-0">
       <div className="container">
@@ -126,7 +138,10 @@ export default function FaqArea() {
             <div className="tp-instructor-become-tab">
               <div className="tp-faq-section">
                 <h5 className="tp-faq-subtitle">Frequently asked questions</h5>
-                <h3 className="tp-faq-title">Get answers to common questions about DTMA courses and billing.</h3>
+                <h3 className="tp-faq-title">
+                  Get answers to common questions about DTMA courses and
+                  billing.
+                </h3>
               </div>
               {/* <ul
                 className="nav nav-tabs justify-content-center"
@@ -156,8 +171,9 @@ export default function FaqArea() {
                 {tabContentData.map((tab) => (
                   <div
                     key={tab.id}
-                    className={`tab-pane fade ${tab.id === "home" ? "show active" : ""
-                      }`}
+                    className={`tab-pane fade ${
+                      tab.id === "home" ? "show active" : ""
+                    }`}
                     id={tab.id}
                     role="tabpanel"
                     aria-labelledby={tab.label}
@@ -210,7 +226,13 @@ export default function FaqArea() {
                               id={tab.id}
                             >
                               {tab.faqs.map((faq) => (
-                                <FaqItem key={faq.id} faq={faq} parentId={tab.id} />
+                                <FaqItem
+                                  key={faq.id}
+                                  faq={faq}
+                                  parentId={tab.id}
+                                  isOpen={openFaqId[tab.id] === faq.id}
+                                  onToggle={() => handleToggle(tab.id, faq.id)}
+                                />
                               ))}
                             </div>
                           </div>
