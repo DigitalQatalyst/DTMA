@@ -6,7 +6,7 @@ import CourseFilterArea from "./_components/course-filter-area";
 // import BannerArea from "@/components/banner/banner-area";
 
 export const metadata: Metadata = {
-  title: "Course With Filter - Acadia",
+  title: "Course With Filter - DTMA",
 };
 
 export default function CourseWithFilterPage() {

@@ -4,6 +4,7 @@
 import FaqItem from "./faq-item";
 import "../../app/(home)/(home-main)/main.css"; // Adjust the path as necessary
 import { useState } from "react";
+import FaqAccordion from "../accord/Accordion";
 
 // navData.js
 export const navItems = [
@@ -218,7 +219,10 @@ export default function FaqArea() {
                           </div> */}
                       {/* </div> */}
                       {/* </div> */}
-                      <div className="col-lg-10 offset-lg-1">
+                      <div
+                        className="col-lg-10 offset-lg-1"
+                        style={{ marginBottom: "3rem" }}
+                      >
                         <div className="tp-faq-box">
                           <div className="tpd-accordion">
                             <div
@@ -226,7 +230,14 @@ export default function FaqArea() {
                               id={tab.id}
                             >
                               {tab.faqs.map((faq) => (
-                                <FaqItem
+                                // <FaqItem
+                                //   key={faq.id}
+                                //   faq={faq}
+                                //   parentId={tab.id}
+                                //   isOpen={openFaqId[tab.id] === faq.id}
+                                //   onToggle={() => handleToggle(tab.id, faq.id)}
+                                // />
+                                <FaqAccordion
                                   key={faq.id}
                                   faq={faq}
                                   parentId={tab.id}
