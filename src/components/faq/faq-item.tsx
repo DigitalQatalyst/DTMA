@@ -31,8 +31,13 @@ export default function FaqItem({ faq, parentId, isOpen, onToggle }: IProps) {
         className={`accordion-collapse collapse${isOpen ? " show" : ""}`}
         data-bs-parent={`#${parentId}`}
       >
-        <div className="accordion-body" style={{ backgroundColor: "red" }}>
-          <p className="faqanswer">{faq.answer}</p>
+        <div className="accordion-body" style={{ 
+          backgroundColor: "#fff",
+          color: "#000",
+          padding: "1rem",
+          fontSize: "1rem"
+        }}>
+          <p className="faqanswer" style={{ margin: 0 }}>{faq.answer}</p>
         </div>
       </div>
     </div>
