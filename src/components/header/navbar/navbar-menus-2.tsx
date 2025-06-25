@@ -75,14 +75,12 @@ export default function NavbarMenusTwo() {
             {/* ))} */}
             {/* </ul> */}
             {/* )} */}
-            
           </li>
         ))}
-        <li className="menu-item-has-children"> {/* Added a class, adjust as needed for styling */}
+        {/* <li className="menu-item-has-children">
           <Image src={search} alt="search"  style={{  height: "20px", width: "20px", cursor: "pointer"}} />
-        </li>
+        </li> */}
       </ul>
-      
     </nav>
   );
 }

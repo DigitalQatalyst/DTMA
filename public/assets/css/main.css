@@ -20527,7 +20527,7 @@ a .course-sky {
   border-radius: 10px;
   background-color: var(--tp-common-white);
   box-shadow: 0 0 24px 0 rgba(3, 31, 66, 0.1);
-  margin-top: -300px;
+  margin-top: -500px;
   position: sticky;
   z-index: 9;
 }

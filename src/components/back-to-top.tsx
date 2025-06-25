@@ -1,8 +1,7 @@
-'use client';
+"use client";
 import React, { useEffect } from "react";
 
 export default function BackToTop() {
-
   function backToTop() {
     const result = document.querySelector(".back-to-top-wrapper");
     if (result) {
@@ -22,11 +21,15 @@ export default function BackToTop() {
     backToTop();
     return () => {
       window.removeEventListener("scroll", backToTop);
-    }
-  },[])
+    };
+  }, []);
   return (
     <div className="back-to-top-wrapper">
-      <button id="back_to_top" type="button" className="back-to-top-btn">
+      <button
+        id="back_to_top"
+        type="button"
+        className="back-to-top-btn d-flex align-items-center justify-content-center"
+      >
         <svg
           width="12"
           height="7"

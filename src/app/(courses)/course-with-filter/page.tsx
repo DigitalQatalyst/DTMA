@@ -5,27 +5,25 @@ import { all_courses } from "@/data/course-data";
 import CourseFilterArea from "./_components/course-filter-area";
 // import BannerArea from "@/components/banner/banner-area";
 
-
 export const metadata: Metadata = {
-    title: "Course With Filter - Acadia",
-}
+  title: "Course With Filter - DTMA",
+};
 
 export default function CourseWithFilterPage() {
-    return (
-        <CourseFilterProvider initialCourses={all_courses}>
+  return (
+    <CourseFilterProvider initialCourses={all_courses}>
+      {/* course banner area start */}
+      {/* <CourseFilterBanner/> */}
+      {/* course banner area end */}
 
-            {/* course banner area start */}
-            {/* <CourseFilterBanner/> */}
-            {/* course banner area end */}
+      {/* course filter area */}
+      <CourseFilterArea />
+      {/* course filter area */}
 
-            {/* course filter area */}
-            <CourseFilterArea/>
-            {/* course filter area */}
-
-            {/* banner area start */}
-            {/* <BannerArea/> */}
-            {/* banner area end */}
-
-        </CourseFilterProvider>
-    )
+      {/* banner area start */}
+      {/* <BannerArea/> */}
+      {/* banner area end */}
+      
+    </CourseFilterProvider>
+  );
 }

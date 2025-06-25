@@ -15,6 +15,8 @@ import React, { useState } from "react";
 import QuizModal from "./quiz/QuizModal";
 import VideoAndCourse from "./videoandcourse";
 import CourseDetailsNav from "@/components/course/details/course-details-nav";
+import ContentSideBar from "@/components/contentsidebar/contentbar";
+import HeaderTwo from "@/components/header/header-two";
 
 type IProps = {
   course: ICourseDT;
@@ -30,15 +32,18 @@ export default function CourseDetailsArea({ course }: IProps) {
   return (
     <section className="tp-course-details-2-area pt-50 pb-80">
       <div className="container">
+        <div className="mb-50">
+          <HeaderTwo />
+        </div>
         <div className="row">
           <div className="col-lg-8">
             <div className="tp-course-details-2-main-inner pr-30">
               <div id="info" className="align-items-center">
                 <VideoAndCourse />
               </div>
-              <div className="tp-course-details-2-nav d-flex align-items-center">
+              {/* <div className="tp-course-details-2-nav d-flex align-items-center">
                 <CourseDetailsNav />
-              </div>
+              </div> */}
 
               <div id="notes" className="tp-course-details-2-content">
                 <div id="notes">
@@ -78,7 +83,7 @@ export default function CourseDetailsArea({ course }: IProps) {
           </div>
           <div className="col-lg-4">
             {/* right sidebar box */}
-            <ContentBar />
+            <ContentSideBar />
             {/* <CourseDetailsCurriculum /> */}
             {/* <CourseDetailsRightSide course={course} /> */}
             {/* right sidebar box */}
