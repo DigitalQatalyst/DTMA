@@ -6,6 +6,7 @@ import HeaderTwo from "@/components/header/header-two";
 import FooterSeven from "@/components/footer/footer-seven";
 import group_img from "@/assets/page_not_found/Group.svg";
 import FooterTwo from "@/components/footer/footer-two";
+import HeaderNine from "@/components/header/header-nine";
 
 export const metadata: Metadata = {
   title: "Not Found - DTMA",
@@ -15,7 +16,8 @@ export default function NotFound() {
   return (
     <>
       {/* header area start */}
-      <HeaderTwo inner={false} />
+      {/* <HeaderTwo inner={false} /> */}
+      <HeaderNine />
       {/* header area end */}
       <main>
         {/* not found area start */}
