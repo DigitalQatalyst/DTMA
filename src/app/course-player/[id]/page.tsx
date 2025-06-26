@@ -3,6 +3,7 @@ import CourseDetailsArea from "../_components/course-details-area";
 import RelatedCourses from "@/components/course/details/related-courses";
 import { removeTagInText } from "@/utils";
 import HeaderNine from "@/components/header/header-nine";
+import HeaderTwo from '@/components/header/header-two';
 
 export function generateMetadata({ params }: Props) {
   const id = params.id;
@@ -27,7 +28,9 @@ export default function CourseDetailsPage({ params }: Props) {
       {/* breadcrumb area start */}
       {/* <CourseDetailsBreadcrumb course={course} /> */}
       {/* breadcrumb area end */}
-      <HeaderNine />
+      {/* <HeaderNine /> */}
+      <HeaderTwo inner={true} />
+
 
       {/* course details area */}
       <CourseDetailsArea course={course} />

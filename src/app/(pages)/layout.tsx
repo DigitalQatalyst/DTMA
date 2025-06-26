@@ -6,12 +6,12 @@ import FooterSeven from "@/components/footer/footer-seven";
 import HeaderTwo from "@/components/header/header-two";
 import HeaderNine from "@/components/header/header-nine";
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout({ children }: { children: React.ReactNode; }) {
   return (
     <MainProvider>
       {/* header area start */}
       {/* <HeaderTwo inner={true} /> */}
-      <HeaderNine />
+      {/* <HeaderNine /> */}
       {/* header area end */}
 
       {/* main content */}

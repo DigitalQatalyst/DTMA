@@ -16,8 +16,8 @@ export default function NotFound() {
   return (
     <>
       {/* header area start */}
-      {/* <HeaderTwo inner={false} /> */}
-      <HeaderNine />
+      <HeaderTwo inner={false} />
+      {/* <HeaderNine /> */}
       {/* header area end */}
       <main>
         {/* not found area start */}
@@ -26,7 +26,7 @@ export default function NotFound() {
             <div className="row justify-content-center">
               <div className="col-xl-10">
                 <div className="tp-error-wrapper text-center">
-                 <h4 className="tp-error-title">Coming Soon</h4>
+                  <h4 className="tp-error-title">Coming Soon</h4>
                   <div className="tp-error-thumb mb-50 d-flex justify-content-center">
                     <Image
                       src={coming_soon_img}
