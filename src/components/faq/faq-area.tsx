@@ -30,7 +30,7 @@ const tabContentData = [
         id: 6,
         question: "Is there a free trial available?",
         answer:
-          "Yes, we offer a 30-day free trial with full access to all features. During this period, you’ll also receive a free, personalized 30-minute onboarding call to help you get the most out of your experience.",
+          "Yes, we do offer a 30-day free trial with full access to all features. During this period, you’ll also receive a free, personalized 30-minute onboarding call to help you get the most out of your experience.",
       },
       {
         id: 7,
