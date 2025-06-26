@@ -1,13 +1,16 @@
 import MainProvider from "@/components/provider/main-provider";
 import BackToTop from "@/components/back-to-top";
-import HeaderTwo from '@/components/header/header-two';
-import FooterTwo from '@/components/footer/footer-two';
+import FooterSeven from "@/components/footer/footer-seven";
+import HeaderNine from "@/components/header/header-nine";
+import FooterTwo from "@/components/footer/footer-two";
+import "./main.css";
 
 export default function Layout({ children }: { children: React.ReactNode; }) {
   return (
     <MainProvider>
       {/* header area start */}
-      <HeaderTwo />
+      {/* <HeaderTwo inner={true} transparent={true} /> */}
+      <HeaderNine />
       {/* header area end */}
 
       {/* main content */}

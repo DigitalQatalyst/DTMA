@@ -17,6 +17,7 @@ import VideoAndCourse from "./videoandcourse";
 import CourseDetailsNav from "@/components/course/details/course-details-nav";
 import ContentSideBar from "@/components/contentsidebar/contentbar";
 import HeaderTwo from "@/components/header/header-two";
+import HeaderNine from "@/components/header/header-nine";
 
 type IProps = {
   course: ICourseDT;
@@ -31,10 +32,10 @@ export default function CourseDetailsArea({ course }: IProps) {
 
   return (
     <section className="tp-course-details-2-area pt-50 pb-80">
+      {/* <div className="mb-50">
+        <HeaderNine />
+      </div> */}
       <div className="container">
-        <div className="mb-50">
-          <HeaderTwo />
-        </div>
         <div className="row">
           <div className="col-lg-8">
             <div className="tp-course-details-2-main-inner pr-30">
