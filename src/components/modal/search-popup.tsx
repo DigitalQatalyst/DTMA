@@ -9,7 +9,7 @@ const top_programs = [...online_courses_data].slice(0, 4);
 type IProps = {
    isSearchOpen: boolean;
    onHide: () => void;
-}
+};
 
 export default function SearchPopup({ isSearchOpen, onHide }: IProps) {
    return (
@@ -53,7 +53,7 @@ export default function SearchPopup({ isSearchOpen, onHide }: IProps) {
                                                 </div>
                                                 <h4 className="tp-search-course-item-title">
                                                    <Link href={`/course-details/${item.id}`}>
-                                                     {item.category}
+                                                      {item.category}
                                                    </Link>
                                                 </h4>
                                                 <div className="tp-search-course-price">
@@ -73,7 +73,7 @@ export default function SearchPopup({ isSearchOpen, onHide }: IProps) {
             </div>
          </div>
 
-         <div onClick={onHide} className={`body-overlay ${isSearchOpen?'opened':''}`}></div>
+         <div onClick={onHide} className={`body-overlay ${isSearchOpen ? 'opened' : ''}`}></div>
       </>
-   )
+   );
 }

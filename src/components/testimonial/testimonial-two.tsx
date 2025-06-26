@@ -2,9 +2,9 @@
 import Slider from "react-slick";
 import { useRef, useState } from "react";
 import Image from "next/image";
-import shape_underline from "@/assets/img/unlerline/testimonial-2-svg-1.svg";
-import quate_1 from "@/assets/img/testimonial/testimonial-shape-1.png";
-import quate_2 from "@/assets/img/testimonial/testimonial-shape-3.png";
+// import shape_underline from "@/assets/img/shape/bottom-line/line.svg";
+// import quate_1 from "@/assets/img/testimonial/testimonial-shape-1.png";
+// import quate_2 from "@/assets/img/testimonial/testimonial-shape-3.png";
 import { testimonial_two_data } from "@/data/testimonial-data";
 
 // slider options
@@ -49,24 +49,24 @@ export default function TestimonialTwo() {
   const [slider2, setSlider2] = useState<Slider | null>(null);
   const sliderRef = useRef<Slider | null>(null);
 
-    const sliderPrev = () => {
-      sliderRef.current?.slickPrev();
-    };
+  const sliderPrev = () => {
+    sliderRef.current?.slickPrev();
+  };
 
-    const sliderNext = () => {
-      sliderRef.current?.slickNext();
-    };
+  const sliderNext = () => {
+    sliderRef.current?.slickNext();
+  };
   return (
-    <section className="testimonial-area lightblue-bg pb-85">
+    <section className="testimonial-area pb-85">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-xxl-6 col-lg-8">
             <div className="tp-testimonial-section">
-              <div className="tp-section text-center mb-40">
-                <h5 className="tp-section-3-subtitle">Live Courses</h5>
-                <h3 className="tp-section-3-title">
-                  Student{" "}
-                  <span>
+              <div className="tp-testimonial-section text-center mb-40">
+                <h5 className="tp-course-subtitle">What Our Learners Say</h5>
+                <h3 className="tp-testimony-title">
+                  Don’t just take our words - see how DTMA has empowered professionals like you:
+                  {/* <span>
                     Say
                     <Image
                       className="tp-underline-shape-8 wow bounceIn"
@@ -75,8 +75,7 @@ export default function TestimonialTwo() {
                       src={shape_underline}
                       alt="shape-underline"
                     />
-                  </span>
-                  About Acadia
+                  </span> */}
                 </h3>
               </div>
             </div>
@@ -137,7 +136,7 @@ export default function TestimonialTwo() {
                   </div>
                   <div className="tp-testimonial-2-content p-relative">
                     <p>{item.testimonial}</p>
-                    <div className="tp-testimonial-2-shape">
+                    {/* <div className="tp-testimonial-2-shape">
                       <div className="shape-1">
                         <Image
                           src={quate_1}
@@ -150,7 +149,7 @@ export default function TestimonialTwo() {
                           alt="quate"
                         />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               ))}

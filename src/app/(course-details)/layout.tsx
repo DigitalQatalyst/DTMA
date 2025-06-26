@@ -4,13 +4,13 @@ import MainProvider from "@/components/provider/main-provider";
 import Navbar from "@/components/header/navbar/dtma-navbar";
 import PostFooter from "@/components/footer/footer-landingPage";
 import Footer from "@/components/footer/dtma";
+import FooterTwo from "@/components/footer/footer-two";
 
-export default function Layout({children}: {children:React.ReactNode}) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <MainProvider>
+      {/* <Navbar /> */}
 
-      <Navbar />
-      
       {/* <HeaderTwo inner={true}/> */}
 
       {/* main content */}
@@ -18,8 +18,8 @@ export default function Layout({children}: {children:React.ReactNode}) {
       {/* main content */}
 
       {/* footer area start */}
-      <PostFooter/>
-      <Footer/>
+      {/* <PostFooter /> */}
+      <FooterTwo />
       {/* footer area end */}
 
       {/* back to top */}

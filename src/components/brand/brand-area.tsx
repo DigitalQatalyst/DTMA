@@ -25,46 +25,175 @@ const brands = [
 
 export default function BrandArea() {
   return (
-    <section className="brand-area mb-65">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-4">
-            <div className="tp-brand-2-content mb-40">
-              <h4 className="tp-brand-2-title">
-                Who will <br /> You Learn {' '}
-                <span>
-                  With?
-                  <Image
-                    className="tp-underline-shape-10 wow bounceIn"
-                    data-wow-duration="1.5s"
-                    data-wow-delay=".4s"
-                    src={shape_underline}
-                    alt="shape-underline"
-                  />
-                </span>
-              </h4>
-              <p>
-                You can list your partners or instructors <br /> brands here to
-                show off your sites
-              </p>
-              <div className="tp-brand-2-btn">
-                <a className="tp-btn-round" href="#">
-                  View All Partners
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-8">
-            <div className="tp-brand-2-wrapper">
-              {brands.map((brand, index) => (
-                <div className="tp-brand-2-item" key={index}>
-                  <Image src={brand} alt="brand" />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    // <section className="brand-area mb-65">
+    //   <div className="container">
+    //     <div className="row">
+    //       <div className="col-lg-4">
+    //         <div className="tp-brand-2-content mb-40">
+    //           <h4 className="tp-brand-2-title">
+    //             Who will <br /> You Learn {' '}
+    //             <span>
+    //               With?
+    //               <Image
+    //                 className="tp-underline-shape-10 wow bounceIn"
+    //                 data-wow-duration="1.5s"
+    //                 data-wow-delay=".4s"
+    //                 src={shape_underline}
+    //                 alt="shape-underline"
+    //               />
+    //             </span>
+    //           </h4>
+    //           <p>
+    //             You can list your partners or instructors <br /> brands here to
+    //             show off your sites
+    //           </p>
+    //           <div className="tp-brand-2-btn">
+    //             <a className="tp-btn-round" href="#">
+    //               View All Partners
+    //             </a>
+    //           </div>
+    //         </div>
+    //       </div>
+    //       <div className="col-lg-8">
+    //         <div className="tp-brand-2-wrapper">
+    //           {brands.map((brand, index) => (
+    //             <div className="tp-brand-2-item" key={index}>
+    //               <Image src={brand} alt="brand" />
+    //             </div>
+    //           ))}
+    //         </div>
+    //       </div>
+    //     </div>
+    //   </div>
+    // </section>
+
+      <div
+    style={{
+      display: "flex",
+      maxWidth: "1440px",
+       width: "100%",
+      padding: "80px",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+      margin: "0 auto" 
+    }}
+  >
+
+     {/* <div
+    style={{
+      width: "1440px",
+      height: "309px",
+      position: "absolute"
+    }}
+  >
+  </div> */}
+
+   <div
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        alignSelf: "stretch"
+      }}
+    >
+
+      <div
+  style={{
+    display: "flex",
+    width: "888px",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "flex-start",
+    gap: "24px"
+  }}
+>
+
+    <div
+    style={{
+      alignSelf: "stretch",
+      color: "rgba(0, 10, 6, 0.80)",
+      fontFamily: "Outfit",
+      fontSize: "40px",
+      fontStyle: "normal",
+      fontWeight: 700,
+      lineHeight: "60px",
+      letterSpacing: "-2px"
+    }}
+  >
+    Ready to Future-Proof Your Career? Start Your Digital Transformation Journey with DTMA Today!
+  </div>
+
+    <div
+    style={{
+      alignSelf: "stretch",
+      color: "#636366",
+      fontFamily: "Outfit",
+      fontSize: "18px",
+      fontStyle: "normal",
+      fontWeight: 400,
+      lineHeight: "28px"
+    }}
+  >
+    Join our global community of learners and take the first step towards mastering the digital skills that will define the future of work.
+  </div>
+
+</div>
+      
+      <div
+  style={{
+    width: "210.6px",
+    height: "55px"
+  }}
+>
+
+  <div
+  style={{
+    display: "flex",
+    width: "210.6px",
+    height: "55px",
+    padding: "16px",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "10px",
+    flexShrink: 0,
+    borderRadius: "8px",
+    background: "#008080"
+  }}
+>
+  <div
+  style={{
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "9px"
+  }}
+>
+  <a href="/course-with-filter" style={{ textDecoration: "none" }}>
+    <button
+    style={{
+      color: "#FFF",
+      textAlign: "center",
+      fontFamily: "Outfit",
+      fontSize: "14px",
+      fontStyle: "normal",
+      fontWeight: 500,
+      lineHeight: "20px",
+      letterSpacing: "0.1px",
+      background: "none",
+      border: "none",
+      cursor: "pointer",
+      padding: 0
+    }}
+  >
+    Explore Our Courses
+  </button>
+  </a>
+</div>
+</div>
+</div>
+    </div>
+  </div>
   );
 }
