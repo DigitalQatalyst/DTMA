@@ -65,7 +65,7 @@ export default function CourseDetailsRightSide({ course }: IProps) {
         </div>
         <div className="tp-course-details-2-widget-btn">
           <Link href="/cartnotfound">Add to Cart</Link>
-          <Link className="active" href="/course-with-filter">
+          <Link className="active" href="/checkout">
             Buy Course
           </Link>
           <p>30-Day Money-Back Guarantee</p>
