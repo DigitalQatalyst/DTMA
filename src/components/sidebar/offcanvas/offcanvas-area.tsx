@@ -1,17 +1,17 @@
 import Link from "next/link";
 import Image from "next/image";
-import logo from '@/assets/img/logo/logo-black.png';
-import { BehanceSvg, CloseThreeSvg, DribbleSvg, InstagramSvg, YoutubeTwoSvg } from "@/components/svg";
+import logo from '@/assets/img/logo/dtma.svg';
+import { CloseThreeSvg } from "@/components/svg";
 import OffcanvasMenu from "./offcanvas-menu";
 import OffcanvasMenuTwo from "./offcanvas-menu-2";
 
 
-const galleryData = [
-   { link: "https://www.instagram.com/", src: "/assets/img/menu/offcanvas/offcanvas-1.jpg" },
-   { link: "https://www.instagram.com/", src: "/assets/img/menu/offcanvas/offcanvas-2.jpg" },
-   { link: "https://www.instagram.com/", src: "/assets/img/menu/offcanvas/offcanvas-3.jpg" },
-   { link: "https://www.instagram.com/", src: "/assets/img/menu/offcanvas/offcanvas-4.jpg" },
-];
+// const galleryData = [
+//    { link: "https://www.instagram.com/", src: "/assets/img/menu/offcanvas/offcanvas-1.jpg" },
+//    { link: "https://www.instagram.com/", src: "/assets/img/menu/offcanvas/offcanvas-2.jpg" },
+//    { link: "https://www.instagram.com/", src: "/assets/img/menu/offcanvas/offcanvas-3.jpg" },
+//    { link: "https://www.instagram.com/", src: "/assets/img/menu/offcanvas/offcanvas-4.jpg" },
+// ];
 
 type IProps = {
    openOffCanvas: boolean;
@@ -19,7 +19,7 @@ type IProps = {
    offcanvas_cls?: string;
    offcanvas_menu_2?: boolean;
 }
-export default function OffcanvasArea({openOffCanvas,onHandleOffCanvas,offcanvas_cls,offcanvas_menu_2}:IProps) {
+export default function OffcanvasArea({ openOffCanvas, onHandleOffCanvas, offcanvas_cls, offcanvas_menu_2 }: IProps) {
    return (
       <>
          <div className={`offcanvas__area ${offcanvas_cls} ${openOffCanvas ? 'offcanvas-opened' : ''}`}>
@@ -38,16 +38,16 @@ export default function OffcanvasArea({openOffCanvas,onHandleOffCanvas,offcanvas
                      </div>
                   </div>
                   <div className="offcanvas-main">
-                     <div className="offcanvas-content">
+                     {/* <div className="offcanvas-content">
                         <h3 className="offcanvas-title">Hello There!</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit, </p>
-                     </div>
-                     
+                     </div> */}
+
                      {/* mobile menu */}
                      {offcanvas_menu_2 ? <OffcanvasMenuTwo /> : <OffcanvasMenu />}
                      {/* mobile menu */}
 
-                     <div className="offcanvas-gallery">
+                     {/* <div className="offcanvas-gallery">
                         <div className="row gx-2">
                            {galleryData.map((item, index) => (
                               <div className="col-md-3 col-3" key={index}>
@@ -59,16 +59,16 @@ export default function OffcanvasArea({openOffCanvas,onHandleOffCanvas,offcanvas
                               </div>
                            ))}
                         </div>
-                     </div>
-                     <div className="offcanvas-contact">
+                     </div> */}
+                     {/* <div className="offcanvas-contact">
                         <h3 className="offcanvas-title sm">Information</h3>
                         <ul>
                            <li><a href="tel:1245654">+ 4 20 7700 1007</a></li>
                            <li><a href="mailto:hello@acadia.com">hello@acadia.com</a></li>
                            <li><a href="#">Avenue de Roma 158b, Lisboa</a></li>
                         </ul>
-                     </div>
-                     <div className="offcanvas-social">
+                     </div> */}
+                     {/* <div className="offcanvas-social">
                         <h3 className="offcanvas-title sm">Follow Us</h3>
                         <ul>
                            <li>
@@ -92,14 +92,14 @@ export default function OffcanvasArea({openOffCanvas,onHandleOffCanvas,offcanvas
                               </a>
                            </li>
                         </ul>
-                     </div>
+                     </div> */}
                   </div>
                </div>
             </div>
          </div>
 
          {/* Body Overlay */}
-         <div onClick={onHandleOffCanvas} className={`body-overlay ${openOffCanvas ? 'opened' : ''}`}/>
+         <div onClick={onHandleOffCanvas} className={`body-overlay ${openOffCanvas ? 'opened' : ''}`} />
          {/* Body Overlay */}
       </>
    )
