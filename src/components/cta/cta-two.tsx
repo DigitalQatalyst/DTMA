@@ -13,7 +13,15 @@ export default function CtaTwo() {
         <div className="row justify-content-center">
           <div className="col-xxl-8 col-lg-10">
             <div className="tp-cta-2-wrapper text-center">
-              <h2 className="tp-cta-2-title">
+              <h2
+                className=""
+                style={{
+                  color: "#fff",
+                  fontSize: "2rem",
+                  fontWeight: "semibold",
+                  paddingBottom: "2rem",
+                }}
+              >
                 Subscribe to our newsletter
                 {/* <span>
                   Transformation
