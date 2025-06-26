@@ -9,13 +9,13 @@ import HeaderTwo from "@/components/header/header-two";
 import MainProvider from "@/components/provider/main-provider";
 import "./main.css";
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout({ children }: { children: React.ReactNode; }) {
   return (
     <MainProvider>
       {/* header area start */}
-      {/* <HeaderTwo /> */}
+      <HeaderTwo />
       {/* header area end */}
-      <HeaderNine />
+      {/* <HeaderNine /> */}
 
       {/* main content */}
       {children}

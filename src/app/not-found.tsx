@@ -16,8 +16,8 @@ export default function NotFound() {
   return (
     <>
       {/* header area start */}
-      {/* <HeaderTwo inner={false} /> */}
-      <HeaderNine />
+      <HeaderTwo inner={false} />
+      {/* <HeaderNine /> */}
       {/* header area end */}
       <main>
         {/* not found area start */}

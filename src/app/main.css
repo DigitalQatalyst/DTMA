@@ -2,11 +2,9 @@
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(
-    186deg,
-    rgba(12, 125, 129, 0.5) -3.07%,
-    rgba(12, 125, 129, 0) 95.2%
-  );
+  background: linear-gradient(186deg,
+      rgba(12, 125, 129, 0.5) -3.07%,
+      rgba(12, 125, 129, 0) 95.2%);
   width: 100%;
   height: 665px;
   position: relative;
@@ -22,8 +20,10 @@
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   /* hide scrollbar */
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .course-items-row div {
@@ -116,8 +116,10 @@
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   /* hide scrollbar */
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 /* Message Icon Button */
@@ -284,7 +286,7 @@
   color: #000;
 }
 
-.tp-faq-box .tpd-accordio .accordion-body {
+.tp-faq-box .tpd-accordion .accordion-body {
   /* color: var(--Grey-on-black, #636366); */
   font-size: 16px;
   font-weight: 300;
@@ -297,8 +299,8 @@
 .contact-wrapper {
   display: flex;
   flex-direction: column;
-  margin-top: 0;
-  /* gap: 40px; */
+  margin-top: 30px;
+  gap: 40px;
   /* Space between the two sections */
 }
 
@@ -459,11 +461,9 @@
 }
 
 .tp-footer-main {
-  background: linear-gradient(
-    186deg,
-    rgba(12, 125, 129, 0.5) -3.07%,
-    rgba(12, 125, 129, 0) 95.2%
-  );
+  background: linear-gradient(186deg,
+      rgba(12, 125, 129, 0.5) -3.07%,
+      rgba(12, 125, 129, 0) 95.2%);
 }
 
 .new-badge {
@@ -833,7 +833,8 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5); /* Background color for visibility */
+  background: rgba(0, 0, 0, 0.5);
+  /* Background color for visibility */
   color: white;
   border: none;
   border-radius: 50%;
@@ -843,23 +844,28 @@
 
 .slick-prev {
   background-color: red;
-  left: 10px; /* Position left */
+  left: 10px;
+  /* Position left */
 }
 
 .slick-next {
   background-color: green;
-  right: 10px; /* Position right */
+  right: 10px;
+  /* Position right */
 }
 
 .slick-prev:hover,
 .slick-next:hover {
-  background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Darker background on hover */
 }
 
 .slick-prev svg,
 .slick-next svg {
-  fill: white; /* Icon color */
+  fill: white;
+  /* Icon color */
 }
+
 .faqanswer {
   color: red;
   font-size: 16px;

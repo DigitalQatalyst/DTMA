@@ -2,11 +2,9 @@
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(
-    186deg,
-    rgba(12, 125, 129, 0.5) -3.07%,
-    rgba(12, 125, 129, 0) 95.2%
-  );
+  background: linear-gradient(186deg,
+      rgba(12, 125, 129, 0.5) -3.07%,
+      rgba(12, 125, 129, 0) 95.2%);
   width: 100%;
   height: 665px;
   position: relative;
@@ -14,15 +12,33 @@
   /* Ensure the gradient is applied across the full width of the section */
 }
 
+.course-items-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  /* hide scrollbar */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.course-items-row div {
+  scroll-snap-align: start;
+}
+
 /* Header (Navbar) */
 .header-area {
   /* position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    border-radius: 12px;
-    border: 2px solid #FFF; */
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 2;
+      border-radius: 12px;
+      border: 2px solid #FFF; */
   /* background: #FFF; */
   /* backdrop-filter: blur(10px); */
 }
@@ -92,6 +108,20 @@
   margin-top: 20px;
 }
 
+.course-items-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  /* hide scrollbar */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
 /* Message Icon Button */
 .message-icon-btn {
   display: flex;
@@ -145,9 +175,9 @@
   color: #000a06;
   text-align: center;
   font-family: Outfit;
-  font-size: 20px;
+  font-size: 14px;
   font-style: normal;
-  font-weight: 200;
+  /* font-weight: 100; */
   line-height: 20px;
 }
 
@@ -256,8 +286,8 @@
   color: #000;
 }
 
-.tp-faq-box .tpd-accordio .accordion-body {
-  color: var(--Grey-on-black, #636366);
+.tp-faq-box .tpd-accordion .accordion-body {
+  /* color: var(--Grey-on-black, #636366); */
   font-size: 16px;
   font-weight: 300;
   border-radius: 0 0 16px 16px;
@@ -269,8 +299,8 @@
 .contact-wrapper {
   display: flex;
   flex-direction: column;
-  margin-top: 0;
-  /* gap: 40px; */
+  margin-top: 30px;
+  gap: 40px;
   /* Space between the two sections */
 }
 
@@ -278,11 +308,12 @@
   border-radius: 16px;
   background: rgba(0, 128, 128, 0.2);
   text-align: center;
-  padding: 20px 0;
+  padding: 8px 0;
   border-radius: 8px;
   color: white;
-  margin: 5rem;
-  padding: 3rem 0rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  padding: 1rem 0rem;
 }
 
 .contact-title {
@@ -326,7 +357,8 @@
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
-  margin: 5rem;
+  margin-right: 5rem;
+  margin-left: 5rem;
 }
 
 .item-1 {
@@ -429,11 +461,9 @@
 }
 
 .tp-footer-main {
-  background: linear-gradient(
-    186deg,
-    rgba(12, 125, 129, 0.5) -3.07%,
-    rgba(12, 125, 129, 0) 95.2%
-  );
+  background: linear-gradient(186deg,
+      rgba(12, 125, 129, 0.5) -3.07%,
+      rgba(12, 125, 129, 0) 95.2%);
 }
 
 .new-badge {
@@ -603,15 +633,15 @@
 
 /* Apply green color on hover for inactive dots */
 /* This works by targeting the inactive image and applying a filter.
-   Adjust filter values based on your grey SVG's color to get the exact green.
-   This might be more effective if your SVG uses 'currentColor' or similar for its fill. */
+     Adjust filter values based on your grey SVG's color to get the exact green.
+     This might be more effective if your SVG uses 'currentColor' or similar for its fill. */
 .custom-slick-dots .slick-dots li:hover .dot-inactive {
   /* Example filter to turn grey to green */
   filter: brightness(0.8) sepia(1) saturate(100) hue-rotate(80deg);
   /* Adjust these values */
   /* If your SVG's fill is not inherited, you might need:
-     fill: #1D976C; for SVG embedded directly via currentColor
-  */
+       fill: #1D976C; for SVG embedded directly via currentColor
+    */
 }
 
 /* Hide slick's default button styling */
@@ -788,3 +818,57 @@
   color: #008080;
   text-decoration: none;
 }
+
+/* carousel
+ */
+
+.course-slider {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  /* Background color for visibility */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  z-index: 10;
+}
+
+.slick-prev {
+  background-color: red;
+  left: 10px;
+  /* Position left */
+}
+
+.slick-next {
+  background-color: green;
+  right: 10px;
+  /* Position right */
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Darker background on hover */
+}
+
+.slick-prev svg,
+.slick-next svg {
+  fill: white;
+  /* Icon color */
+}
+
+.faqanswer {
+  color: red;
+  font-size: 16px;
+}
+
+/* test accordion */

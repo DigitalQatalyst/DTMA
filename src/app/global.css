@@ -2,3 +2,878 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* src/styles/button.css */
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(186deg,
+            rgba(12, 125, 129, 0.5) -3.07%,
+            rgba(12, 125, 129, 0) 95.2%);
+    width: 100%;
+    height: 665px;
+    position: relative;
+    margin-top: 0;
+    /* Ensure the gradient is applied across the full width of the section */
+}
+
+.course-items-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    /* hide scrollbar */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.course-items-row div {
+    scroll-snap-align: start;
+}
+
+/* Header (Navbar) */
+.header-area {
+    /* position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 2;
+      border-radius: 12px;
+      border: 2px solid #FFF; */
+    /* background: #FFF; */
+    /* backdrop-filter: blur(10px); */
+}
+
+.tp-header-2 {
+    border-radius: 12px;
+    border: 2px solid #fff;
+    background: #fff;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+/* Hero Content */
+.content-container {
+    position: absolute;
+    /* Position the text inside the hero section */
+    top: 170%;
+    /* Adjust vertical position of hero content */
+    left: 50%;
+    transform: translateX(-50%);
+    /* Center the text horizontally */
+    z-index: 1;
+    /* Ensure text appears above the background but below navbar */
+    text-align: center;
+}
+
+.hero-content {
+    color: #000a06;
+    /* Dark color for the main text */
+    font-size: 40px;
+    /* Large font for the title */
+    font-weight: bold;
+}
+
+/* Sign In Button */
+.tp-sign-in-btn {
+    color: #008080;
+    /* Light teal color */
+    font-family: Outfit;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 24px;
+    border-radius: 8px;
+    border: 1px solid #008080;
+    /* Same color as text */
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tp-sign-in-btn:hover {
+    background-color: #008080;
+    /* Hover background */
+    color: white;
+    /* Hover text color */
+}
+
+/* Courses Button */
+.courses-btn {
+    padding: 16px 24px;
+    background: #008080;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    margin-top: 20px;
+}
+
+.course-items-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    /* hide scrollbar */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* Message Icon Button */
+.message-icon-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    padding: 13.83px;
+    /* Adjust padding to match design */
+    background-color: #008080;
+    /* Teal background color */
+    border-radius: 50%;
+    /* Fully rounded shape */
+    gap: 24px;
+    /* Adjust spacing between icon and border */
+    border: none;
+    /* No border */
+    cursor: pointer;
+    position: fixed;
+    /* Fixed position on the screen */
+    top: 20rem;
+    /* Position it at the bottom of the screen */
+    left: 55rem;
+    /* Position it to the far right */
+    z-index: 10;
+    /* Ensure it stays above other elements */
+}
+
+.message-icon-btn img {
+    width: 30px;
+    /* Adjust the icon size as per your design */
+    height: 30px;
+    /* Adjust the icon size */
+}
+
+.trustee {
+    text-align: center;
+}
+
+.tp-course-subtitle {
+    color: #000a06;
+    font-family: Outfit;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 60px;
+    /* 150% */
+}
+
+.tp-course-p .tp-courses-subtitle .tp-testimony-title {
+    color: #000a06;
+    text-align: center;
+    font-family: Outfit;
+    font-size: 14px;
+    font-style: normal;
+    /* font-weight: 100; */
+    line-height: 20px;
+}
+
+.tp-category-title {
+    color: var(--Grey-on-black, #636366);
+
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    /* 111.111% */
+}
+
+.tp-section {
+    display: flex;
+    /* Use space-between to push items to opposite ends */
+    justify-content: space-between;
+    /* Changed from flex-start */
+    align-items: center;
+    width: 100%;
+    /* gap: 10rem; */
+}
+
+/* Container for the navigation and image */
+.nav-container {
+    display: flex;
+    /* justify-content: flex-end; */
+    /* Align items to the far right */
+    align-items: center;
+    /* Align items vertically centered */
+    gap: 10px;
+    /* margin-left: auto; */
+}
+
+/* Style for the navigation */
+.nav-content {
+    display: flex;
+    gap: 20px;
+    color: var(--P-500, #008080);
+
+    /* 100% */
+    /* Space between the tab buttons */
+}
+
+/* Image styling to make sure it's inline and aligned */
+
+.course-area-p {
+    text-align: left;
+    /* Align the paragraph text to the left */
+    font-size: 1rem;
+    color: #666;
+    margin-top: 20px;
+}
+
+.tp-faq-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    /* align-self: stretch; */
+}
+
+.tp-faq-subtitle {
+    color: var(--Gray-900, #101828);
+    text-align: center;
+    font-family: Outfit;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 60px;
+    /* 150% */
+    letter-spacing: -0.8px;
+}
+
+.tp-faq-title {
+    color: rgba(0, 0, 6, 0.6);
+    text-align: center;
+    font-family: Outfit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 3rem;
+    /* 100% */
+}
+
+.tab-content {
+    justify-content: center;
+    align-items: center;
+}
+
+.accordion-button {
+    color: #000006;
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    /* 155.556% */
+}
+
+.tp-faq-box .tpd-accordion .accordion-button {
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+}
+
+.tp-faq-box .tpd-accordion .accordion-body {
+    /* color: var(--Grey-on-black, #636366); */
+    font-size: 16px;
+    font-weight: 300;
+    border-radius: 0 0 16px 16px;
+    border-bottom: 1px solid #e6e8f0;
+    border-left: 1px solid #e6e8f0;
+    border-right: 1px solid #e6e8f0;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 40px;
+    /* Space between the two sections */
+}
+
+.contact-section {
+    border-radius: 16px;
+    background: rgba(0, 128, 128, 0.2);
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 8px;
+    color: white;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    padding: 1rem 0rem;
+}
+
+.contact-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contact-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.contact-button {
+    color: var(--Primary-100, #fff);
+    text-align: center;
+    font-family: Outfit;
+    font-size: var(--Label-Large-Size, 14px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: var(--Label-Large-Line-Height, 20px);
+    /* 142.857% */
+    letter-spacing: var(--Label-Large-Tracking, 0.1px);
+    border-radius: 8px;
+    border: 1px solid var(--Primary, #008080);
+    background: var(--Primary, #008080);
+    padding: 10px 18px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    /* Shadow/xs */
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+
+.contact-button:hover {
+    background-color: #006c6c;
+}
+
+.skills-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    margin-right: 5rem;
+    margin-left: 5rem;
+}
+
+.item-1 {
+    display: flex;
+    width: 783px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.skills-title {
+    color: #000a06;
+    font-family: Outfit;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 60px;
+    /* 150% */
+    letter-spacing: -2px;
+}
+
+.skills-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.skills-button {
+    border-radius: 8px;
+    background: var(--P-500, #008080);
+    display: inline-flex;
+    padding: 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.tp-cta-2-bg {
+    margin: 5rem;
+    border-radius: 8px;
+    background: #008080;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.tp-cta-2-title {
+    color: var(--base-white, #fff);
+    text-align: center;
+    font-family: Outfit;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 48px;
+}
+
+.tp-cta-2-form {
+    display: flex;
+    /* Makes the input and button align horizontally by default */
+    gap: 15px;
+    /* Add some space between them on desktop */
+    justify-content: center;
+    /* Center the form elements */
+    align-items: center;
+    /* Vertically align them */
+    max-width: 500px;
+    /* Optional: limit overall form width on desktop */
+    margin: 0 auto;
+    /* Optional: center the form itself */
+}
+
+.tp-cta-2-input {
+    flex-grow: 1;
+    color: red;
+    height: 60px;
+    border: 2px solid red;
+}
+
+.tp-btn-subscribe {
+    min-width: 160px;
+    height: 60px;
+    padding: 0 25px;
+    border: none;
+    border-radius: 8px;
+    background: white;
+    color: #008080;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.tp-footer-main {
+    background: linear-gradient(186deg,
+            rgba(12, 125, 129, 0.5) -3.07%,
+            rgba(12, 125, 129, 0) 95.2%);
+}
+
+.new-badge {
+    border-radius: 4px;
+    background: var(--Primary, #008080);
+    color: white;
+    padding: 5px 10px;
+    margin-left: 5px;
+}
+
+.tp-footer-btn {
+    position: relative;
+    display: flex;
+    width: 80%;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 60px;
+}
+
+.footer-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 40px;
+    padding: 0 20px;
+    background: var(--P-500, #008080);
+    color: white;
+    border: none;
+    border-radius: 8px 8px 8px 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    white-space: nowrap;
+    z-index: 2;
+    margin: 5px;
+}
+
+.tp-footer-sub-input {
+    flex-grow: 1;
+    border: none;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    color: #55585b;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.tp-footer-bottom-wrapper {
+    padding: 20px 0;
+    color: #a3a3a3;
+}
+
+.tp-footer-copyright {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 0.9rem;
+    color: #a3a3a3;
+}
+
+.tp-footer-copyright a {
+    color: #4b465c;
+    text-decoration: none;
+}
+
+.tp-footer-copyright span {
+    white-space: nowrap;
+}
+
+.tp-footer-social-icons img {
+    height: 20px;
+    width: auto;
+}
+
+.cta-container {
+    max-width: 1200px;
+    /* Or your desired max width */
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 767px) {
+    .tp-cta-2 {
+        /* You might need to adjust this class name based on your HTML */
+        padding: 2rem 1rem;
+        /* Adjust padding for smaller screens (top/bottom, left/right) */
+        width: 90%;
+        /* Give it a percentage width */
+        max-width: 400px;
+        /* Or a suitable max-width for small screens if you want */
+        margin-left: auto;
+        /* Center the block */
+        margin-right: auto;
+        /* Center the block */
+        box-sizing: border-box;
+        /* Crucial for width calculation */
+    }
+
+    .tp-cta-2-form {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        /* Center items horizontally when flex-direction is column */
+        gap: 1rem;
+    }
+
+    .tp-cta-btn {
+        width: calc(100% + 1rem);
+        max-width: none;
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .tp-btn-subscribe {
+        min-width: unset;
+    }
+
+    .tp-cta-2-title {
+        font-size: 1.8rem;
+        text-align: center;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        padding: 0 0.5rem;
+    }
+
+    .tp-cta-2-input {
+        width: 100%;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        box-sizing: border-box;
+    }
+}
+
+/* testimonial */
+/* --- Custom Slick Dots Styling with Image Assets & Hover Effects --- */
+
+.custom-slick-dots .slick-dots {
+    bottom: -60px;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    display: flex !important;
+    justify-content: center;
+    gap: 10px;
+}
+
+.custom-slick-dots .slick-dots li {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    outline: none;
+}
+
+/* Make dots "hugger" (larger) on hover */
+.custom-slick-dots .slick-dots li:hover {
+    transform: scale(1.5);
+    /* Makes dot 50% larger on hover */
+}
+
+/* Apply green color on hover for inactive dots */
+/* This works by targeting the inactive image and applying a filter.
+     Adjust filter values based on your grey SVG's color to get the exact green.
+     This might be more effective if your SVG uses 'currentColor' or similar for its fill. */
+.custom-slick-dots .slick-dots li:hover .dot-inactive {
+    /* Example filter to turn grey to green */
+    filter: brightness(0.8) sepia(1) saturate(100) hue-rotate(80deg);
+    /* Adjust these values */
+    /* If your SVG's fill is not inherited, you might need:
+       fill: #1D976C; for SVG embedded directly via currentColor
+    */
+}
+
+/* Hide slick's default button styling */
+.custom-slick-dots .slick-dots li button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 0;
+    /* Hide default dot character */
+    line-height: 0;
+    outline: none;
+}
+
+.custom-slick-dots .slick-dots li button:before {
+    display: none;
+    /* Hide default dot pseudo-element */
+}
+
+/* Wrapper div from customPaging */
+.custom-dot-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles for the custom Image components within customPaging */
+.custom-slick-dots .slick-dots li .dot-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Ensure the SVG fits without cropping */
+    transition: opacity 0.3s ease, filter 0.3s ease;
+    /* Smooth transition for showing/hiding and filter */
+}
+
+.custom-slick-dots .slick-dots li .dot-inactive {
+    opacity: 1;
+    /* Inactive image visible by default */
+}
+
+.custom-slick-dots .slick-dots li .dot-active {
+    opacity: 0;
+    /* Active image hidden by default */
+}
+
+/* When the parent <li> is active, show the active image and hide the inactive */
+.custom-slick-dots .slick-dots li.slick-active .dot-inactive {
+    opacity: 0 !important;
+    /* Hide inactive image */
+    /* filter: none; */
+    /* Reset filter if it was applied on hover to inactive */
+}
+
+.custom-slick-dots .slick-dots li.slick-active .dot-active {
+    opacity: 1;
+    /* Show active image */
+}
+
+.testimonial-heading {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+}
+
+.testimonial-subheading {
+    font-size: 18px;
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 60px;
+    font-family: sans-serif;
+}
+
+.testimonial-section {
+    padding-top: 60px;
+    padding-bottom: 120px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.testimonial-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.slide-wrapper {
+    padding: 0 15px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.testimonial-item {
+    display: flex;
+    flex-direction: row;
+    /* Flexed in one row */
+    align-items: flex-start;
+    gap: 30px;
+    text-align: left;
+}
+
+.avatar-block {
+    flex-shrink: 0;
+    width: 160px;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0px;
+}
+
+.testimonial-content {
+    flex-grow: 1;
+    padding: 0;
+    position: relative;
+}
+
+.rating {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.star {
+    color: #008080;
+    /* Changed to #008080 as per the fill color you specified earlier */
+    font-size: 16px;
+}
+
+.testimonial-text {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.metadata {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+.company {
+    font-size: 15px;
+    font-weight: 500;
+    color: #008080;
+    text-decoration: none;
+}
+
+/* carousel
+ */
+
+.course-slider {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    /* Background color for visibility */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    z-index: 10;
+}
+
+.slick-prev {
+    background-color: red;
+    left: 10px;
+    /* Position left */
+}
+
+.slick-next {
+    background-color: green;
+    right: 10px;
+    /* Position right */
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Darker background on hover */
+}
+
+.slick-prev svg,
+.slick-next svg {
+    fill: white;
+    /* Icon color */
+}
+
+.faqanswer {
+    color: red;
+    font-size: 16px;
+}
+
+/* test accordion */

@@ -4,13 +4,15 @@ import FooterSeven from "@/components/footer/footer-seven";
 import HeaderNine from "@/components/header/header-nine";
 import FooterTwo from "@/components/footer/footer-two";
 import "./main.css";
+import HeaderTwo from "@/components/header/header-two";
+
 
 export default function Layout({ children }: { children: React.ReactNode; }) {
   return (
     <MainProvider>
       {/* header area start */}
-      {/* <HeaderTwo inner={true} transparent={true} /> */}
-      <HeaderNine />
+      <HeaderTwo />
+      {/* <HeaderNine /> */}
       {/* header area end */}
 
       {/* main content */}
