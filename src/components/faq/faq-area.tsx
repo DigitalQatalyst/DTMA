@@ -30,38 +30,38 @@ const tabContentData = [
         id: 6,
         question: "Is there a free trial available?",
         answer:
-          "Yes, you can try us for free for 30 days. If you want, we'll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
+          "Yes, we offer a 30-day free trial with full access to all features. During this period, you’ll also receive a free, personalized 30-minute onboarding call to help you get the most out of your experience.",
       },
       {
         id: 7,
         active: true,
         question: "Can I change my plan later?",
         answer:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "Absolutely! You can upgrade, downgrade, or switch your plan at any time. Simply log into your account, go to the subscription settings, and select your preferred plan. Any changes will take effect at the start of your next billing cycle.",
       },
       {
         id: 8,
         question: "What is your cancellation policy?",
         answer:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "You can cancel your subscription at any time directly from your account settings. If you cancel before your next billing cycle, you will not be charged for the upcoming period. Please note, we do not offer refunds for any payments made.",
       },
       {
         id: 9,
         question: "Can other info be added to an invoice?",
         answer:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "Yes, you can customize your invoices by adding additional details like your company name, tax ID, or any other relevant information. This can be done through the 'Invoice Settings' section of your account.",
       },
       {
         id: 10,
         question: "How does billing work?",
         answer:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "Billing is done on a recurring monthly or annual basis, depending on the plan you choose. You will receive an invoice at the beginning of each billing period. Payments can be made via credit card, debit card, or PayPal.",
       },
       {
         id: 11,
         question: "How do I change my account email?",
         answer:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "To change your account email, go to your account settings, select 'Profile', and click 'Edit'. You’ll be able to update your email address there. A confirmation email will be sent to your new email to verify the change.",
       },
     ],
   },
