@@ -14,14 +14,14 @@ type IProps = {
   totalItems?: number;
 };
 export default function CourseFilterBanner({
-  spacing = "pt-180 pb-220",
+  spacing = "mt-180 pb-220",
   totalItems = 48,
 }: IProps) {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [activeView, setActiveView] = useState<"grid" | "list">("grid");
 
   return (
-    <section className={`tp-course-filter-area p-relative ${spacing}`}>
+    <section className={` ${spacing}`}>
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
@@ -83,9 +83,8 @@ export default function CourseFilterBanner({
                 </div>
               </div>
               <div
-                className={`tp-filter-dropdown-area tp-filter-dropdown-wrapper d-none d-md-block ${
-                  isFilterOpen ? "filter-dropdown-opened" : ""
-                }`}
+                className={`tp-filter-dropdown-area tp-filter-dropdown-wrapper d-none d-md-block ${isFilterOpen ? "filter-dropdown-opened" : ""
+                  }`}
               >
                 <CourseFilterDropdownArea />
               </div>
