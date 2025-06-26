@@ -2,7 +2,10 @@ import { all_courses } from "@/data/course-data";
 import RelatedCourses from "@/components/course/details/related-courses";
 import CourseDetailsArea from "../_components/course-details-area";
 import { removeTagInText } from "@/utils";
-
+import Link from "next/link";
+import HeaderTwo from "@/components/header/header-two";
+import Image from "next/image";
+import group_img from "@/assets/page_not_found/Group.svg";
 
 export function generateMetadata({ params }: Props) {
     const id = params.id;
@@ -16,7 +19,7 @@ export function generateMetadata({ params }: Props) {
 type Props = {
     params: {
         id: string;
-    }
+    };
 };
 
 export default function CourseDetailsTwoPage({ params }: Props) {
@@ -30,14 +33,52 @@ export default function CourseDetailsTwoPage({ params }: Props) {
                 {/* course details area */}
 
                 {/* related course start */}
-                <RelatedCourses/>
+                <RelatedCourses />
                 {/* related course end */}
 
             </main>
         ) : (
-            <div className="text-center mt-100 mb-80">
-                <h3>No Course found with id: {params.id}</h3>
-            </div>
+            <main>
+                {/* not found area start */}
+                <div className="tp-error-area pt-120 pb-120">
+                    <div className="container">
+                        <div className="row justify-content-center">
+                            <div className="col-xl-10">
+                                <div className="tp-error-wrapper text-center">
+                                    <div className="tp-error-thumb mb-50 d-flex justify-content-center">
+                                        <Image
+                                            src={group_img}
+                                            alt="error-img"
+                                            style={{ height: "auto", width: "550px" }}
+                                        />
+                                    </div>
+                                    <div className="tp-error-content">
+                                        <p style={{
+                                            color: "#000A06",
+                                            textAlign: "center",
+                                            fontSize: "40px",
+                                            fontStyle: "normal",
+                                            fontWeight: 500,
+                                            lineHeight: "60px"
+                                        }}>Course not found</p>
+                                        <Link
+                                            className="tp-btn-inner"
+                                            href="/course-with-filter"
+                                            style={{
+                                                borderRadius: "8px",
+                                                background: "#008080",
+                                            }}
+                                        >
+                                            Go Back
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/* not found area end */}
+            </main>
         )
-    )
+    );
 }

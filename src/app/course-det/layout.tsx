@@ -4,7 +4,7 @@ import BackToTop from "@/components/back-to-top";
 import FooterTwo from "@/components/footer/footer-two";
 import "./main.css";
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout({ children }: { children: React.ReactNode; }) {
   return (
     <MainProvider>
       {/* header area start */}
