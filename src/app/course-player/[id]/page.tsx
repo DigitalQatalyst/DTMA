@@ -31,8 +31,6 @@ export default function CourseDetailsPage({ params }: Props) {
       {/* breadcrumb area start */}
       {/* <CourseDetailsBreadcrumb course={course} /> */}
       {/* breadcrumb area end */}
-      {/* <HeaderNine /> */}
-      {/* <HeaderTwo inner={true} /> */}
 
 
       {/* course details area */}
@@ -45,7 +43,6 @@ export default function CourseDetailsPage({ params }: Props) {
     </main>
   ) : (
     <>
-      {/* <HeaderTwo inner={false} /> */}
       {/* <HeaderNine /> */}
       {/* header area end */}
       <main>
