@@ -29185,6 +29185,9 @@ span.dark-border {
   z-index: -1;
   width: calc(100% - 40px);
   background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0px 10px 10px rgba(8, 19, 34, 0.02);
+  
+  /* background-color: rgba(255, 255, 255, 0.6); */
   border-radius: 14px;
 }
 .tp-fact-count {
@@ -30169,10 +30172,10 @@ span.common-pale-purple {
   font-size: 26px;
   font-weight: 600;
   padding: 19px 30px 18px 30px;
-  border-bottom: 1px solid #e6e8f0;
+  border-bottom: none;
 }
 .tp-dashboard-tab-list {
-  padding: 0 30px;
+  padding: 30px 0px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px),
   only screen and (min-width: 768px) and (max-width: 991px),
@@ -30209,7 +30212,7 @@ span.common-pale-purple {
   bottom: 0;
   height: 3px;
   width: 100%;
-  background-color: var(--tp-dashboard-primary);
+  background-color: #008080;
   box-shadow: 0px 1px 2px 0px rgba(20, 56, 181, 0.25);
 }
 .tp-dashboard-course {
