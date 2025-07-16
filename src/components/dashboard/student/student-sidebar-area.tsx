@@ -22,7 +22,7 @@ const dashboardMenuData = [
       {
         title: "Browse",
         icon: Globe,
-        href: "/dashboard/student-enroll-course",
+        href: "/dashboard/learner-browse",
       },
     ],
   },
