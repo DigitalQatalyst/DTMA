@@ -23,7 +23,11 @@ export default function DashboardCourseItemFour({ course }: IProps) {
       </div>
       <div className="tp-dashboard-course-content">
         <h4 className="tp-dashboard-course-title">
-          <Link href={`/course-details/${id}`}>{removeTagInText(title)}</Link>
+          <Link href={`/course-details/${id}`} style={{}}>
+            {removeTagInText(title).length > 30
+              ? removeTagInText(title).slice(0, 30) + "..."
+              : removeTagInText(title)}
+          </Link>
         </h4>
         <div className="tp-dashboard-course-meta">
           <span style={{ display: "flex", alignItems: "center", gap: "4px" }}>

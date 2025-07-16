@@ -17,7 +17,7 @@ const dashboardMenuData = [
       {
         title: "My Learning",
         icon: GraduationCap,
-        href: "/dashboard/student-profile",
+        href: "/dashboard/learner-my-learning",
       },
       {
         title: "Browse",
@@ -51,7 +51,10 @@ export default function StudentDashboardSidebar() {
                       const isActive = item.href === pathname;
                       const iconColor = isActive ? "#fff" : "gray"; // Active color white, else gray
                       return (
-                        <li key={index} className="flex-row items-center">
+                        <li
+                          key={index}
+                          className="myside flex-row items-center"
+                        >
                           <Link
                             className="flex-row items-center"
                             style={{
