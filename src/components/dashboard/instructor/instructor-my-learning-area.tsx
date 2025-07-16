@@ -10,15 +10,15 @@ import DashboardEnrollCourseItem from "@/components/course/single/dashboard/dash
 import DashboardCourseItemFour from "@/components/course/single/dashboard/dashboard-course-item-4";
 
 const tab_lists = [
-  { id: "publish", title: "Published" },
-  { id: "pending", title: "Pending" },
-  { id: "draft", title: "Draft" },
+  { id: "publish", title: "In Progress" },
+  { id: "pending", title: "Completed" },
+  { id: "draft", title: "Enrolled" },
 ];
 
 type IProps = {
   bundleCourse?: boolean;
 };
-export default function InstructorMyCourseArea({ bundleCourse }: IProps) {
+export default function InstructorMyLearningArea({ bundleCourse }: IProps) {
   const limit = 6;
   const [activeTab, setActiveTab] = useState(
     bundleCourse ? tab_lists[2].id : tab_lists[0].id
@@ -57,9 +57,27 @@ export default function InstructorMyCourseArea({ bundleCourse }: IProps) {
   return (
     <>
       {/* dashboard tab area start */}
-      {/* <div className="dashboader-area mb-30">
-        <div className="tp-dashboard-tab">
-          <h2 className="tp-dashboard-tab-title">My Courses</h2>
+      <div className="dashboader-area mb-30">
+        <div>
+          <h2
+            className=""
+            style={{
+              fontSize: "26px",
+              fontWeight: "500",
+            }}
+          >
+            My Courses
+          </h2>
+          <p
+            style={{
+              fontSize: "15px",
+              fontWeight: "400",
+            }}
+          >
+            Track your progress and continue Learning.
+          </p>
+        </div>
+        <div className="">
           <div className="tp-dashboard-tab-list">
             <ul>
               {tab_lists.map((tab) => (
@@ -70,14 +88,15 @@ export default function InstructorMyCourseArea({ bundleCourse }: IProps) {
                       activeTab === tab.id ? "active" : ""
                     } pointer`}
                   >
-                    {tab.title} <span>({handleCourseCount(tab.id)})</span>
+                    {tab.title}
+                    {/* <span>({handleCourseCount(tab.id)})</span> */}
                   </a>
                 </li>
               ))}
             </ul>
           </div>
         </div>
-      </div> */}
+      </div>
       {/* dashboard tab area end */}
       <div
         style={{
@@ -86,14 +105,14 @@ export default function InstructorMyCourseArea({ bundleCourse }: IProps) {
           paddingBottom: "20px",
         }}
       >
-        <h2
+        {/* <h2
           style={{
             fontSize: "24px",
             fontWeight: "500",
           }}
         >
           Continue Learning
-        </h2>
+        </h2> */}
       </div>
 
       {/* course area start */}
