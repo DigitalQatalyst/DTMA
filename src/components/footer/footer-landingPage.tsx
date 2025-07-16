@@ -1,13 +1,17 @@
+import Image from "next/image";
+
 const PreFooter = () => {
   return (
 <section className="footer-section py-5" style={{ backgroundColor: "#f8f9fa" }}>
   <div className="container">
     <div className="row">
       <div className="col-12 col-md-4">
-      <img
+      <Image
                   src="/assets/img/icon/DTMA.svg"
                   alt="line Icon"
                   style={{ marginRight: "-3rem", zIndex: "3"}}
+                  width={100}  // Specify the width here (e.g., 100px)
+                  height={100}
                 />
         <p className="mb-4" style={{ color: "#6c757d", marginTop: "2rem" }}>
           Designed for professionals and organizations, <span color="#008080">DTMA</span> <br/> provides cutting-edge learning in AI, automation, and <br /> digital transformation, empowering a future-ready <br/> workforce.

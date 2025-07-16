@@ -1,11 +1,11 @@
-import { RightArrowTwo } from "@/components/svg";
-import Link from "next/link";
+// import { RightArrowTwo } from "@/components/svg";
+// import Link from "next/link";
 
 
 export default function AboutBanner() {
     return (
-        <section className="tp-about-pt fix p-relative pt-200">
-            <div className="tp-about-bg-main" data-background="assets/img/about/about/about-bg.png" style={{ backgroundImage: "url(/assets/img/about/about/about-bg.png)" }}></div>
+        <section className="tp-about-pt fix p-relative">
+            {/* <div className="tp-about-bg-main" data-background="assets/img/about/about/about-bg.png" style={{ backgroundImage: "url(/assets/img/about/about/about-bg.png)" }}></div>
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-lg-12">
@@ -17,10 +17,19 @@ export default function AboutBanner() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             <div className="container-fluid p-0">
-                <div className="tp-about-banner-bg" data-background="assets/img/about/about/about-thumb-1.jpg" style={{ backgroundImage: "url(/assets/img/about/about/about-thumb-1.jpg)" }}>
-                    <div className="row g-0">
+                <div className="tp-about-banner-bg" 
+                style={{ 
+                    display: "flex",
+                    height: "281px",
+                    padding: "179px 1243px 80px 80px",
+                    alignItems: "center",
+                    alignSelf: "stretch",
+                    opacity: 0.8,
+                    background: "linear-gradient(0deg, rgba(0,0,0,0.20) 0%, rgba(0,0,0,0.20) 100%), url(/assets/img/about/about/about-thumb-3.jpg) lightgray 50% / cover no-repeat",
+                }}>
+                    {/* <div className="row g-0">
                         <div className="col-xl-6 col-lg-12"></div>
                         <div className="col-xl-6 col-lg-12">
                             <div className="tp-about-banner-content p-relative">
@@ -33,7 +42,7 @@ export default function AboutBanner() {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>
