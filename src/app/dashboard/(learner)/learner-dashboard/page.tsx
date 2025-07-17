@@ -23,8 +23,9 @@ export default function StudentDashboardPage() {
       {/* dashboard content area start */}
       <DashboardContentWrapper studentSidebar={true}>
         {/* dashboard fact area start */}
+
         <InstructorDashboardFacts />
-        {/* <InstructorMyCourseArea /> */}
+        <InstructorMyCourseArea />
         {/* dashboard fact area end */}
       </DashboardContentWrapper>
       {/* dashboard content area end */}
