@@ -16,7 +16,7 @@ export default function NotFound() {
   return (
     <>
       {/* header area start */}
-      <HeaderTwo inner={false} />
+      {/* <HeaderTwo inner={false} /> */}
       {/* <HeaderNine /> */}
       {/* header area end */}
       <main>
@@ -63,7 +63,7 @@ export default function NotFound() {
       </main>
 
       {/* footer area start */}
-      <FooterTwo />
+      {/* <FooterTwo /> */}
       {/* footer area end */}
     </>
   );
