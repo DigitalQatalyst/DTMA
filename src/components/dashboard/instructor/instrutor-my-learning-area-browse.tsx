@@ -62,6 +62,7 @@ export default function InstructorMyLearningAreaBrowse({ bundleCourse }: IProps)
       {/* dashboard tab area start */}
       <div className="dashboader-area mb-30">
         <div>
+          <SearchBar />
           <h2
             className=""
             style={{
@@ -80,7 +81,7 @@ export default function InstructorMyLearningAreaBrowse({ bundleCourse }: IProps)
             Track your progress and continue Learning.
           </p> */}
         </div>
-        <SearchBar />
+        
         <LearnerBrowseButtons />
         {/* course area start */}
         {currentItems.length > 0 ? (
