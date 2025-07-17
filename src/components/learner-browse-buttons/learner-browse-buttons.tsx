@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { styles } from "./styles";
 
 const LearnerBrowseButtons = () => {
   const [activeCategory, setActiveCategory] = useState("Economy 4.0");
@@ -9,16 +10,15 @@ const LearnerBrowseButtons = () => {
   ];
 
   return (
-    <div className="flex gap-2 mb-4">
+    <div style={styles.container}>
       {categories.map((category) => (
         <button
           key={category}
           onClick={() => setActiveCategory(category)}
-          className={`px-4 py-2 rounded-full text-sm font-medium ${
-            activeCategory === category
-              ? "bg-teal-600 text-white"
-              : "bg-gray-200 text-gray-700"
-          }`}
+          style={{
+            ...styles.button,
+            ...(activeCategory === category ? styles.activeButton : styles.inactiveButton),
+          }}
         >
           {category}
         </button>
