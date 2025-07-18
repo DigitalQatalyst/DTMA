@@ -166,6 +166,16 @@ li,
   transform: translateY(-1px);
 }
 
+tp-cart-list/* In your CSS file (e.g., global.css or a specific module.css for cart) */
+
+.tp-cart-item__tag {
+  color: #28a745; /* A standard green color */
+  background-color: #d4edda; /* A light green color */
+  padding: 4px 8px; /* Add some padding for better appearance */
+  border-radius: 4px; /* Slightly rounded corners */
+  font-size: 0.85em; /* Adjust font size if needed */
+  font-weight: 500;
+}
 .tpd-action-approv button svg,
 .tp-cart-list tr td .tp-cart-action-btn svg,
 .tp-order-details-icon span svg,
@@ -28083,8 +28093,7 @@ span.dark-border {
   color: var(--tp-common-white);
 }
 .tp-cart-checkout-wrapper {
-  background: var(--tp-common-white);
-  box-shadow: 0px 30px 70px rgba(1, 15, 28, 0.1);
+ /* box-shadow: 0px 30px 70px rgba(1, 15, 28, 0.1); */
   padding: 36px 24px 28px;
   margin-left: -24px;
 }
@@ -28099,7 +28108,6 @@ span.dark-border {
 .tp-cart-checkout-top {
   padding-bottom: 13px;
   margin-bottom: 19px;
-  border-bottom: 1px solid #e0e2e3;
 }
 .tp-cart-checkout-top span {
   font-size: 20px;

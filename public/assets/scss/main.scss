@@ -32,6 +32,14 @@
   border: 1px solid var(--Stroke-Color-1, #DBDADE); /* Set border color with fallback */
 }
 
+.tp-cart-item__tag {
+  color: #28a745; /* A standard green color */
+  background-color: #d4edda; /* A light green color */
+  padding: 4px 8px; /* Add some padding for better appearance */
+  border-radius: 4px; /* Slightly rounded corners */
+  font-size: 0.85em; /* Adjust font size if needed */
+  font-weight: 500;
+}
 /* Inside main.scss */
 .tp-course-filter-btn .tp-filter-btn {
     border-radius: 8px !important; /* Remove border-radius */

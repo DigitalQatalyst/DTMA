@@ -14,6 +14,7 @@
     "@fullcalendar/interaction": "^6.1.15",
     "@fullcalendar/react": "^6.1.15",
     "@fullcalendar/timegrid": "^6.1.15",
+    "@svgr/webpack": "^8.1.0",
     "bootstrap": "^5.3.3",
     "graphql-request": "^7.2.0",
     "lucide-react": "^0.511.0",
@@ -42,8 +43,8 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^18",
+    "@types/node": "^20.19.8",
+    "@types/react": "^18.3.23",
     "@types/react-dom": "^18",
     "@types/react-flatpickr": "^3.8.11",
     "@types/react-modal-video": "^1.2.3",
@@ -53,6 +54,6 @@
     "eslint-config-next": "14.2.11",
     "postcss": "^8.5.4",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5.8.3"
   }
 }
