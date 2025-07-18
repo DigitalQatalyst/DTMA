@@ -56,7 +56,7 @@ export const online_courses_data: ICourseDT[] = [
     id: 4,
     author_img: "/assets/img/teacher/teacher-5.png",
     author_name: "Benjamin",
-    title: "The complete guide to build <br/> restful API application",
+    title: "Guide to build application",
     thumbnail: "/assets/img/course/course-thumb-4.jpg",
     category: "Category",
     credits: 1000,

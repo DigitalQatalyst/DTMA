@@ -12,51 +12,20 @@ import CourseItem from "@/components/course/single/course-item";
 import SearchBar from "@/components/search-bar/search-bar";
 import LearnerBrowseButtons from "@/components/learner-browse-buttons/learner-browse-buttons";
 
-const tab_lists = [
-  { id: "publish", title: "In Progress" },
-  { id: "pending", title: "Completed" },
-  { id: "draft", title: "Enrolled" },
-];
+
 
 type IProps = {
   bundleCourse?: boolean;
 };
 export default function InstructorMyLearningAreaBrowse({ bundleCourse }: IProps) {
   const limit = 6;
-  const [activeTab, setActiveTab] = useState(
-    bundleCourse ? tab_lists[2].id : tab_lists[0].id
-  );
+  
   const [myCourses, setMyCourses] = useState([...online_courses_data]);
   const { currentItems, handlePageClick, pageCount } = usePagination(
     myCourses,
     limit
   );
-
-  useEffect(() => {
-    if (activeTab === "publish") {
-      setMyCourses([...online_courses_data]);
-    } else if (activeTab === "pending") {
-      setMyCourses([]);
-    } else if (activeTab === "draft") {
-      setMyCourses([...online_courses_data].slice(3, 6));
-    }
-  }, [activeTab]);
-
-  function handleCourseCount(tab: string) {
-    let count = 0;
-    switch (tab) {
-      case "publish":
-        count = [...online_courses_data].length;
-        break;
-      case "pending":
-        count = [].length;
-        break;
-      case "draft":
-        count = [...online_courses_data].slice(3, 6).length;
-        break;
-    }
-    return count;
-  }
+ 
   return (
     <>
       {/* dashboard tab area start */}
@@ -66,20 +35,13 @@ export default function InstructorMyLearningAreaBrowse({ bundleCourse }: IProps)
           <h2
             className=""
             style={{
-              fontSize: "26px",
-              fontWeight: "500",
+              fontSize: "32px",
+              fontWeight: "400",
+              marginBottom: "1rem",
             }}
           >
             Recommended Categories
           </h2>
-          {/* <p
-            style={{
-              fontSize: "15px",
-              fontWeight: "400",
-            }}
-          >
-            Track your progress and continue Learning.
-          </p> */}
         </div>
         
         <LearnerBrowseButtons />
@@ -110,21 +72,6 @@ export default function InstructorMyLearningAreaBrowse({ bundleCourse }: IProps)
             </div>
           </div>
         )}
-        {/* course area end */}
-
-        {/* pagination area start */}
-        {/* {myCourses.length > 0 && myCourses.length >= limit && (
-          <div className="tp-dashboard-pagination pt-20">
-            <div className="tp-pagination">
-              <Pagination
-                handlePageClick={handlePageClick}
-                pageCount={pageCount}
-                isCenter={true}
-              />
-            </div>
-          </div>
-        )} */}
-        {/* pagination area end */}
       </div>
     </>
   );
