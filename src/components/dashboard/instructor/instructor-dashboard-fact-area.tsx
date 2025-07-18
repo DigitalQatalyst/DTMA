@@ -74,7 +74,14 @@ export default function InstructorDashboardFacts() {
       </div>
       <div className="row">
         {factData.map((fact, index) => (
-          <div key={index} className="col-lg-4">
+          <div
+            key={index}
+            className="col-lg-4"
+            style={{
+              backgroundColor: "white",
+              zIndex: "1000",
+            }}
+          >
             <div
               style={{
                 boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
