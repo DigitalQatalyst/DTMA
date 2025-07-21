@@ -73,6 +73,7 @@ export default function InstructorDashboardFacts() {
         </div>
       </div>
       <div className="row">
+        {/* fact data here */}
         {factData.map((fact, index) => (
           <div
             key={index}
