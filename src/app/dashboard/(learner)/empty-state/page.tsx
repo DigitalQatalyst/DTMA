@@ -3,13 +3,20 @@ import DashboardBanner from "@/components/dashboard/dashboard-banner";
 import DashboardContentWrapper from "@/components/dashboard/dashboard-content-wrapper";
 // import StudentDashboardSidebar from "@/components/dashboard/student/student-sidebar-area";
 import DashboardCourseItemFour from "@/components/course/single/dashboard/dashboard-course-item-4";
+
 import "./dash.css";
 
 export const metadata: Metadata = {
   title: "Student Dashboard - DTMA",
 };
 
-export default function StudentDashboardPage({ courses }: { courses?: any[] }) {
+interface StudentDashboardPageProps {
+  courses?: any[];
+}
+
+export default function StudentDashboardPage({
+  courses,
+}: StudentDashboardPageProps) {
   // Ensure courses is an array before checking its length
   const isEmpty = !Array.isArray(courses) || courses.length === 0;
   return (
