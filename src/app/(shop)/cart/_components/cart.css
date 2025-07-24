@@ -1,5 +1,20 @@
+/* Custom container styling for cart page */
+.tp-cart-area .container {
+  max-width: 1600px;
+  padding: 0 30px;
+}
+
+.tp-cart-item {
+  position: relative;
+}
+
+.tp-cart-item__price {
+  color: #008080;
+  font-weight: 700
+}
+
 .tp-cart-item__tag {
-  color: #008080; 
+  color: #008080;
   background-color: var(--Linear-teal, rgba(0, 128, 128, 0.20));
   padding: 5px 10px;
   border-radius: 8px;
@@ -8,18 +23,36 @@
 }
 
 .tp-cart-checkout-wrapper {
-    background: transparent !important;
-    box-shadow: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tp-cart-item__chapters,
+.tp-cart-item__learners {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tp-cart-item__title {
+  color: #1A1A1A;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 
-.tp-cart-item__title{
-    color: #1A1A1A;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+.tp-cart-checkout-top {
+  border-bottom: none !important;
+  /* Correct placement */
+  color: var(--Gray-900---Text-color, #2B3445);
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-style: normal;
+  /* font-weight: 400; */
 }
+
 .tp-cart-item__meta {
   flex-wrap: wrap;
   align-items: flex-start;
@@ -35,36 +68,142 @@
 .fa-solid.fa-star.is-rating-star {
   color: #FFCD4E;
 }
+
 .fa-regular.fa-star.is-rating-star {
   color: #C1CDD7;
 }
+
 .tp-cart-item__rating .fa-star {
   margin-right: 2px;
 }
 
-.tp-cart-checkout-btn{
-border-radius: 4px;
-background: var(--P-500, #008080);
-padding: 13px 22px;
-justify-content: center;
-align-items: center;
-color: var(--Primary-100, #FFF);
-/* font-weight: 700; */
-}
-
 .tp-cart-price-text {
-    color: var(--B-500, #1A1A1A);
-/* font-family: 'Inter'; */
+  color: var(--B-500, #1A1A1A);
+  /* font-family: 'Inter'; */
   font-family: 'Arial', sans-serif;
   font-size: 16px;
   font-style: normal;
-font-weight: 700;
+  font-weight: 700;
+}
+
+.tp-cart-item__content {
+  position: relative;
+  padding-right: 40px;
+  /* Add space for delete button */
 }
 
 .tp-cart-item__remove-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    margin-left: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 5px;
+  color: #666;
+  transition: color 0.3s ease;
+  position: absolute;
+  top: 0;
+  right: 0px;
+}
+
+.tp-cart-list {
+  /* max-width: 800px;
+  margin-left: auto;
+  margin-right: auto; */
+}
+
+.tp-cart-empty-state {
+  padding-bottom: 5rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; /* This centers the content *inside* .tp-cart-empty-state */
+}
+
+/* Ensure .tp-cart-breadcrumb, .tp-cart-title, .tp-cart-subtitle are left-aligned by default or explicitly */
+.tp-cart-breadcrumb,
+.tp-cart-title,
+.tp-cart-subtitle {
+  text-align: left; /* Explicitly ensure left alignment */
+}
+
+
+.tp-cart-empty-image {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.tp-cart-empty-image img {
+  width: 463.004px;
+  height: 374.33px;
+  flex-shrink: 0;
+  opacity: 0.8;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.tp-cart-empty-title {
+  color: var(--Grey-on-black, #636366);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.tp-cart-empty-subtitle {
+  color: var(--Grey-on-black, #636366);
+  font-size: 32px;
+  /* font-family: Outfit; */
+  line-height: 1.5;
+  margin-bottom: 30px;
+  font-weight: 100;
+}
+
+.tp-cart-checkout-btn {
+  border-radius: 8px;
+  background: var(--P-500, #008080);
+  padding: 10px 15px;
+  justify-content: center;
+  align-items: center;
+  color: var(--Primary-100, #FFF);
+  font-weight: 300;
+}
+
+.tp-cart-breadcrumb .breadcrumb {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+.tp-cart-breadcrumb .breadcrumb-item {
+  color: #666;
+  display: flex;
+  /* Ensures the items within the breadcrumb list are also aligned */
+  align-items: center;
+}
+
+.tp-cart-breadcrumb .breadcrumb-item+.breadcrumb-item::before {
+  content: "|";
+  color: #666;
+  margin: 0 8px;
+}
+
+.tp-cart-breadcrumb-link {
+  color: var(--Grey-on-black, #636366);
+  display: flex;
+  align-items: center;
+}
+
+.tp-cart-breadcrumb-link:hover {
+  color: #008080;
+}
+
+.tp-cart-breadcrumb .fa-house {
+  font-size: 14px;
 }
