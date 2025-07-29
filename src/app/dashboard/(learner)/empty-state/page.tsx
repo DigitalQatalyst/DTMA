@@ -4,7 +4,7 @@ import { useState } from "react"; // Now it's fine to use useState
 import { Metadata } from "next";
 import DashboardContentWrapper from "@/components/dashboard/dashboard-content-wrapper";
 import DashboardCourseItemFour from "@/components/course/single/dashboard/dashboard-course-item-4"; // Corrected the import path
-
+import { online_courses_data } from "@/data/course-data";
 interface StudentDashboardPageProps {
   courses?: any[];
 }
@@ -14,45 +14,46 @@ export default function StudentDashboardPage({
 }: StudentDashboardPageProps) {
   const isEmpty = !Array.isArray(courses) || courses.length === 0;
 
-  const mockCourses = isEmpty
-    ? [
-        {
-          id: 1,
-          title: "Creating Seamless E-Commerce Experiences",
-          progress: "30 minutes remaining",
-          thumbnail: "/assets/img/banner/download.png", // Updated relative path
-          status: "in-progress",
-        },
-        {
-          id: 2,
-          title: "Creating Seamless E-Commerce Experiences",
-          progress: "30 minutes remaining",
-          thumbnail: "/assets/img/banner/download.png", // Updated relative path
-          status: "in-progress",
-        },
-        {
-          id: 3,
-          title: "Creating Seamless E-Commerce Experiences",
-          progress: "30 minutes remaining",
-          thumbnail: "/assets/img/banner/download.png", // Updated relative path
-          status: "in-progress",
-        },
-        {
-          id: 4,
-          title: "Creating Seamless E-Commerce Experiences",
-          progress: "30 minutes remaining",
-          thumbnail: "/assets/img/banner/download.png", // Updated relative path
-          status: "in-progress",
-        },
-        {
-          id: 5,
-          title: "Creating Seamless E-Commerce Experiences",
-          progress: "30 minutes remaining",
-          thumbnail: "/assets/img/banner/download.png", // Updated relative path
-          status: "in-progress",
-        },
-      ]
-    : courses;
+  // const mockCourses = isEmpty
+  //   ? [
+  //       {
+  //         id: 1,
+  //         title: "Creating Seamless E-Commerce Experiences",
+  //         progress: "30 minutes remaining",
+  //         thumbnail: "/assets/img/banner/download.png", // Updated relative path
+  //         status: "in-progress",
+  //         progressValue: 30, // Example progress value
+  //       },
+  //       {
+  //         id: 2,
+  //         title: "Creating Seamless E-Commerce Experiences",
+  //         progress: "30 minutes remaining",
+  //         thumbnail: "/assets/img/banner/download.png", // Updated relative path
+  //         status: "in-progress",
+  //       },
+  //       {
+  //         id: 3,
+  //         title: "Creating Seamless E-Commerce Experiences",
+  //         progress: "30 minutes remaining",
+  //         thumbnail: "/assets/img/banner/download.png", // Updated relative path
+  //         status: "in-progress",
+  //       },
+  //       {
+  //         id: 4,
+  //         title: "Creating Seamless E-Commerce Experiences",
+  //         progress: "30 minutes remaining",
+  //         thumbnail: "/assets/img/banner/download.png", // Updated relative path
+  //         status: "in-progress",
+  //       },
+  //       {
+  //         id: 5,
+  //         title: "Creating Seamless E-Commerce Experiences",
+  //         progress: "30 minutes remaining",
+  //         thumbnail: "/assets/img/banner/download.png", // Updated relative path
+  //         status: "in-progress",
+  //       },
+  //     ]
+  //   : courses;
 
   const [activeTab, setActiveTab] = useState("in-progress");
 
@@ -62,10 +63,10 @@ export default function StudentDashboardPage({
         <div className="flex flex-1">
           <main className="flex-1 p-6 bg-white">
             <div className="mb-8">
-              <h1 className="text-2xl font-bold text-gray-900 mb-2">
+              <h1 className="py-2 px-4 text-2xl font-bold text-gray-900 mb-2">
                 My Courses
               </h1>
-              <p className="text-gray-600 text-sm">
+              <p className="py-2 px-4 text-gray-600 text-sm">
                 Track your progress and continue learning
               </p>
             </div>
@@ -106,7 +107,7 @@ export default function StudentDashboardPage({
             {activeTab === "completed" ? (
               <div className="text-center py-12">
                 <img
-                  src="/path-to-your-image.png" // Replace with actual image path
+                  src="/assets/img/banner/Bibliophile-bro 1.png"
                   alt="No completed courses"
                   style={{
                     width: "600px",
@@ -134,12 +135,12 @@ export default function StudentDashboardPage({
 
                 <button
                   style={{
-                    width: "223px",
+                    width: "200px",
                     height: "47px",
                     borderRadius: "8px",
                     borderWidth: "1px",
                     opacity: 1,
-                    gap: "10px",
+                    gap: "20px",
                     paddingTop: "15px",
                     paddingRight: "20px",
                     paddingBottom: "15px",
@@ -160,8 +161,8 @@ export default function StudentDashboardPage({
                   justifyContent: "flex-start",
                 }}
               >
-                {!isEmpty || mockCourses.length > 0 ? (
-                  mockCourses.slice(0, 6).map((course, index) => (
+                {!isEmpty || online_courses_data.length > 0 ? (
+                  online_courses_data.slice(0, 6).map((course, index) => (
                     <div
                       key={course.id || index}
                       style={{
@@ -171,7 +172,7 @@ export default function StudentDashboardPage({
                         transform: "rotate(0deg)",
                       }}
                     >
-                      <CourseCard course={course} />
+                      <DashboardCourseItemFour course={course} />
                     </div>
                   ))
                 ) : (
