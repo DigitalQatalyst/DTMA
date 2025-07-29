@@ -1,2 +1,20 @@
-// TODO: Hotfix for type declaration, refactor types to align
-export type ICourseDT = Record<string, any>;
+export interface ICourseDT {
+  id: string | number;
+  author_img: string;
+  author_name: string;
+  title: string;
+  thumbnail: string;
+  category: string;
+  credits: number;
+  price: number;
+  avg_rating: number;
+  discount: number;
+  lessons: number;
+  students: number;
+  total_rating: number;
+  language: string;
+  progress: number;
+  description?: string;
+  slug?: string;
+  videoURL?: string;
+}
