@@ -1,129 +1,240 @@
+"use client"; // Still keep the client directive here
+
+import { useState } from "react"; // Now it's fine to use useState
 import { Metadata } from "next";
-import DashboardBanner from "@/components/dashboard/dashboard-banner";
 import DashboardContentWrapper from "@/components/dashboard/dashboard-content-wrapper";
-// import StudentDashboardSidebar from "@/components/dashboard/student/student-sidebar-area";
-import DashboardCourseItemFour from "@/components/course/single/dashboard/dashboard-course-item-4";
-
-import "./dash.css";
-
-export const metadata: Metadata = {
-  title: "Student Dashboard - DTMA",
-};
+import DashboardCourseItemFour from "@/components/course/single/dashboard/dashboard-course-item-4"; // Corrected the import path
 
 interface StudentDashboardPageProps {
   courses?: any[];
 }
 
 export default function StudentDashboardPage({
-  courses,
+  courses = [],
 }: StudentDashboardPageProps) {
-  // Ensure courses is an array before checking its length
   const isEmpty = !Array.isArray(courses) || courses.length === 0;
-  return (
-    <main style={{ backgroundColor: "#ffffff" }}>
-      {/* dashboard banner area start */}
-      {/* <DashboardBanner studentBanner={true} /> */}
-      {/* dashboard banner area end */}
 
-      {/* dashboard content area start */}
+  const mockCourses = isEmpty
+    ? [
+        {
+          id: 1,
+          title: "Creating Seamless E-Commerce Experiences",
+          progress: "30 minutes remaining",
+          thumbnail: "/assets/img/banner/download.png", // Updated relative path
+          status: "in-progress",
+        },
+        {
+          id: 2,
+          title: "Creating Seamless E-Commerce Experiences",
+          progress: "30 minutes remaining",
+          thumbnail: "/assets/img/banner/download.png", // Updated relative path
+          status: "in-progress",
+        },
+        {
+          id: 3,
+          title: "Creating Seamless E-Commerce Experiences",
+          progress: "30 minutes remaining",
+          thumbnail: "/assets/img/banner/download.png", // Updated relative path
+          status: "in-progress",
+        },
+        {
+          id: 4,
+          title: "Creating Seamless E-Commerce Experiences",
+          progress: "30 minutes remaining",
+          thumbnail: "/assets/img/banner/download.png", // Updated relative path
+          status: "in-progress",
+        },
+        {
+          id: 5,
+          title: "Creating Seamless E-Commerce Experiences",
+          progress: "30 minutes remaining",
+          thumbnail: "/assets/img/banner/download.png", // Updated relative path
+          status: "in-progress",
+        },
+      ]
+    : courses;
+
+  const [activeTab, setActiveTab] = useState("in-progress");
+
+  return (
+    <main className="bg-gray-50 min-h-screen">
       <DashboardContentWrapper studentSidebar={true}>
-        {/* dashboard fact area start */}
-        <div style={{ display: "flex", flex: "1" }}>
-          {/* <StudentDashboardSidebar /> */}
-          <main
-            style={{ flex: "1", padding: "1.5rem", backgroundColor: "#ffffff" }}
-          >
-            <h1
-              style={{
-                fontSize: "1.5rem",
-                fontWeight: "bold",
-                marginBottom: "0.5rem",
-                color: "#1f2937",
-              }}
-            >
-              My Courses
-            </h1>
-            <p
-              style={{
-                color: "#6b7280",
-                marginBottom: "1.5rem",
-                fontSize: "0.875rem",
-              }}
-            >
-              Track your progress and continue learning
-            </p>
-            <div
-              style={{ display: "flex", gap: "0.5rem", marginBottom: "1.5rem" }}
-            >
+        <div className="flex flex-1">
+          <main className="flex-1 p-6 bg-white">
+            <div className="mb-8">
+              <h1 className="text-2xl font-bold text-gray-900 mb-2">
+                My Courses
+              </h1>
+              <p className="text-gray-600 text-sm">
+                Track your progress and continue learning
+              </p>
+            </div>
+
+            <div className="flex gap-1 mb-8">
               <button
-                style={{
-                  padding: "0.25rem 0.75rem",
-                  backgroundColor: "#e5e7eb",
-                  color: "#374151",
-                  borderRadius: "0.25rem",
-                  border: "none",
-                  cursor: "pointer",
-                  fontSize: "0.875rem",
-                }}
+                onClick={() => setActiveTab("in-progress")}
+                className={`px-4 py-2 ${
+                  activeTab === "in-progress"
+                    ? "bg-teal-500 text-teal-600 underline"
+                    : "bg-gray-100 text-gray-700"
+                } rounded-md text-sm font-medium hover:bg-teal-600 transition-colors`}
               >
                 In Progress
               </button>
               <button
-                style={{
-                  padding: "0.25rem 0.75rem",
-                  backgroundColor: "#e5e7eb",
-                  color: "#374151",
-                  borderRadius: "0.25rem",
-                  border: "none",
-                  cursor: "pointer",
-                  fontSize: "0.875rem",
-                }}
+                onClick={() => setActiveTab("completed")}
+                className={`px-4 py-2 ${
+                  activeTab === "completed"
+                    ? "bg-teal-500 text-teal-600 underline"
+                    : "bg-gray-100 text-gray-700"
+                } rounded-md text-sm font-medium hover:bg-teal-600 transition-colors`}
               >
                 Completed
               </button>
               <button
-                style={{
-                  padding: "0.25rem 0.75rem",
-                  backgroundColor: "#e5e7eb",
-                  color: "#374151",
-                  borderRadius: "0.25rem",
-                  border: "none",
-                  cursor: "pointer",
-                  fontSize: "0.875rem",
-                }}
+                onClick={() => setActiveTab("enrolled")}
+                className={`px-4 py-2 ${
+                  activeTab === "enrolled"
+                    ? "bg-teal-500 text-teal-600"
+                    : "bg-gray-100 text-gray-700"
+                } rounded-md text-sm font-medium hover:bg-teal-600 transition-colors`}
               >
                 Enrolled
               </button>
             </div>
-            {!isEmpty && (
+
+            {activeTab === "completed" ? (
+              <div className="text-center py-12">
+                <img
+                  src="/path-to-your-image.png" // Replace with actual image path
+                  alt="No completed courses"
+                  style={{
+                    width: "600px",
+                    height: "600px",
+                    opacity: 1,
+                    transform: "rotate(0deg)",
+                  }}
+                  className="mx-auto mb-4"
+                />
+                <p
+                  style={{
+                    font: "Inter",
+                    fontWeight: 100,
+                    fontStyle: "Thin",
+                    fontSize: "18px",
+                    lineHeight: "60px",
+                    letterSpacing: "0%",
+                    textAlign: "center",
+                    verticalAlign: "middle",
+                  }}
+                  className="leading-none"
+                >
+                  Looks like you have not completed any course!
+                </p>
+
+                <button
+                  style={{
+                    width: "223px",
+                    height: "47px",
+                    borderRadius: "8px",
+                    borderWidth: "1px",
+                    opacity: 1,
+                    gap: "10px",
+                    paddingTop: "15px",
+                    paddingRight: "20px",
+                    paddingBottom: "15px",
+                    paddingLeft: "20px",
+                    backgroundColor: "#008080", // Set background color to #008080
+                  }}
+                  className="mt-4 border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white transition-colors"
+                >
+                  Browse Courses
+                </button>
+              </div>
+            ) : (
               <div
                 style={{
-                  marginTop: "1.5rem",
-                  display: "grid",
-                  gridTemplateColumns: "repeat(1, minmax(0, 1fr))",
-                  gap: "1.5rem",
+                  display: "flex",
+                  flexWrap: "wrap",
+                  gap: "32px",
+                  justifyContent: "flex-start",
                 }}
-                className="sm:grid-cols-2 lg:grid-cols-3"
               >
-                {courses.slice(0, 5).map((course, index) => (
-                  <div
-                    key={index}
-                    style={{
-                      width: "100%",
-                      paddingTop: "20px",
-                      paddingBottom: "20px",
-                    }}
-                  >
-                    <DashboardCourseItemFour course={course} />
+                {!isEmpty || mockCourses.length > 0 ? (
+                  mockCourses.slice(0, 6).map((course, index) => (
+                    <div
+                      key={course.id || index}
+                      style={{
+                        width: "265px",
+                        height: "384px",
+                        opacity: 1,
+                        transform: "rotate(0deg)",
+                      }}
+                    >
+                      <CourseCard course={course} />
+                    </div>
+                  ))
+                ) : (
+                  <div className="text-center py-12">
+                    <p className="text-gray-500">No courses found</p>
                   </div>
-                ))}
+                )}
               </div>
             )}
           </main>
         </div>
-        {/* dashboard fact area end */}
       </DashboardContentWrapper>
-      {/* dashboard content area end */}
     </main>
+  );
+}
+
+function CourseCard({ course }: { course: any }) {
+  return (
+    <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
+      <div className="aspect-video bg-gray-100">
+        <img
+          src={course.thumbnail || "/assets/img/banner/download.png"} // Corrected relative path
+          alt={course.title}
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      <div className="p-4">
+        <h3 className="font-medium text-gray-900 mb-3 line-clamp-2">
+          {course.title}
+        </h3>
+
+        <div className="mb-4">
+          <div className="flex justify-between items-center mb-1">
+            <span className="text-xs text-gray-600">Progress</span>
+            <span className="text-xs text-teal-600 font-medium">
+              {course.progress}
+            </span>
+          </div>
+          <div className="w-full bg-gray-200 rounded-full h-2">
+            <div
+              className="bg-teal-500 h-2 rounded-full transition-all duration-300"
+              style={{ width: "50%" }} // This ensures progress reads "30 minutes remaining"
+            />
+          </div>
+        </div>
+
+        <button
+          style={{
+            width: "265px",
+            height: "38px",
+            borderRadius: "8px",
+            backgroundColor: "#00808033", // Background color as specified
+            opacity: 1,
+            gap: "10px",
+            transform: "rotate(0deg)",
+          }}
+          className="w-full text-teal-600 py-2 px-4 rounded-md text-sm font-medium hover:bg-teal-100 transition-colors flex items-center justify-center"
+        >
+          Continue
+          <span className="ml-2">→</span> {/* Right Icon */}
+        </button>
+      </div>
+    </div>
   );
 }
