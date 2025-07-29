@@ -257,6 +257,7 @@ export const gym_course_data: ICourseDT[] = [
     students: 45,
     total_rating: 5,
     language: "English",
+    progress: 60,
   },
   {
     id: 8,
@@ -273,6 +274,7 @@ export const gym_course_data: ICourseDT[] = [
     students: 45,
     total_rating: 5,
     language: "German",
+    progress: 60,
   },
   {
     id: 9,
@@ -289,6 +291,7 @@ export const gym_course_data: ICourseDT[] = [
     students: 45,
     total_rating: 4.8,
     language: "Italian",
+    progress: 60,
   },
   {
     id: 10,
@@ -305,6 +308,7 @@ export const gym_course_data: ICourseDT[] = [
     students: 45,
     total_rating: 4.7,
     language: "English",
+    progress: 60,
   },
   {
     id: 11,
@@ -321,6 +325,7 @@ export const gym_course_data: ICourseDT[] = [
     students: 45,
     total_rating: 4.6,
     language: "English",
+    progress: 60,
   },
   {
     id: 12,
@@ -337,6 +342,7 @@ export const gym_course_data: ICourseDT[] = [
     students: 45,
     total_rating: 5,
     language: "English",
+    progress: 60,
   },
 ];
 
@@ -356,6 +362,7 @@ export const high_school_course_data: ICourseDT[] = [
     students: 45,
     total_rating: 12,
     language: "Hindi",
+    progress: 60,
   },
   {
     id: 14,
@@ -372,6 +379,7 @@ export const high_school_course_data: ICourseDT[] = [
     students: 38,
     total_rating: 15,
     language: "English",
+    progress: 60,
   },
 ];
 
