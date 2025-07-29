@@ -24,6 +24,7 @@ export default function CourseItem({ course, removeTag }: IProps) {
     total_rating,
     category,
     credits,
+    price,
   } = course || {};
 
   // Calculate number of filled stars
@@ -56,27 +57,55 @@ export default function CourseItem({ course, removeTag }: IProps) {
 
       <div className="tp-course-thumb">
         <Link href={`/course-details/${id}`}>
-          <Image
+          {/* <Image
             className="course-lightblue"
             src={thumbnail}
             alt={title}
             width={352}
             height={200}
-          />
+          /> */}
+          {/* video */}
+          <video
+            src={thumbnail}
+            // controls
+            // autoPlay
+            // loop
+            muted
+            width={352}
+            height={200}
+          ></video>
         </Link>
       </div>
       <div className="tp-course-content">
         <div className="tp-course-tag mb-10">
           <span>{category}</span>
         </div>
-        <div className="tp-course-meta">
-          <span>
+        <div
+          className="tp-course-meta"
+          style={{
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          <span
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "5px",
+            }}
+          >
             <span>
               <LessonsSvg />
             </span>{" "}
             {lessons} Lessons
           </span>
-          <span>
+          <span
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "5px",
+            }}
+          >
             <span>
               <UserSvgTwo />
             </span>{" "}
@@ -92,7 +121,7 @@ export default function CourseItem({ course, removeTag }: IProps) {
           ></Link>
         </h4>
 
-        <h5 className="credits-line">${credits}</h5>
+        <h5 className="credits-line">${price}</h5>
 
         <div className="tp-course-rating d-flex align-items-end justify-content-between">
           <div className="tp-course-rating-star">
