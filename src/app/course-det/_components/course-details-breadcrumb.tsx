@@ -10,7 +10,7 @@ type IProps = {
   course: ICourseDT;
 };
 
-export default function CourseDetailsBreadcrumb({}: IProps) {
+export default function CourseDetailsBreadcrumb({ course }: IProps) {
   return (
     <section className="tp-breadcrumb__area pt-25 pb-55 p-relative z-index-1 fix">
       <div
@@ -33,9 +33,7 @@ export default function CourseDetailsBreadcrumb({}: IProps) {
 
               <div className="tp-course-details-2-header">
                 {/* <span className="tp-course-details-2-category">{course.category}</span> */}
-                <h3 className="tp-course-details-2-title">
-                  Revolutionizing Procurement with <br /> Digital Tools
-                </h3>
+                <h3 className="tp-course-details-2-title">{course?.title}</h3>
                 <div className="tp-course-details-2-meta-wrapper d-flex align-items-center flex-wrap">
                   <div className="tp-course-details-2-meta">
                     <span className="tp-course-details-2-meta-subtitle">

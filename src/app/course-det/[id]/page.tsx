@@ -1,10 +1,11 @@
+"use client";
 import { all_courses } from "@/data/course-data";
 import CourseDetailsArea from "../_components/course-details-area";
 import RelatedCourses from "@/components/course/details/related-courses";
 import { removeTagInText } from "@/utils";
 import { Metadata } from "next";
-
-export function generateMetadata({ params }: Props) {
+import useCourse from "@/hooks/use-course";
+function generateMetadata({ params }: Props) {
   const id = params.id;
   const course = all_courses.find((item) => item.id == Number(id));
   return {
@@ -24,7 +25,9 @@ type Props = {
 };
 
 export default function CourseDetailsPage({ params }: Props) {
-  const course = all_courses.find((item) => item.id == Number(params.id));
+  const { filterCourse } = useCourse();
+  const course = filterCourse.find((item) => item.id == Number(params.id));
+  // console.log("course page id", course);
   return course ? (
     <main>
       {/* breadcrumb area start */}

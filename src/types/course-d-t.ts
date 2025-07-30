@@ -1,6 +1,6 @@
 export interface ICourseDT {
   id: string | number;
-  author_img: string;
+  author_img: string | null;
   author_name: string;
   title: string;
   thumbnail: string;
@@ -8,10 +8,10 @@ export interface ICourseDT {
   credits: number;
   price: number;
   avg_rating: number;
-  discount: number;
+  discount: number | null;
   lessons: number;
-  students: number;
-  total_rating: number;
+  students: number | null;
+  total_rating: number | null;
   language: string;
   progress: number;
   description?: string;
