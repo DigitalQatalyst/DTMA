@@ -42,7 +42,7 @@ export default function CourseItem({ course, removeTag }: IProps) {
     ));
 
   return (
-    <div className="tp-course-item p-relative fix mb-30">
+    <div className="tp-course-item p-relative fix mb-30 hover:shadow-lg transition-shadow duration-300 rounded-lg overflow-hidden">
       {/* <div className="tp-course-teacher mb-15">
         <span>
           {author_img && (
@@ -57,15 +57,15 @@ export default function CourseItem({ course, removeTag }: IProps) {
 
       <div className="tp-course-thumb">
         <Link href={`/course-details/${id}`}>
-          {/* <Image
+          <img
             className="course-lightblue"
-            src={thumbnail}
+            src="https://8840-54-37-203-255.ngrok-free.app/assets/preview/29/silvia-agrasar-227575-unsplash__preview.jpg"
             alt={title}
             width={352}
             height={200}
-          /> */}
+          />
           {/* video */}
-          <video
+          {/* <video
             src={thumbnail}
             // controls
             // autoPlay
@@ -73,7 +73,7 @@ export default function CourseItem({ course, removeTag }: IProps) {
             muted
             width={352}
             height={200}
-          ></video>
+          ></video> */}
         </Link>
       </div>
       <div className="tp-course-content">

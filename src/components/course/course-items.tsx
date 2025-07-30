@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import useCourse from "@/hooks/use-course";
 import CourseItem from "./single/course-item";
 import Slider from "react-slick";
@@ -11,7 +12,12 @@ import "slick-carousel/slick/slick-theme.css";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 export default function CourseItems({ singleCourse }: { singleCourse?: any }) {
+  const router = useRouter();
   const { filterCourse } = useCourse();
+
+  const handleCourseClick = (courseId: number) => {
+    router.push(`/course-details/${courseId}`);
+  };
 
   // Group the courses into sets of 3 for each slide
   const groupCourses = (courses: any[], groupSize: number) => {
@@ -75,9 +81,13 @@ export default function CourseItems({ singleCourse }: { singleCourse?: any }) {
         {groupedCourses.map((group, index) => (
           <div key={index} className="course-slider-item">
             <div className="row">
-              {group.map((item) => (
-                <div key={item.id} className="col-lg-4 col-md-6">
-                  <CourseItem course={item} />
+              {group.map((course) => (
+                <div
+                  key={course.id}
+                  className="col-lg-4 col-md-6 cursor-pointer"
+                  onClick={() => handleCourseClick(course.id)}
+                >
+                  <CourseItem course={course} />
                 </div>
               ))}
             </div>
