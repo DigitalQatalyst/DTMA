@@ -40,7 +40,7 @@ export default function CourseDetailsArea({ course }: IProps) {
           <div className="col-lg-8">
             <div className="tp-course-details-2-main-inner pr-30">
               <div id="info" className="align-items-center">
-                <VideoAndCourse />
+                <VideoAndCourse course={course} />
               </div>
               {/* <div className="tp-course-details-2-nav d-flex align-items-center">
                 <CourseDetailsNav />

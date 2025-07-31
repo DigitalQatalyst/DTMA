@@ -1,17 +1,19 @@
+"use client";
 import { all_courses } from "@/data/course-data";
 import CourseDetailsArea from "../_components/course-details-area";
 import RelatedCourses from "@/components/course/details/related-courses";
 import { removeTagInText } from "@/utils";
 import HeaderNine from "@/components/header/header-nine";
-import HeaderTwo from '@/components/header/header-two';
+import HeaderTwo from "@/components/header/header-two";
+import useCourse from "@/hooks/use-course";
 
-export function generateMetadata({ params }: Props) {
+function generateMetadata({ params }: Props) {
   const id = params.id;
   const course = all_courses.find((item) => item.id == Number(id));
   return {
     title: course?.title
       ? `${removeTagInText(course.title)} - Acadia`
-      : "Course Details - Acadia",
+      : "Course Player - Acadia",
   };
 }
 
@@ -22,7 +24,8 @@ type Props = {
 };
 
 export default function CourseDetailsPage({ params }: Props) {
-  const course = all_courses.find((item) => item.id == Number(params.id));
+  const { filterCourse } = useCourse();
+  const course = filterCourse.find((item) => item.id == Number(params.id));
   return course ? (
     <main>
       {/* breadcrumb area start */}
@@ -30,7 +33,6 @@ export default function CourseDetailsPage({ params }: Props) {
       {/* breadcrumb area end */}
       {/* <HeaderNine /> */}
       <HeaderTwo inner={true} />
-
 
       {/* course details area */}
       <CourseDetailsArea course={course} />
