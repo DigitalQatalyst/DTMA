@@ -8,10 +8,10 @@ export interface ICourseDT {
   credits: number;
   price: number;
   avg_rating: number;
-  discount: number | null;
+  discount: number;
   lessons: number;
-  students: number | null;
-  total_rating: number | null;
+  students: number;
+  total_rating: number;
   language: string;
   progress: number;
   description?: string;
