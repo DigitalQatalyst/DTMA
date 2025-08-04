@@ -5,6 +5,7 @@ import { Metadata } from "next";
 import DashboardContentWrapper from "@/components/dashboard/dashboard-content-wrapper";
 import DashboardCourseItemFour from "@/components/course/single/dashboard/dashboard-course-item-4"; // Corrected the import path
 import { online_courses_data } from "@/data/course-data";
+
 interface StudentDashboardPageProps {
   courses?: any[];
 }
@@ -13,47 +14,6 @@ export default function StudentDashboardPage({
   courses = [],
 }: StudentDashboardPageProps) {
   const isEmpty = !Array.isArray(courses) || courses.length === 0;
-
-  // const mockCourses = isEmpty
-  //   ? [
-  //       {
-  //         id: 1,
-  //         title: "Creating Seamless E-Commerce Experiences",
-  //         progress: "30 minutes remaining",
-  //         thumbnail: "/assets/img/banner/download.png", // Updated relative path
-  //         status: "in-progress",
-  //         progressValue: 30, // Example progress value
-  //       },
-  //       {
-  //         id: 2,
-  //         title: "Creating Seamless E-Commerce Experiences",
-  //         progress: "30 minutes remaining",
-  //         thumbnail: "/assets/img/banner/download.png", // Updated relative path
-  //         status: "in-progress",
-  //       },
-  //       {
-  //         id: 3,
-  //         title: "Creating Seamless E-Commerce Experiences",
-  //         progress: "30 minutes remaining",
-  //         thumbnail: "/assets/img/banner/download.png", // Updated relative path
-  //         status: "in-progress",
-  //       },
-  //       {
-  //         id: 4,
-  //         title: "Creating Seamless E-Commerce Experiences",
-  //         progress: "30 minutes remaining",
-  //         thumbnail: "/assets/img/banner/download.png", // Updated relative path
-  //         status: "in-progress",
-  //       },
-  //       {
-  //         id: 5,
-  //         title: "Creating Seamless E-Commerce Experiences",
-  //         progress: "30 minutes remaining",
-  //         thumbnail: "/assets/img/banner/download.png", // Updated relative path
-  //         status: "in-progress",
-  //       },
-  //     ]
-  //   : courses;
 
   const [activeTab, setActiveTab] = useState("in-progress");
 
@@ -141,11 +101,17 @@ export default function StudentDashboardPage({
                     borderWidth: "1px",
                     opacity: 1,
                     gap: "20px",
-                    paddingTop: "15px",
+                    paddingTop: "12px", // Adjust padding for better vertical alignment
                     paddingRight: "20px",
-                    paddingBottom: "15px",
+                    paddingBottom: "12px", // Adjust padding for better vertical alignment
                     paddingLeft: "20px",
                     backgroundColor: "#008080", // Set background color to #008080
+                    color: "white", // Make text white
+                    textAlign: "center", // Ensure text is centered inside the button
+                    display: "inline-flex", // Align text and icon properly
+                    justifyContent: "center", // Center content
+                    alignItems: "center", // Align text vertically
+                    marginBottom: "40px",
                   }}
                   className="mt-4 border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white transition-colors"
                 >
