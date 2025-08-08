@@ -6,14 +6,10 @@ import DashboardContentWrapper from "@/components/dashboard/dashboard-content-wr
 import DashboardCourseItemFour from "@/components/course/single/dashboard/dashboard-course-item-4"; // Corrected the import path
 import { online_courses_data } from "@/data/course-data";
 
-interface StudentDashboardPageProps {
-  courses?: any[];
-}
-
-export default function StudentDashboardPage({
-  courses = [],
-}: StudentDashboardPageProps) {
-  const isEmpty = !Array.isArray(courses) || courses.length === 0;
+export default function StudentDashboardPage() {
+  // Use online_courses_data directly
+  const isEmpty =
+    !Array.isArray(online_courses_data) || online_courses_data.length === 0;
 
   const [activeTab, setActiveTab] = useState("in-progress");
 
