@@ -1,7 +1,11 @@
-trigger:
-  branches:
-    include:
-      - develop
+# trigger:
+#   branches:
+#     include:
+#       - develop
+
+#  Use pipeline run button (manual UI or API)
+pr: none
+trigger: none  #  Explicitly disables automatic CI triggers
 
 variables:
   - group: ovh-secrets
@@ -44,13 +48,27 @@ stages:
               secureFile: 'kubeconfig-dtma.yml'
 
           - script: |
+              echo "Deploying to Kubernetes"
               mkdir -p ~/.kube
               cp $(GetKubeconfig.secureFilePath) ~/.kube/config
+              kubectl config use-context kubernetes-admin@DTMA
+              kubectl config get-contexts
+              
+              kubectl create secret docker-registry ovh-registry-secret \
+              	--docker-server=$REGISTRY_URL \
+              	--docker-username=$REGISTRY_USERNAME \
+              	--docker-password=$REGISTRY_PASSWORD \
+              	--docker-email=$REGISTRY_EMAIL \
+              	--namespace=dev
+              
 
               echo "Updating deployment with image tag: $(imageTag)"
               sed -i "s|image: .*$|image: $(REGISTRY_URL)/dtma/$(imageName):$(imageTag)|" K8s/deployment.yaml
-
-              echo "Deploying to Kubernetes"
-              kubectl config use-context kubernetes-admin@DTMP
+                            
               kubectl apply -f K8s/deployment.yaml -n dev
+              kubectl apply -f K8s/services.yaml -n dev
+              kubectl set image deployment/frontend-deployment frontend=$(REGISTRY_URL)/dtma/$(imageName):$(imageTag) -n dev
+              
+              echo "Force a rolling restart of the deployment to pick up the latest image"
+              kubectl rollout restart deployment frontend-deployment -n dev
             displayName: 'Deploy to OVH Kubernetes'
