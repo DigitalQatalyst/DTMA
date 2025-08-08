@@ -169,7 +169,7 @@ export default function MissionArea() {
       flexShrink: 0,
       aspectRatio: "651.02/571.35",
       borderRadius: "8px",
-      background: "url(/assets/img/about/about/pexels.jpg) lightgray 50% / cover no-repeat"
+      background: "url(/assets/img/about/about/mission.png) lightgray 50% / cover no-repeat"
     }}
   >
   </div>
