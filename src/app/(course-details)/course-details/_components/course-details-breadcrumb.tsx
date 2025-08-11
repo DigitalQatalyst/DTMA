@@ -10,7 +10,7 @@ type IProps = {
   course: ICourseDT;
 };
 
-export default function CourseDetailsBreadcrumb({}: IProps) {
+export default function CourseDetailsBreadcrumb({ course }: IProps) {
   return (
     <section className="tp-breadcrumb__area pt-25 pb-55 p-relative z-index-1 fix">
       <div
