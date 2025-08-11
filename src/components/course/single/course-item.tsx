@@ -25,6 +25,7 @@ export default function CourseItem({ course, removeTag }: IProps) {
     category,
     credits,
     price,
+    featuredAsset,
   } = course || {};
 
   // Calculate number of filled stars
@@ -59,7 +60,7 @@ export default function CourseItem({ course, removeTag }: IProps) {
         <Link href={`/course-details/${id}`}>
           <img
             className="course-lightblue"
-            src="https://8840-54-37-203-255.ngrok-free.app/assets/preview/29/silvia-agrasar-227575-unsplash__preview.jpg"
+            src={featuredAsset?.preview}
             alt={title}
             width={352}
             height={200}

@@ -17,4 +17,10 @@ export interface ICourseDT {
   description?: string;
   slug?: string;
   videoURL?: string;
+  featuredAsset: {
+    id: string | number;
+    name: string;
+    source: string;
+    preview: string;
+  };
 }
