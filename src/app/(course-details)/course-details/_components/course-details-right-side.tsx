@@ -24,7 +24,12 @@ export default function CourseDetailsRightSide({ course }: IProps) {
   return (
     <div className="tp-course-details-2-widget">
       <div className="tp-course-details-2-widget-thumb p-relative ">
-        <Image src={course_img} alt="course-img" />
+        <Image
+          width={0}
+          height={0}
+          src={course.featuredAsset?.preview}
+          alt="course-img"
+        />
         <VideoProvider videoId="go7QYaQR494">
           <span
             className="d-flex align-items-center justify-content-center"
