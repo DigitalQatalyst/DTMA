@@ -3,7 +3,7 @@ import bookData from "@/data/book-shop-data";
 import ShopDetailsArea from "../_components/shop-details-area";
 import RelatedProducts from "../_components/related-products";
 
-export function generateMetadata({ params }: { params: { id: string } }) {
+function generateMetadata({ params }: { params: { id: string } }) {
   const id = params.id;
   const bookItem = bookData.find((item) => item.id == Number(id));
   return {

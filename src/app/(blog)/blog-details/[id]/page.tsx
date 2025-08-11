@@ -1,10 +1,8 @@
-"use client";
 import all_blogs from "@/data/blog-data";
 import DetailsBreadcrumb from "../_components/details-breadcrumb";
 import BlogDetailsArea from "../_components/blog-details-area";
 import BlogDetailsRelatedBlogs from "@/components/blog/details/blog-details-related-blogs";
-
-export function generateMetadata({ params }: { params: { id: string } }) {
+function generateMetadata({ params }: { params: { id: string } }) {
   const id = params.id;
   const blog = all_blogs.find((item) => item.id == Number(id));
   return {

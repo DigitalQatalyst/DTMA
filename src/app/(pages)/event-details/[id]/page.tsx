@@ -7,7 +7,7 @@ type Props = {
   params: { id: string };
 };
 
-export function generateMetadata({ params }: Props) {
+function generateMetadata({ params }: Props) {
   const id = params.id;
   const event = all_events.find((item) => item.id == Number(id));
   return {
