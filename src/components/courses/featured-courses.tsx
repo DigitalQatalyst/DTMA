@@ -166,7 +166,7 @@ const FeaturedCoursesSection = () => {
                 }}
               >
                 <Image
-                  src={course?.imgSrc}
+                  src={course.imgSrc}
                   alt={course.title}
                   className="card-img-top"
                   // style={{
