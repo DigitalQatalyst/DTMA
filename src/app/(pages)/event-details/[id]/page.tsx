@@ -1,3 +1,4 @@
+"use client";
 import { all_events } from "@/data/event-data";
 import EventBreadcrumb from "../_components/event-breadcrumb";
 import EventDetailsArea from "../_components/event-details-area";
