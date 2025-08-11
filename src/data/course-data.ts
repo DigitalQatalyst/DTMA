@@ -75,7 +75,6 @@ export const online_courses_data: ICourseDT[] = [
     author_img: "/assets/img/teacher/teacher-5.png",
     author_name: "Benjamin",
     title: "Guide to build application",
-    title: "Guide to build application",
     thumbnail: "/assets/img/course/course-thumb-4.jpg",
     category: "Category",
     credits: 1000,
@@ -343,6 +342,12 @@ export const gym_course_data: ICourseDT[] = [
     total_rating: 5,
     language: "English",
     progress: 60,
+    featuredAsset: {
+      id: 1,
+      name: "course-thumb-1",
+      source: "local",
+      preview: "/assets/img/course/course-thumb-1.jpg",
+    },
   },
   {
     id: 8,
@@ -360,6 +365,12 @@ export const gym_course_data: ICourseDT[] = [
     total_rating: 5,
     language: "German",
     progress: 60,
+    featuredAsset: {
+      id: 1,
+      name: "course-thumb-1",
+      source: "local",
+      preview: "/assets/img/course/course-thumb-1.jpg",
+    },
   },
   {
     id: 9,
@@ -377,6 +388,12 @@ export const gym_course_data: ICourseDT[] = [
     total_rating: 4.8,
     language: "Italian",
     progress: 60,
+    featuredAsset: {
+      id: 1,
+      name: "course-thumb-1",
+      source: "local",
+      preview: "/assets/img/course/course-thumb-1.jpg",
+    },
   },
   {
     id: 10,
@@ -394,6 +411,12 @@ export const gym_course_data: ICourseDT[] = [
     total_rating: 4.7,
     language: "English",
     progress: 60,
+    featuredAsset: {
+      id: 1,
+      name: "course-thumb-1",
+      source: "local",
+      preview: "/assets/img/course/course-thumb-1.jpg",
+    },
   },
   {
     id: 11,
@@ -411,6 +434,12 @@ export const gym_course_data: ICourseDT[] = [
     total_rating: 4.6,
     language: "English",
     progress: 60,
+    featuredAsset: {
+      id: 1,
+      name: "course-thumb-1",
+      source: "local",
+      preview: "/assets/img/course/course-thumb-1.jpg",
+    },
   },
   {
     id: 12,
@@ -428,6 +457,12 @@ export const gym_course_data: ICourseDT[] = [
     total_rating: 5,
     language: "English",
     progress: 60,
+    featuredAsset: {
+      id: 1,
+      name: "course-thumb-1",
+      source: "local",
+      preview: "/assets/img/course/course-thumb-1.jpg",
+    },
   },
 ];
 
@@ -448,6 +483,12 @@ export const high_school_course_data: ICourseDT[] = [
     total_rating: 12,
     language: "Hindi",
     progress: 60,
+    featuredAsset: {
+      id: 1,
+      name: "course-thumb-1",
+      source: "local",
+      preview: "/assets/img/course/course-thumb-1.jpg",
+    },
   },
   {
     id: 14,
@@ -465,6 +506,12 @@ export const high_school_course_data: ICourseDT[] = [
     total_rating: 15,
     language: "English",
     progress: 60,
+    featuredAsset: {
+      id: 1,
+      name: "course-thumb-1",
+      source: "local",
+      preview: "/assets/img/course/course-thumb-1.jpg",
+    },
   },
 ];
 
