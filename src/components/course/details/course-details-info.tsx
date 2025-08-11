@@ -1,27 +1,29 @@
 "use client";
 import React from "react";
 import { MinusSvg, PlusThreeSvg } from "@/components/svg";
+import { ICourseDT } from "@/types/course-d-t";
 
-export default function CourseDetailsInfo() {
+type IProps = {
+  course: ICourseDT;
+};
+
+export default function CourseDetailsInfo({ course }: IProps) {
+  console.log("cp", course);
   const [showMore, setShowMore] = React.useState(false);
   return (
     <div id="info">
       <h4 className="tp-course-details-2-main-title">About Course</h4>
       <div className="tp-course-details-2-text mb-60">
         <div className={`content ${showMore ? "show" : ""}`}>
-          <p>
-            Learn to transform procurement processes through digital
-            technologies, improving efficiency, transparency, and
-            cost-effectiveness.{" "}
-          </p>
-          <p>
+          <p>{course?.description}. </p>
+          {/* <p>
             This course offers a comprehensive understanding of how to leverage
             cutting-edge tools and methodologies to modernize procurement
             operations. You will explore strategies for automating workflows,
             enhancing supplier collaboration, and implementing data-driven
             decision-making processes. By mastering these skills, you&apos;ll be
             equipped to lead procurement
-          </p>
+          </p> */}
         </div>
         <a
           onClick={() => setShowMore(!showMore)}
