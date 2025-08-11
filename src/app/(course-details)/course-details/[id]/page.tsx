@@ -56,6 +56,7 @@ import Link from "next/link";
 import HeaderTwo from "@/components/header/header-two";
 import Image from "next/image";
 import group_img from "@/assets/page_not_found/Group.svg";
+import useCourse from "@/hooks/use-course";
 export function generateMetadata({ params }: Props) {
   const id = params.id;
   const course = all_courses.find((item) => item.id == Number(id));
