@@ -28,6 +28,12 @@ interface Product {
   description: string;
   slug: string;
   customFields: CustomFields;
+  featuredAsset: {
+    id: string;
+    name: string;
+    source: string;
+    preview: string;
+  };
 }
 
 interface GetCoursesResponse {
@@ -80,6 +86,8 @@ const mapToCourseDT = (item: Product): ICourseDT => ({
   language: "English", // Placeholder
   progress: 0, // Default
   description: item.description,
+  // featured asset
+  featuredAsset: item.featuredAsset,
 });
 
 export default function CourseFilterArea() {
@@ -162,7 +170,7 @@ export default function CourseFilterArea() {
   }
 
   return (
-    <section style={{ marginTop: '-100px' }}>
+    <section style={{ marginTop: "-100px" }}>
       <CourseFilterBanner totalItems={totalItems} />
       {courses.length > 0 ? (
         <div className="tp-filter-mt-2">
