@@ -95,7 +95,7 @@ export default function MissionArea() {
     //   </div>
     // </section>
 
-     <div
+    <div
       style={{
         display: "flex",
         width: "100%",
@@ -104,75 +104,75 @@ export default function MissionArea() {
         alignItems: "flex-start"
       }}
     >
-       <div
-    style={{
-      width: "578.905px",
-      height: "368px",
-      flexShrink: 0
-    }}
-  >
-    <div
-    style={{
-      display: "flex",
-      width: "578.905px",
-      flexDirection: "column",
-      alignItems: "flex-start",
-      gap: "14px"
-    }}
-  >
       <div
-    style={{
-      alignSelf: "stretch",
-      color: "#000006",
-      fontFamily: "Outfit",
-      fontSize: "40px",
-      fontStyle: "normal",
-      fontWeight: 700,
-      lineHeight: "60px",
-      letterSpacing: "-0.8px"
-    }}
-  >
-    Mission
-  </div>
-  <div
-  style={{
-    alignSelf: "stretch",
-    color: "#000",
-    fontFamily: "Montserrat",
-    fontSize: "16px",
-    fontStyle: "normal",
-    fontWeight: 400,
-    lineHeight: "40px"
-  }}
->
-  Our mission is to provide accessible, flexible, and cutting-edge education that empowers individuals and organizations to excel in the digital economy.
-</div>
-<div
-  style={{
-    alignSelf: "stretch",
-    color: "#000",
-    fontFamily: "Montserrat",
-    fontSize: "16px",
-    fontStyle: "normal",
-    fontWeight: 400,
-    lineHeight: "40px"
-  }}
->
-  By offering specialized, role-based courses and real-world case studies, we equip professionals with the knowledge and tools to navigate the challenges of digital transformation and drive innovation within their organizations.
-</div>
-  </div>
-  </div>
-    <div
-    style={{
-      width: "651.017px",
-      height: "571.352px",
-      flexShrink: 0,
-      aspectRatio: "651.02/571.35",
-      borderRadius: "8px",
-      background: "url(/assets/img/about/about/mission.png) lightgray 50% / cover no-repeat"
-    }}
-  >
-  </div>
+        style={{
+          width: "578.905px",
+          height: "368px",
+          flexShrink: 0
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            width: "578.905px",
+            flexDirection: "column",
+            alignItems: "flex-start",
+            gap: "14px"
+          }}
+        >
+          <div
+            style={{
+              alignSelf: "stretch",
+              color: "#000006",
+              fontFamily: "Outfit",
+              fontSize: "40px",
+              fontStyle: "normal",
+              fontWeight: 700,
+              lineHeight: "60px",
+              letterSpacing: "-0.8px"
+            }}
+          >
+            Mission
+          </div>
+          <div
+            style={{
+              alignSelf: "stretch",
+              color: "#000",
+              fontFamily: "Montserrat",
+              fontSize: "16px",
+              fontStyle: "normal",
+              fontWeight: 400,
+              lineHeight: "40px"
+            }}
+          >
+            Our mission is to provide accessible, flexible, and cutting-edge education that empowers individuals and organizations to excel in the digital economy.
+          </div>
+          <div
+            style={{
+              alignSelf: "stretch",
+              color: "#000",
+              fontFamily: "Montserrat",
+              fontSize: "16px",
+              fontStyle: "normal",
+              fontWeight: 400,
+              lineHeight: "40px"
+            }}
+          >
+            By offering specialized, role-based courses and real-world case studies, we equip professionals with the knowledge and tools to navigate the challenges of digital transformation and drive innovation within their organizations.
+          </div>
+        </div>
+      </div>
+      <div
+        style={{
+          width: "651.017px",
+          height: "571.352px",
+          flexShrink: 0,
+          aspectRatio: "651.02/571.35",
+          borderRadius: "8px",
+          background: "url(/assets/img/about/about/mission.png) white 50% / cover no-repeat"
+        }}
+      >
+      </div>
     </div>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.scss";
 import "../styles/global.css";
 import { Outfit, Jost, Crimson_Pro } from "next/font/google";
+import CourseProvider from "@/components/provider/course-provider";
 
 const outfit_bold = Outfit({
   subsets: ["latin"],
@@ -45,7 +46,9 @@ export default function RootLayout({
       <body
         className={`${outfit_bold.variable} ${outfit_heading.variable} ${outfit_p.variable} ${jost_primary.variable} ${crismon_secondary.variable}`}
       >
-        {children}
+        <CourseProvider>
+          {children}
+        </CourseProvider>
       </body>
     </html>
   );

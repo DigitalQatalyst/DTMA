@@ -4,27 +4,23 @@ import DashboardContentWrapper from "@/components/dashboard/dashboard-content-wr
 import InstructorDashboardFacts from "@/components/dashboard/instructor/instructor-dashboard-fact-area";
 
 export const metadata: Metadata = {
-    title: "Student Dashboard - Acadia",
-}
+  title: "Student Dashboard - Acadia",
+};
 
 export default function StudentDashboardPage() {
-    return (
-        <main className="tp-dashboard-body-bg">
+  return (
+    <main className="tp-dashboard-body-bg">
+      {/* dashboard banner area start */}
+      <DashboardBanner studentBanner={true} />
+      {/* dashboard banner area end */}
 
-            {/* dashboard banner area start */}
-            <DashboardBanner studentBanner={true} />
-            {/* dashboard banner area end */}
-
-            {/* dashboard content area start */}
-            <DashboardContentWrapper studentSidebar={true}>
-
-                {/* dashboard fact area start */}
-                <InstructorDashboardFacts />
-                {/* dashboard fact area end */}
-
-            </DashboardContentWrapper>
-            {/* dashboard content area end */}
-
-        </main>
-    )
+      {/* dashboard content area start */}
+      <DashboardContentWrapper studentSidebar={true}>
+        {/* dashboard fact area start */}
+        <InstructorDashboardFacts />
+        {/* dashboard fact area end */}
+      </DashboardContentWrapper>
+      {/* dashboard content area end */}
+    </main>
+  );
 }

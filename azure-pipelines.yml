@@ -1,7 +1,11 @@
-trigger:
-  branches:
-    include:
-      - develop
+# trigger:
+#   branches:
+#     include:
+#       - develop
+
+#  Use pipeline run button (manual UI or API)
+pr: none
+trigger: none  #  Explicitly disables automatic CI triggers
 
 variables:
   - group: ovh-secrets

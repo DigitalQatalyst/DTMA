@@ -1,3 +1,4 @@
+"use client";
 import { all_events } from "@/data/event-data";
 import EventBreadcrumb from "../_components/event-breadcrumb";
 import EventDetailsArea from "../_components/event-details-area";
@@ -6,7 +7,7 @@ type Props = {
   params: { id: string };
 };
 
-export function generateMetadata({ params }: Props) {
+function generateMetadata({ params }: Props) {
   const id = params.id;
   const event = all_events.find((item) => item.id == Number(id));
   return {

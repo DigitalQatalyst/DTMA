@@ -41,10 +41,11 @@ export default function CourseDetailsArea({ course }: IProps) {
               {/* <div id="info" className="align-items-center">
                 <VideoAndCourse />
               </div> */}
+              {/* <div></div> */}
 
               <div id="notes" className="tp-course-details-2-content">
                 <div id="notes">
-                  <CourseDetailsInfo />
+                  <CourseDetailsInfo course={course} />
                 </div>
 
                 {/* {/* <div id="resources">

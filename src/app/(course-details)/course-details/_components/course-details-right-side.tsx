@@ -24,7 +24,12 @@ export default function CourseDetailsRightSide({ course }: IProps) {
   return (
     <div className="tp-course-details-2-widget">
       <div className="tp-course-details-2-widget-thumb p-relative ">
-        <Image src={course_img} alt="course-img" />
+        <Image
+          width={0}
+          height={0}
+          src={course.featuredAsset?.preview}
+          alt="course-img"
+        />
         <VideoProvider videoId="go7QYaQR494">
           <span
             className="d-flex align-items-center justify-content-center"
@@ -38,10 +43,7 @@ export default function CourseDetailsRightSide({ course }: IProps) {
         <div className="tp-course-details-2-widget-price d-flex align-items-center justify-content-between">
           {/* <CoursePrice discount={discount} price={price} /> */}
           <div className="d-flex align-items-center gap-1">
-            <span style={{ color: "var(--tp-dashboard-primary)" }}>
-              {" "}
-              $94.25
-            </span>
+            <span style={{ color: "#008080" }}> ${course?.price}</span>
             <p
               className="border-none"
               style={{
@@ -65,7 +67,13 @@ export default function CourseDetailsRightSide({ course }: IProps) {
         </div>
         <div className="tp-course-details-2-widget-btn">
           <Link href="/cartnotfound">Add to Cart</Link>
-          <Link className="active" href="/checkout">
+          <Link
+            className="active"
+            style={{
+              backgroundColor: "#008080",
+            }}
+            href="/checkout"
+          >
             Buy Course
           </Link>
           <p>30-Day Money-Back Guarantee</p>
