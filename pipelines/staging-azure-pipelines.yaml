@@ -8,12 +8,13 @@ pr: none
 trigger: none  #  Explicitly disables automatic CI triggers
 
 variables:
-  - group: ovh-secrets
-  - name: imageName
-    value: dtma/frontend
-  - name: imageTag
-    value: $(Build.BuildId)
+- group: ovh-secrets
+- name: imageName
+  value: dtma/frontend
+- name: imageTag
+  value: $(Build.BuildId)
 
+steps:
 # 1. Download the Kubeconfig File from Azure DevOps Secure Files
 - task: DownloadSecureFile@1
   displayName: 'GetKubeconfig'
