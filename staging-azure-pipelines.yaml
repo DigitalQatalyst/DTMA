@@ -18,22 +18,7 @@ steps:
 # 1. Referencing Github Repo
 - checkout: self
 
-# 2. Authenticating and Pulling Frontend Image from the Registry.
-- script: |
-    kubectl create secret docker-registry regcred \
-              	--docker-server=$REGISTRY_URL \
-              	--docker-username=$REGISTRY_USERNAME \
-              	--docker-password=$REGISTRY_PASSWORD \
-              	--docker-email=$REGISTRY_EMAIL \
-              	--namespace=test
-              
-
-    echo "Updating deployment with image tag: $(imageTag)"
-    sed -i "s|image: .*$|image: $(REGISTRY_URL)/dtma/$(imageName):$(imageTag)|" K8s/overlays/staging/deployment.yaml
-
-  displayName: "Authenticating and Pulling Frontend Image from the Registrys"
-
- #2. Fetch latest image tag from OVH CR and update deployment manifest
+# 2. Fetch latest image tag from OVH CR and update deployment manifest
 - script: |
       echo "Installing jq and yq..."
       sudo apt-get update
@@ -50,6 +35,22 @@ steps:
       yq -i -y '.spec.template.spec.containers[0].image = "$(REGISTRY_URL)/dtma/$(imageName):" + env(LATEST_TAG)' \
         k8s/overlays/staging/deployment.yaml
   displayName: "Update image tag in manifest"
+
+# 2. Authenticating and Pulling Frontend Image from the Registry.
+- script: |
+    kubectl create secret docker-registry regcred \
+              	--docker-server=$(REGISTRY_URL) \
+              	--docker-username=$(REGISTRY_USERNAME) \
+              	--docker-password=$(REGISTRY_PASSWORD) \
+              	--docker-email=$(REGISTRY_EMAIL) \
+              	--namespace=test
+              
+
+    echo "Updating deployment with image tag: $(imageTag)"
+    sed -i "s|image: .*$|image: $(REGISTRY_URL)/dtma/$(imageName):$(imageTag)|" K8s/overlays/staging/deployment.yaml
+
+  displayName: "Authenticating and Pulling Frontend Image from the Registrys"
+
 # 3. Download the Kubeconfig File from Azure DevOps Secure Files
 - task: DownloadSecureFile@1
   displayName: 'GetKubeconfig'
