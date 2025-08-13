@@ -21,10 +21,10 @@ steps:
 # 2. Authenticating and Pulling Frontend Image from the Registry.
 - script: |
     kubectl create secret docker-registry ovh-registry-secret \
-              	--docker-server=$REGISTRY_URL \
-              	--docker-username=$REGISTRY_USERNAME \
-              	--docker-password=$REGISTRY_PASSWORD \
-              	--docker-email=$REGISTRY_EMAIL \
+              	--docker-server=$(REGISTRY_URL) \
+              	--docker-username=$(REGISTRY_USERNAME) \
+              	--docker-password=$(REGISTRY_PASSWORD) \
+              	--docker-email=$(REGISTRY_EMAIL) \
               	--namespace=test
               
 
