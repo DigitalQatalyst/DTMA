@@ -29,7 +29,7 @@ steps:
               
 
     echo "Updating deployment with image tag: $(imageTag)"
-    sed -i "s|image: .*$|image: $(REGISTRY_URL)/dtma/$(imageName):$(imageTag)|" K8s/deployment.yaml
+    sed -i "s|image: .*$|image: $(REGISTRY_URL)/dtma/$(imageName):$(imageTag)|" K8s/overlays/staging/deployment.yaml
 
   displayName: "Authenticating and Pulling Frontend Image from the Registrys"
 
