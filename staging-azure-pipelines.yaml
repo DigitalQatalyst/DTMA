@@ -36,24 +36,13 @@ steps:
       sed -i "s|image: .*$|image: $(REGISTRY_URL)/dtma/$(imageName):$(LATEST_TAG)|" K8s/overlays/staging/deployment.yaml
   displayName: "Update image tag in manifest"
 
-# 2. Authenticating and Pulling Frontend Image from the Registry.
-- script: |
-    kubectl create secret docker-registry regcred \
-              	--docker-server=$(REGISTRY_URL) \
-              	--docker-username=$(REGISTRY_USERNAME) \
-              	--docker-password=$(REGISTRY_PASSWORD) \
-              	--docker-email=$(REGISTRY_EMAIL) \
-              	--namespace=test
-             
-
-  displayName: "Authenticating and Pulling Frontend Image from the Registrys"
 
 # 3. Download the Kubeconfig File from Azure DevOps Secure Files
 - task: DownloadSecureFile@1
   displayName: 'GetKubeconfig'
   name: GetKubeconfig
   inputs:
-    secureFile: 'kubeconfig-dtma.yml'  # Use the name of your Kubeconfig secure file in Azure DevOps
+    secureFile: 'kubeconfig-dtma.yml'  
   
 #4. Authenticating Kubernetes.'
 - script: |
@@ -66,6 +55,17 @@ steps:
   env:
     KUBECONFIG_FILE: $(GetKubeconfig.secureFilePath)
   displayName: 'Authenticating Kubernetes'
+
+# 5. Authenticating kubectl from the Registry.
+- script: |
+    kubectl create secret docker-registry regcred \
+              	--docker-server=$(REGISTRY_URL) \
+              	--docker-username=$(REGISTRY_USERNAME) \
+              	--docker-password=$(REGISTRY_PASSWORD) \
+              	--docker-email=$(REGISTRY_EMAIL) \
+              	--namespace=test
+             
+  displayName: "Authenticating kubectl the Registry"  
 
 # 5. Deploying Image to OVH
 - task: Kubernetes@1
