@@ -15,21 +15,32 @@ variables:
   value: $(Build.BuildId)
 
 steps:
-# Referencing Github Repo
+# 1. Referencing Github Repo
 - checkout: self
 
-# Confirming pipeline reads Repo
-- script: ls -R K8s/overlays/staging
-  displayName: "Check that staging folder exists"
+# 2. Authenticating and Pulling Frontend Image from the Registry.
+- script: |
+    kubectl create secret docker-registry ovh-registry-secret \
+              	--docker-server=$REGISTRY_URL \
+              	--docker-username=$REGISTRY_USERNAME \
+              	--docker-password=$REGISTRY_PASSWORD \
+              	--docker-email=$REGISTRY_EMAIL \
+              	--namespace=test
+              
 
-# 1. Download the Kubeconfig File from Azure DevOps Secure Files
+    echo "Updating deployment with image tag: $(imageTag)"
+    sed -i "s|image: .*$|image: $(REGISTRY_URL)/dtma/$(imageName):$(imageTag)|" K8s/deployment.yaml
+
+  displayName: "Authenticating and Pulling Frontend Image from the Registrys"
+
+# 3. Download the Kubeconfig File from Azure DevOps Secure Files
 - task: DownloadSecureFile@1
   displayName: 'GetKubeconfig'
   name: GetKubeconfig
   inputs:
     secureFile: 'kubeconfig-dtma.yml'  # Use the name of your Kubeconfig secure file in Azure DevOps
   
-#2. Authenticating Kubernetes.'
+#4. Authenticating Kubernetes.'
 - script: |
       echo "Authenticating Kubernetes"
       mkdir -p ~/.kube
@@ -41,7 +52,7 @@ steps:
     KUBECONFIG_FILE: $(GetKubeconfig.secureFilePath)
   displayName: 'Authenticating Kubernetes'
 
-# 3. Deploying Image to OVH
+# 5. Deploying Image to OVH
 - task: Kubernetes@1
   displayName: 'Deploy to OVH Kubernetes Cluster'
   inputs:
