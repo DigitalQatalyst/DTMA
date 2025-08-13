@@ -58,7 +58,7 @@ steps:
 
 # 5. Authenticating kubectl from the Registry.
 - script: |
-    kubectl create secret docker-registry regcred \
+    kubectl create secret docker-registry registrycred \
               	--docker-server=$(REGISTRY_URL) \
               	--docker-username=$(REGISTRY_USERNAME) \
               	--docker-password=$(REGISTRY_PASSWORD) \
