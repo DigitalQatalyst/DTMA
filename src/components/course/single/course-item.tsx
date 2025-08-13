@@ -60,7 +60,7 @@ export default function CourseItem({ course, removeTag }: IProps) {
         <Link href={`/course-details/${id}`}>
           <img
             className="course-lightblue"
-            src={featuredAsset?.preview}
+            src={thumbnail} // Use thumbnail from ICourseDT (mapped to featuredAsset.preview)
             alt={title}
             width={352}
             height={200}

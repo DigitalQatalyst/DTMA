@@ -62,6 +62,12 @@ const GET_COURSES = `
           rating
           videoURL
         }
+        featuredAsset {
+          id
+          name
+          source
+          preview
+        }
       }
       totalItems
     }
@@ -72,7 +78,7 @@ const GET_COURSES = `
 const mapToCourseDT = (item: Product): ICourseDT => ({
   id: item.id,
   title: item.name,
-  thumbnail: "/assets/img/dtma/home_02_slide_1-removebg-preview 1 1.png", // Placeholder
+  thumbnail: item.featuredAsset.preview, // Use preview from featuredAsset
   author_name: item.customFields.instructor,
   author_img: "/assets/img/teacher/teacher-1.png", // Placeholder
   category: "Technology", // Placeholder
@@ -86,12 +92,46 @@ const mapToCourseDT = (item: Product): ICourseDT => ({
   language: "English", // Placeholder
   progress: 0, // Default
   description: item.description,
-  // featured asset
   featuredAsset: item.featuredAsset,
 });
 
+// // Transform filter state to ProductFilterParameter
+// const mapFilterToProductFilterParameter = (state: any) => {
+//   const filter: any = {};
+
+//   // Map instructor filter (expects StringOperators)
+//   if (state.instructor && typeof state.instructor === "string" && state.instructor.trim() !== "") {
+//     filter.instructor = { contains: state.instructor.trim() };
+//   }
+
+//   // Map category filter (assuming category is stored in customFields)
+//   if (state.category && typeof state.category === "string" && state.category.trim() !== "") {
+//     filter["customFields.category"] = { eq: state.category.trim() };
+//   }
+
+//   // Map price filter (assuming priceFilter is a range like "0-100")
+//   if (state.priceFilter && typeof state.priceFilter === "string" && state.priceFilter.trim() !== "") {
+//     const [min, max] = state.priceFilter.split("-").map(Number);
+//     if (!isNaN(min) && !isNaN(max)) {
+//       filter.price = { between: { min, max } };
+//     }
+//   }
+
+//   // Map language filter (assuming language is stored in customFields, and schema uses languageCode)
+//   if (state.language && typeof state.language === "string" && state.language.trim() !== "") {
+//     filter["customFields.language"] = { eq: state.language.trim() };
+//   }
+
+//   // Map search term (apply to name field)
+//   if (state.searchTerm && typeof state.searchTerm === "string" && state.searchTerm.trim() !== "") {
+//     filter.name = { contains: state.searchTerm.trim() };
+//   }
+
+//   return Object.keys(filter).length > 0 ? filter : undefined; // Return undefined if no filters
+// };
+
 export default function CourseFilterArea() {
-  const { state } = useCourseFilter();
+  // const { state } = useCourseFilter();
   const [courses, setCourses] = useState<ICourseDT[]>([]);
   const [totalItems, setTotalItems] = useState(0);
   const [loading, setLoading] = useState(true);
@@ -104,11 +144,15 @@ export default function CourseFilterArea() {
     const fetchCourses = async () => {
       try {
         setLoading(true);
+        // const filter = mapFilterToProductFilterParameter(state); // Transform state to valid filter
         const data = await client.request<GetCoursesResponse>(GET_COURSES, {
           page: currentPage * pageSize, // Calculate skip
           pageSize,
+          // filter, // Use transformed filter
         });
+        console.log("Fetched course data:", data.products.items); // Log fetched course data
         const mappedCourses = data.products.items.map(mapToCourseDT);
+        console.log("Mapped courses:", mappedCourses); // Log mapped courses
         setCourses(mappedCourses);
         setTotalItems(data.products.totalItems);
         setError(null);
@@ -116,13 +160,14 @@ export default function CourseFilterArea() {
         setError("Failed to load courses");
         setCourses([]);
         setTotalItems(0);
+        console.error("Error fetching courses:", err); // Log error
       } finally {
         setLoading(false);
       }
     };
 
     fetchCourses();
-  }, [currentPage]);
+  }, [currentPage]); // Removed state from dependencies
 
   // Use pagination hook with fetched courses
   const { currentItems, handlePageClick, pageCount } = usePagination(
