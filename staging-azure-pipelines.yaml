@@ -30,9 +30,9 @@ steps:
         | jq -r '.tags | sort | last')
 
       echo "Latest tag: $LATEST_TAG"
-      IMAGE="${REGISTRY_URL}/dtma/${imageName}:${LATEST_TAG}"
-
+      
       echo "Patching deployment manifest..."
+      IMAGE="${REGISTRY_URL}/dtma/${imageName}:${LATEST_TAG}"
       yq -i -y '.spec.template.spec.containers[0].image = \"${IMAGE}\"" k8s/overlays/staging/deployment.yaml
   displayName: "Update image tag in manifest"
 
