@@ -57,16 +57,7 @@ steps:
     KUBECONFIG_FILE: $(GetKubeconfig.secureFilePath)
   displayName: 'Authenticating Kubernetes'
 
-# 5. Authenticating kubectl from the Registry.
-- script: |
-    kubectl create secret docker-registry registrycred \
-              	--docker-server=$(REGISTRY_URL) \
-              	--docker-username=$(REGISTRY_USERNAME) \
-              	--docker-password=$(REGISTRY_PASSWORD) \
-              	--docker-email=$(REGISTRY_EMAIL) \
-              	--namespace=test
-             
-  displayName: "Authenticating kubectl the Registry"  
+ 
 
 # 5. Deploying Image to OVH
 - task: Kubernetes@1
