@@ -47,7 +47,7 @@ steps:
       echo "Latest tag: $LATEST_TAG"
 
       echo "Patching deployment manifest..."
-      yq e -i -y '.spec.template.spec.containers[0].image = "$(REGISTRY_URL)/dtma/$(imageName):" + env(LATEST_TAG)' \
+      yq -i -y '.spec.template.spec.containers[0].image = "$(REGISTRY_URL)/dtma/$(imageName):" + env(LATEST_TAG)' \
         k8s/overlays/staging/deployment.yaml
   displayName: "Update image tag in manifest"
 # 3. Download the Kubeconfig File from Azure DevOps Secure Files
