@@ -41,6 +41,6 @@ steps:
     connectionType: 'Kubernetes service connection'
     kubernetesServiceEndpoint: 'Kubernetes-dtma'  # Use your secure file path or environment variable
     command: 'apply'
-    arguments: '-k **/K8s/overlays/staging/'
+    arguments: '-f **/K8s/overlays/staging/deployment.yaml'
     # Optional: Add namespace if needed (default or specify another)
     namespace: 'test'
