@@ -15,6 +15,13 @@ variables:
   value: $(Build.BuildId)
 
 steps:
+# Referencing Github Repo
+- checkout: self
+
+# Confirming pipeline reads Repo
+- script: ls -R k8s/overlays/staging
+  displayName: "Check that staging folder exists"
+
 # 1. Download the Kubeconfig File from Azure DevOps Secure Files
 - task: DownloadSecureFile@1
   displayName: 'GetKubeconfig'
