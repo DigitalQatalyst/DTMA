@@ -33,7 +33,7 @@ steps:
 
       echo "Patching deployment manifest..."
       yq -i -y '.spec.template.spec.containers[0].image = "$(REGISTRY_URL)/dtma/$(imageName):" + env(LATEST_TAG)' \
-        k8s/overlays/staging/deployment.yaml
+        K8s/overlays/staging/deployment.yaml
   displayName: "Update image tag in manifest"
 
 # 2. Authenticating and Pulling Frontend Image from the Registry.
