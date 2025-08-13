@@ -21,10 +21,10 @@ steps:
 # 2. Authenticating and Pulling Frontend Image from the Registry.
 - script: |
     kubectl create secret docker-registry regcred \
-              	--docker-server=$(REGISTRY_URL) \
-              	--docker-username=$(REGISTRY_USERNAME) \
-              	--docker-password=$(REGISTRY_PASSWORD) \
-              	--docker-email=$(REGISTRY_EMAIL) \
+              	--docker-server=$REGISTRY_URL \
+              	--docker-username=$REGISTRY_USERNAME \
+              	--docker-password=$REGISTRY_PASSWORD \
+              	--docker-email=$REGISTRY_EMAIL \
               	--namespace=test
               
 
@@ -33,6 +33,23 @@ steps:
 
   displayName: "Authenticating and Pulling Frontend Image from the Registrys"
 
+ # Fetch latest image tag from OVH CCR and update deployment manifest
+- script: |
+      echo "Installing jq and yq..."
+      sudo apt-get update
+      sudo apt-get install -y jq yq
+      
+      echo "Fetching latest image tag from OVH CCR..."
+      LATEST_TAG=$(curl -s -u "$(REGISTRY_USERNAME):$(REGISTRY_PASSWORD)" \
+        https://$(REGISTRY_URL)/v2/dtma/$(imageName)/tags/list \
+        | jq -r '.tags | sort | last')
+
+      echo "Latest tag: $LATEST_TAG"
+
+      echo "Patching deployment manifest..."
+      yq e -i '.spec.template.spec.containers[0].image = "$(REGISTRY_URL)/dtma/$(imageName):" + env(LATEST_TAG)' \
+        k8s/overlays/staging/deployment.yaml
+  displayName: "Update image tag in manifest"
 # 3. Download the Kubeconfig File from Azure DevOps Secure Files
 - task: DownloadSecureFile@1
   displayName: 'GetKubeconfig'
