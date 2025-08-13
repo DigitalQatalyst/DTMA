@@ -32,8 +32,8 @@ steps:
       echo "Latest tag: $LATEST_TAG"
       
       echo "Patching deployment manifest..."
-      IMAGE="${REGISTRY_URL}/dtma/${imageName}:${LATEST_TAG}"
-      yq -i -y '.spec.template.spec.containers[0].image = \"${IMAGE}\"" k8s/overlays/staging/deployment.yaml
+      echo "Updating deployment with image tag: $(LATEST_Tag)"
+      sed -i "s|image: .*$|image: $(REGISTRY_URL)/dtma/$(imageName):$(LATEST_TAG)|" K8s/overlays/staging/deployment.yaml
   displayName: "Update image tag in manifest"
 
 # 2. Authenticating and Pulling Frontend Image from the Registry.
@@ -44,7 +44,7 @@ steps:
               	--docker-password=$(REGISTRY_PASSWORD) \
               	--docker-email=$(REGISTRY_EMAIL) \
               	--namespace=test
-              
+             
 
   displayName: "Authenticating and Pulling Frontend Image from the Registrys"
 
