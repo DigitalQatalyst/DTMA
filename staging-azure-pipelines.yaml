@@ -32,9 +32,9 @@ steps:
       echo "Latest tag: $LATEST_TAG"
       
       echo "Patching deployment manifest..."
-      echo "Updating deployment with image tag: $(LATEST_Tag)"
-      sed -i "s|image: .*$|image: $(REGISTRY_URL)/dtma/$(imageName):$(LATEST_TAG)|" K8s/overlays/staging/deployment.yaml
-      cat k8s/overlays/staging/deployment.yaml | grep 'image:'
+      echo "Updating deployment with image tag: $LATEST_TAG"
+      sed -i "s|image: .*$|image: $(REGISTRY_URL)/dtma/$(imageName):$LATEST_TAG|" K8s/overlays/staging/deployment.yaml
+      cat K8s/overlays/staging/deployment.yaml | grep 'image:'
   displayName: "Update image tag in manifest"
 
 
