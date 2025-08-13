@@ -20,7 +20,7 @@ steps:
 
 # 2. Authenticating and Pulling Frontend Image from the Registry.
 - script: |
-    kubectl create secret docker-registry ovh-registry-secret \
+    kubectl create secret docker-registry regcred \
               	--docker-server=$(REGISTRY_URL) \
               	--docker-username=$(REGISTRY_USERNAME) \
               	--docker-password=$(REGISTRY_PASSWORD) \
@@ -62,3 +62,21 @@ steps:
     arguments: '-k K8s/overlays/staging'
     # Optional: Add namespace if needed (default or specify another)
     namespace: 'test'
+
+# 6. Verifying Deployment Success
+- script: |
+      echo "✅ Waiting for deployment to finish..."
+      kubectl rollout status deployment/dtma-frontend -n test --timeout=180s
+
+      echo "🔍 Checking for non-running pods..."
+      NOT_RUNNING=$(kubectl get pods -n test --selector=app=frontend \
+        --no-headers | grep -v "Running" || true)
+
+      if [ -n "$NOT_RUNNING" ]; then
+        echo "❌ Some pods are not running:"
+        echo "$NOT_RUNNING"
+        exit 1
+      else
+        echo "✅ All pods are running."
+      fi
+  displayName: "Verifying deployment success"
