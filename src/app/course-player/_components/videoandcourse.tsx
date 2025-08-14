@@ -2,8 +2,9 @@
 import { ChevronRight, Lock } from "lucide-react";
 import React, { useState } from "react";
 import QuizModal from "./quiz/QuizModal";
+import { ICourseDT } from "@/types/course-d-t";
 
-export default function VideoAndCourse() {
+export default function VideoAndCourse({ course }: { course: ICourseDT }) {
   const [viewIndex, setViewIndex] = useState(0); // 0 = video, 1 = quick start
   const [isQuizModalOpen, setIsQuizModalOpen] = useState(false);
 
@@ -17,7 +18,7 @@ export default function VideoAndCourse() {
     <div className="container h-full player p-12">
       <div className="pageheading">
         <p className="playerheading text-green-500">
-          Revolutionizing Procurement with Digital Tools.
+          {course?.title || "Revolutionizing Procurement with Digital Tools."}
         </p>
       </div>
       <div className="herosection">
@@ -36,7 +37,10 @@ export default function VideoAndCourse() {
               controls
               width={500}
               height={400}
-              src="https://videos.pexels.com/video-files/3141208/3141208-uhd_2560_1440_25fps.mp4"
+              src={`${
+                course?.thumbnail ||
+                "https://videos.pexels.com/video-files/3141208/3141208-uhd_2560_1440_25fps.mp4"
+              }`}
             ></video>
 
             <div className="overlay">

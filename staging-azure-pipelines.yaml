@@ -1,0 +1,72 @@
+# trigger:
+#   branches:
+#     include:
+#       - develop
+
+#  Use pipeline run button (manual UI or API)
+pr: none
+trigger: none  #  Explicitly disables automatic CI triggers
+
+variables:
+- group: ovh-secrets
+- name: imageName
+  value: dtma/frontend
+- name: imageTag
+  value: $(Build.BuildId)
+
+steps:
+# 1. Referencing Github Repo
+- checkout: self
+
+# 2. Fetch latest image tag from OVH CR and update deployment manifest
+- script: |
+      echo "Installing jq and yq..."
+      sudo apt-get update
+      sudo apt-get install -y jq yq
+      
+      echo "Fetching latest image tag from OVH CCR..."
+      LATEST_TAG=$(curl -s -u "$(REGISTRY_USERNAME):$(REGISTRY_PASSWORD)" \
+        https://$(REGISTRY_URL)/v2/dtma/$(imageName)/tags/list \
+        | jq -r '.tags | sort | last')
+
+      echo "Latest tag: $LATEST_TAG"
+      
+      echo "Patching deployment manifest..."
+      echo "Updating deployment with image tag: $LATEST_TAG"
+      sed -i "s|image: .*$|image: $(REGISTRY_URL)/dtma/$(imageName):$LATEST_TAG|" K8s/overlays/staging/deployment.yaml
+      cat K8s/overlays/staging/deployment.yaml | grep 'image:'
+  displayName: "Update image tag in manifest"
+
+
+# 3. Download the Kubeconfig File from Azure DevOps Secure Files
+- task: DownloadSecureFile@1
+  displayName: 'GetKubeconfig'
+  name: GetKubeconfig
+  inputs:
+    secureFile: 'kubeconfig-dtma.yml'  
+  
+#4. Authenticating Kubernetes.'
+- script: |
+      echo "Authenticating Kubernetes"
+      mkdir -p ~/.kube
+      cp $KUBECONFIG_FILE ~/.kube/config 
+      kubectl config use-context kubernetes-admin@DTMA
+      kubectl config get-contexts
+
+  env:
+    KUBECONFIG_FILE: $(GetKubeconfig.secureFilePath)
+  displayName: 'Authenticating Kubernetes'
+
+ 
+
+# 5. Deploying Image to OVH
+- task: Kubernetes@1
+  displayName: 'Deploy to OVH Kubernetes Cluster'
+  inputs:
+    connectionType: 'Kubernetes service connection'
+    kubernetesServiceEndpoint: 'Kubernetes-dtma'  # Use your secure file path or environment variable
+    command: 'apply'
+    arguments: '-k K8s/overlays/staging'
+    # Optional: Add namespace if needed (default or specify another)
+    namespace: 'test'
+

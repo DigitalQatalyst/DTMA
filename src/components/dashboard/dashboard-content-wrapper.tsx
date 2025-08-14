@@ -5,9 +5,12 @@ type IProps = {
   children: React.ReactNode;
   studentSidebar?: boolean;
 };
-export default function DashboardContentWrapper({children,studentSidebar=false}: IProps) {
+export default function DashboardContentWrapper({
+  children,
+  studentSidebar = false,
+}: IProps) {
   return (
-    <section className="tpd-main pb-75">
+    <section className="tpd-main pt-30 pb-75">
       <div className="container">
         <div className="row">
           <div className="col-lg-3">

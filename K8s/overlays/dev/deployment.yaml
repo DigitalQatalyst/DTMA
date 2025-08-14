@@ -1,0 +1,28 @@
+# Deployment configuration
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment  # Change this to 'staging' or 'prod' as needed
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: u4c2j2w9.c1.gra9.container-registry.ovh.net/dtma/dtma/frontend:5513
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
+      imagePullSecrets:
+      - name: ovh-registry-secret  # Make sure the secret is created as mentioned before
+
+---
+
+      
+      

@@ -1,3 +1,4 @@
+"use client";
 import { all_courses } from "@/data/course-data";
 import CourseDetailsArea from "../_components/course-details-area";
 import RelatedCourses from "@/components/course/details/related-courses";
@@ -7,14 +8,15 @@ import Link from "next/link";
 import HeaderTwo from "@/components/header/header-two";
 import Image from "next/image";
 import group_img from "@/assets/page_not_found/Group.svg";
+import useCourse from "@/hooks/use-course";
 
-export function generateMetadata({ params }: Props) {
+function generateMetadata({ params }: Props) {
   const id = params.id;
   const course = all_courses.find((item) => item.id == Number(id));
   return {
     title: course?.title
       ? `${removeTagInText(course.title)} - Acadia`
-      : "Course Details - Acadia",
+      : "Course Player - Acadia",
   };
 }
 
@@ -25,13 +27,13 @@ type Props = {
 };
 
 export default function CourseDetailsPage({ params }: Props) {
-  const course = all_courses.find((item) => item.id == Number(params.id));
+  const { filterCourse } = useCourse();
+  const course = filterCourse.find((item) => item.id == Number(params.id));
   return course ? (
     <main>
       {/* breadcrumb area start */}
       {/* <CourseDetailsBreadcrumb course={course} /> */}
       {/* breadcrumb area end */}
-
 
       {/* course details area */}
       <CourseDetailsArea course={course} />
@@ -60,14 +62,18 @@ export default function CourseDetailsPage({ params }: Props) {
                     />
                   </div>
                   <div className="tp-error-content">
-                    <p style={{
-                      color: "#000A06",
-                      textAlign: "center",
-                      fontSize: "40px",
-                      fontStyle: "normal",
-                      fontWeight: 500,
-                      lineHeight: "60px"
-                    }}>Page Not Found</p>
+                    <p
+                      style={{
+                        color: "#000A06",
+                        textAlign: "center",
+                        fontSize: "40px",
+                        fontStyle: "normal",
+                        fontWeight: 500,
+                        lineHeight: "60px",
+                      }}
+                    >
+                      Page Not Found
+                    </p>
                     <Link
                       className="tp-btn-inner"
                       href="/"
