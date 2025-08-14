@@ -129,7 +129,10 @@ export const useCart = () => {
   // Get active order
   const { data: orderData, loading, error, refetch } = useQuery(GET_ACTIVE_ORDER, {
     errorPolicy: 'all',
-    fetchPolicy: 'cache-and-network'
+    fetchPolicy: 'cache-and-network',
+    // ssr: false,
+    skip: typeof window === 'undefined',
+    notifyOnNetworkStatusChange: true,
   });
 
   // Add item mutation
@@ -168,7 +171,7 @@ export const useCart = () => {
       const result = await addItemToOrder({
         variables: { productId, quantity }
       });
-      
+
       if (result.data?.addItemToOrder.__typename === 'Order') {
         setSuccessMessage('Course added to cart successfully!');
         setTimeout(() => setSuccessMessage(null), 3000);
@@ -188,7 +191,7 @@ export const useCart = () => {
       const result = await removeOrderLine({
         variables: { orderLineId }
       });
-      
+
       if (result.data?.removeOrderLine.__typename === 'Order') {
         setSuccessMessage('Course removed from cart successfully!');
         setTimeout(() => setSuccessMessage(null), 3000);
@@ -206,7 +209,7 @@ export const useCart = () => {
   const clearCart = useCallback(async () => {
     try {
       const result = await removeAllOrderLines();
-      
+
       if (result.data?.removeAllOrderLines.__typename === 'Order') {
         setSuccessMessage('Cart cleared successfully!');
         setTimeout(() => setSuccessMessage(null), 3000);
@@ -222,7 +225,7 @@ export const useCart = () => {
   }, [removeAllOrderLines]);
 
   // Computed values
-  const activeOrder = orderData?.activeOrder;
+  const activeOrder = orderData?.activeOrder || null;
   const cartItems = activeOrder?.lines || [];
   const cartItemsCount = cartItems.reduce((total: number, line: any) => total + line.quantity, 0);
   const cartTotal = activeOrder?.totalWithTax || 0;
@@ -238,7 +241,7 @@ export const useCart = () => {
     loading,
     error,
     successMessage,
-    
+
     // Actions
     addToCart,
     removeFromCart,
