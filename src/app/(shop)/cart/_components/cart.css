@@ -118,14 +118,16 @@
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  text-align: center; /* This centers the content *inside* .tp-cart-empty-state */
+  text-align: center;
+  /* This centers the content *inside* .tp-cart-empty-state */
 }
 
 /* Ensure .tp-cart-breadcrumb, .tp-cart-title, .tp-cart-subtitle are left-aligned by default or explicitly */
 .tp-cart-breadcrumb,
 .tp-cart-title,
 .tp-cart-subtitle {
-  text-align: left; /* Explicitly ensure left alignment */
+  text-align: left;
+  /* Explicitly ensure left alignment */
 }
 
 
@@ -206,4 +208,90 @@
 
 .tp-cart-breadcrumb .fa-house {
   font-size: 14px;
+}
+
+/* Add to your global CSS file or create a new component CSS file */
+.cart-icon-link {
+  color: #333;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.cart-icon-link:hover {
+  color: #008080;
+}
+
+.cart-count-badge {
+  font-size: 10px;
+  min-width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dc3545 !important;
+  color: white;
+  border-radius: 50%;
+  font-weight: 600;
+}
+
+/* Add to the end of your existing cart.css file */
+
+/* Cart Icon Styles */
+.cart-icon-link {
+  color: rgba(47, 43, 61, 0.90);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  padding: 8px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.cart-icon-link:hover {
+  color: #008080;
+  background-color: rgba(0, 128, 128, 0.1);
+}
+
+.cart-count-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #dc3545;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 10px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(50%, -50%);
+  min-width: 18px;
+}
+
+/* Fix empty cart centering */
+.tp-cart-empty-state {
+  padding-bottom: 5rem;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Quantity display styling */
+.tp-cart-item__quantity {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Remove button hover effect */
+.tp-cart-item__remove-btn:hover {
+  color: #d32f2f;
 }

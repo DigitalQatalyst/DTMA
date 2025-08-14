@@ -1,7 +1,10 @@
+'use client';
 import type { Metadata } from "next";
 import "./globals.scss";
 import "../styles/global.css";
 import { Outfit, Jost, Crimson_Pro } from "next/font/google";
+import { ApolloProvider } from '@apollo/client'; // NEW: Add Apollo Provider
+import { apolloClient } from '@/lib/apollo-client'; // NEW: Import Apollo Client
 
 const outfit_bold = Outfit({
   subsets: ["latin"],
@@ -29,12 +32,6 @@ const crismon_secondary = Crimson_Pro({
   variable: "--tp-ff-secondary",
 });
 
-export const metadata: Metadata = {
-  title: "Acadia - University & Online Course Next js Template",
-  description:
-    "Acadia – template is perfect for a variety of educational needs, including e-Learning, Course Schools, Online Schools, Kindergartens, Classic LMS setups, University Status pages, Instructor Portfolios, Language Academies, Gym Coaching, Online Courses, Single Courses, marketplaces, University Classics, Elegant Homepages, Technology-focused Homepages, and more",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -45,7 +42,10 @@ export default function RootLayout({
       <body
         className={`${outfit_bold.variable} ${outfit_heading.variable} ${outfit_p.variable} ${jost_primary.variable} ${crismon_secondary.variable}`}
       >
-        {children}
+        {/* NEW: Wrap with Apollo Provider */}
+        <ApolloProvider client={apolloClient}>
+          {children}
+        </ApolloProvider>
       </body>
     </html>
   );

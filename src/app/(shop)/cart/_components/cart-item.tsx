@@ -1,12 +1,11 @@
 'use client';
-import { useState } from "react";
 import Link from "next/link";
 import './cart.css'
 import Image from "next/image";
-import { formatPrice } from "@/lib/format-price";
 
 type ICart = {
   id: number;
+  orderLineId: string; // NEW: Add order line ID
   image: string;
   title: string;
   tag: string;
@@ -17,17 +16,18 @@ type ICart = {
     count: number;
   };
   price: number;
+  quantity: number; // NEW: Add quantity
 }
 
 type IProps = {
   item: ICart;
-  onRemove: (id: number) => void;
+  onRemove: (orderLineId: string) => void; // NEW: Change to use order line ID
 }
 
 export default function CartItem({ item, onRemove }: IProps) {
   const handleRemoveItem = () => {
-    console.log(`Attempting to remove item with ID: ${item.id}`);
-    onRemove(item.id);
+    console.log(`Attempting to remove item with order line ID: ${item.orderLineId}`);
+    onRemove(item.orderLineId); // NEW: Use order line ID
   };
 
   return (
@@ -44,7 +44,6 @@ export default function CartItem({ item, onRemove }: IProps) {
         </Link>
       </div>
       <div className="tp-cart-item__content flex-grow-1">
-
         <div className="d-flex align-items-start mb-10">
           <h4 className="tp-cart-item__title mb-0 flex-grow-1">
             <Link href={`/shop-details/${item.id}`}>{item.title}</Link>
@@ -70,19 +69,21 @@ export default function CartItem({ item, onRemove }: IProps) {
         </div>
         <div className="tp-cart-item__meta d-flex align-items-center mb-10">
           <span className="tp-cart-item__tag mr-10">{item.tag}</span>
-          <div className="tp-cart-item__details-row">
-            <span className="tp-cart-item__chapters mr-20">
-              <i className="fa-regular fa-book-open"></i> {item.chapters} Chapters
-            </span>
-            <span className="tp-cart-item__learners mr-20">
-              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="15" viewBox="0 0 13 15" fill="none">
-                <path d="M6.5711 7.5C8.36215 7.5 9.81407 6.04493 9.81407 4.25C9.81407 2.45507 8.36212 1 6.5711 1C4.78005 1 3.32812 2.45507 3.32812 4.25C3.32812 6.04493 4.78005 7.5 6.5711 7.5Z" stroke="#636366" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M12.1429 14.0031C12.1429 11.4876 9.64577 9.45312 6.57143 9.45312C3.49709 9.45312 1 11.4876 1 14.0031" stroke="#636366" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg> {item.learners} Learners
-            </span>
-
-          </div>
         </div>
+        
+        <div className="tp-cart-item__details-row mb-10">
+          <span className="tp-cart-item__chapters mr-20">
+            <i className="fa-regular fa-book-open"></i> {item.chapters} Chapters
+          </span>
+          <span className="tp-cart-item__learners mr-20">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="15" viewBox="0 0 13 15" fill="none">
+              <path d="M6.5711 7.5C8.36215 7.5 9.81407 6.04493 9.81407 4.25C9.81407 2.45507 8.36212 1 6.5711 1C4.78005 1 3.32812 2.45507 3.32812 4.25C3.32812 6.04493 4.78005 7.5 6.5711 7.5Z" stroke="#636366" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M12.1429 14.0031C12.1429 11.4876 9.64577 9.45312 6.57143 9.45312C3.49709 9.45312 1 11.4876 1 14.0031" stroke="#636366" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg> 
+            {item.learners} Learners
+          </span>
+        </div>
+        
         <div className="tp-cart-item__rating d-flex align-items-center mb-10">
           {[...Array(5)].map((_, i) => (
             <i
@@ -92,11 +93,15 @@ export default function CartItem({ item, onRemove }: IProps) {
           ))}
           <span className="tp-cart-item__rating-count">({item.rating.count})</span>
         </div>
-        <div className="tp-cart-item__price">
-          <span>{formatPrice(item.price, true)} credits</span>
+        
+        <div className="tp-cart-item__price d-flex align-items-center justify-content-between">
+          <span>{item.price} credits</span>
+          {/* NEW: Show quantity if greater than 1 */}
+          {item.quantity > 1 && (
+            <span className="tp-cart-item__quantity">Qty: {item.quantity}</span>
+          )}
         </div>
       </div>
-
     </div>
   );
 }

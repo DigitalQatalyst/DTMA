@@ -1,6 +1,7 @@
 import React from "react";
-import Link from "next/link"; // Import Link from next/link
+import Link from "next/link";
 import SearchButton from "../button/search-button";
+import CartIcon from "@/components/cart/cart-icon"; // NEW: Import Cart Icon
 
 export default function MainMenu() {
   const linkStyles = {
@@ -8,13 +9,13 @@ export default function MainMenu() {
     fontSize: "15px",
     fontStyle: "normal",
     fontWeight: 500,
-    lineHeight: "22px" /* 146.667% */,
+    lineHeight: "22px",
   };
 
   return (
     <div className="main-menu text-xl-center d-none d-xl-block">
       <nav>
-        <ul>
+        <ul className="d-flex align-items-center">
           <li>
             <Link href="/" style={linkStyles}>
               Home
@@ -34,6 +35,10 @@ export default function MainMenu() {
             <Link href="/contact" style={linkStyles}>
               Help & Support
             </Link>
+          </li>
+          {/* NEW: Add Cart Icon */}
+          <li style={{ marginLeft: "20px" }}>
+            <CartIcon />
           </li>
           {/* <li style={{ marginTop: "35px" }}>
             <SearchButton />
