@@ -50,7 +50,7 @@ export default function CounterSix() {
     //   </div>
     // </section>
 
-        <div
+    <div
       style={{
         display: "flex",
         width: "100%",
@@ -60,17 +60,17 @@ export default function CounterSix() {
       }}
     >
       <div
-  style={{
-    width: "651.017px",
-    height: "571.352px",
-    flexShrink: 0,
-    borderRadius: "8px",
-    background: "url(/assets/img/about/about/approach.png) lightgray 50% / cover no-repeat"
-  }}
->
-  
-</div>
- <div
+        style={{
+          width: "651.017px",
+          height: "571.352px",
+          flexShrink: 0,
+          borderRadius: "8px",
+          background: "url(/assets/img/about/about/approach.png) white 50% / cover no-repeat"
+        }}
+      >
+
+      </div>
+      <div
         style={{
           width: "578.905px",
           height: "328px",
@@ -78,43 +78,43 @@ export default function CounterSix() {
           marginLeft: "40px",
         }}
       >
-      <div
-    style={{
-      display: "flex",
-      width: "578.905px",
-      flexDirection: "column",
-      alignItems: "flex-start",
-      gap: "14px"
-    }}
-  >
-      <div
-    style={{
-      alignSelf: "stretch",
-      color: "#000006",
-      fontFamily: "Outfit",
-      fontSize: "40px",
-      fontStyle: "normal",
-      fontWeight: 700,
-      lineHeight: "60px",
-      letterSpacing: "-0.8px"
-    }}
-  >
-    Our Approach
-  </div>
-    <div
-    style={{
-      alignSelf: "stretch",
-      color: "#000",
-      fontFamily: "Inter",
-      fontSize: "16px",
-      fontStyle: "normal",
-      fontWeight: 400,
-      lineHeight: "40px"
-    }}
-  >
-    Our approach focuses on empowering learners with flexible, personalized, and practical education. Using AI-driven learning paths, we ensure that you gain the skills most relevant to your career goals.
-  </div>
-    <div
+        <div
+          style={{
+            display: "flex",
+            width: "578.905px",
+            flexDirection: "column",
+            alignItems: "flex-start",
+            gap: "14px"
+          }}
+        >
+          <div
+            style={{
+              alignSelf: "stretch",
+              color: "#000006",
+              fontFamily: "Outfit",
+              fontSize: "40px",
+              fontStyle: "normal",
+              fontWeight: 700,
+              lineHeight: "60px",
+              letterSpacing: "-0.8px"
+            }}
+          >
+            Our Approach
+          </div>
+          <div
+            style={{
+              alignSelf: "stretch",
+              color: "#000",
+              fontFamily: "Inter",
+              fontSize: "16px",
+              fontStyle: "normal",
+              fontWeight: 400,
+              lineHeight: "40px"
+            }}
+          >
+            Our approach focuses on empowering learners with flexible, personalized, and practical education. Using AI-driven learning paths, we ensure that you gain the skills most relevant to your career goals.
+          </div>
+          <div
             style={{
               alignSelf: "stretch",
               color: "#000",
@@ -127,7 +127,7 @@ export default function CounterSix() {
           >
             From microlearning sessions to immersive case studies, our courses are designed to fit seamlessly into your schedule, helping you stay competitive and relevant in today’s digital world.
           </div>
-  </div>
+        </div>
       </div>
     </div>
   );

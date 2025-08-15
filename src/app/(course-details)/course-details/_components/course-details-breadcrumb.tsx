@@ -20,9 +20,6 @@ export default function CourseDetailsBreadcrumb({ course }: IProps) {
         }}
       ></div>
       <div className="container">
-        <div className="mb-50">
-          <HeaderTwo />
-        </div>
         <div className="row align-items-center">
           <div className="col-sm-12">
             <div className="tp-breadcrumb__content">

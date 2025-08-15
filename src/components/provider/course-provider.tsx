@@ -26,7 +26,34 @@ export default function CourseProvider({ children }: IPropType) {
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
-              query: `query GetCourses($page: Int, $pageSize: Int, $filter: ProductFilterParameter) {\n  products(options: { skip: $page, take: $pageSize, filter: $filter }) {\n    items {\n      id\n      name\n      description\n      slug\n      customFields {\n        instructor\n        duration\n        price\n        credits\n        learnersEnrolled\n        lessonCount\n        rating\n        videoURL\n      }\n    }\n    totalItems\n  }\n}`,
+              // query: `query GetCourses($page: Int, $pageSize: Int, $filter: ProductFilterParameter) {\n  products(options: { skip: $page, take: $pageSize, filter: $filter }) {\n    items {\n      id\n      name\n      description\n      slug\n      customFields {\n        instructor\n        duration\n        price\n        credits\n        learnersEnrolled\n        lessonCount\n        rating\n        videoURL\n      }\n    }\n    totalItems\n  }\n}`,
+              query: `query GetCourses($page: Int, $pageSize: Int, $filter: ProductFilterParameter) {
+ products(options: { skip: $page, take: $pageSize, filter: $filter }) {
+   items {
+     id
+     name
+     description
+    featuredAsset {
+      id
+      name
+      source
+      preview
+    }
+     slug
+     customFields {
+       instructor
+       duration
+       price
+       credits
+       learnersEnrolled
+       lessonCount
+       rating
+       videoURL
+     }
+   }
+   totalItems
+  }
+}`,
               variables: {
                 page: 0,
                 pageSize: 6,
@@ -43,6 +70,7 @@ export default function CourseProvider({ children }: IPropType) {
           title: item.name,
           description: item.description,
           slug: item.slug,
+          featuredAsset: item.featuredAsset,
           // price
           price: item.customFields?.price || 0,
           author_name: item.customFields?.instructor || "",

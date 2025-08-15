@@ -9,6 +9,7 @@ import useCourseFilter from "@/hooks/use-course-filter";
 import usePagination from "@/hooks/use-pagination";
 import { ICourseDT } from "@/types/course-d-t";
 import CourseFilterBanner from "./course-filter-banner";
+import LearnerDashboardSidebar from "@/components/learner-dashboard-sidebar/LearnerDashboardSidebar";
 
 // Define TypeScript interfaces for GraphQL response
 interface CustomFields {
@@ -170,58 +171,65 @@ export default function CourseFilterArea() {
   }
 
   return (
-    <section style={{ marginTop: "-100px" }}>
-      <CourseFilterBanner totalItems={totalItems} />
-      {courses.length > 0 ? (
-        <div className="tp-filter-mt-2">
-          <div className="container">
-            <div className="tab-content" id="myTabContent">
-              <div
-                className="tab-pane fade show active"
-                id="home"
-                role="tabpanel"
-                aria-labelledby="home-tab"
-              >
-                <div className="row">
-                  {currentItems.map((course) => (
-                    <div key={course.id} className="col-lg-4 col-md-6">
-                      <CourseItem course={course} />
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div
-                className="tab-pane fade"
-                id="profile"
-                role="tabpanel"
-                aria-labelledby="profile-tab"
-              >
-                {currentItems.map((course) => (
-                  <CourseListItemTwo key={course.id} course={course} />
-                ))}
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="col-lg-12">
-                <div className="tp-event-inner-pagination pb-100">
-                  <div className="tp-dashboard-pagination pt-20">
-                    <div className="tp-pagination">
-                      <Pagination
-                        handlePageClick={handlePageChange}
-                        pageCount={pageCount}
-                        isCenter={true}
-                      />
+    <section style={{ marginTop: "100px" }}>
+      <div className="container" style={{ display: "flex", gap: "20px" }}>
+        {/* Sidebar */}
+        <LearnerDashboardSidebar />
+        {/* Main Content */}
+        <div style={{ width: "75%" }}>
+          {/* <CourseFilterBanner totalItems={totalItems} /> */}
+          {courses.length > 0 ? (
+            <div className="tp-filter-mt-2">
+              <div className="container">
+                <div className="tab-content" id="myTabContent">
+                  <div
+                    className="tab-pane fade show active"
+                    id="home"
+                    role="tabpanel"
+                    aria-labelledby="home-tab"
+                  >
+                    <div className="row">
+                      {currentItems.map((course) => (
+                        <div key={course.id} className="col-lg-4 col-md-6">
+                          <CourseItem course={course} />
+                        </div>
+                      ))}
                     </div>
                   </div>
+                  <div
+                    className="tab-pane fade"
+                    id="profile"
+                    role="tabpanel"
+                    aria-labelledby="profile-tab"
+                  >
+                    {/* {currentItems.map((course) => (
+                      <CourseListItemTwo key={course.id} course={course} />
+                    ))} */}
+                  </div>
                 </div>
+
+                {/* <div className="row">
+                  <div className="col-lg-12">
+                    <div className="tp-event-inner-pagination pb-100">
+                      <div className="tp-dashboard-pagination pt-20">
+                        <div className="tp-pagination">
+                          <Pagination
+                            handlePageClick={handlePageChange}
+                            pageCount={pageCount}
+                            isCenter={true}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> */}
               </div>
             </div>
-          </div>
+          ) : (
+            <ResetFilter />
+          )}
         </div>
-      ) : (
-        <ResetFilter />
-      )}
+      </div>
     </section>
   );
 }

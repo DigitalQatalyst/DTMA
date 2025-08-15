@@ -19,16 +19,16 @@ export default function AboutBanner() {
                 </div>
             </div> */}
             <div className="container-fluid p-0">
-                <div className="tp-about-banner-bg" 
-                style={{ 
-                    display: "flex",
-                    height: "281px",
-                    padding: "179px 1243px 80px 80px",
-                    alignItems: "center",
-                    alignSelf: "stretch",
-                    opacity: 0.8,
-                    background: "linear-gradient(0deg, rgba(0,0,0,0.20) 0%, rgba(0,0,0,0.20) 100%), url(/assets/img/about/about/about-thumb-3.jpg) lightgray 50% / cover no-repeat",
-                }}>
+                <div className="tp-about-banner-bg"
+                    style={{
+                        display: "flex",
+                        height: "281px",
+                        padding: "179px 1243px 80px 80px",
+                        alignItems: "center",
+                        alignSelf: "stretch",
+                        opacity: 0.8,
+                        background: "linear-gradient(0deg, rgba(0,0,0,0.20) 0%, rgba(0,0,0,0.20) 100%), url(/assets/img/about/about/about-thumb-3.jpg) white 50% / cover no-repeat",
+                    }}>
                     {/* <div className="row g-0">
                         <div className="col-xl-6 col-lg-12"></div>
                         <div className="col-xl-6 col-lg-12">
@@ -46,5 +46,5 @@ export default function AboutBanner() {
                 </div>
             </div>
         </section>
-    )
+    );
 }
