@@ -65,7 +65,7 @@ export default function CounterSix() {
     height: "571.352px",
     flexShrink: 0,
     borderRadius: "8px",
-    background: "url(/assets/img/about/about/pexels.jpg) lightgray 50% / cover no-repeat"
+    background: "url(/assets/img/about/about/approach.png) lightgray 50% / cover no-repeat"
   }}
 >
   
