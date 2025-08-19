@@ -11,13 +11,11 @@ function Content() {
 
   const searchParams = useSearchParams();
   const code = searchParams.get("code");
-  console.log("code", code);
   const error = searchParams.get("error");
   const loginUrl =
     "https://dgqatalyst.b2clogin.com/dgqatalyst.onmicrosoft.com/B2C_1_login/oauth2/v2.0/token"; //tenant dgqatalyst
-  const client_id = "5ca62169-f345-4c82-8ad9-0873d0d61e20";
-  // const client_secret = "bfa15ece-ee34-4f28-9c4e-fd4a16940bc8";
-  const client_secret = "PqG8Q~VCTP.hT~SMoxoYoTKMxPcI.uZk5qfKHbXl";
+  const client_id = process.env.NEXT_PUBLIC_CLIENT_ID;
+  const client_secret = process.env.NEXT_PUBLIC_CLIENT_SECRET;
   const redirect_url = "http://localhost:3000/auth";
   const scope = "openid profile";
   const registerUrl =
@@ -33,7 +31,6 @@ function Content() {
     scope: scope,
     grant_type: "authorization_code",
   };
-  console.log("requestBody", requestBody);
 
   const urlSearchParams = new URLSearchParams(
     requestBody as Record<string, string>
