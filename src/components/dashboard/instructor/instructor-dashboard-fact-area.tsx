@@ -45,7 +45,7 @@ const factData = [
   // },
 ];
 
-export default function InstructorDashboardFacts() {
+export default function InstructorDashboardFacts({ user }: { user: any }) {
   return (
     <section className="tp-fact-wrapper">
       <div className="row">
@@ -67,7 +67,8 @@ export default function InstructorDashboardFacts() {
                 color: "#000000",
               }}
             >
-              Welcome Back, <span style={{ color: "#008080" }}>Katie Pena</span>
+              Welcome Back,{" "}
+              <span style={{ color: "#008080" }}>{user?.name || "Katie"}</span>
             </h2>
           </div>
         </div>

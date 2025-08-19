@@ -34,14 +34,18 @@ export default function NotFound() {
                     />
                   </div>
                   <div className="tp-error-content">
-                    <p style={{
-                      color: "#000A06",
-                      textAlign: "center",
-                      fontSize: "40px",
-                      fontStyle: "normal",
-                      fontWeight: 500,
-                      lineHeight: "60px"
-                    }}>Page Not Found</p>
+                    <p
+                      style={{
+                        color: "#000A06",
+                        textAlign: "center",
+                        fontSize: "40px",
+                        fontStyle: "normal",
+                        fontWeight: 500,
+                        lineHeight: "60px",
+                      }}
+                    >
+                      Page Not Found
+                    </p>
                     <Link
                       className="tp-btn-inner"
                       href="/"

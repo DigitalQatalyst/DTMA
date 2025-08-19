@@ -1,14 +1,21 @@
+"use client";
 import { Metadata } from "next";
 import DashboardBanner from "@/components/dashboard/dashboard-banner";
 import DashboardContentWrapper from "@/components/dashboard/dashboard-content-wrapper";
 import InstructorDashboardFacts from "@/components/dashboard/instructor/instructor-dashboard-fact-area";
 import InstructorMyCourseArea from "@/components/dashboard/instructor/instructor-my-course-area";
 import "./dash.css";
-export const metadata: Metadata = {
+import { useAuth } from "@/context/AuthContext";
+const metadata: Metadata = {
   title: "Student Dashboard - DTMA",
 };
 
 export default function StudentDashboardPage() {
+  const { user, authenticated } = useAuth();
+  const userdata = {
+    name: user?.given_name,
+    email: user?.emails[0],
+  };
   return (
     <main
       className=""
@@ -24,7 +31,7 @@ export default function StudentDashboardPage() {
       <DashboardContentWrapper studentSidebar={true}>
         {/* dashboard fact area start */}
 
-        <InstructorDashboardFacts />
+        <InstructorDashboardFacts user={userdata} />
         <InstructorMyCourseArea />
         {/* dashboard fact area end */}
       </DashboardContentWrapper>
