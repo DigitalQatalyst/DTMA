@@ -1,13 +1,9 @@
-"use client";
 import React from "react";
 import HeaderTwo from "@/components/header/header-two";
 // import msg from "@/assets/img/hero/Message.svg";
 import Image from "next/image";
-import { useAuth } from "@/context/AuthContext";
 
 const HeroAreaTwo = () => {
-  const { user } = useAuth();
-  console.log("logged user", user);
   return (
     // The hero-section itself is full width for the gradient
     <section className="hero-section position-relative">

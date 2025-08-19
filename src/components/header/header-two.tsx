@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,8 +7,6 @@ import logo from "@/assets/img/logo/dtma.svg";
 import cart from "@/assets/img/hero/local_mall.svg";
 import HeaderStickyWrapper from "./header-sticky-provider/header-sticky-wrapper";
 import OffcanvasButton from "./button/offcanvas-btn";
-import { useAuth } from "@/context/AuthContext";
-import { User2 } from "lucide-react";
 
 type IProps = {
   inner?: boolean;
@@ -17,8 +14,6 @@ type IProps = {
 };
 
 export default function HeaderTwo({ inner = false, transparent }: IProps) {
-  const { user, authenticated } = useAuth();
-  console.log("user here", user?.given_name);
   return (
     <>
       {/* The header-area class now needs to sit inside the container
@@ -78,18 +73,9 @@ export default function HeaderTwo({ inner = false, transparent }: IProps) {
                       inner ? "" : "home-2"
                     } d-none d-xxl-block`}
                   >
-                    {!authenticated ? (
-                      <Link
-                        className="tp-sign-in-btn"
-                        href="https://dgqatalyst.b2clogin.com/dgqatalyst.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1_login&client_id=5ca62169-f345-4c82-8ad9-0873d0d61e20&nonce=defaultNonce&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fauth&scope=openid&response_type=code&prompt=login"
-                      >
-                        Sign In
-                      </Link>
-                    ) : (
-                      <Link className="" href="/dashboard/learner-dashboard">
-                        {user?.given_name}
-                      </Link>
-                    )}
+                    <Link className="tp-sign-in-btn" href="/">
+                      Sign In
+                    </Link>
                   </div>
                   <div className="offcanvas-btn d-xxl-none ml-30">
                     <OffcanvasButton
