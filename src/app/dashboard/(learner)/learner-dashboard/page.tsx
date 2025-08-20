@@ -6,6 +6,8 @@ import InstructorDashboardFacts from "@/components/dashboard/instructor/instruct
 import InstructorMyCourseArea from "@/components/dashboard/instructor/instructor-my-course-area";
 import "./dash.css";
 import { useAuth } from "@/context/AuthContext";
+import { redirect, RedirectType } from "next/navigation";
+import { useLayoutEffect } from "react";
 const metadata: Metadata = {
   title: "Student Dashboard - DTMA",
 };
@@ -16,6 +18,12 @@ export default function StudentDashboardPage() {
     name: user?.given_name,
     email: user?.emails[0],
   };
+  useLayoutEffect(() => {
+    const isAuth = authenticated;
+    if (!isAuth) {
+      redirect("/");
+    }
+  }, [authenticated]);
   return (
     <main
       className=""

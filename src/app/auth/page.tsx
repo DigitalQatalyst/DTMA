@@ -83,6 +83,10 @@ function Content() {
                   .then((res) => res.json())
                   .then((json) => {
                     console.log("Password reset response:", json);
+                    setTimeout(() => {
+                      window.location.href =
+                        "https://dgqatalyst.b2clogin.com/dgqatalyst.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1_login&client_id=5ca62169-f345-4c82-8ad9-0873d0d61e20&nonce=defaultNonce&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fauth&scope=openid&response_type=code&prompt=login"; // This will reload and redirect to /profile-demo
+                    }, 3000);
                     return json;
                   });
               } else {
