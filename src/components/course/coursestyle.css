@@ -1,0 +1,46 @@
+.loadingcard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.cardload {
+  width: 20rem;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0.8rem;
+  background-color: white;
+}
+
+.cardload__skeleton {
+  background-image: linear-gradient(
+    90deg,
+    #ccc 0px,
+    rgb(229 229 229 / 90%) 40px,
+    #ccc 80px
+  );
+  background-size: 300%;
+  background-position: 100% 0;
+  border-radius: inherit;
+  animation: shimmer 1.5s infinite;
+}
+
+.cardload__title {
+  height: 15px;
+  margin-bottom: 15px;
+}
+
+.cardload__description {
+  height: 100px;
+}
+
+.loadingcards {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+@keyframes shimmer {
+  to {
+    background-position: -100% 0;
+  }
+}

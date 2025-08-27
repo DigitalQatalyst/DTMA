@@ -11,49 +11,128 @@ type IPropType = {
 
 export default function CourseProvider({ children }: IPropType) {
   const [activeTab, setActiveTab] = React.useState<string>("All Courses");
-  const [filterCourse, setFilterCourse] = React.useState<ICourseDT[]>([
-    ...online_courses_data,
-  ]);
+  // const [filterCourse, setFilterCourse] = React.useState<ICourseDT[]>([
+  //   ...online_courses_data,
+  // ]);
+  const [filterCourse, setFilterCourse] = React.useState<ICourseDT[]>([]);
+  const [loadingCourse, setLoadingCourse] = React.useState<boolean>(true);
+  const [errorCourse, setErrorCourse] = React.useState<string | null>(null);
+
+  // console.log("load state", loadingCourse);
+
+  //   useEffect(() => {
+  //     async function fetchCourses() {
+  //       try {
+  //         const res = await fetch(
+  //           // "https://8840-54-37-203-255.ngrok-free.app/shop-api",
+  //           "https://k-marion-pc-instant.trycloudflare.com/shop-api",
+  //           {
+  //             method: "POST",
+  //             headers: {
+  //               "Content-Type": "application/json",
+  //             },
+  //             body: JSON.stringify({
+  //               // query: `query GetCourses($page: Int, $pageSize: Int, $filter: ProductFilterParameter) {\n  products(options: { skip: $page, take: $pageSize, filter: $filter }) {\n    items {\n      id\n      name\n      description\n      slug\n      customFields {\n        instructor\n        duration\n        price\n        credits\n        learnersEnrolled\n        lessonCount\n        rating\n        videoURL\n      }\n    }\n    totalItems\n  }\n}`,
+  //               query: `query GetCourses($page: Int, $pageSize: Int, $filter: ProductFilterParameter) {
+  //  products(options: { skip: $page, take: $pageSize, filter: $filter }) {
+  //    items {
+  //      id
+  //      name
+  //      description
+  //     featuredAsset {
+  //       id
+  //       name
+  //       source
+  //       preview
+  //     }
+  //      slug
+  //      customFields {
+  //        instructor
+  //        duration
+  //        price
+  //        credits
+  //        learnersEnrolled
+  //        lessonCount
+  //        rating
+  //        videoURL
+  //      }
+  //    }
+  //    totalItems
+  //   }
+  // }`,
+  //               variables: {
+  //                 page: 0,
+  //                 pageSize: 6,
+  //                 filter: {},
+  //               },
+  //             }),
+  //           }
+  //         );
+  //         const json = await res.json();
+  //         const items = json?.data?.products?.items || [];
+  //         // Map API data to ICourseDT structure
+  //         const mapped = items.map((item: any) => ({
+  //           id: item.id,
+  //           title: item.name,
+  //           description: item.description,
+  //           slug: item.slug,
+  //           featuredAsset: item.featuredAsset,
+  //           // price
+  //           price: item.customFields?.price || 0,
+  //           author_name: item.customFields?.instructor || "",
+  //           lessons: item.customFields?.lessonCount || 0,
+  //           students: item.customFields?.learnersEnrolled || 0,
+  //           avg_rating: item.customFields?.rating || 0,
+  //           credits: item.customFields?.credits || 0,
+  //           thumbnail: item.customFields?.videoURL || "/default-thumb.jpg",
+  //           // Add other fields as needed
+  //         }));
+  //         console.log("mapped", mapped);
+  //         if (mapped.length > 0) setFilterCourse(mapped);
+  //       } catch (e) {
+  //         // fallback to dummy data
+  //       }
+  //     }
+  //     fetchCourses();
+  //   }, []);
 
   useEffect(() => {
     async function fetchCourses() {
+      setLoadingCourse(true);
       try {
         const res = await fetch(
-          "https://8840-54-37-203-255.ngrok-free.app/shop-api",
+          "https://k-marion-pc-instant.trycloudflare.com/shop-api",
           {
             method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-              // query: `query GetCourses($page: Int, $pageSize: Int, $filter: ProductFilterParameter) {\n  products(options: { skip: $page, take: $pageSize, filter: $filter }) {\n    items {\n      id\n      name\n      description\n      slug\n      customFields {\n        instructor\n        duration\n        price\n        credits\n        learnersEnrolled\n        lessonCount\n        rating\n        videoURL\n      }\n    }\n    totalItems\n  }\n}`,
               query: `query GetCourses($page: Int, $pageSize: Int, $filter: ProductFilterParameter) {
- products(options: { skip: $page, take: $pageSize, filter: $filter }) {
-   items {
-     id
-     name
-     description
-    featuredAsset {
-      id
-      name
-      source
-      preview
-    }
-     slug
-     customFields {
-       instructor
-       duration
-       price
-       credits
-       learnersEnrolled
-       lessonCount
-       rating
-       videoURL
-     }
-   }
-   totalItems
-  }
-}`,
+            products(options: { skip: $page, take: $pageSize, filter: $filter }) {
+              items {
+                id
+                name
+                description
+                featuredAsset {
+                  id
+                  name
+                  source
+                  preview
+                }
+                slug
+                customFields {
+                  instructor
+                  duration
+                  price
+                  credits
+                  learnersEnrolled
+                  lessonCount
+                  rating
+                  videoURL
+                }
+              }
+              totalItems
+            }
+          }`,
               variables: {
                 page: 0,
                 pageSize: 6,
@@ -62,16 +141,18 @@ export default function CourseProvider({ children }: IPropType) {
             }),
           }
         );
+
+        if (!res.ok) throw new Error("Failed to fetch courses");
+
         const json = await res.json();
         const items = json?.data?.products?.items || [];
-        // Map API data to ICourseDT structure
+
         const mapped = items.map((item: any) => ({
           id: item.id,
           title: item.name,
           description: item.description,
           slug: item.slug,
           featuredAsset: item.featuredAsset,
-          // price
           price: item.customFields?.price || 0,
           author_name: item.customFields?.instructor || "",
           lessons: item.customFields?.lessonCount || 0,
@@ -79,17 +160,19 @@ export default function CourseProvider({ children }: IPropType) {
           avg_rating: item.customFields?.rating || 0,
           credits: item.customFields?.credits || 0,
           thumbnail: item.customFields?.videoURL || "/default-thumb.jpg",
-          // Add other fields as needed
         }));
-        console.log("mapped", mapped);
-        if (mapped.length > 0) setFilterCourse(mapped);
-      } catch (e) {
-        // fallback to dummy data
+
+        setFilterCourse(mapped);
+        setErrorCourse(null);
+      } catch (e: any) {
+        setErrorCourse(e.message || "Something went wrong");
+      } finally {
+        setLoadingCourse(false);
       }
     }
+
     fetchCourses();
   }, []);
-
   React.useEffect(() => {
     if (activeTab === "New") {
       setFilterCourse([...online_courses_data]); // Show all courses
@@ -101,7 +184,15 @@ export default function CourseProvider({ children }: IPropType) {
   }, [activeTab]);
 
   return (
-    <CourseContext.Provider value={{ activeTab, setActiveTab, filterCourse }}>
+    <CourseContext.Provider
+      value={{
+        activeTab,
+        setActiveTab,
+        filterCourse,
+        loadingCourse,
+        errorCourse,
+      }}
+    >
       {children}
     </CourseContext.Provider>
   );

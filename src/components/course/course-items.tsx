@@ -10,10 +10,11 @@ import "slick-carousel/slick/slick-theme.css";
 
 // Import chevron icons
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import CourseLoader from "./course-loader";
 
 export default function CourseItems({ singleCourse }: { singleCourse?: any }) {
   const router = useRouter();
-  const { filterCourse } = useCourse();
+  const { filterCourse, loadingCourse } = useCourse();
 
   const handleCourseClick = (courseId: number) => {
     router.push(`/course-details/${courseId}`);
@@ -74,26 +75,35 @@ export default function CourseItems({ singleCourse }: { singleCourse?: any }) {
 
   return (
     <section className="course-slider">
-      <h4 className="course-heading">Our Courses</h4>
+      {!loadingCourse && <h4 className="course-heading">Our Courses</h4>}
 
-      <Slider {...sliderOptions}>
-        {/* Loop through the grouped courses and render them */}
-        {groupedCourses.map((group, index) => (
-          <div key={index} className="course-slider-item">
-            <div className="row">
-              {group.map((course) => (
-                <div
-                  key={course.id}
-                  className="col-lg-4 col-md-6 cursor-pointer"
-                  onClick={() => handleCourseClick(course.id)}
-                >
-                  <CourseItem course={course} />
-                </div>
-              ))}
+      {loadingCourse ? (
+        <div className="loadingcards">
+          <CourseLoader />
+          <CourseLoader />
+          <CourseLoader />
+          <CourseLoader />
+        </div>
+      ) : (
+        <Slider {...sliderOptions}>
+          {/* Loop through the grouped courses and render them */}
+          {groupedCourses.map((group, index) => (
+            <div key={index} className="course-slider-item">
+              <div className="row">
+                {group.map((course) => (
+                  <div
+                    key={course.id}
+                    className="col-lg-4 col-md-6 cursor-pointer"
+                    onClick={() => handleCourseClick(course.id)}
+                  >
+                    <CourseItem course={course} />
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
-      </Slider>
+          ))}
+        </Slider>
+      )}
     </section>
   );
 }

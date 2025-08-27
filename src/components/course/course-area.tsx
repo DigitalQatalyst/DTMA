@@ -6,6 +6,7 @@ import arrow_outward from "@/assets/img/icon/arrow_outward.svg";
 import CourseProvider from "../provider/course-provider";
 import CourseTabBtn from "./course-tab-btn";
 import CourseItems from "./course-items";
+import "./coursestyle.css";
 
 const tab_navs = ["Browse More Courses"];
 
