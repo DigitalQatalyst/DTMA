@@ -63,7 +63,7 @@ stages:
 
           - script: |
               echo "Fetching the previous image tag from Kubernetes annotations..."
-              previous_image_tag=$(kubectl get deployment dtma-frontend --namespace=dev -o=jsonpath='{.metadata.annotations.last-image}' || echo "No previous tag found")
+              previous_image_tag=$(kubectl get deployment frontend-deployment --namespace=dev -o=jsonpath='{.metadata.annotations.last-image}' || echo "No previous tag found")
               
               if [ "$previous_image_tag" == "No previous tag found" ]; then
                 echo "No previous image tag found. Manual rollback required."
