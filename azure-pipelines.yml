@@ -86,8 +86,8 @@ stages:
               if [ $? -ne 0 ]; then
                 echo "Deployment failed! One or more pods are not in the Running state. Initiating rollback..."
                 # Rollback to the previous image using the provided previousImageTag
-                kubectl set image deployment/dtma-frontend $(imageName)=$(registry)/$(imageName):$(previousImageTag) --namespace=dev
-                kubectl annotate deployment/dtma-frontend last-image=$(imageTag) --overwrite --namespace=dev  # Annotate for audit
+                kubectl set image deployment/frontend-deployment $(imageName)=$(registry)/$(imageName):$(previousImageTag) --namespace=dev
+                kubectl annotate deployment/frontend-deployment last-image=$(imageTag) --overwrite --namespace=dev  # Annotate for audit
               else
                 echo "All pods are running successfully. Deployment was successful."
               fi
