@@ -80,7 +80,7 @@ stages:
   displayName: 'Wait for Container to Start'
 
 
-- script: |
+  - script: |
     echo "Checking the status of the pods..."
     kubectl get pods --namespace=dev -l app=$(imageName) -o custom-columns=":status.phase" | grep -E "Running|Succeeded"
     if [ $? -ne 0 ]; then
@@ -91,5 +91,5 @@ stages:
     else
       echo "All pods are running successfully. Deployment was successful."
     fi
-  displayName: 'Check Pods Status and Trigger Rollback if Needed'
+ displayName: 'Check Pods Status and Trigger Rollback if Needed'
 
